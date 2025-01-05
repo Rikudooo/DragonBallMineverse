@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/yardratrock",
+    "up": "dbm:block/yardratrock",
+    "north": "dbm:block/yardratrock",
+    "east": "dbm:block/yardratrock",
+    "south": "dbm:block/yardratrock",
+    "west": "dbm:block/yardratrock",
+    "particle": "dbm:block/yardratrock"
+  },
+  "render_type": "solid"
+}

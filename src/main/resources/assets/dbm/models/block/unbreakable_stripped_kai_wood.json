@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/stripped_kai_log",
+    "up": "dbm:block/stripped_kai_log",
+    "north": "dbm:block/stripped_kai_log",
+    "east": "dbm:block/stripped_kai_log",
+    "south": "dbm:block/stripped_kai_log",
+    "west": "dbm:block/stripped_kai_log",
+    "particle": "dbm:block/stripped_kai_log"
+  },
+  "render_type": "solid"
+}

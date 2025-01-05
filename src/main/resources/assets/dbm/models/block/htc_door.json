@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/doortimechambertop",
+    "up": "dbm:block/doortimechambertop",
+    "north": "dbm:block/doortimechambertop",
+    "east": "dbm:block/doortimechambertop",
+    "south": "dbm:block/doortimechambertop",
+    "west": "dbm:block/doortimechambertop",
+    "particle": "dbm:block/doortimechambertop"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "particle": "dbm:block/pinkbuildingblockbricks",
+    "bottom": "dbm:block/pinkbuildingblockbricks",
+    "top": "dbm:block/pinkbuildingblockbricks",
+    "side": "dbm:block/pinkbuildingblockbricks"
+  },
+  "render_type": "solid"
+}

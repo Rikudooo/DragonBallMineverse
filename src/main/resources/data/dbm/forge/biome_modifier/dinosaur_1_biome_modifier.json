@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "sunflower_plains",
+    "old_growth_birch_forest",
+    "forest",
+    "birch_forest",
+    "plains"
+  ],
+  "spawners": {
+    "type": "dbm:dinosaur_1",
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

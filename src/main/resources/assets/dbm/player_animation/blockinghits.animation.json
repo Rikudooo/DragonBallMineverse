@@ -1,0 +1,21 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"blockinghits": {
+			"loop": true,
+			"animation_length": 0.04167,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"vector": [-107.62436, -42.05244, 6.82047]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-48.24783, 46.46899, 7.95683]
+					}
+				}
+			}
+		}
+	}
+}

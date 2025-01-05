@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "dbm:blocks/bluedoorbottom",
+    "top": "dbm:blocks/bluedoortop"
+  }
+}

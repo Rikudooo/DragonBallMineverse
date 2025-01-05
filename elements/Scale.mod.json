@@ -1,0 +1,19 @@
+{
+  "_fv": 66,
+  "_type": "attribute",
+  "definition": {
+    "description": "Scale",
+    "minValue": 0.01,
+    "maxValue": 10.0,
+    "defaultValue": 1.0,
+    "isPersistent": true,
+    "entities": [
+      {
+        "value": "EntityPlayerMP"
+      },
+      {
+        "value": "EntityPlayer"
+      }
+    ]
+  }
+}

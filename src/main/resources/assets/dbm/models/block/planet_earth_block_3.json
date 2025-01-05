@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/earth3",
+    "up": "dbm:block/earth3",
+    "north": "dbm:block/earth3",
+    "east": "dbm:block/earth3",
+    "south": "dbm:block/earth3",
+    "west": "dbm:block/earth3",
+    "particle": "dbm:block/earth3"
+  },
+  "render_type": "solid"
+}

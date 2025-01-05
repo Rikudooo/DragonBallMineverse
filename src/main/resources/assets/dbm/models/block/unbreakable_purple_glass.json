@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/purple_stained_glass",
+    "up": "dbm:block/purple_stained_glass",
+    "north": "dbm:block/purple_stained_glass",
+    "east": "dbm:block/purple_stained_glass",
+    "south": "dbm:block/purple_stained_glass",
+    "west": "dbm:block/purple_stained_glass",
+    "particle": "dbm:block/purple_stained_glass"
+  },
+  "render_type": "translucent"
+}

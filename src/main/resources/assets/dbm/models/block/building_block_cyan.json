@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/cyanbuildingblock",
+    "up": "dbm:block/cyanbuildingblock",
+    "north": "dbm:block/cyanbuildingblock",
+    "east": "dbm:block/cyanbuildingblock",
+    "south": "dbm:block/cyanbuildingblock",
+    "west": "dbm:block/cyanbuildingblock",
+    "particle": "dbm:block/cyanbuildingblock"
+  },
+  "render_type": "solid"
+}

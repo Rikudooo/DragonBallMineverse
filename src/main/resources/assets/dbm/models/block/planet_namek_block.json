@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/planetnamekblock",
+    "up": "dbm:block/planetnamekblock",
+    "north": "dbm:block/planetnamekblock",
+    "east": "dbm:block/planetnamekblock",
+    "south": "dbm:block/planetnamekblock",
+    "west": "dbm:block/planetnamekblock",
+    "particle": "dbm:block/planetnamekblock"
+  },
+  "render_type": "solid"
+}

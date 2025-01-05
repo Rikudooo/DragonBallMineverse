@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "MOUSE_RIGHT",
+    "keyBindingName": "Use/Charge Ki Attack",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "UseKiAttackOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "UseKiAttackOnKeyReleased"
+    }
+  }
+}

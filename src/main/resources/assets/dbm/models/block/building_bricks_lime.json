@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/limebuildingbrick",
+    "up": "dbm:block/limebuildingbrick",
+    "north": "dbm:block/limebuildingbrick",
+    "east": "dbm:block/limebuildingbrick",
+    "south": "dbm:block/limebuildingbrick",
+    "west": "dbm:block/limebuildingbrick",
+    "particle": "dbm:block/limebuildingbrick"
+  },
+  "render_type": "solid"
+}

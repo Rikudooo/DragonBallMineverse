@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dbm:block/healing_water"
+    }
+  }
+}

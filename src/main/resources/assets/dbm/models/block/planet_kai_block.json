@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/kaiworldplanetblock",
+    "up": "dbm:block/kaiworldplanetblock",
+    "north": "dbm:block/kaiworldplanetblock",
+    "east": "dbm:block/kaiworldplanetblock",
+    "south": "dbm:block/kaiworldplanetblock",
+    "west": "dbm:block/kaiworldplanetblock",
+    "particle": "dbm:block/kaiworldplanetblock"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/yellow_stained_glass",
+    "up": "dbm:block/yellow_stained_glass",
+    "north": "dbm:block/yellow_stained_glass",
+    "east": "dbm:block/yellow_stained_glass",
+    "south": "dbm:block/yellow_stained_glass",
+    "west": "dbm:block/yellow_stained_glass",
+    "particle": "dbm:block/yellow_stained_glass"
+  },
+  "render_type": "translucent"
+}

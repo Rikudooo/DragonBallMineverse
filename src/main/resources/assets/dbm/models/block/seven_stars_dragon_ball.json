@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/sevenstardragonball",
+  "textures": {
+    "all": "dbm:block/db7",
+    "particle": "dbm:block/db7",
+    "0": "dbm:block/dragonballtexture"
+  },
+  "render_type": "translucent"
+}

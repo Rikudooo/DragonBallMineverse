@@ -1,0 +1,134 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "bluedbgui.png",
+          "use1Xscale": false,
+          "x": 102,
+          "y": 37
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_welcome_to_dragon_ball_mineverse",
+          "text": {
+            "fixedValue": "Welcome to Dragon Ball Mineverse! Embark"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 108,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_on_an_epic_journey_through_the",
+          "text": {
+            "fixedValue": "on an epic journey through the world of"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 108,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_dragon_ball_where_power_knows_n",
+          "text": {
+            "fixedValue": "Dragon Ball, where power knows no limits."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 108,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_train_hard_unlock_powerful_form",
+          "text": {
+            "fixedValue": "Train hard, unlock powerful forms, and"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 108,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_challenge_legendary_foes_your_a",
+          "text": {
+            "fixedValue": "challenge legendary foes. Your adventure"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 108,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_become_the_strongest_begins_n",
+          "text": {
+            "fixedValue": "to become the strongest begins now!"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 108,
+          "y": 89
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_right",
+          "image": "right.png",
+          "hoveredImage": "righthovered.png",
+          "onClick": {
+            "name": "OpenCreationGUI"
+          },
+          "x": 311,
+          "y": 184
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

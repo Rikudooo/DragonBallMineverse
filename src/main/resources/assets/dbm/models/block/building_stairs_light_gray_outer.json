@@ -1,0 +1,10 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "particle": "dbm:block/lightgrayblock",
+    "bottom": "dbm:block/lightgrayblock",
+    "top": "dbm:block/lightgrayblock",
+    "side": "dbm:block/lightgrayblock"
+  },
+  "render_type": "solid"
+}

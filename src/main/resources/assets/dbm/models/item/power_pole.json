@@ -1,0 +1,7 @@
+{
+  "parent": "dbm:custom/powerpole",
+  "textures": {
+    "0": "dbm:block/powerpole",
+    "particle": "dbm:item/powerpole"
+  }
+}

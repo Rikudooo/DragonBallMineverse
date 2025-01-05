@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/grayblock",
+    "up": "dbm:block/grayblock",
+    "north": "dbm:block/grayblock",
+    "east": "dbm:block/grayblock",
+    "south": "dbm:block/grayblock",
+    "west": "dbm:block/grayblock",
+    "particle": "dbm:block/grayblock"
+  },
+  "render_type": "solid"
+}

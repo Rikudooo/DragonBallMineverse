@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "dbm:block/orangebuildingblock",
+    "bottom": "dbm:block/orangebuildingblock",
+    "top": "dbm:block/orangebuildingblock",
+    "side": "dbm:block/orangebuildingblock"
+  },
+  "render_type": "solid"
+}

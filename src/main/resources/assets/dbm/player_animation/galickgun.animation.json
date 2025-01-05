@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"galickgun": {
+			"loop": true,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"vector": [-85.63184, -15.6851, 7.69376]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-85.40903, 12.1183, -15.74213]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [0, 0, 10]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [0, 0, -10]
+					}
+				}
+			}
+		}
+	}
+}

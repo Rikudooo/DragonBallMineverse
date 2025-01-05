@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Power Release",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "ReleasePowerOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ReleasePowerOnKeyReleased"
+    }
+  }
+}

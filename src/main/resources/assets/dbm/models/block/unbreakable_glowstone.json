@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/glowstone",
+    "up": "dbm:block/glowstone",
+    "north": "dbm:block/glowstone",
+    "east": "dbm:block/glowstone",
+    "south": "dbm:block/glowstone",
+    "west": "dbm:block/glowstone",
+    "particle": "dbm:block/glowstone"
+  },
+  "render_type": "solid"
+}

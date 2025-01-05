@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/kaistone",
+    "up": "dbm:block/kaistone",
+    "north": "dbm:block/kaistone",
+    "east": "dbm:block/kaistone",
+    "south": "dbm:block/kaistone",
+    "west": "dbm:block/kaistone",
+    "particle": "dbm:block/kaistone"
+  },
+  "render_type": "solid"
+}

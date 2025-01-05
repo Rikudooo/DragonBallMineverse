@@ -1,0 +1,10 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "particle": "dbm:block/orangebuildingblockbricks",
+    "bottom": "dbm:block/orangebuildingblockbricks",
+    "top": "dbm:block/orangebuildingblockbricks",
+    "side": "dbm:block/orangebuildingblockbricks"
+  },
+  "render_type": "solid"
+}

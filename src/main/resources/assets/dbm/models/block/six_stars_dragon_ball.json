@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/sixstardragonball",
+  "textures": {
+    "all": "dbm:block/db6",
+    "particle": "dbm:block/db6",
+    "0": "dbm:block/dragonballtexture"
+  },
+  "render_type": "translucent"
+}

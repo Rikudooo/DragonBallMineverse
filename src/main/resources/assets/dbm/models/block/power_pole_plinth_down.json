@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/powerpoledownsocle",
+  "textures": {
+    "all": "dbm:block/yellowbuildingblock",
+    "particle": "dbm:block/yellowbuildingblock",
+    "0": "dbm:block/yellowbuildingblock"
+  },
+  "render_type": "solid"
+}

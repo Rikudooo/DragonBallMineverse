@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"twohandwave": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"torso": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-84.48615, -24.89837, -2.3273]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-85, 25, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [-4.98107, 0.43523, 9.98107]
+					},
+					"position": {
+						"vector": [0, 0, 2]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [2.4905, 0.21782, -9.99527]
+					},
+					"position": {
+						"vector": [0, 0, 2]
+					}
+				}
+			}
+		}
+	}
+}

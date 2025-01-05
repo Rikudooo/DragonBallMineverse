@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "dbm:block/blackbuildingblockbricks",
+    "bottom": "dbm:block/blackbuildingblockbricks",
+    "top": "dbm:block/blackbuildingblockbricks",
+    "side": "dbm:block/blackbuildingblockbricks"
+  },
+  "render_type": "solid"
+}

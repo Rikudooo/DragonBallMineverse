@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Z",
+    "keyBindingName": "Alternative Function",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "AltFunctionOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "AltFunctionOnKeyReleased"
+    }
+  }
+}

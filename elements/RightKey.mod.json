@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "D",
+    "keyBindingName": "Right",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "RightKeyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "RightKeyOnKeyReleased"
+    }
+  }
+}

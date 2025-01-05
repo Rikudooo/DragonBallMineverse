@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/fourstardragonball",
+  "textures": {
+    "all": "dbm:block/db4",
+    "particle": "dbm:block/db4",
+    "0": "dbm:block/dragonballtexture"
+  },
+  "render_type": "translucent"
+}

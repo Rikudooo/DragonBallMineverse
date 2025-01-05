@@ -1,0 +1,586 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "customformforgegui2.png",
+          "use1Xscale": false,
+          "x": 15,
+          "y": 36
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallgui2.png",
+          "use1Xscale": false,
+          "x": 333,
+          "y": 77
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "DisplayPlayer"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 356,
+          "y": 135
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "alignment.png",
+          "use1Xscale": false,
+          "x": 22,
+          "y": 43
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fightingclass.png",
+          "use1Xscale": false,
+          "x": 22,
+          "y": 119
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "AlignmentLeft"
+          },
+          "x": 25,
+          "y": 72
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "AlignmentRight"
+          },
+          "x": 36,
+          "y": 72
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft1",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "FightingClassLeft"
+          },
+          "x": 25,
+          "y": 150
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright1",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "FightingClassRight"
+          },
+          "x": 36,
+          "y": 150
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_alignment",
+          "text": {
+            "fixedValue": "Alignment",
+            "name": "Alignment"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 49,
+          "y": 75
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fighting_class",
+          "text": {
+            "fixedValue": "Fighting Class",
+            "name": "FightingClass"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 48,
+          "y": 152
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 127,
+          "y": 113
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 186,
+          "y": 113
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 227,
+          "y": 113
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_acts_with_compassion_and_righteo",
+          "text": {
+            "fixedValue": "Acts with compassion and"
+          },
+          "color": {
+            "value": -6697729,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnGood"
+          },
+          "x": 123,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_righteousness_always_striving",
+          "text": {
+            "fixedValue": "righteousness. always striving to"
+          },
+          "color": {
+            "value": -6697729,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnGood"
+          },
+          "x": 123,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_protect_and_help_others",
+          "text": {
+            "fixedValue": "protect and help others"
+          },
+          "color": {
+            "value": -6697729,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnGood"
+          },
+          "x": 123,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_balanced_between_good_and_evil",
+          "text": {
+            "fixedValue": "Balanced between good and evil,"
+          },
+          "color": {
+            "value": -3368449,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnNeutral"
+          },
+          "x": 123,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_focused_on_personal_goals",
+          "text": {
+            "fixedValue": "focused on personal goals"
+          },
+          "color": {
+            "value": -3368449,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnNeutral"
+          },
+          "x": 123,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_without_extreme_morality",
+          "text": {
+            "fixedValue": "without extreme morality"
+          },
+          "color": {
+            "value": -3368449,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnNeutral"
+          },
+          "x": 123,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_driven_by_selfish_desires_using",
+          "text": {
+            "fixedValue": "Driven by selfish desires, using"
+          },
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnEvil"
+          },
+          "x": 123,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_power_to_dominate_and",
+          "text": {
+            "fixedValue": "power to dominate and cause harm"
+          },
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnEvil"
+          },
+          "x": 123,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_others",
+          "text": {
+            "fixedValue": "to others"
+          },
+          "color": {
+            "value": -6750208,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnEvil"
+          },
+          "x": 123,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_a_fighter_who_relies_on_physical",
+          "text": {
+            "fixedValue": "A fighter who relies on physical"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnWarrior"
+          },
+          "x": 123,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_strength_and_durability_using_k",
+          "text": {
+            "fixedValue": "strength and durability, using ki "
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnWarrior"
+          },
+          "x": 123,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_enhance_powerful",
+          "text": {
+            "fixedValue": "to enhance powerful close-range"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnWarrior"
+          },
+          "x": 123,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_attacks_and_defense",
+          "text": {
+            "fixedValue": "attacks and defense"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnWarrior"
+          },
+          "x": 123,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_a_balanced_combatant_mastering",
+          "text": {
+            "fixedValue": "A balanced combatant, mastering"
+          },
+          "color": {
+            "value": -6697729,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnMartialArtist"
+          },
+          "x": 123,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_physical_and_spiritual_technique",
+          "text": {
+            "fixedValue": "physical and spiritual techniques"
+          },
+          "color": {
+            "value": -6697729,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnMartialArtist"
+          },
+          "x": 123,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_combining_precision_agility_an",
+          "text": {
+            "fixedValue": "combining precision, agility, "
+          },
+          "color": {
+            "value": -6697729,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnMartialArtist"
+          },
+          "x": 123,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_and_ki_control",
+          "text": {
+            "fixedValue": "and ki control"
+          },
+          "color": {
+            "value": -6697729,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnMartialArtist"
+          },
+          "x": 123,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_a_specialist_in_harnessing_ki_en",
+          "text": {
+            "fixedValue": "A specialist in harnessing ki"
+          },
+          "color": {
+            "value": -16737793,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnSpiritualist"
+          },
+          "x": 123,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_energy_focusing_on_advanced",
+          "text": {
+            "fixedValue": "energy, focusing on advanced"
+          },
+          "color": {
+            "value": -16737793,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnSpiritualist"
+          },
+          "x": 123,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_techniques_and_longrange",
+          "text": {
+            "fixedValue": "techniques and long-range attacks"
+          },
+          "color": {
+            "value": -16737793,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnSpiritualist"
+          },
+          "x": 123,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hrough_energy_manipulation",
+          "text": {
+            "fixedValue": "hrough energy manipulation"
+          },
+          "color": {
+            "value": -16737793,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnSpiritualist"
+          },
+          "x": 123,
+          "y": 161
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_left",
+          "image": "left.png",
+          "hoveredImage": "lefthovered.png",
+          "onClick": {
+            "name": "OpenCreationGUI"
+          },
+          "x": 19,
+          "y": 183
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_right",
+          "image": "right.png",
+          "hoveredImage": "righthovered.png",
+          "onClick": {
+            "name": "OpenFinishGUI"
+          },
+          "x": 285,
+          "y": 183
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

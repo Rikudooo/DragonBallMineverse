@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/invertedblackcoloredblockbricks",
+    "up": "dbm:block/invertedblackcoloredblockbricks",
+    "north": "dbm:block/invertedblackcoloredblockbricks",
+    "east": "dbm:block/invertedblackcoloredblockbricks",
+    "south": "dbm:block/invertedblackcoloredblockbricks",
+    "west": "dbm:block/invertedblackcoloredblockbricks",
+    "particle": "dbm:block/invertedblackcoloredblockbricks"
+  },
+  "render_type": "solid"
+}

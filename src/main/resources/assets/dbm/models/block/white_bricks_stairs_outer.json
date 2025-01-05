@@ -1,0 +1,10 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "particle": "dbm:block/whitebuildingblockbricks",
+    "bottom": "dbm:block/whitebuildingblockbricks",
+    "top": "dbm:block/whitebuildingblockbricks",
+    "side": "dbm:block/whitebuildingblockbricks"
+  },
+  "render_type": "solid"
+}

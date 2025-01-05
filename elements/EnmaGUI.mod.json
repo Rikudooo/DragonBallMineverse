@@ -1,0 +1,106 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "dialogbox.png",
+          "use1Xscale": false,
+          "x": 24,
+          "y": 143
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "enmahead.png",
+          "use1Xscale": false,
+          "x": 27,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_enma",
+          "text": {
+            "fixedValue": "King Enma"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 60,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hello_there_so_youre_dead_hu",
+          "text": {
+            "fixedValue": "Hello there! So, you're dead, huh? Let's see what your fate holds..."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogexit",
+          "image": "dialogexit.png",
+          "hoveredImage": "dialogexithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 393,
+          "y": 145
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_revivebutton",
+          "image": "revivebutton.png",
+          "hoveredImage": "revivebuttonhovered.png",
+          "onClick": {
+            "name": "ReviveButton"
+          },
+          "x": 261,
+          "y": 111
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_reincarnatebutton",
+          "image": "reincarnatebutton.png",
+          "hoveredImage": "reincarnatebuttonhovered.png",
+          "x": 332,
+          "y": 111
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

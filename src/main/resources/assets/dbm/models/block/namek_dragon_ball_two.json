@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/twostarnamekdragonball",
+  "textures": {
+    "all": "dbm:block/db2",
+    "particle": "dbm:block/db2",
+    "0": "dbm:block/dragonballtexture"
+  },
+  "render_type": "translucent"
+}

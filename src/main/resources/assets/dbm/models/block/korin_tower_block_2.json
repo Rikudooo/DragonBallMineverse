@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/korintowerblock2",
+  "textures": {
+    "all": "dbm:block/korinblock2",
+    "particle": "dbm:block/korinblock2",
+    "3": "dbm:block/korintowerblock"
+  },
+  "render_type": "solid"
+}

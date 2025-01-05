@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/buildingtiles2",
+    "up": "dbm:block/buildingtiles2",
+    "north": "dbm:block/buildingtiles2",
+    "east": "dbm:block/buildingtiles2",
+    "south": "dbm:block/buildingtiles2",
+    "west": "dbm:block/buildingtiles2",
+    "particle": "dbm:block/buildingtiles2"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "SPACE",
+    "keyBindingName": "Space",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "SpaceKeyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "SpaceKeyOnKeyReleased"
+    }
+  }
+}

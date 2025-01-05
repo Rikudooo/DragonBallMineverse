@@ -1,0 +1,142 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "learngui.png",
+          "use1Xscale": false,
+          "x": 28,
+          "y": 97
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "northkaioface.png",
+          "use1Xscale": false,
+          "x": 41,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_enma",
+          "text": {
+            "fixedValue": "North Kaio"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 81,
+          "y": 127
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogexit",
+          "image": "dialogexit.png",
+          "hoveredImage": "dialogexithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 382,
+          "y": 142
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "kaiokenoverlay.png",
+          "use1Xscale": false,
+          "x": 71,
+          "y": 155
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnKaioken"
+          },
+          "displayCondition": {
+            "name": "ReturnKaiokenNotOwned"
+          },
+          "x": 46,
+          "y": 157
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_kaioken_15000_tp",
+          "text": {
+            "fixedValue": "Kaioken | 15,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 86,
+          "y": 159
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton1",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "x": 46,
+          "y": 176
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spiritbomb.png",
+          "use1Xscale": false,
+          "x": 71,
+          "y": 175
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spirit_bomb_cost_8000_tp",
+          "text": {
+            "fixedValue": "Spirit Bomb | Cost: 8,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 86,
+          "y": 178
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

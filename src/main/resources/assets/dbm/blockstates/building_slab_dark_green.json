@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dbm:block/building_slab_dark_green"
+    },
+    "type=top": {
+      "model": "dbm:block/building_slab_dark_green_top"
+    },
+    "type=double": {
+      "model": "dbm:block/building_slab_dark_green_full"
+    }
+  }
+}

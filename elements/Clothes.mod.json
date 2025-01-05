@@ -1,0 +1,11 @@
+{
+  "_fv": 66,
+  "_type": "tab",
+  "definition": {
+    "name": "Clothes",
+    "icon": {
+      "value": "CUSTOM:TurtleGiKingKai.body"
+    },
+    "showSearch": false
+  }
+}

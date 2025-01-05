@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/kaiplanks",
+    "up": "dbm:block/kaiplanks",
+    "north": "dbm:block/kaiplanks",
+    "east": "dbm:block/kaiplanks",
+    "south": "dbm:block/kaiplanks",
+    "west": "dbm:block/kaiplanks",
+    "particle": "dbm:block/kaiplanks"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "dbm:custom/dragonradar",
+  "textures": {
+    "0": "dbm:block/dragonradar",
+    "particle": "dbm:item/dragonballradar"
+  }
+}

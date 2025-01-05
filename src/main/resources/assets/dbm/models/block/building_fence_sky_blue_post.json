@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "dbm:block/skybluebuildingblock",
+    "particle": "dbm:block/skybluebuildingblock"
+  },
+  "render_type": "solid"
+}

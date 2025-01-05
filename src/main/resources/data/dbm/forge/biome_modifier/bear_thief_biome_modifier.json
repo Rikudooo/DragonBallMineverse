@@ -1,0 +1,15 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "sunflower_plains",
+    "old_growth_birch_forest",
+    "forest",
+    "birch_forest"
+  ],
+  "spawners": {
+    "type": "dbm:bear_thief",
+    "weight": 12,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

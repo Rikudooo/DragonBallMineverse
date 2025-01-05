@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "S",
+    "keyBindingName": "Backward",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "BackwardKeyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "BackwardKeyOnKeyReleased"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "dbm:block/vertical_ladder_support"
+    },
+    "facing=east": {
+      "model": "dbm:block/vertical_ladder_support",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "dbm:block/vertical_ladder_support",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dbm:block/vertical_ladder_support",
+      "y": 270
+    }
+  }
+}

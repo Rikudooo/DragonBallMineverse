@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "dbm:block/pinkbuildingblockbricks",
+    "particle": "dbm:block/pinkbuildingblockbricks"
+  },
+  "render_type": "solid"
+}

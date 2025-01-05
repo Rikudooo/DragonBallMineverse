@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dbm:block/hyperbolic_time_chamber_block"
+    }
+  }
+}

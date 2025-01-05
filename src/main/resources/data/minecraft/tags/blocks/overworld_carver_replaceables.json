@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "dbm:unbreakable_dirt",
+    "dbm:unbreakable_grass_block",
+    "dbm:unbreakable_stone"
+  ]
+}

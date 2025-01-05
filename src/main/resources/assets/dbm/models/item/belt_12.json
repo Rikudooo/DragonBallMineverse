@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dbm:item/item_belt_2_12"
+  }
+}

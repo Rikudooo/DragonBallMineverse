@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "A",
+    "keyBindingName": "Left",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "LeftKeyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "LeftKeyOnKeyReleased"
+    }
+  }
+}

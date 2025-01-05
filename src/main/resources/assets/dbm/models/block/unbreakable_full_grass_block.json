@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/greenestgrassblock",
+    "up": "dbm:block/greenestgrassblock",
+    "north": "dbm:block/greenestgrassblock",
+    "east": "dbm:block/greenestgrassblock",
+    "south": "dbm:block/greenestgrassblock",
+    "west": "dbm:block/greenestgrassblock",
+    "particle": "dbm:block/greenestgrassblock"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aba",
+    "cdc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blue_wool"
+    },
+    "b": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "c": {
+      "item": "minecraft:white_wool"
+    },
+    "d": {
+      "item": "minecraft:yellow_wool"
+    }
+  },
+  "result": {
+    "item": "dbm:battle_armor_chestplate",
+    "count": 1
+  }
+}

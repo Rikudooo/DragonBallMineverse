@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "nothing",
+        "2": "korintowerblock"
+      },
+      "name": "default"
+    }
+  }
+}

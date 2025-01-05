@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"kamehameha": {
+			"loop": true,
+			"animation_length": 0.25,
+			"bones": {
+				"RightArm": {
+					"rotation": {
+						"vector": [-91.09364, -24.71835, 4.19988]
+					}
+				},
+				"LeftArm": {
+					"rotation": {
+						"vector": [-70.4602, 25.11398, -0.26302]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-93.05099, -34.96182, 1.74942]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-65.62555, 26.54576, 7.35882]
+					}
+				}
+			}
+		}
+	}
+}

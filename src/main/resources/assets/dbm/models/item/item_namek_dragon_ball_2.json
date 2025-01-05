@@ -1,0 +1,7 @@
+{
+  "parent": "dbm:custom/twostarnamekdragonball",
+  "textures": {
+    "0": "dbm:block/dragonballtexture",
+    "particle": "dbm:item/db2"
+  }
+}

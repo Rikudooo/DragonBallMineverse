@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "dbm:block/pinkbuildingblock",
+    "bottom": "dbm:block/pinkbuildingblock",
+    "top": "dbm:block/pinkbuildingblock",
+    "side": "dbm:block/pinkbuildingblock"
+  },
+  "render_type": "solid"
+}

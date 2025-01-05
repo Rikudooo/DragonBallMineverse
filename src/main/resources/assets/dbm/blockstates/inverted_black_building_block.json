@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dbm:block/inverted_black_building_block"
+    }
+  }
+}

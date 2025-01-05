@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "dbm:block/diagonal_ladder"
+    },
+    "facing=east": {
+      "model": "dbm:block/diagonal_ladder",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "dbm:block/diagonal_ladder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dbm:block/diagonal_ladder",
+      "y": 270
+    }
+  }
+}

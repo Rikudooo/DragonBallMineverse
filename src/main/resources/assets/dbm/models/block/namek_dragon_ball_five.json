@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/fivestarnamekdragonball",
+  "textures": {
+    "all": "dbm:block/db5",
+    "particle": "dbm:block/db5",
+    "0": "dbm:block/dragonballtexture"
+  },
+  "render_type": "translucent"
+}

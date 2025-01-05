@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/otherworldcloud",
+    "up": "dbm:block/otherworldcloud",
+    "north": "dbm:block/otherworldcloud",
+    "east": "dbm:block/otherworldcloud",
+    "south": "dbm:block/otherworldcloud",
+    "west": "dbm:block/otherworldcloud",
+    "particle": "dbm:block/otherworldcloud"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,788 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "customformforgegui2.png",
+          "use1Xscale": false,
+          "x": 14,
+          "y": 36
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "skin.png",
+          "use1Xscale": false,
+          "x": 229,
+          "y": 45
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallgui2.png",
+          "use1Xscale": false,
+          "x": 333,
+          "y": 77
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "DisplayPlayer"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 356,
+          "y": 135
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "race.png",
+          "use1Xscale": false,
+          "x": 24,
+          "y": 45
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_race",
+          "text": {
+            "fixedValue": "",
+            "name": "Race"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 38,
+          "y": 69
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "SelectRaceLeft"
+          },
+          "x": 24,
+          "y": 67
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "SelectRaceRight"
+          },
+          "x": 75,
+          "y": 67
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "eyes.png",
+          "use1Xscale": false,
+          "x": 161,
+          "y": 45
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hair.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 24,
+          "y": 97
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft1",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "HairLeft"
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 32,
+          "y": 119
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright1",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "HairRight"
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 67,
+          "y": 119
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft2",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "HairColorLeft"
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 32,
+          "y": 136
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright2",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "HairColorRight"
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 67,
+          "y": 136
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 25,
+          "y": 158
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft3",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "EyebrowsLeft"
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 32,
+          "y": 164
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright3",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "EyebrowsRight"
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 67,
+          "y": 164
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft4",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "EyesLeft"
+          },
+          "x": 165,
+          "y": 68
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright4",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "EyesRight"
+          },
+          "x": 196,
+          "y": 68
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft5",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "EyesColorLeft"
+          },
+          "x": 165,
+          "y": 85
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright5",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "EyesColorRight"
+          },
+          "x": 196,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 155,
+          "y": 106
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft6",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "MouthLeft"
+          },
+          "x": 165,
+          "y": 113
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright6",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "MouthRight"
+          },
+          "x": 196,
+          "y": 113
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft7",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "Skin1Left"
+          },
+          "x": 239,
+          "y": 68
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright7",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "Skin1Right"
+          },
+          "x": 271,
+          "y": 68
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft8",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "Skin2Left"
+          },
+          "displayCondition": {
+            "name": "ReturnHas2Skins"
+          },
+          "x": 239,
+          "y": 95
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright8",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "Skin2Right"
+          },
+          "displayCondition": {
+            "name": "ReturnHas2Skins"
+          },
+          "x": 271,
+          "y": 95
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft9",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "Skin3Left"
+          },
+          "displayCondition": {
+            "name": "ReturnHas3Skins"
+          },
+          "x": 239,
+          "y": 122
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright9",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "Skin3Right"
+          },
+          "displayCondition": {
+            "name": "ReturnHas3Skins"
+          },
+          "x": 271,
+          "y": 122
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft10",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "Skin4Left"
+          },
+          "displayCondition": {
+            "name": "ReturnHas4Skins"
+          },
+          "x": 239,
+          "y": 149
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright10",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "Skin4Right"
+          },
+          "displayCondition": {
+            "name": "ReturnHas4Skins"
+          },
+          "x": 271,
+          "y": 149
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_hair",
+          "text": {
+            "fixedValue": "",
+            "name": "Hair"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 45,
+          "y": 121
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_hair_color",
+          "text": {
+            "fixedValue": "",
+            "name": "HairColor"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 45,
+          "y": 138
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_eyes",
+          "text": {
+            "fixedValue": "",
+            "name": "Eyes"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_eyes_color",
+          "text": {
+            "fixedValue": "",
+            "name": "EyesColor"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 87
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_eyebrows",
+          "text": {
+            "fixedValue": "",
+            "name": "Eyebrows"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnHumanoid"
+          },
+          "x": 45,
+          "y": 166
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mouth",
+          "text": {
+            "fixedValue": "",
+            "name": "Mouth"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 115
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_left",
+          "image": "left.png",
+          "hoveredImage": "lefthovered.png",
+          "onClick": {
+            "name": "MenuOnKeyReleased"
+          },
+          "x": 19,
+          "y": 183
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_skin_1",
+          "text": {
+            "fixedValue": "",
+            "name": "Skin1"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 255,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_skin_2",
+          "text": {
+            "fixedValue": "",
+            "name": "Skin2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnHas2Skins"
+          },
+          "x": 255,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_skin_3",
+          "text": {
+            "fixedValue": "",
+            "name": "Skin3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnHas3Skins"
+          },
+          "x": 255,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_skin_4",
+          "text": {
+            "fixedValue": "",
+            "name": "Skin4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnHas4Skins"
+          },
+          "x": 255,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_right",
+          "image": "right.png",
+          "hoveredImage": "righthovered.png",
+          "onClick": {
+            "name": "OpenCreation2GUI"
+          },
+          "x": 285,
+          "y": 183
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "officon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnTailOff"
+          },
+          "x": 35,
+          "y": 86
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "onicon.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnTailTrue"
+          },
+          "x": 35,
+          "y": 86
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_onandoffbutton",
+          "image": "onandoffbutton.png",
+          "hoveredImage": "onandoff.png",
+          "onClick": {
+            "name": "SetTailTrueFalse"
+          },
+          "displayCondition": {
+            "name": "ReturnSaiyanOrHalfSaiyan"
+          },
+          "x": 35,
+          "y": 86
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "size.png",
+          "use1Xscale": false,
+          "x": 92,
+          "y": 45
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft11",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "HeightLeft"
+          },
+          "x": 104,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_text_ki_sense_level",
+          "text": {
+            "fixedValue": "",
+            "name": "Height"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 118,
+          "y": 70
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright11",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "HeightRight"
+          },
+          "x": 131,
+          "y": 68
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customleft12",
+          "image": "customleft.png",
+          "hoveredImage": "customlefthovered.png",
+          "onClick": {
+            "name": "Widthleft"
+          },
+          "x": 104,
+          "y": 85
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_customright12",
+          "image": "customright.png",
+          "hoveredImage": "customrighthovered.png",
+          "onClick": {
+            "name": "WidthRight"
+          },
+          "x": 131,
+          "y": 85
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_width",
+          "text": {
+            "fixedValue": "",
+            "name": "Width"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 118,
+          "y": 87
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

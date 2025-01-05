@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/ajisaleaves",
+    "up": "dbm:block/ajisaleaves",
+    "north": "dbm:block/ajisaleaves",
+    "east": "dbm:block/ajisaleaves",
+    "south": "dbm:block/ajisaleaves",
+    "west": "dbm:block/ajisaleaves",
+    "particle": "dbm:block/ajisaleaves"
+  },
+  "render_type": "solid"
+}

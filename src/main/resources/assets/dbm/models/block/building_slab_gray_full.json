@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "dbm:block/grayblock",
+    "bottom": "dbm:block/grayblock",
+    "top": "dbm:block/grayblock",
+    "side": "dbm:block/grayblock"
+  },
+  "render_type": "solid"
+}

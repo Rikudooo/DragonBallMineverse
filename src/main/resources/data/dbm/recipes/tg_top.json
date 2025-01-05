@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aaa",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:orange_wool"
+    },
+    "b": {
+      "item": "minecraft:blue_wool"
+    }
+  },
+  "result": {
+    "item": "dbm:turtle_gi_chestplate",
+    "count": 1
+  }
+}

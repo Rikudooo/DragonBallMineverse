@@ -1,0 +1,10 @@
+{
+  "parent": "dbm:custom/supportverticalladder",
+  "textures": {
+    "all": "dbm:block/korinblock2",
+    "particle": "dbm:block/korinblock2",
+    "1": "dbm:block/nothing",
+    "2": "dbm:block/korintowerblock"
+  },
+  "render_type": "cutout"
+}

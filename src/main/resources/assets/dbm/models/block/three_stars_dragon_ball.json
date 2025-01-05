@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/threestardragonball",
+  "textures": {
+    "all": "dbm:block/db3",
+    "particle": "dbm:block/db3",
+    "0": "dbm:block/dragonballtexture"
+  },
+  "render_type": "translucent"
+}

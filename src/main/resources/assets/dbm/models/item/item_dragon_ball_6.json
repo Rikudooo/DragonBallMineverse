@@ -1,0 +1,7 @@
+{
+  "parent": "dbm:custom/sixstardragonball",
+  "textures": {
+    "0": "dbm:block/dragonballtexture",
+    "particle": "dbm:item/db6"
+  }
+}

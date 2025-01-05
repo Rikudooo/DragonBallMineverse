@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/blue_stained_glass",
+    "up": "dbm:block/blue_stained_glass",
+    "north": "dbm:block/blue_stained_glass",
+    "east": "dbm:block/blue_stained_glass",
+    "south": "dbm:block/blue_stained_glass",
+    "west": "dbm:block/blue_stained_glass",
+    "particle": "dbm:block/blue_stained_glass"
+  },
+  "render_type": "translucent"
+}

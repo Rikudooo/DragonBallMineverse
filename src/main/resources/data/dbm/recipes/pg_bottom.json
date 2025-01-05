@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a",
+    "b b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:purple_wool"
+    },
+    "b": {
+      "item": "minecraft:brown_wool"
+    }
+  },
+  "result": {
+    "item": "dbm:purple_gi_leggings",
+    "count": 1
+  }
+}

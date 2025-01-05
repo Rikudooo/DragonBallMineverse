@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dbm:horizontal_ladder_support",
+    "dbm:horizontal_ladder",
+    "dbm:diagonal_ladder",
+    "dbm:vertical_ladder",
+    "dbm:vertical_ladder_support"
+  ]
+}

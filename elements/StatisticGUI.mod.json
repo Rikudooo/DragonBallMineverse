@@ -1,0 +1,819 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "4stardbgui.png",
+          "use1Xscale": false,
+          "x": 38,
+          "y": 16
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "DisplayPlayer"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 204,
+          "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 273,
+          "y": 74
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 309,
+          "y": 74
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_player_stats",
+          "text": {
+            "fixedValue": "Player Stats"
+          },
+          "color": {
+            "value": -16777063,
+            "falpha": 0.0
+          },
+          "x": 42,
+          "y": 19
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_text",
+          "text": {
+            "fixedValue": "",
+            "name": "NameText"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_alignment_text",
+          "text": {
+            "fixedValue": "",
+            "name": "AlignmentText"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_fighting_class_text",
+          "text": {
+            "fixedValue": "",
+            "name": "FightingClassText"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_max_health_text",
+          "text": {
+            "fixedValue": "",
+            "name": "MaxHealthText"
+          },
+          "color": {
+            "value": -16751104,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_max_ki_text",
+          "text": {
+            "fixedValue": "",
+            "name": "MaxKiText"
+          },
+          "color": {
+            "value": -16737793,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_race_text",
+          "text": {
+            "fixedValue": "",
+            "name": "RaceText"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_max_stamina_text",
+          "text": {
+            "fixedValue": "",
+            "name": "MaxStaminaText"
+          },
+          "color": {
+            "value": -10092340,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_strength_text",
+          "text": {
+            "fixedValue": "",
+            "name": "StrengthText"
+          },
+          "color": {
+            "value": -13434880,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_speed_text",
+          "text": {
+            "fixedValue": "",
+            "name": "SpeedText"
+          },
+          "color": {
+            "value": -3355393,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_defense_text",
+          "text": {
+            "fixedValue": "",
+            "name": "DefenseText"
+          },
+          "color": {
+            "value": -6710887,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 272,
+          "y": 154
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 305,
+          "y": 154
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_quit",
+          "image": "quit.png",
+          "hoveredImage": "quithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 376,
+          "y": 18
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_form_text",
+          "text": {
+            "fixedValue": "",
+            "name": "FormText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_sub_form_text",
+          "text": {
+            "fixedValue": "",
+            "name": "SubFormText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_tp_text",
+          "text": {
+            "fixedValue": "",
+            "name": "TPText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 55
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_body",
+          "text": {
+            "fixedValue": "Body"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 42,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_agility",
+          "text": {
+            "fixedValue": "Agility"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 42,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_strength",
+          "text": {
+            "fixedValue": "Strength"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 42,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spirit",
+          "text": {
+            "fixedValue": "Spirit"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 42,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ki_power",
+          "text": {
+            "fixedValue": "Focus"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 42,
+          "y": 179
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_body_increase_max_hp_and_stamin",
+          "text": {
+            "fixedValue": "Body: Increase Max HP and Stamina"
+          },
+          "width": 24,
+          "height": 10,
+          "x": 41,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agility_increase_speed_stamina",
+          "text": {
+            "fixedValue": "Agility: Increase Speed, Stamina, and Defense"
+          },
+          "width": 39,
+          "height": 10,
+          "x": 41,
+          "y": 126
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_strength_increase_melee_damage",
+          "text": {
+            "fixedValue": "Strength: Increase Melee Damage and Defense"
+          },
+          "width": 46,
+          "height": 11,
+          "x": 41,
+          "y": 143
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_spirit_increase_ki_pool",
+          "text": {
+            "fixedValue": "Spirit: Increase Ki Pool"
+          },
+          "width": 36,
+          "height": 11,
+          "x": 41,
+          "y": 161
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_focus_increase_ki_damage",
+          "text": {
+            "fixedValue": "Focus: Increase Ki Damage"
+          },
+          "width": 28,
+          "height": 9,
+          "x": 42,
+          "y": 180
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_ki_power_text",
+          "text": {
+            "fixedValue": "",
+            "name": "KiPowerText"
+          },
+          "color": {
+            "value": -16763905,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_melee_damage_text",
+          "text": {
+            "fixedValue": "",
+            "name": "MeleeDamageText"
+          },
+          "color": {
+            "value": -52429,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_ki_damage_text",
+          "text": {
+            "fixedValue": "",
+            "name": "KiDamageText"
+          },
+          "color": {
+            "value": -10066177,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_resilience_text",
+          "text": {
+            "fixedValue": "",
+            "name": "ResilienceText"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 179
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dbbutton",
+          "image": "dbbutton.png",
+          "hoveredImage": "dbbuttonhovered.png",
+          "onClick": {
+            "name": "UpgradeBody"
+          },
+          "x": 25,
+          "y": 106
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dbbutton1",
+          "image": "dbbutton.png",
+          "hoveredImage": "dbbuttonhovered.png",
+          "onClick": {
+            "name": "UpgradeAgility"
+          },
+          "x": 25,
+          "y": 124
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dbbutton2",
+          "image": "dbbutton.png",
+          "hoveredImage": "dbbuttonhovered.png",
+          "onClick": {
+            "name": "UpgradeStrength"
+          },
+          "x": 25,
+          "y": 142
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dbbutton3",
+          "image": "dbbutton.png",
+          "hoveredImage": "dbbuttonhovered.png",
+          "onClick": {
+            "name": "UpgradeSpirit"
+          },
+          "x": 25,
+          "y": 160
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dbbutton4",
+          "image": "dbbutton.png",
+          "hoveredImage": "dbbuttonhovered.png",
+          "onClick": {
+            "name": "UpgradeFocus"
+          },
+          "x": 25,
+          "y": 178
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_multiply",
+          "image": "multiply.png",
+          "hoveredImage": "multiplyhovered.png",
+          "onClick": {
+            "name": "ChangeStatIncrease"
+          },
+          "x": 26,
+          "y": 54
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statsicon",
+          "image": "statsicon.png",
+          "hoveredImage": "statsiconhovered.png",
+          "onClick": {
+            "name": "OpenStatsGUI"
+          },
+          "x": 43,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillicon",
+          "image": "skillicon.png",
+          "hoveredImage": "skilliconhovered.png",
+          "onClick": {
+            "name": "OpenSkillsGUI"
+          },
+          "x": 68,
+          "y": 216
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "currenticon.png",
+          "use1Xscale": false,
+          "x": 41,
+          "y": 214
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_kiattackicon",
+          "image": "kiattackicon.png",
+          "hoveredImage": "kiattackiconhovered.png",
+          "onClick": {
+            "name": "OpenSkillsGUI"
+          },
+          "x": 93,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_storyiconhovered",
+          "image": "storyicon.png",
+          "hoveredImage": "storyiconhovered.png",
+          "onClick": {
+            "name": "OpenStoryGUI"
+          },
+          "x": 168,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_formicon",
+          "image": "formicon.png",
+          "hoveredImage": "formiconhovered.png",
+          "onClick": {
+            "name": "OpenRacialSkillsGUI"
+          },
+          "x": 118,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ultimateformicon",
+          "image": "ultimateformicon.png",
+          "hoveredImage": "ultimateformiconhovered.png",
+          "onClick": {
+            "name": "OpenUltimateSkillsGUI"
+          },
+          "x": 143,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_groupicon",
+          "image": "groupicon.png",
+          "hoveredImage": "groupiconhovered.png",
+          "onClick": {
+            "name": "OpenGroupGUI"
+          },
+          "x": 193,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon8",
+          "image": "icon8.png",
+          "hoveredImage": "hoveredicon8.png",
+          "onClick": {
+            "name": "OpenIcon8"
+          },
+          "x": 218,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon9",
+          "image": "icon9.png",
+          "hoveredImage": "hoveredicon9.png",
+          "onClick": {
+            "name": "OpenIcon9"
+          },
+          "x": 243,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon10",
+          "image": "icon10.png",
+          "hoveredImage": "hoveredicon10.png",
+          "onClick": {
+            "name": "OpenIcon10"
+          },
+          "x": 268,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon11",
+          "image": "icon11.png",
+          "hoveredImage": "hoveredicon11.png",
+          "onClick": {
+            "name": "OpenIcon11"
+          },
+          "x": 293,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon12",
+          "image": "icon12.png",
+          "hoveredImage": "hoveredicon12.png",
+          "onClick": {
+            "name": "OpenIcon12"
+          },
+          "x": 318,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon13",
+          "image": "icon13.png",
+          "hoveredImage": "hoveredicon13.png",
+          "onClick": {
+            "name": "OpenIcon13"
+          },
+          "x": 343,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon14",
+          "image": "icon14.png",
+          "hoveredImage": "hoveredicon14.png",
+          "onClick": {
+            "name": "OpenIcon14"
+          },
+          "x": 368,
+          "y": 216
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_formtext",
+          "text": {
+            "fixedValue": "FormText",
+            "name": "ReturnFormText"
+          },
+          "width": 44,
+          "height": 10,
+          "x": 50,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_age_text",
+          "text": {
+            "fixedValue": "A",
+            "name": "AgeText"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 62
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

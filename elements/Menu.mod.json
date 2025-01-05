@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "M",
+    "keyBindingName": "Menu",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyReleased": {
+      "name": "MenuOnKeyReleased"
+    }
+  }
+}

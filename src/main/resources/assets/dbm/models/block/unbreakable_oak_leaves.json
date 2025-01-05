@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/oakleavescolored",
+    "up": "dbm:block/oakleavescolored",
+    "north": "dbm:block/oakleavescolored",
+    "east": "dbm:block/oakleavescolored",
+    "south": "dbm:block/oakleavescolored",
+    "west": "dbm:block/oakleavescolored",
+    "particle": "dbm:block/oakleavescolored"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,50 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"giantkiattackcharge": {
+			"loop": true,
+			"animation_length": 0.16667,
+			"bones": {
+				"torso": {
+					"rotation": {
+						"vector": [-7.5, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 1.5]
+					}
+				},
+				"head": {
+					"position": {
+						"vector": [0, 0, 1.25]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [0, 0, 147.5]
+					},
+					"position": {
+						"vector": [0, 0, 1.25]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [0, 0, -147.5]
+					},
+					"position": {
+						"vector": [0, 0, 1.25]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [5, 0, 15]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [5, 0, -15]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/onestardragonball",
+  "textures": {
+    "all": "dbm:block/db1",
+    "particle": "dbm:block/db1",
+    "0": "dbm:block/dragonballtexture"
+  },
+  "render_type": "translucent"
+}

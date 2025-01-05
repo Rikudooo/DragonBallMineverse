@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "F",
+    "keyBindingName": "Blocking",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "BlockingOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "BlockingOnKeyReleased"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/sand",
+    "up": "dbm:block/sand",
+    "north": "dbm:block/sand",
+    "east": "dbm:block/sand",
+    "south": "dbm:block/sand",
+    "west": "dbm:block/sand",
+    "particle": "dbm:block/sand"
+  },
+  "render_type": "solid"
+}

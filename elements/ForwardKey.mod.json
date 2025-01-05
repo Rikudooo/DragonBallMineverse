@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "W",
+    "keyBindingName": "Forward Key",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "ForwardKeyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ForwardKeyOnKeyReleased"
+    }
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "_fv": 66,
+  "_type": "block",
+  "definition": {
+    "texture": "yellowbuildingblock",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 2,
+    "customModelName": "powerpoleupsocle:default",
+    "rotationMode": 0,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "SOLID",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 6.95,
+        "my": 14.225,
+        "mz": 6.9,
+        "Mx": 7.4,
+        "My": 16.225,
+        "Mz": 9.05,
+        "subtract": false
+      },
+      {
+        "mx": 8.65,
+        "my": 14.225,
+        "mz": 6.9,
+        "Mx": 9.1,
+        "My": 16.225,
+        "Mz": 9.05,
+        "subtract": false
+      },
+      {
+        "mx": 8.65,
+        "my": 13.225,
+        "mz": 7.15,
+        "Mx": 8.85,
+        "My": 14.225,
+        "Mz": 8.8,
+        "subtract": false
+      },
+      {
+        "mx": 7.2,
+        "my": 13.225,
+        "mz": 7.15,
+        "Mx": 7.4,
+        "My": 14.225,
+        "Mz": 8.8,
+        "subtract": false
+      },
+      {
+        "mx": 6.9,
+        "my": 13.225,
+        "mz": 7.85,
+        "Mx": 7.4,
+        "My": 16.225,
+        "Mz": 8.125,
+        "subtract": false
+      },
+      {
+        "mx": 8.65,
+        "my": 13.225,
+        "mz": 7.85,
+        "Mx": 9.15,
+        "My": 16.225,
+        "Mz": 8.125,
+        "subtract": false
+      },
+      {
+        "mx": 7.8625,
+        "my": 13.225,
+        "mz": 6.85,
+        "Mx": 8.1375,
+        "My": 16.225,
+        "Mz": 7.35,
+        "subtract": false
+      },
+      {
+        "mx": 7.8625,
+        "my": 13.225,
+        "mz": 8.6,
+        "Mx": 8.1375,
+        "My": 16.225,
+        "Mz": 9.1,
+        "subtract": false
+      },
+      {
+        "mx": 7.8625,
+        "my": 14.825,
+        "mz": 9.1,
+        "Mx": 8.1375,
+        "My": 16.225,
+        "Mz": 9.3,
+        "subtract": false
+      },
+      {
+        "mx": 6.7,
+        "my": 14.825,
+        "mz": 7.85,
+        "Mx": 6.9,
+        "My": 16.225,
+        "Mz": 8.125,
+        "subtract": false
+      },
+      {
+        "mx": 9.15,
+        "my": 14.825,
+        "mz": 7.85,
+        "Mx": 9.35,
+        "My": 16.225,
+        "Mz": 8.125,
+        "subtract": false
+      },
+      {
+        "mx": 7.8625,
+        "my": 14.825,
+        "mz": 6.65,
+        "Mx": 8.1375,
+        "My": 16.225,
+        "Mz": 6.85,
+        "subtract": false
+      },
+      {
+        "mx": 7.4,
+        "my": 13.225,
+        "mz": 8.6,
+        "Mx": 8.65,
+        "My": 14.225,
+        "Mz": 8.8,
+        "subtract": false
+      },
+      {
+        "mx": 7.4,
+        "my": 13.225,
+        "mz": 7.15,
+        "Mx": 8.65,
+        "My": 14.225,
+        "Mz": 7.35,
+        "subtract": false
+      },
+      {
+        "mx": 7.4,
+        "my": 14.225,
+        "mz": 8.6,
+        "Mx": 8.65,
+        "My": 16.225,
+        "Mz": 9.05,
+        "subtract": false
+      },
+      {
+        "mx": 7.4,
+        "my": 14.225,
+        "mz": 6.9,
+        "Mx": 8.65,
+        "My": 16.225,
+        "Mz": 7.35,
+        "subtract": false
+      },
+      {
+        "mx": 6.65,
+        "my": 15.925,
+        "mz": 6.6,
+        "Mx": 9.4,
+        "My": 16.225,
+        "Mz": 9.35,
+        "subtract": false
+      }
+    ],
+    "name": "Power Pole Base",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hardness": 10000.0,
+    "resistance": 2.0E9,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "creativeTabs": [],
+    "destroyTool": "Not specified",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 0,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "lightOpacity": 0,
+    "material": {
+      "value": "ROCK"
+    },
+    "tickRate": 0,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "STONE"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": 0,
+    "unbreakable": true,
+    "vanillaToolTier": "NONE",
+    "isBonemealable": false,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "onEntityCollides": {
+      "name": "KorinTowerBaseEntityCollidesInTheBlock"
+    },
+    "generateFeature": false,
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "TAG:stone_ore_replaceables"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

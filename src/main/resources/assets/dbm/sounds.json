@@ -1,0 +1,109 @@
+{
+  "punch1": {
+    "subtitle": "subtitles.punch1",
+    "sounds": [
+      {
+        "name": "dbm:lightpunch",
+        "stream": false
+      }
+    ]
+  },
+  "punch2": {
+    "subtitle": "subtitles.punch2",
+    "sounds": [
+      {
+        "name": "dbm:lightpunch2",
+        "stream": false
+      }
+    ]
+  },
+  "punch3": {
+    "subtitle": "subtitles.punch3",
+    "sounds": [
+      {
+        "name": "dbm:lightpunch3",
+        "stream": false
+      }
+    ]
+  },
+  "detransform": {
+    "subtitle": "subtitles.detransform",
+    "sounds": [
+      {
+        "name": "dbm:dragon_ball_super_-_power_down_sound_effect",
+        "stream": false
+      }
+    ]
+  },
+  "aura": {
+    "sounds": [
+      {
+        "name": "dbm:aura",
+        "stream": false
+      }
+    ]
+  },
+  "transform": {
+    "subtitle": "subtitles.transform",
+    "sounds": [
+      {
+        "name": "dbm:transformation",
+        "stream": false
+      }
+    ]
+  },
+  "kiblast": {
+    "subtitle": "subtitles.kiblast",
+    "sounds": [
+      {
+        "name": "dbm:blast",
+        "stream": false
+      }
+    ]
+  },
+  "jump": {
+    "subtitle": "subtitles.jump",
+    "sounds": [
+      {
+        "name": "dbm:jump",
+        "stream": false
+      }
+    ]
+  },
+  "block": {
+    "subtitle": "subtitles.block",
+    "sounds": [
+      {
+        "name": "dbm:block",
+        "stream": false
+      }
+    ]
+  },
+  "kamehameha_charge": {
+    "subtitle": "subtitles.kamehameha_charge",
+    "sounds": [
+      {
+        "name": "dbm:kamehameha_charge",
+        "stream": false
+      }
+    ]
+  },
+  "beamfire_1": {
+    "subtitle": "subtitles.beamfire_1",
+    "sounds": [
+      {
+        "name": "dbm:beamfire_1",
+        "stream": false
+      }
+    ]
+  },
+  "kiwave_charge": {
+    "subtitle": "subtitles.kiwave_charge",
+    "sounds": [
+      {
+        "name": "dbm:kiwavecharge",
+        "stream": false
+      }
+    ]
+  }
+}

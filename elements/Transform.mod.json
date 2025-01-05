@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "G",
+    "keyBindingName": "Transform",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "TransformOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "TransformOnKeyReleased"
+    }
+  }
+}

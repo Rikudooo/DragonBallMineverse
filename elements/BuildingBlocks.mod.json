@@ -1,0 +1,11 @@
+{
+  "_fv": 66,
+  "_type": "tab",
+  "definition": {
+    "name": "Blocks",
+    "icon": {
+      "value": "CUSTOM:BuildingBlockWhite"
+    },
+    "showSearch": false
+  }
+}

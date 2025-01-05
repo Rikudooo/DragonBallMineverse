@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/skybluebuildingblock",
+    "up": "dbm:block/skybluebuildingblock",
+    "north": "dbm:block/skybluebuildingblock",
+    "east": "dbm:block/skybluebuildingblock",
+    "south": "dbm:block/skybluebuildingblock",
+    "west": "dbm:block/skybluebuildingblock",
+    "particle": "dbm:block/skybluebuildingblock"
+  },
+  "render_type": "solid"
+}

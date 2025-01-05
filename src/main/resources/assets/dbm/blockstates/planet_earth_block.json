@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dbm:block/planet_earth_block"
+    }
+  }
+}

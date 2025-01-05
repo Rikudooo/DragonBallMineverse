@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/kailogtop",
+    "up": "dbm:block/kailogtop",
+    "north": "dbm:block/kailog",
+    "east": "dbm:block/kailog",
+    "south": "dbm:block/kailog",
+    "west": "dbm:block/kailog",
+    "particle": "dbm:block/kailogtop"
+  },
+  "render_type": "solid"
+}

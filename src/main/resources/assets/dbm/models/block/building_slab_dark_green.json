@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "dbm:block/darkgreenbuildingblock",
+    "bottom": "dbm:block/darkgreenbuildingblock",
+    "top": "dbm:block/darkgreenbuildingblock",
+    "side": "dbm:block/darkgreenbuildingblock"
+  },
+  "render_type": "solid"
+}

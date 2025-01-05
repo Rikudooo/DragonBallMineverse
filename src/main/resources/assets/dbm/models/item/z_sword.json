@@ -1,0 +1,7 @@
+{
+  "parent": "dbm:custom/true_z-sword",
+  "textures": {
+    "1": "dbm:block/zsword",
+    "particle": "dbm:item/zsword"
+  }
+}

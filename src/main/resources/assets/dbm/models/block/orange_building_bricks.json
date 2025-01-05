@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/orangebuildingblockbricks",
+    "up": "dbm:block/orangebuildingblockbricks",
+    "north": "dbm:block/orangebuildingblockbricks",
+    "east": "dbm:block/orangebuildingblockbricks",
+    "south": "dbm:block/orangebuildingblockbricks",
+    "west": "dbm:block/orangebuildingblockbricks",
+    "particle": "dbm:block/orangebuildingblockbricks"
+  },
+  "render_type": "solid"
+}

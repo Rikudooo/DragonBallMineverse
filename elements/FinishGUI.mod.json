@@ -1,0 +1,303 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "customformforgegui2.png",
+          "use1Xscale": false,
+          "x": 70,
+          "y": 36
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallgui2.png",
+          "use1Xscale": false,
+          "x": 181,
+          "y": 77
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "DisplayPlayer"
+          },
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 204,
+          "y": 135
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_left",
+          "image": "left.png",
+          "hoveredImage": "lefthovered.png",
+          "onClick": {
+            "name": "OpenCreation2GUI"
+          },
+          "x": 74,
+          "y": 183
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_next",
+          "image": "next.png",
+          "hoveredImage": "nexthovered.png",
+          "onClick": {
+            "name": "FinishProcedure"
+          },
+          "x": 307,
+          "y": 183
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_player_info",
+          "text": {
+            "fixedValue": "Player Info"
+          },
+          "color": {
+            "value": -10053121,
+            "falpha": 0.0
+          },
+          "x": 267,
+          "y": 52
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 265,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smallbluebar.png",
+          "use1Xscale": false,
+          "x": 99,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_player_stats",
+          "text": {
+            "fixedValue": "Player Stats"
+          },
+          "color": {
+            "value": -10053121,
+            "falpha": 0.0
+          },
+          "x": 99,
+          "y": 52
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_name_text",
+          "text": {
+            "fixedValue": "",
+            "name": "NameText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 258,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_race_text",
+          "text": {
+            "fixedValue": "",
+            "name": "RaceText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 258,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_alignment_text",
+          "text": {
+            "fixedValue": "",
+            "name": "AlignmentText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 258,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_fighting_class_text",
+          "text": {
+            "fixedValue": "",
+            "name": "FightingClassText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 258,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_max_health_text",
+          "text": {
+            "fixedValue": "",
+            "name": "MaxHealthText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_max_ki_text",
+          "text": {
+            "fixedValue": "",
+            "name": "MaxKiText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 84
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_max_stamina_text",
+          "text": {
+            "fixedValue": "",
+            "name": "MaxStaminaText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 97
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_strength_text",
+          "text": {
+            "fixedValue": "",
+            "name": "StrengthText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 111
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_speed_text",
+          "text": {
+            "fixedValue": "",
+            "name": "SpeedText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 126
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_defense_text",
+          "text": {
+            "fixedValue": "",
+            "name": "DefenseText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 140
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_ki_power_text",
+          "text": {
+            "fixedValue": "",
+            "name": "KiPowerText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 155
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

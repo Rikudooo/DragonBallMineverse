@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/oak_log_top",
+    "up": "dbm:block/oak_log_top",
+    "north": "dbm:block/oak_log",
+    "east": "dbm:block/oak_log",
+    "south": "dbm:block/oak_log",
+    "west": "dbm:block/oak_log",
+    "particle": "dbm:block/oak_log_top"
+  },
+  "render_type": "solid"
+}

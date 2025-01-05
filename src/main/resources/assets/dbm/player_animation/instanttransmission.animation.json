@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"instanttransmission": {
+			"animation_length": 3,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [-153.89774, -29.8742, 31.76017]
+						},
+						"0.25": {
+							"vector": [-153.89774, -29.8742, 31.76017]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, -3]
+						},
+						"0.25": {
+							"vector": [0, 0, -3]
+						}
+					}
+				}
+			}
+		}
+	}
+}

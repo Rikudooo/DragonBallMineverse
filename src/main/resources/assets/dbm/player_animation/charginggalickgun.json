@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"charginggalickgun": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"torso": {
+					"rotation": {
+						"vector": [0, -45, 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [0, -90, -100]
+					},
+					"position": {
+						"vector": [5, 0, -4]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-37.25235, -15.7627, -109.65736]
+					},
+					"position": {
+						"vector": [1, 0, 3]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [-17.55165, -7.61407, 6.96766]
+					},
+					"position": {
+						"vector": [0, 0, -2]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [12.77852, -29.37671, -11.28421]
+					},
+					"position": {
+						"vector": [-1, 0, 1]
+					}
+				}
+			}
+		}
+	}
+}

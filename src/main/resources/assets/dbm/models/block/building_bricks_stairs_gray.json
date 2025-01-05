@@ -1,0 +1,10 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "particle": "dbm:block/grayblockbricks",
+    "bottom": "dbm:block/grayblockbricks",
+    "top": "dbm:block/grayblockbricks",
+    "side": "dbm:block/grayblockbricks"
+  },
+  "render_type": "solid"
+}

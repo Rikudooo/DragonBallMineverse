@@ -1,0 +1,7 @@
+{
+  "parent": "dbm:custom/senzubean",
+  "textures": {
+    "0": "dbm:block/senzubeantexture",
+    "particle": "dbm:item/senzubean"
+  }
+}

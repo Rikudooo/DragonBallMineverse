@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "dbm:block/darkgrayblockbricks",
+    "particle": "dbm:block/darkgrayblockbricks"
+  },
+  "render_type": "solid"
+}

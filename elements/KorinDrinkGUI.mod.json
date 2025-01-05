@@ -1,0 +1,126 @@
+{
+  "_fv": 66,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "dialogbox.png",
+          "use1Xscale": false,
+          "x": 24,
+          "y": 143
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "korinface.png",
+          "use1Xscale": false,
+          "x": 25,
+          "y": 108
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_enma",
+          "text": {
+            "fixedValue": "Master Korin"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 60,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hello_there_so_youre_dead_hu",
+          "text": {
+            "fixedValue": "Do you wish to drink the sacred water? You will see your potential to"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogexit",
+          "image": "dialogexit.png",
+          "hoveredImage": "dialogexithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 393,
+          "y": 145
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_drinkbutton",
+          "image": "drinkbutton.png",
+          "hoveredImage": "drinkbuttonhovered.png",
+          "onClick": {
+            "name": "DrinkWater"
+          },
+          "x": 318,
+          "y": 197
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_be_fully_released_you_will_also",
+          "text": {
+            "fixedValue": "be fully released. You will also get the ability to sense Ki. However,"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_theres_only_a_10_it_works_els",
+          "text": {
+            "fixedValue": "there's only a 10% it works, else you will die."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 170
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

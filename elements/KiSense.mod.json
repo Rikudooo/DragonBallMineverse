@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "F6",
+    "keyBindingName": "Ki Sense",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "KiSenseOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "KiSenseOnKeyReleased"
+    }
+  }
+}

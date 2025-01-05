@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "dbm:block/invertedblackcoloredblock",
+    "bottom": "dbm:block/invertedblackcoloredblock",
+    "top": "dbm:block/invertedblackcoloredblock",
+    "side": "dbm:block/invertedblackcoloredblock"
+  },
+  "render_type": "solid"
+}
