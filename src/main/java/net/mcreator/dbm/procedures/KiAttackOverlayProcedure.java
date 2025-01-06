@@ -401,7 +401,7 @@ public class KiAttackOverlayProcedure {
 			SelectedAttack = (player.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).CurrentKiAttack;
 			RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "kiattackbar" + ".png")));
 			renderTexture((float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() - 10), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() - 10), 1, 0, (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255, 8);
-			renderTexts(SelectedAttack, (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() - 45), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() - 39), 0, 0, (float) 0.85, 255 << 24 | 255 << 16 | 255 << 8 | 255, 8);
+			renderTexts(SelectedAttack, (float) (Minecraft.getInstance().getWindow().getGuiScaledWidth() - 42), (float) (Minecraft.getInstance().getWindow().getGuiScaledHeight() - 39), 0, 0, (float) 0.85, 255 << 24 | 255 << 16 | 255 << 8 | 255, 8);
 			release();
 		}
 	}

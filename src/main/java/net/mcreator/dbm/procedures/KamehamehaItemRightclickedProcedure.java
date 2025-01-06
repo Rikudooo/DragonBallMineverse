@@ -22,12 +22,5 @@ public class KamehamehaItemRightclickedProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		{
-			String _setval = "Ki Wave";
-			entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.KiSlot3 = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
 	}
 }

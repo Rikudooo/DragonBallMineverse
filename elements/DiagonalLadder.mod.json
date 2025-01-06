@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "korinblock2",
@@ -96,6 +96,7 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Ladder",
     "specialInformation": {
       "fixedValue": []

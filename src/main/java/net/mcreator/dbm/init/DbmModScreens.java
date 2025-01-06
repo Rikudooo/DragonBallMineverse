@@ -19,6 +19,8 @@ import net.mcreator.dbm.client.gui.NorthKaioGUIScreen;
 import net.mcreator.dbm.client.gui.NorthKaioGUI2Screen;
 import net.mcreator.dbm.client.gui.KorinGUIScreen;
 import net.mcreator.dbm.client.gui.KorinDrinkGUIScreen;
+import net.mcreator.dbm.client.gui.KameSenninGUIScreen;
+import net.mcreator.dbm.client.gui.KameSenninGUI2Screen;
 import net.mcreator.dbm.client.gui.FinishGUIScreen;
 import net.mcreator.dbm.client.gui.EnmaGUIScreen;
 import net.mcreator.dbm.client.gui.DendeGUIScreen;
@@ -43,6 +45,8 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.KORIN_GUI.get(), KorinGUIScreen::new);
 			MenuScreens.register(DbmModMenus.DENDE_GUI.get(), DendeGUIScreen::new);
 			MenuScreens.register(DbmModMenus.KORIN_DRINK_GUI.get(), KorinDrinkGUIScreen::new);
+			MenuScreens.register(DbmModMenus.KAME_SENNIN_GUI.get(), KameSenninGUIScreen::new);
+			MenuScreens.register(DbmModMenus.KAME_SENNIN_GUI_2.get(), KameSenninGUI2Screen::new);
 		});
 	}
 }

@@ -26,9 +26,9 @@ public class KorinGUIScreen extends AbstractContainerScreen<KorinGUIMenu> {
 	private final int x, y, z;
 	private final Player entity;
 	ImageButton imagebutton_dialogexit;
-	ImageButton imagebutton_skillsbutton;
 	ImageButton imagebutton_nimbusbutton;
 	ImageButton imagebutton_drinkbutton;
+	ImageButton imagebutton_senzubutton;
 
 	public KorinGUIScreen(KorinGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -87,47 +87,47 @@ public class KorinGUIScreen extends AbstractContainerScreen<KorinGUIMenu> {
 		});
 		guistate.put("button:imagebutton_dialogexit", imagebutton_dialogexit);
 		this.addRenderableWidget(imagebutton_dialogexit);
-		imagebutton_skillsbutton = new ImageButton(this.leftPos + -172, this.topPos + 77, 68, 29, 0, 0, 29, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_skillsbutton.png"), 68, 58, e -> {
-			if (SenzuTimedOutProcedure.execute(entity)) {
+		imagebutton_nimbusbutton = new ImageButton(this.leftPos + -35, this.topPos + 77, 68, 29, 0, 0, 29, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_nimbusbutton.png"), 68, 58, e -> {
+			if (NotHasFlyingNimbusProcedure.execute(entity)) {
 				DbmMod.PACKET_HANDLER.sendToServer(new KorinGUIButtonMessage(1, x, y, z));
 				KorinGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (SenzuTimedOutProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
-			}
-		};
-		guistate.put("button:imagebutton_skillsbutton", imagebutton_skillsbutton);
-		this.addRenderableWidget(imagebutton_skillsbutton);
-		imagebutton_nimbusbutton = new ImageButton(this.leftPos + -35, this.topPos + 77, 68, 29, 0, 0, 29, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_nimbusbutton.png"), 68, 58, e -> {
-			if (NotHasFlyingNimbusProcedure.execute(entity)) {
-				DbmMod.PACKET_HANDLER.sendToServer(new KorinGUIButtonMessage(2, x, y, z));
-				KorinGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}) {
-			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (NotHasFlyingNimbusProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = NotHasFlyingNimbusProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_nimbusbutton", imagebutton_nimbusbutton);
 		this.addRenderableWidget(imagebutton_nimbusbutton);
 		imagebutton_drinkbutton = new ImageButton(this.leftPos + 104, this.topPos + 77, 68, 29, 0, 0, 29, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_drinkbutton.png"), 68, 58, e -> {
 			if (WaterNotDrankProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new KorinGUIButtonMessage(2, x, y, z));
+				KorinGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = WaterNotDrankProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_drinkbutton", imagebutton_drinkbutton);
+		this.addRenderableWidget(imagebutton_drinkbutton);
+		imagebutton_senzubutton = new ImageButton(this.leftPos + -172, this.topPos + 77, 68, 29, 0, 0, 29, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_senzubutton.png"), 68, 58, e -> {
+			if (SenzuTimedOutProcedure.execute(entity)) {
 				DbmMod.PACKET_HANDLER.sendToServer(new KorinGUIButtonMessage(3, x, y, z));
 				KorinGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (WaterNotDrankProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = SenzuTimedOutProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
-		guistate.put("button:imagebutton_drinkbutton", imagebutton_drinkbutton);
-		this.addRenderableWidget(imagebutton_drinkbutton);
+		guistate.put("button:imagebutton_senzubutton", imagebutton_senzubutton);
+		this.addRenderableWidget(imagebutton_senzubutton);
 	}
 }

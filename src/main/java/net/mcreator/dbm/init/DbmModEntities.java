@@ -30,6 +30,14 @@ import net.mcreator.dbm.entity.KiBlastEntity;
 import net.mcreator.dbm.entity.KameTurtleEntity;
 import net.mcreator.dbm.entity.KameSenninEntity;
 import net.mcreator.dbm.entity.GregoryEntity;
+import net.mcreator.dbm.entity.GiantKiBlastEntity;
+import net.mcreator.dbm.entity.DragonBallE7Entity;
+import net.mcreator.dbm.entity.DragonBallE6Entity;
+import net.mcreator.dbm.entity.DragonBallE5Entity;
+import net.mcreator.dbm.entity.DragonBallE4Entity;
+import net.mcreator.dbm.entity.DragonBallE3Entity;
+import net.mcreator.dbm.entity.DragonBallE2Entity;
+import net.mcreator.dbm.entity.DragonBallE1Entity;
 import net.mcreator.dbm.entity.Dinosaur1Entity;
 import net.mcreator.dbm.entity.DendeEntity;
 import net.mcreator.dbm.entity.BubblesEntity;
@@ -53,7 +61,7 @@ public class DbmModEntities {
 	public static final RegistryObject<EntityType<GregoryEntity>> GREGORY = register("gregory",
 			EntityType.Builder.<GregoryEntity>of(GregoryEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GregoryEntity::new).fireImmune().sized(0.4f, 0.9f));
 	public static final RegistryObject<EntityType<SpiritBombEntity>> SPIRIT_BOMB = register("spirit_bomb",
-			EntityType.Builder.<SpiritBombEntity>of(SpiritBombEntity::new, MobCategory.MISC).setCustomClientFactory(SpiritBombEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<SpiritBombEntity>of(SpiritBombEntity::new, MobCategory.MISC).setCustomClientFactory(SpiritBombEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(10f, 10f));
 	public static final RegistryObject<EntityType<PunchingBagEntity>> PUNCHING_BAG = register("punching_bag", EntityType.Builder.<PunchingBagEntity>of(PunchingBagEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(PunchingBagEntity::new).fireImmune().sized(1.1f, 1.9f));
 	public static final RegistryObject<EntityType<AdminPunchingBagEntity>> ADMIN_PUNCHING_BAG = register("admin_punching_bag", EntityType.Builder.<AdminPunchingBagEntity>of(AdminPunchingBagEntity::new, MobCategory.MONSTER)
@@ -84,7 +92,25 @@ public class DbmModEntities {
 			.setUpdateInterval(3).setCustomClientFactory(KameSenninEntity::new).fireImmune().sized(0.6f, 1.4f));
 	public static final RegistryObject<EntityType<KameTurtleEntity>> KAME_TURTLE = register("kame_turtle", EntityType.Builder.<KameTurtleEntity>of(KameTurtleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(KameTurtleEntity::new).fireImmune().sized(0.9f, 0.6f));
+	public static final RegistryObject<EntityType<DragonBallE1Entity>> DRAGON_BALL_E_1 = register("dragon_ball_e_1", EntityType.Builder.<DragonBallE1Entity>of(DragonBallE1Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonBallE1Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<DragonBallE2Entity>> DRAGON_BALL_E_2 = register("dragon_ball_e_2", EntityType.Builder.<DragonBallE2Entity>of(DragonBallE2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonBallE2Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<DragonBallE3Entity>> DRAGON_BALL_E_3 = register("dragon_ball_e_3", EntityType.Builder.<DragonBallE3Entity>of(DragonBallE3Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonBallE3Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<DragonBallE4Entity>> DRAGON_BALL_E_4 = register("dragon_ball_e_4", EntityType.Builder.<DragonBallE4Entity>of(DragonBallE4Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonBallE4Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<DragonBallE5Entity>> DRAGON_BALL_E_5 = register("dragon_ball_e_5", EntityType.Builder.<DragonBallE5Entity>of(DragonBallE5Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonBallE5Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<DragonBallE6Entity>> DRAGON_BALL_E_6 = register("dragon_ball_e_6", EntityType.Builder.<DragonBallE6Entity>of(DragonBallE6Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonBallE6Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<DragonBallE7Entity>> DRAGON_BALL_E_7 = register("dragon_ball_e_7", EntityType.Builder.<DragonBallE7Entity>of(DragonBallE7Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonBallE7Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<GiantKiBlastEntity>> GIANT_KI_BLAST = register("giant_ki_blast",
+			EntityType.Builder.<GiantKiBlastEntity>of(GiantKiBlastEntity::new, MobCategory.MISC).setCustomClientFactory(GiantKiBlastEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(2f, 2f));
 
+	// Start of user code block custom entities
+	// End of user code block custom entities
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}
@@ -109,6 +135,13 @@ public class DbmModEntities {
 			Dinosaur1Entity.init();
 			KameSenninEntity.init();
 			KameTurtleEntity.init();
+			DragonBallE1Entity.init();
+			DragonBallE2Entity.init();
+			DragonBallE3Entity.init();
+			DragonBallE4Entity.init();
+			DragonBallE5Entity.init();
+			DragonBallE6Entity.init();
+			DragonBallE7Entity.init();
 		});
 	}
 
@@ -131,5 +164,12 @@ public class DbmModEntities {
 		event.put(DINOSAUR_1.get(), Dinosaur1Entity.createAttributes().build());
 		event.put(KAME_SENNIN.get(), KameSenninEntity.createAttributes().build());
 		event.put(KAME_TURTLE.get(), KameTurtleEntity.createAttributes().build());
+		event.put(DRAGON_BALL_E_1.get(), DragonBallE1Entity.createAttributes().build());
+		event.put(DRAGON_BALL_E_2.get(), DragonBallE2Entity.createAttributes().build());
+		event.put(DRAGON_BALL_E_3.get(), DragonBallE3Entity.createAttributes().build());
+		event.put(DRAGON_BALL_E_4.get(), DragonBallE4Entity.createAttributes().build());
+		event.put(DRAGON_BALL_E_5.get(), DragonBallE5Entity.createAttributes().build());
+		event.put(DRAGON_BALL_E_6.get(), DragonBallE6Entity.createAttributes().build());
+		event.put(DRAGON_BALL_E_7.get(), DragonBallE7Entity.createAttributes().build());
 	}
 }

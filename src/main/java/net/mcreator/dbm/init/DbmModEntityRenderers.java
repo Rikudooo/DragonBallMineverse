@@ -23,6 +23,13 @@ import net.mcreator.dbm.client.renderer.KingEnmaRenderer;
 import net.mcreator.dbm.client.renderer.KameTurtleRenderer;
 import net.mcreator.dbm.client.renderer.KameSenninRenderer;
 import net.mcreator.dbm.client.renderer.GregoryRenderer;
+import net.mcreator.dbm.client.renderer.DragonBallE7Renderer;
+import net.mcreator.dbm.client.renderer.DragonBallE6Renderer;
+import net.mcreator.dbm.client.renderer.DragonBallE5Renderer;
+import net.mcreator.dbm.client.renderer.DragonBallE4Renderer;
+import net.mcreator.dbm.client.renderer.DragonBallE3Renderer;
+import net.mcreator.dbm.client.renderer.DragonBallE2Renderer;
+import net.mcreator.dbm.client.renderer.DragonBallE1Renderer;
 import net.mcreator.dbm.client.renderer.Dinosaur1Renderer;
 import net.mcreator.dbm.client.renderer.DendeRenderer;
 import net.mcreator.dbm.client.renderer.BubblesRenderer;
@@ -52,5 +59,13 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.DINOSAUR_1.get(), Dinosaur1Renderer::new);
 		event.registerEntityRenderer(DbmModEntities.KAME_SENNIN.get(), KameSenninRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.KAME_TURTLE.get(), KameTurtleRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_1.get(), DragonBallE1Renderer::new);
+		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_2.get(), DragonBallE2Renderer::new);
+		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_3.get(), DragonBallE3Renderer::new);
+		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_4.get(), DragonBallE4Renderer::new);
+		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_5.get(), DragonBallE5Renderer::new);
+		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_6.get(), DragonBallE6Renderer::new);
+		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_7.get(), DragonBallE7Renderer::new);
+		event.registerEntityRenderer(DbmModEntities.GIANT_KI_BLAST.get(), ThrownItemRenderer::new);
 	}
 }

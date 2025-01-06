@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,7 +15,7 @@
         "data": {
           "image": "customformforgegui2.png",
           "use1Xscale": false,
-          "x": 14,
+          "x": 15,
           "y": 36
         }
       },

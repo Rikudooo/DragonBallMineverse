@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.NorthKaioGUI2Menu;
+import net.mcreator.dbm.procedures.LearnSpiritBombProcedure;
 import net.mcreator.dbm.procedures.LearnKaiokenProcedure;
 import net.mcreator.dbm.procedures.CloseGUIProcedure;
 import net.mcreator.dbm.DbmMod;
@@ -70,6 +71,10 @@ public class NorthKaioGUI2ButtonMessage {
 		if (buttonID == 1) {
 
 			LearnKaiokenProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			LearnSpiritBombProcedure.execute(entity);
 		}
 	}
 

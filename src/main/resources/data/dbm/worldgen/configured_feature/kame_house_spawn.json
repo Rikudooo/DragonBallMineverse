@@ -1,0 +1,16 @@
+{
+  "type": "dbm:kame_house_spawn",
+  "config": {
+    "structure": "dbm:kamehousespawn",
+    "random_rotation": true,
+    "ignored_blocks": [
+      "minecraft:structure_block",
+      "minecraft:air"
+    ],
+    "offset": [
+      0,
+      -3,
+      0
+    ]
+  }
+}

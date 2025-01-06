@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -102,6 +102,12 @@
           "name": "imagebutton_learnbutton1",
           "image": "learnbutton.png",
           "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnSpiritBomb"
+          },
+          "displayCondition": {
+            "name": "SpiritBombNotOwned"
+          },
           "x": 46,
           "y": 176
         }

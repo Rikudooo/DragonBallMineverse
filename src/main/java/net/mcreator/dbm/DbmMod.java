@@ -17,13 +17,16 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.dbm.world.features.StructureFeature;
 import net.mcreator.dbm.init.DbmModTabs;
 import net.mcreator.dbm.init.DbmModSounds;
 import net.mcreator.dbm.init.DbmModParticleTypes;
 import net.mcreator.dbm.init.DbmModMenus;
 import net.mcreator.dbm.init.DbmModItems;
+import net.mcreator.dbm.init.DbmModFeatures;
 import net.mcreator.dbm.init.DbmModEntities;
 import net.mcreator.dbm.init.DbmModBlocks;
+import net.mcreator.dbm.init.DbmModAttributes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -51,10 +54,13 @@ public class DbmMod {
 		DbmModEntities.REGISTRY.register(bus);
 
 		DbmModTabs.REGISTRY.register(bus);
+		DbmModFeatures.REGISTRY.register(bus);
+		StructureFeature.REGISTRY.register(bus);
 
 		DbmModParticleTypes.REGISTRY.register(bus);
 
 		DbmModMenus.REGISTRY.register(bus);
+		DbmModAttributes.REGISTRY.register(bus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dbm.world.inventory.NorthKaioGUI2Menu;
+import net.mcreator.dbm.procedures.SpiritBombNotOwnedProcedure;
 import net.mcreator.dbm.procedures.ReturnKaiokenNotOwnedProcedure;
 import net.mcreator.dbm.network.NorthKaioGUI2ButtonMessage;
 import net.mcreator.dbm.DbmMod;
@@ -96,15 +97,25 @@ public class NorthKaioGUI2Screen extends AbstractContainerScreen<NorthKaioGUI2Me
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnKaiokenNotOwnedProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnKaiokenNotOwnedProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_learnbutton", imagebutton_learnbutton);
 		this.addRenderableWidget(imagebutton_learnbutton);
 		imagebutton_learnbutton1 = new ImageButton(this.leftPos + -168, this.topPos + 56, 26, 13, 0, 0, 13, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_learnbutton1.png"), 26, 26, e -> {
-		});
+			if (SpiritBombNotOwnedProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new NorthKaioGUI2ButtonMessage(2, x, y, z));
+				NorthKaioGUI2ButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = SpiritBombNotOwnedProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_learnbutton1", imagebutton_learnbutton1);
 		this.addRenderableWidget(imagebutton_learnbutton1);
 	}

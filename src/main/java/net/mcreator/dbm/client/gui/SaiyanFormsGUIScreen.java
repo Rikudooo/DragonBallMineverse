@@ -257,9 +257,9 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnRacialFormOver4Procedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnRacialFormOver4Procedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_ssj2icon", imagebutton_ssj2icon);
@@ -287,9 +287,9 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnKaiokenOwnedProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnKaiokenOwnedProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_kaiokenicon", imagebutton_kaiokenicon);

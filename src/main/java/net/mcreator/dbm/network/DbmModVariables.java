@@ -214,6 +214,7 @@ public class DbmModVariables {
 			clone.Width = original.Width;
 			clone.JumpTimer = original.JumpTimer;
 			clone.CanJump = original.CanJump;
+			clone.KiAttackRoll = original.KiAttackRoll;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -292,6 +293,15 @@ public class DbmModVariables {
 		public String DragonBallEarth6 = "\"\"";
 		public String DragonBallEarth7 = "\"\"";
 		public boolean DefaultStructureLoaded = false;
+		public boolean KameHouseSpawned = false;
+		public String KameHouseCoords = "\"\"";
+		public String DBCoords1 = "\"\"";
+		public String DBCoords2 = "\"\"";
+		public String DBCoords3 = "\"\"";
+		public String DBCoords4 = "\"\"";
+		public String DBCoords5 = "\"\"";
+		public String DBCoords6 = "\"\"";
+		public String DBCoords7 = "\"\"";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -309,6 +319,15 @@ public class DbmModVariables {
 			DragonBallEarth6 = nbt.getString("DragonBallEarth6");
 			DragonBallEarth7 = nbt.getString("DragonBallEarth7");
 			DefaultStructureLoaded = nbt.getBoolean("DefaultStructureLoaded");
+			KameHouseSpawned = nbt.getBoolean("KameHouseSpawned");
+			KameHouseCoords = nbt.getString("KameHouseCoords");
+			DBCoords1 = nbt.getString("DBCoords1");
+			DBCoords2 = nbt.getString("DBCoords2");
+			DBCoords3 = nbt.getString("DBCoords3");
+			DBCoords4 = nbt.getString("DBCoords4");
+			DBCoords5 = nbt.getString("DBCoords5");
+			DBCoords6 = nbt.getString("DBCoords6");
+			DBCoords7 = nbt.getString("DBCoords7");
 		}
 
 		@Override
@@ -322,6 +341,15 @@ public class DbmModVariables {
 			nbt.putString("DragonBallEarth6", DragonBallEarth6);
 			nbt.putString("DragonBallEarth7", DragonBallEarth7);
 			nbt.putBoolean("DefaultStructureLoaded", DefaultStructureLoaded);
+			nbt.putBoolean("KameHouseSpawned", KameHouseSpawned);
+			nbt.putString("KameHouseCoords", KameHouseCoords);
+			nbt.putString("DBCoords1", DBCoords1);
+			nbt.putString("DBCoords2", DBCoords2);
+			nbt.putString("DBCoords3", DBCoords3);
+			nbt.putString("DBCoords4", DBCoords4);
+			nbt.putString("DBCoords5", DBCoords5);
+			nbt.putString("DBCoords6", DBCoords6);
+			nbt.putString("DBCoords7", DBCoords7);
 			return nbt;
 		}
 
@@ -542,6 +570,7 @@ public class DbmModVariables {
 		public double Width = 1.0;
 		public double JumpTimer = 0;
 		public boolean CanJump = false;
+		public double KiAttackRoll = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -678,6 +707,7 @@ public class DbmModVariables {
 			nbt.putDouble("Width", Width);
 			nbt.putDouble("JumpTimer", JumpTimer);
 			nbt.putBoolean("CanJump", CanJump);
+			nbt.putDouble("KiAttackRoll", KiAttackRoll);
 			return nbt;
 		}
 
@@ -811,6 +841,7 @@ public class DbmModVariables {
 			Width = nbt.getDouble("Width");
 			JumpTimer = nbt.getDouble("JumpTimer");
 			CanJump = nbt.getBoolean("CanJump");
+			KiAttackRoll = nbt.getDouble("KiAttackRoll");
 		}
 	}
 
@@ -972,6 +1003,7 @@ public class DbmModVariables {
 					variables.Width = message.data.Width;
 					variables.JumpTimer = message.data.JumpTimer;
 					variables.CanJump = message.data.CanJump;
+					variables.KiAttackRoll = message.data.KiAttackRoll;
 				}
 			});
 			context.setPacketHandled(true);

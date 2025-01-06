@@ -1,0 +1,16 @@
+{
+  "type": "dbm:structure_feature",
+  "config": {
+    "structure": "dbm:kame_house",
+    "random_rotation": true,
+    "ignored_blocks": [
+      "minecraft:structure_block",
+      "minecraft:air"
+    ],
+    "offset": [
+      0,
+      -3,
+      0
+    ]
+  }
+}

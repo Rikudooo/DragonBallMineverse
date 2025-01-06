@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blue_wool"
+    },
+    "b": {
+      "tag": "minecraft:sand"
+    },
+    "c": {
+      "item": "minecraft:gravel"
+    }
+  },
+  "result": {
+    "item": "dbm:punching_bag_item",
+    "count": 1
+  }
+}

@@ -103,7 +103,7 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/customformforgegui2.png"), this.leftPos + -200, this.topPos + -84, 0, 0, 285, 166, 285, 166);
+		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/customformforgegui2.png"), this.leftPos + -199, this.topPos + -84, 0, 0, 285, 166, 285, 166);
 
 		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/skin.png"), this.leftPos + 15, this.topPos + -75, 0, 0, 62, 21, 62, 21);
 
@@ -218,9 +218,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHumanoidProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHumanoidProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customleft1", imagebutton_customleft1);
@@ -232,9 +232,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHumanoidProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHumanoidProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customright1", imagebutton_customright1);
@@ -246,9 +246,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHumanoidProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHumanoidProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customleft2", imagebutton_customleft2);
@@ -260,9 +260,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHumanoidProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHumanoidProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customright2", imagebutton_customright2);
@@ -274,9 +274,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHumanoidProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHumanoidProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customleft3", imagebutton_customleft3);
@@ -288,9 +288,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHumanoidProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHumanoidProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customright3", imagebutton_customright3);
@@ -366,9 +366,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHas2SkinsProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHas2SkinsProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customleft8", imagebutton_customleft8);
@@ -380,9 +380,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHas2SkinsProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHas2SkinsProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customright8", imagebutton_customright8);
@@ -394,9 +394,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHas3SkinsProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHas3SkinsProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customleft9", imagebutton_customleft9);
@@ -408,9 +408,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHas3SkinsProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHas3SkinsProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customright9", imagebutton_customright9);
@@ -422,9 +422,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHas4SkinsProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHas4SkinsProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customleft10", imagebutton_customleft10);
@@ -436,9 +436,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnHas4SkinsProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnHas4SkinsProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_customright10", imagebutton_customright10);
@@ -466,9 +466,9 @@ public class CharacterCreationGUIScreen extends AbstractContainerScreen<Characte
 			}
 		}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ReturnSaiyanOrHalfSaiyanProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnSaiyanOrHalfSaiyanProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_onandoffbutton", imagebutton_onandoffbutton);

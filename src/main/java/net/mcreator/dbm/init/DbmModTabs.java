@@ -26,8 +26,16 @@ public class DbmModTabs {
 				tabData.accept(DbmModItems.SENZU_BEAN.get());
 				tabData.accept(DbmModItems.DRAGON_RADAR.get());
 				tabData.accept(DbmModItems.POWER_POLE.get());
+				tabData.accept(DbmModItems.PUNCHING_BAG_ITEM.get());
 				tabData.accept(DbmModItems.RAW_DINOSAUR.get());
 				tabData.accept(DbmModItems.COOKED_DINOSAUR.get());
+				tabData.accept(DbmModItems.DRAGON_BALL_1.get());
+				tabData.accept(DbmModItems.DRAGON_BALL_2.get());
+				tabData.accept(DbmModItems.DRAGON_BALL_3.get());
+				tabData.accept(DbmModItems.DRAGON_BALL_4.get());
+				tabData.accept(DbmModItems.DRAGON_BALL_5.get());
+				tabData.accept(DbmModItems.DRAGON_BALL_6.get());
+				tabData.accept(DbmModItems.DRAGON_BALL_7.get());
 			})
 
 					.build());
@@ -201,9 +209,11 @@ public class DbmModTabs {
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+
 			tabData.accept(DbmModItems.SABERTOOTH_SPAWN_EGG.get());
 			tabData.accept(DbmModItems.BEAR_THIEF_SPAWN_EGG.get());
 			tabData.accept(DbmModItems.DINOSAUR_1_SPAWN_EGG.get());
+
 		}
 	}
 }

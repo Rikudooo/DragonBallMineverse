@@ -1,0 +1,188 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "learngui.png",
+          "use1Xscale": false,
+          "x": 28,
+          "y": 97
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "kamesenninface.png",
+          "use1Xscale": false,
+          "x": 41,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_enma",
+          "text": {
+            "fixedValue": "Kame Sennin"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 81,
+          "y": 127
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogexit",
+          "image": "dialogexit.png",
+          "hoveredImage": "dialogexithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 382,
+          "y": 142
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "kiwave.png",
+          "use1Xscale": false,
+          "x": 71,
+          "y": 155
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnKiWave"
+          },
+          "displayCondition": {
+            "name": "KiWaveNotOwned"
+          },
+          "x": 45,
+          "y": 156
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_kaioken_15000_tp",
+          "text": {
+            "fixedValue": "Ki Wave | 1,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 158
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton1",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnKamehameha"
+          },
+          "displayCondition": {
+            "name": "KamehamehaNotOwned"
+          },
+          "x": 45,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "kamehameha.png",
+          "use1Xscale": false,
+          "x": 71,
+          "y": 171
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spirit_bomb_cost_8000_tp",
+          "text": {
+            "fixedValue": "Kamehameha | 6,500 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 177
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton2",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnGiantKiBlast"
+          },
+          "displayCondition": {
+            "name": "GiantKiBlastNotEarned"
+          },
+          "x": 45,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bigkiblast.png",
+          "use1Xscale": false,
+          "x": 71,
+          "y": 189
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_giant_ki_blast_560_tp",
+          "text": {
+            "fixedValue": "Giant Ki Blast | 560 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 192
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

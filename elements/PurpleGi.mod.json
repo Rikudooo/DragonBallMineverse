@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "armor",
   "definition": {
     "enableHelmet": false,
@@ -17,8 +17,8 @@
     ],
     "armorTextureFile": "air",
     "helmetName": "Turtle Gi",
-    "bodyName": "Turtle Gi Top",
-    "leggingsName": "Turtle Gi Bottom ",
+    "bodyName": "Purple Gi Top",
+    "leggingsName": "Purple Gi Bottom ",
     "bootsName": "Turtle Gi",
     "helmetSpecialInformation": {
       "fixedValue": []

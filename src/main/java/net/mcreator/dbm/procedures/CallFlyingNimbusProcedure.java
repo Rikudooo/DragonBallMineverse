@@ -27,8 +27,7 @@ public class CallFlyingNimbusProcedure {
 		if (entity == null || text == null)
 			return;
 		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FlyingNimbus == true) {
-			if ((text).equals("Nimbus") || (text).equals("nimbus") || (text).equals("flying nimbus") || (text).equals("Flying Nimbus") || (text).equals("Kinto'un") || (text).equals("kinto'un") || (text).equals("nuage supersonic")
-					|| (text).equals("Nuage Supersonic")) {
+			if (((text).toLowerCase()).equals("nimbus") || ((text).toLowerCase()).equals("flying nimbus") || ((text).toLowerCase()).equals("kinto'un") || ((text).toLowerCase()).equals("nuage supersonic")) {
 				{
 					boolean _setval = true;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

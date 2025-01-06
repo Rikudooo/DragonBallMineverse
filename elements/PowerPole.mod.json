@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -30,9 +30,6 @@
     "blockDropsTier": "NETHERITE",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
-    "onRightClickedOnBlock": {
-      "name": "PowerPoleRightclickedOnBlock"
-    }
+    "damageOnCrafting": false
   }
 }

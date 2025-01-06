@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "livingentity",
   "definition": {
     "mobName": "Power Pole Entity",
@@ -120,15 +120,6 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "onRightClickedOn": {
-      "name": "PowerPoleEntityRightClickedOnEntity"
-    },
-    "onMobTickUpdate": {
-      "name": "PowerPoleEntityOnEntityTickUpdate"
-    },
-    "onInitialSpawn": {
-      "name": "PowerPoleEntityOnInitialEntitySpawn"
-    },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",

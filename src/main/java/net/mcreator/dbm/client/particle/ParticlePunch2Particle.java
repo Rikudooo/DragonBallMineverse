@@ -26,8 +26,7 @@ public class ParticlePunch2Particle extends TextureSheetParticle {
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			ParticlePunch2Particle particle = new ParticlePunch2Particle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
-			return particle;
+			return new ParticlePunch2Particle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
 		}
 	}
 

@@ -71,15 +71,15 @@ public class KorinGUIButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			SenzuBeanButtonProcedure.execute(entity);
+			FlyingNimbusButtonProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			FlyingNimbusButtonProcedure.execute(entity);
+			OpenKorinDrinkGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenKorinDrinkGUIProcedure.execute(world, x, y, z, entity);
+			SenzuBeanButtonProcedure.execute(entity);
 		}
 	}
 

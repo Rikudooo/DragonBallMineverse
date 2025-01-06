@@ -1,0 +1,96 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "dialogbox.png",
+          "use1Xscale": false,
+          "x": 24,
+          "y": 143
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "kamesenninface.png",
+          "use1Xscale": false,
+          "x": 27,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_enma",
+          "text": {
+            "fixedValue": "Kame Sennin"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 60,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hello_there_so_youre_dead_hu",
+          "text": {
+            "fixedValue": "Hey! I can teach you if you bring me... He he."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogexit",
+          "image": "dialogexit.png",
+          "hoveredImage": "dialogexithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 393,
+          "y": 145
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillsbutton",
+          "image": "skillsbutton.png",
+          "hoveredImage": "skillsbuttonhovered.png",
+          "onClick": {
+            "name": "OpenKameSenninGUI2"
+          },
+          "x": 42,
+          "y": 197
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

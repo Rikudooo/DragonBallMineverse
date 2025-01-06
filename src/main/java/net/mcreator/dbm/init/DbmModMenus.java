@@ -19,6 +19,8 @@ import net.mcreator.dbm.world.inventory.NorthKaioGUIMenu;
 import net.mcreator.dbm.world.inventory.NorthKaioGUI2Menu;
 import net.mcreator.dbm.world.inventory.KorinGUIMenu;
 import net.mcreator.dbm.world.inventory.KorinDrinkGUIMenu;
+import net.mcreator.dbm.world.inventory.KameSenninGUIMenu;
+import net.mcreator.dbm.world.inventory.KameSenninGUI2Menu;
 import net.mcreator.dbm.world.inventory.FinishGUIMenu;
 import net.mcreator.dbm.world.inventory.EnmaGUIMenu;
 import net.mcreator.dbm.world.inventory.DendeGUIMenu;
@@ -41,4 +43,6 @@ public class DbmModMenus {
 	public static final RegistryObject<MenuType<KorinGUIMenu>> KORIN_GUI = REGISTRY.register("korin_gui", () -> IForgeMenuType.create(KorinGUIMenu::new));
 	public static final RegistryObject<MenuType<DendeGUIMenu>> DENDE_GUI = REGISTRY.register("dende_gui", () -> IForgeMenuType.create(DendeGUIMenu::new));
 	public static final RegistryObject<MenuType<KorinDrinkGUIMenu>> KORIN_DRINK_GUI = REGISTRY.register("korin_drink_gui", () -> IForgeMenuType.create(KorinDrinkGUIMenu::new));
+	public static final RegistryObject<MenuType<KameSenninGUIMenu>> KAME_SENNIN_GUI = REGISTRY.register("kame_sennin_gui", () -> IForgeMenuType.create(KameSenninGUIMenu::new));
+	public static final RegistryObject<MenuType<KameSenninGUI2Menu>> KAME_SENNIN_GUI_2 = REGISTRY.register("kame_sennin_gui_2", () -> IForgeMenuType.create(KameSenninGUI2Menu::new));
 }

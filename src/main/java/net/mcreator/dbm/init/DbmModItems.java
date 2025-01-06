@@ -21,8 +21,16 @@ import net.mcreator.dbm.item.PurpleGiItem;
 import net.mcreator.dbm.item.PunchingBagItemItem;
 import net.mcreator.dbm.item.PowerPoleItem;
 import net.mcreator.dbm.item.OldSchoolTurtleGiItem;
+import net.mcreator.dbm.item.MakankosappoItemItem;
 import net.mcreator.dbm.item.KamehamehaItemItem;
 import net.mcreator.dbm.item.DragonRadarItem;
+import net.mcreator.dbm.item.DragonBall7Item;
+import net.mcreator.dbm.item.DragonBall6Item;
+import net.mcreator.dbm.item.DragonBall5Item;
+import net.mcreator.dbm.item.DragonBall4Item;
+import net.mcreator.dbm.item.DragonBall3Item;
+import net.mcreator.dbm.item.DragonBall2Item;
+import net.mcreator.dbm.item.DragonBall1Item;
 import net.mcreator.dbm.item.CookedDinosaurItem;
 import net.mcreator.dbm.item.BattleArmorItem;
 import net.mcreator.dbm.DbmMod;
@@ -216,6 +224,14 @@ public class DbmModItems {
 	public static final RegistryObject<Item> COOKED_DINOSAUR = REGISTRY.register("cooked_dinosaur", () -> new CookedDinosaurItem());
 	public static final RegistryObject<Item> BEAR_THIEF_SPAWN_EGG = REGISTRY.register("bear_thief_spawn_egg", () -> new ForgeSpawnEggItem(DbmModEntities.BEAR_THIEF, -2065900, -13434880, new Item.Properties()));
 	public static final RegistryObject<Item> DINOSAUR_1_SPAWN_EGG = REGISTRY.register("dinosaur_1_spawn_egg", () -> new ForgeSpawnEggItem(DbmModEntities.DINOSAUR_1, -1733294, -4449, new Item.Properties()));
+	public static final RegistryObject<Item> DRAGON_BALL_1 = REGISTRY.register("dragon_ball_1", () -> new DragonBall1Item());
+	public static final RegistryObject<Item> DRAGON_BALL_2 = REGISTRY.register("dragon_ball_2", () -> new DragonBall2Item());
+	public static final RegistryObject<Item> DRAGON_BALL_3 = REGISTRY.register("dragon_ball_3", () -> new DragonBall3Item());
+	public static final RegistryObject<Item> DRAGON_BALL_4 = REGISTRY.register("dragon_ball_4", () -> new DragonBall4Item());
+	public static final RegistryObject<Item> DRAGON_BALL_5 = REGISTRY.register("dragon_ball_5", () -> new DragonBall5Item());
+	public static final RegistryObject<Item> DRAGON_BALL_6 = REGISTRY.register("dragon_ball_6", () -> new DragonBall6Item());
+	public static final RegistryObject<Item> DRAGON_BALL_7 = REGISTRY.register("dragon_ball_7", () -> new DragonBall7Item());
+	public static final RegistryObject<Item> MAKANKOSAPPO_ITEM = REGISTRY.register("makankosappo_item", () -> new MakankosappoItemItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

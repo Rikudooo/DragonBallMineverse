@@ -34,41 +34,49 @@ import com.mojang.blaze3d.platform.GlStateManager;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class KiWaveCharginRenderProcedure {
-	private static boolean texture = false;
 	private static BufferBuilder bufferBuilder = null;
 	private static VertexBuffer vertexBuffer = null;
+	private static VertexFormat.Mode mode = null;
+	private static VertexFormat format = null;
 	private static PoseStack poseStack = null;
 	private static Matrix4f projectionMatrix = null;
 	private static boolean worldCoordinate = true;
 	private static Vec3 offset = Vec3.ZERO;
-	private static float partialTick = 0.0F;
-	private static int ticks = 0;
 	private static int currentStage = 0;
 	private static int targetStage = 0; // NONE: 0, SKY: 1, WORLD: 2
+
+	private static void add(double x, double y, double z, int color) {
+		add(x, y, z, 0.0F, 0.0F, color);
+	}
 
 	private static void add(double x, double y, double z, float u, float v, int color) {
 		if (bufferBuilder == null || !bufferBuilder.building())
 			return;
-		if (texture) {
-			bufferBuilder.vertex(x, y, z).uv(u, v).color(color).endVertex();
-		} else {
+		if (format == DefaultVertexFormat.POSITION_COLOR) {
 			bufferBuilder.vertex(x, y, z).color(color).endVertex();
+		} else if (format == DefaultVertexFormat.POSITION_TEX_COLOR) {
+			bufferBuilder.vertex(x, y, z).uv(u, v).color(color).endVertex();
 		}
 	}
 
-	private static boolean begin(VertexFormat.Mode mode, boolean texture, boolean update) {
-		if (bufferBuilder == null || !bufferBuilder.building()) {
+	private static boolean begin(VertexFormat.Mode mode, VertexFormat format, boolean update) {
+		if (KiWaveCharginRenderProcedure.bufferBuilder == null || !KiWaveCharginRenderProcedure.bufferBuilder.building()) {
 			if (update)
 				clear();
-			if (vertexBuffer == null) {
-				KiWaveCharginRenderProcedure.texture = texture;
-				bufferBuilder = Tesselator.getInstance().getBuilder();
-				if (texture) {
-					bufferBuilder.begin(mode, DefaultVertexFormat.POSITION_TEX_COLOR);
-				} else {
-					bufferBuilder.begin(mode, DefaultVertexFormat.POSITION_COLOR);
+			if (KiWaveCharginRenderProcedure.vertexBuffer == null) {
+				if (format == DefaultVertexFormat.POSITION_COLOR) {
+					KiWaveCharginRenderProcedure.mode = mode;
+					KiWaveCharginRenderProcedure.format = format;
+					KiWaveCharginRenderProcedure.bufferBuilder = Tesselator.getInstance().getBuilder();
+					KiWaveCharginRenderProcedure.bufferBuilder.begin(mode, DefaultVertexFormat.POSITION_COLOR);
+					return true;
+				} else if (format == DefaultVertexFormat.POSITION_TEX_COLOR) {
+					KiWaveCharginRenderProcedure.mode = mode;
+					KiWaveCharginRenderProcedure.format = format;
+					KiWaveCharginRenderProcedure.bufferBuilder = Tesselator.getInstance().getBuilder();
+					KiWaveCharginRenderProcedure.bufferBuilder.begin(mode, DefaultVertexFormat.POSITION_TEX_COLOR);
+					return true;
 				}
-				return true;
 			}
 		}
 		return false;
@@ -124,15 +132,15 @@ public class KiWaveCharginRenderProcedure {
 		if (vertexBuffer == null)
 			return;
 		float i, j, k;
-		if (!worldCoordinate) {
-			i = (float) x;
-			j = (float) y;
-			k = (float) z;
-		} else {
+		if (worldCoordinate) {
 			Vec3 pos = Minecraft.getInstance().gameRenderer.getMainCamera().getPosition();
 			i = (float) (x - pos.x());
 			j = (float) (y - pos.y());
 			k = (float) (z - pos.z());
+		} else {
+			i = (float) x;
+			j = (float) y;
+			k = (float) z;
 		}
 		poseStack.pushPose();
 		poseStack.translate(i, j, k);
@@ -143,8 +151,7 @@ public class KiWaveCharginRenderProcedure {
 		poseStack.translate(offset.x(), offset.y(), offset.z());
 		RenderSystem.setShaderColor((color >> 16 & 255) / 255.0F, (color >> 8 & 255) / 255.0F, (color & 255) / 255.0F, (color >>> 24) / 255.0F);
 		vertexBuffer.bind();
-		Matrix4f matrix4f = poseStack.last().pose();
-		vertexBuffer.drawWithShader(matrix4f, projectionMatrix, vertexBuffer.getFormat().hasUV(0) ? GameRenderer.getPositionTexColorShader() : GameRenderer.getPositionColorShader());
+		vertexBuffer.drawWithShader(poseStack.last().pose(), projectionMatrix, vertexBuffer.getFormat().hasUV(0) ? GameRenderer.getPositionTexColorShader() : GameRenderer.getPositionColorShader());
 		VertexBuffer.unbind();
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 		poseStack.popPose();
@@ -152,32 +159,31 @@ public class KiWaveCharginRenderProcedure {
 
 	@SubscribeEvent
 	public static void renderLevel(RenderLevelStageEvent event) {
-		poseStack = event.getPoseStack();
-		projectionMatrix = event.getProjectionMatrix();
-		partialTick = event.getPartialTick();
-		ticks = event.getRenderTick();
 		if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_SKY) {
 			currentStage = 1;
 			RenderSystem.depthMask(false);
 			renderShapes(event);
 			RenderSystem.enableCull();
 			RenderSystem.depthMask(true);
+			currentStage = 0;
 		} else if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_PARTICLES) {
 			currentStage = 2;
 			RenderSystem.depthMask(true);
 			renderShapes(event);
 			RenderSystem.enableCull();
 			RenderSystem.depthMask(true);
+			currentStage = 0;
 		}
-		currentStage = 0;
 	}
 
-	private static void renderShapes(Event event) {
+	private static void renderShapes(RenderLevelStageEvent event) {
 		Minecraft minecraft = Minecraft.getInstance();
 		ClientLevel level = minecraft.level;
 		Entity entity = minecraft.gameRenderer.getMainCamera().getEntity();
 		if (level != null && entity != null) {
-			Vec3 pos = entity.getPosition(partialTick);
+			poseStack = event.getPoseStack();
+			projectionMatrix = event.getProjectionMatrix();
+			Vec3 pos = entity.getPosition(event.getPartialTick());
 			RenderSystem.enableBlend();
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
@@ -209,18 +215,18 @@ public class KiWaveCharginRenderProcedure {
 				if (((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SelectedKiAttack).equals("Ki Wave")) {
 					x = Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * (-1.5);
 					z = Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5;
-					if (begin(VertexFormat.Mode.QUADS, false, false)) {
+					if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, false)) {
 						for (int index0 = 0; index0 < 90; index0++) {
 							for (int index1 = 0; index1 < 45; index1++) {
 								k = 255 - (j / 180) * 95;
 								l = 255 - ((j + 4) / 180) * 95;
-								add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), 0.0F, 0.0F,
+								add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5),
 										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
-								add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), 0.0F, 0.0F,
+								add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
 										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
-								add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), 0.0F, 0.0F,
+								add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
 										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
-								add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), 0.0F, 0.0F,
+								add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5),
 										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
 								j = j + 4;
 							}
@@ -231,12 +237,12 @@ public class KiWaveCharginRenderProcedure {
 						end();
 					}
 					if (target(2)) {
-						renderShape((shape()), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
+						renderShape(shape(), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) 1.5, (float) 1.5, (float) 1.5,
 								255 << 24 | 255 << 16 | 255 << 8 | 87);
 						RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-						renderShape((shape()), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
+						renderShape(shape(), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) 1.8, (float) 1.8, (float) 1.8,
 								255 << 24 | 255 << 16 | 255 << 8 | 210);
