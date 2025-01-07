@@ -10359,6 +10359,10 @@
           {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -10374,7 +10378,24 @@
         "files": [
           "src/main/java/net/mcreator/dbm/procedures/DragonBallTickProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/DragonBalls"
     },
@@ -10542,8 +10563,10 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      }
+        ],
+        "return_type": "logic"
+      },
+      "path": "~/DragonBalls"
     },
     {
       "name": "SpiritBombNotOwned",
@@ -10843,6 +10866,277 @@
       "metadata": {
         "files": [
           "src/main/resources/data/dbm/recipes/cooked_dinosaur_meat_2.json"
+        ]
+      }
+    },
+    {
+      "name": "ShenronCalled",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shenron_called",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ShenronCalledProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ShenronEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shenron_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ShenronEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ShenronBeam",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shenron_beam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ShenronBeamProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "ticks",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "DragonBall4STick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_ball_4_s_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/DragonBall4STickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "DragonBallInStoneDisplayCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_ball_in_stone_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/DragonBallInStoneDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "SafeZoneNoMOBS",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "safe_zone_no_mobs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SafeZoneNoMOBSProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone"
+    },
+    {
+      "name": "ChunkLoadedDragonBalls",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chunk_loaded_dragon_balls",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ChunkLoadedDragonBallsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ShowThreeStar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_three_star",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ShowThreeStarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "Show",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/screens/ShowOverlay.java"
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "DragonRadarRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_radar_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dbm/recipes/dragon_radar_recipe.json"
         ]
       }
     }
@@ -11729,6 +12023,30 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "ShenronCalled",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ShenronSpawnTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DragonBallsUsable",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "DragonBallsJumped",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -11827,11 +12145,25 @@
       ],
       "category": "player",
       "subtitle": "Charging Ki Beam"
+    },
+    {
+      "name": "shenroncalled",
+      "files": [
+        "summoning-shenron"
+      ],
+      "category": "neutral",
+      "subtitle": "Spawning Shenron"
     }
   ],
   "tag_elements": {
     "ENTITIES:dbm:earthdragonball": [
-      "CUSTOM:DragonBallE1"
+      "CUSTOM:DragonBallE1",
+      "CUSTOM:DragonBallE2",
+      "CUSTOM:DragonBallE3",
+      "CUSTOM:DragonBallE4",
+      "CUSTOM:DragonBallE5",
+      "CUSTOM:DragonBallE6",
+      "CUSTOM:DragonBallE7"
     ],
     "ENTITIES:dbm:kiwaves": [
       "CUSTOM:Kamehameha"
@@ -11974,6 +12306,7 @@
       "key.dbm.transform": "Transform",
       "block.dbm.building_bricks_slab_light_gray": "Building Bricks Slab",
       "gui.dbm.statistic_gui.label_agility": "Agility",
+      "subtitles.shenroncalled": "Spawning Shenron",
       "entity.dbm.dende": "Dende",
       "gui.dbm.character_creation_gui_2.label_fighting_class": "Fighting Class",
       "block.dbm.building_stairs_cyan": "Building Stairs",

@@ -15,27 +15,123 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.9.4
+// Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class ModelShenron119<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("dbm", "model_shenron_119"), "main");
+	public final ModelPart Head;
+	public final ModelPart cube_r8;
+	public final ModelPart cube_r6;
+	public final ModelPart cube_r5;
+	public final ModelPart cube_r4;
+	public final ModelPart cube_r7;
 	public final ModelPart Shenron;
+	public final ModelPart TopPart;
+	public final ModelPart cube_r1;
+	public final ModelPart cube_r2;
+	public final ModelPart cube_r3;
+	public final ModelPart cube_r9;
+	public final ModelPart cube_r10;
+	public final ModelPart cube_r11;
+	public final ModelPart cube_r12;
+	public final ModelPart cube_r13;
+	public final ModelPart cube_r14;
+	public final ModelPart cube_r15;
+	public final ModelPart cube_r16;
+	public final ModelPart cube_r17;
+	public final ModelPart cube_r18;
+	public final ModelPart cube_r19;
+	public final ModelPart cube_r20;
+	public final ModelPart cube_r21;
+	public final ModelPart cube_r22;
+	public final ModelPart cube_r24;
+	public final ModelPart cube_r23;
+	public final ModelPart cube_r25;
+	public final ModelPart cube_r26;
+	public final ModelPart cube_r27;
+	public final ModelPart cube_r28;
+	public final ModelPart cube_r29;
+	public final ModelPart cube_r30;
+	public final ModelPart cube_r31;
+	public final ModelPart cube_r32;
+	public final ModelPart cube_r33;
+	public final ModelPart cube_r34;
 
 	public ModelShenron119(ModelPart root) {
+		this.Head = root.getChild("Head");
+		this.cube_r8 = this.Head.getChild("cube_r8");
+		this.cube_r6 = this.Head.getChild("cube_r6");
+		this.cube_r5 = this.Head.getChild("cube_r5");
+		this.cube_r4 = this.Head.getChild("cube_r4");
+		this.cube_r7 = this.Head.getChild("cube_r7");
 		this.Shenron = root.getChild("Shenron");
+		this.TopPart = this.Shenron.getChild("TopPart");
+		this.cube_r1 = this.TopPart.getChild("cube_r1");
+		this.cube_r2 = this.TopPart.getChild("cube_r2");
+		this.cube_r3 = this.TopPart.getChild("cube_r3");
+		this.cube_r9 = this.TopPart.getChild("cube_r9");
+		this.cube_r10 = this.TopPart.getChild("cube_r10");
+		this.cube_r11 = this.TopPart.getChild("cube_r11");
+		this.cube_r12 = this.TopPart.getChild("cube_r12");
+		this.cube_r13 = this.TopPart.getChild("cube_r13");
+		this.cube_r14 = this.TopPart.getChild("cube_r14");
+		this.cube_r15 = this.TopPart.getChild("cube_r15");
+		this.cube_r16 = this.TopPart.getChild("cube_r16");
+		this.cube_r17 = this.TopPart.getChild("cube_r17");
+		this.cube_r18 = this.TopPart.getChild("cube_r18");
+		this.cube_r19 = this.TopPart.getChild("cube_r19");
+		this.cube_r20 = this.TopPart.getChild("cube_r20");
+		this.cube_r21 = this.TopPart.getChild("cube_r21");
+		this.cube_r22 = this.TopPart.getChild("cube_r22");
+		this.cube_r24 = this.TopPart.getChild("cube_r24");
+		this.cube_r23 = this.TopPart.getChild("cube_r23");
+		this.cube_r25 = this.Shenron.getChild("cube_r25");
+		this.cube_r26 = this.Shenron.getChild("cube_r26");
+		this.cube_r27 = this.Shenron.getChild("cube_r27");
+		this.cube_r28 = this.Shenron.getChild("cube_r28");
+		this.cube_r29 = this.Shenron.getChild("cube_r29");
+		this.cube_r30 = this.Shenron.getChild("cube_r30");
+		this.cube_r31 = this.Shenron.getChild("cube_r31");
+		this.cube_r32 = this.Shenron.getChild("cube_r32");
+		this.cube_r33 = this.Shenron.getChild("cube_r33");
+		this.cube_r34 = this.Shenron.getChild("cube_r34");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
+		PartDefinition Head = partdefinition.addOrReplaceChild("Head",
+				CubeListBuilder.create().texOffs(0, 25).addBox(-3.9643F, -7.05F, -7.9643F, 8.0F, 7.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(33, 36).addBox(-3.9643F, -0.05F, -6.9643F, 8.0F, 3.0F, 7.0F, new CubeDeformation(0.0F)).texOffs(0, 40)
+						.addBox(-2.9643F, -3.05F, -15.9643F, 6.0F, 3.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(17, 17).addBox(-7.9643F, -3.05F, -14.9643F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(11, 15)
+						.addBox(-15.9643F, -5.7F, -14.9643F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(13, 14).addBox(3.0357F, -3.05F, -14.9643F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(16, 14)
+						.addBox(10.7857F, -0.55F, -14.9643F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(13.1431F, -175.2988F, -20.1856F, 0.1745F, 0.0F, 0.0F));
+		PartDefinition cube_r8 = Head.addOrReplaceChild("cube_r8", CubeListBuilder.create().texOffs(32, 24).addBox(-3.3212F, -1.3488F, -8.7249F, 6.0F, 3.0F, 9.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.3569F, 1.2988F, -6.8144F, 0.2182F, 0.0F, 0.0F));
+		PartDefinition cube_r6 = Head.addOrReplaceChild("cube_r6",
+				CubeListBuilder.create().texOffs(0, 58).addBox(3.7288F, -9.9738F, -0.3999F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58).addBox(-0.2712F, -9.9738F, -0.3999F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58)
+						.addBox(3.7288F, -5.9738F, -0.3999F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58).addBox(-0.2712F, -5.9738F, -0.3999F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(12, 10)
+						.addBox(3.2288F, -1.9738F, -1.1499F, 3.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(14, 11).addBox(-0.7712F, -1.9738F, -1.1499F, 3.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-2.6431F, -7.7012F, -3.8144F, -0.6109F, 0.0F, 0.0F));
+		PartDefinition cube_r5 = Head.addOrReplaceChild("cube_r5",
+				CubeListBuilder.create().texOffs(0, 58).addBox(2.7288F, -2.5838F, -2.8086F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58).addBox(-1.2712F, -2.5838F, -2.8086F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.6431F, -12.7012F, 0.1856F, 0.3054F, 0.0F, 0.0F));
+		PartDefinition cube_r4 = Head.addOrReplaceChild("cube_r4",
+				CubeListBuilder.create().texOffs(0, 58).addBox(2.7288F, -2.8338F, 0.6664F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58).addBox(-1.2712F, -2.8338F, 0.6664F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-1.6431F, -12.7012F, 0.1856F, -1.3963F, 0.0F, 0.0F));
+		PartDefinition cube_r7 = Head.addOrReplaceChild("cube_r7",
+				CubeListBuilder.create().texOffs(14, 14).addBox(12.1788F, -9.2488F, -1.1499F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(13, 14).addBox(-4.8212F, -0.3488F, -1.1499F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-7.6431F, -2.7012F, -13.8144F, 0.0F, 0.0F, 0.6109F));
 		PartDefinition Shenron = partdefinition.addOrReplaceChild("Shenron", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
 		PartDefinition TopPart = Shenron.addOrReplaceChild("TopPart", CubeListBuilder.create(), PartPose.offset(-59.0F, 0.0F, 0.0F));
-		PartDefinition cube_r1 = TopPart.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(12, 12).addBox(-20.4674F, -5.9469F, 1.5633F, 8.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)),
+		PartDefinition cube_r1 = TopPart.addOrReplaceChild("cube_r1",
+				CubeListBuilder.create().texOffs(12, 12).addBox(-20.4674F, -5.9469F, 1.5633F, 8.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(12, 12).addBox(-27.4674F, -6.6969F, 1.5633F, 8.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(81.0F, -191.0F, -2.0F, 0.3927F, -0.3491F, -0.5236F));
-		PartDefinition cube_r2 = TopPart.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(12, 11).addBox(9.5826F, -5.5719F, 3.7883F, 8.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)),
+		PartDefinition cube_r2 = TopPart.addOrReplaceChild("cube_r2",
+				CubeListBuilder.create().texOffs(12, 11).addBox(17.0826F, -5.5719F, 2.7883F, 8.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(12, 11).addBox(9.5826F, -5.5719F, 3.7883F, 8.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(81.0F, -191.0F, -2.0F, 0.3927F, 0.5236F, -0.5236F));
 		PartDefinition cube_r3 = TopPart
 				.addOrReplaceChild(
@@ -82,28 +178,6 @@ public class ModelShenron119<T extends Entity> extends EntityModel<T> {
 				PartPose.offsetAndRotation(3.0413F, 2.8757F, 3.4331F, 0.8786F, 0.2667F, -0.4125F));
 		PartDefinition cube_r23 = TopPart.addOrReplaceChild("cube_r23", CubeListBuilder.create().texOffs(0, 0).addBox(-8.7141F, -12.7095F, -0.5422F, 6.0F, 16.0F, 6.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(24.0F, -126.0F, -23.0F, 2.0071F, 1.5708F, 1.4399F));
-		PartDefinition Head = TopPart.addOrReplaceChild("Head",
-				CubeListBuilder.create().texOffs(0, 25).addBox(69.6788F, -207.3488F, -28.1499F, 8.0F, 7.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(33, 36).addBox(69.6788F, -200.3488F, -27.1499F, 8.0F, 3.0F, 7.0F, new CubeDeformation(0.0F))
-						.texOffs(0, 40).addBox(70.6788F, -203.3488F, -36.1499F, 6.0F, 3.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(17, 17).addBox(65.6788F, -203.3488F, -35.1499F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(11, 15)
-						.addBox(57.6788F, -205.9988F, -35.1499F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(13, 14).addBox(76.6788F, -203.3488F, -35.1499F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(16, 14)
-						.addBox(84.4288F, -200.8488F, -35.1499F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition cube_r8 = Head.addOrReplaceChild("cube_r8", CubeListBuilder.create().texOffs(32, 24).addBox(-3.3212F, -1.3488F, -8.7249F, 6.0F, 3.0F, 9.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(74.0F, -199.0F, -27.0F, 0.2182F, 0.0F, 0.0F));
-		PartDefinition cube_r6 = Head.addOrReplaceChild("cube_r6",
-				CubeListBuilder.create().texOffs(0, 58).addBox(3.7288F, -9.9738F, -0.3999F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58).addBox(-0.2712F, -9.9738F, -0.3999F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58)
-						.addBox(3.7288F, -5.9738F, -0.3999F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58).addBox(-0.2712F, -5.9738F, -0.3999F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(12, 10)
-						.addBox(3.2288F, -1.9738F, -1.1499F, 3.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(14, 11).addBox(-0.7712F, -1.9738F, -1.1499F, 3.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(71.0F, -208.0F, -24.0F, -0.6109F, 0.0F, 0.0F));
-		PartDefinition cube_r5 = Head.addOrReplaceChild("cube_r5",
-				CubeListBuilder.create().texOffs(0, 58).addBox(2.7288F, -2.5838F, -2.8086F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58).addBox(-1.2712F, -2.5838F, -2.8086F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(72.0F, -213.0F, -20.0F, 0.3054F, 0.0F, 0.0F));
-		PartDefinition cube_r4 = Head.addOrReplaceChild("cube_r4",
-				CubeListBuilder.create().texOffs(0, 58).addBox(2.7288F, -2.8338F, 0.6664F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 58).addBox(-1.2712F, -2.8338F, 0.6664F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(72.0F, -213.0F, -20.0F, -1.3963F, 0.0F, 0.0F));
-		PartDefinition cube_r7 = Head.addOrReplaceChild("cube_r7",
-				CubeListBuilder.create().texOffs(14, 14).addBox(12.1788F, -9.2488F, -1.1499F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(13, 14).addBox(-4.8212F, -0.3488F, -1.1499F, 5.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(66.0F, -203.0F, -34.0F, 0.0F, 0.0F, 0.6109F));
 		PartDefinition cube_r25 = Shenron.addOrReplaceChild("cube_r25", CubeListBuilder.create(), PartPose.offsetAndRotation(39.0F, -106.0F, 5.0F, 1.4835F, 0.7854F, 1.4399F));
 		PartDefinition cube_r29_r1 = cube_r25.addOrReplaceChild("cube_r29_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-2.6435F, -37.7995F, 32.122F, 6.0F, 16.0F, 6.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, -11.0F, -3.0F, 2.1817F, 0.0F, 0.0F));
@@ -151,9 +225,12 @@ public class ModelShenron119<T extends Entity> extends EntityModel<T> {
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+		Head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Shenron.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
+		this.Head.xRot = headPitch / (180F / (float) Math.PI);
 	}
 }

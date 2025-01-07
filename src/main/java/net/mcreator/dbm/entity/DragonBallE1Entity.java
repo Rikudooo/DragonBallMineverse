@@ -142,14 +142,14 @@ public class DragonBallE1Entity extends PathfinderMob {
 		Entity entity = this;
 		Level world = this.level();
 
-		DragonBallRightClickedProcedure.execute(entity, sourceentity);
+		DragonBallRightClickedProcedure.execute(world, entity, sourceentity);
 		return retval;
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		DragonBallTickProcedure.execute();
+		DragonBallTickProcedure.execute(this.level(), this.getX(), this.getZ(), this);
 	}
 
 	@Override

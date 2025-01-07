@@ -214,13 +214,13 @@ public class ModelRaptor<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create(), PartPose.offset(9.0F, 15.2095F, -3.4167F));
+		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create(), PartPose.offset(0.0F, 0.2826F, -16.8692F));
 		PartDefinition cube_r1 = Head.addOrReplaceChild("cube_r1",
 				CubeListBuilder.create().texOffs(18, 45).addBox(-1.0F, -19.8F, -0.5F, 2.0F, 14.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 52).addBox(-3.0F, -19.8F, -3.6F, 6.0F, 14.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(28, 75)
 						.addBox(-2.0F, -17.8F, -5.8F, 4.0F, 6.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(26, 75).addBox(-3.0F, -11.8F, -5.8F, 6.0F, 6.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 0)
 						.addBox(-4.0F, -8.4F, -5.8F, 8.0F, 8.0F, 10.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(-9.0F, -17.2269F, -12.7325F, 1.5708F, 0.0F, 0.0F));
-		PartDefinition bone = Head.addOrReplaceChild("bone", CubeListBuilder.create(), PartPose.offsetAndRotation(-9.0F, -20.661F, -17.2706F, -2.3562F, 0.0F, 3.1416F));
+				PartPose.offsetAndRotation(0.0F, -2.3F, 0.72F, 1.5708F, 0.0F, 0.0F));
+		PartDefinition bone = Head.addOrReplaceChild("bone", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, -5.7341F, -3.8181F, -2.3562F, 0.0F, 3.1416F));
 		PartDefinition cube_r2 = bone.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(0, -2).addBox(0.0F, -1.8F, -2.4F, 0.0F, 2.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, -13.239F, 0.8706F, 2.042F, 0.0F, 0.0F));
 		PartDefinition cube_r3 = bone.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(76, 58).addBox(0.0F, -3.0F, -4.0F, 0.0F, 4.0F, 6.0F, new CubeDeformation(0.0F)),

@@ -105,5 +105,14 @@
         "stream": false
       }
     ]
+  },
+  "shenroncalled": {
+    "subtitle": "subtitles.shenroncalled",
+    "sounds": [
+      {
+        "name": "dbm:summoning-shenron",
+        "stream": false
+      }
+    ]
   }
 }

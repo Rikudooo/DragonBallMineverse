@@ -12,10 +12,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -25,6 +27,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.dbm.procedures.ShenronEntityDiesProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
 public class ShenronEntity extends PathfinderMob {
@@ -38,6 +41,7 @@ public class ShenronEntity extends PathfinderMob {
 		xpReward = 0;
 		setNoAi(false);
 		setPersistenceRequired();
+		refreshDimensions();
 	}
 
 	@Override
@@ -113,6 +117,12 @@ public class ShenronEntity extends PathfinderMob {
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		ShenronEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
 	public boolean isPushedByFluid() {
 		double x = this.getX();
 		double y = this.getY();
@@ -133,6 +143,11 @@ public class ShenronEntity extends PathfinderMob {
 
 	@Override
 	protected void pushEntities() {
+	}
+
+	@Override
+	public EntityDimensions getDimensions(Pose pose) {
+		return super.getDimensions(pose).scale(4f);
 	}
 
 	public static void init() {

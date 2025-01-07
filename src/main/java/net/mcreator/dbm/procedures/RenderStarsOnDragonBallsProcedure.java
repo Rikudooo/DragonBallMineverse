@@ -20,6 +20,7 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.dbm.network.DbmModVariables;
 import net.mcreator.dbm.entity.DragonBallE7Entity;
 import net.mcreator.dbm.entity.DragonBallE6Entity;
 import net.mcreator.dbm.entity.DragonBallE5Entity;
@@ -219,180 +220,182 @@ public class RenderStarsOnDragonBallsProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if (entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("dbm:earthdragonball")))) {
-					if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, false)) {
-						for (int index0 = 0; index0 < 90; index0++) {
-							for (int index1 = 0; index1 < 45; index1++) {
-								k = 255 - (j / 180) * 95;
-								l = 255 - ((j + 4) / 180) * 95;
-								add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5),
-										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
-								add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
-										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
-								add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
-										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
-								add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5),
-										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
-								j = j + 4;
+				if (DbmModVariables.MapVariables.get(world).DragonBallsUsable == true) {
+					if (entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("dbm:earthdragonball")))) {
+						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, false)) {
+							for (int index0 = 0; index0 < 90; index0++) {
+								for (int index1 = 0; index1 < 45; index1++) {
+									k = 255 - (j / 180) * 95;
+									l = 255 - ((j + 4) / 180) * 95;
+									add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5),
+											255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
+									add((Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
+											255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
+									add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(j + 4)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
+											255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
+									add((Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(j)) * 0.5), (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5),
+											255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
+									j = j + 4;
+								}
+								j = 0;
+								i = i + 4;
 							}
-							j = 0;
-							i = i + 4;
-						}
-						i = 0;
-						end();
-					}
-					if (target(1)) {
-						renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), 0, 0, 0, (float) 0.3, (float) 0.3, (float) 0.3, 255 << 24 | 228 << 16 | 128 << 8 | 0);
-						renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), 0, 0, 0, (float) 0.32, (float) 0.32, (float) 0.32, 240 << 24 | 228 << 16 | 178 << 8 | 0);
-						release();
-					}
-				}
-				if (entity instanceof LivingEntity _entity ? _entity.hasLineOfSight(entityiterator) : false) {
-					if (entityiterator instanceof DragonBallE1Entity) {
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							i = 0;
 							end();
 						}
-						if (target(2)) {
-							RenderSystem.depthMask(false);
-							RenderSystem.disableDepthTest();
-							RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "one_star" + ".png")));
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
-									255 << 24 | 255 << 16 | 255 << 8 | 255);
+						if (target(1)) {
+							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), 0, 0, 0, (float) 0.3, (float) 0.3, (float) 0.3, 255 << 24 | 228 << 16 | 128 << 8 | 0);
+							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), 0, 0, 0, (float) 0.32, (float) 0.32, (float) 0.32, 240 << 24 | 228 << 16 | 178 << 8 | 0);
 							release();
 						}
 					}
-					if (entityiterator instanceof DragonBallE2Entity) {
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							end();
+					if (entity instanceof LivingEntity _entity ? _entity.hasLineOfSight(entityiterator) : false) {
+						if (entityiterator instanceof DragonBallE1Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "one_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
 						}
-						if (target(2)) {
-							RenderSystem.depthMask(false);
-							RenderSystem.disableDepthTest();
-							RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "two_star" + ".png")));
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
-									255 << 24 | 255 << 16 | 255 << 8 | 255);
-							release();
+						if (entityiterator instanceof DragonBallE2Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "two_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
 						}
-					}
-					if (entityiterator instanceof DragonBallE3Entity) {
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							end();
+						if (entityiterator instanceof DragonBallE3Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "three_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
 						}
-						if (target(2)) {
-							RenderSystem.depthMask(false);
-							RenderSystem.disableDepthTest();
-							RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "three_star" + ".png")));
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
-									255 << 24 | 255 << 16 | 255 << 8 | 255);
-							release();
+						if (entityiterator instanceof DragonBallE4Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "four_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
 						}
-					}
-					if (entityiterator instanceof DragonBallE4Entity) {
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							end();
+						if (entityiterator instanceof DragonBallE5Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "five_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
 						}
-						if (target(2)) {
-							RenderSystem.depthMask(false);
-							RenderSystem.disableDepthTest();
-							RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "four_star" + ".png")));
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
-									255 << 24 | 255 << 16 | 255 << 8 | 255);
-							release();
+						if (entityiterator instanceof DragonBallE6Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "six_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
 						}
-					}
-					if (entityiterator instanceof DragonBallE5Entity) {
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							end();
-						}
-						if (target(2)) {
-							RenderSystem.depthMask(false);
-							RenderSystem.disableDepthTest();
-							RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "five_star" + ".png")));
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
-									255 << 24 | 255 << 16 | 255 << 8 | 255);
-							release();
-						}
-					}
-					if (entityiterator instanceof DragonBallE6Entity) {
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							end();
-						}
-						if (target(2)) {
-							RenderSystem.depthMask(false);
-							RenderSystem.disableDepthTest();
-							RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "six_star" + ".png")));
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
-									255 << 24 | 255 << 16 | 255 << 8 | 255);
-							release();
-						}
-					}
-					if (entityiterator instanceof DragonBallE7Entity) {
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							end();
-						}
-						if (target(2)) {
-							RenderSystem.depthMask(false);
-							RenderSystem.disableDepthTest();
-							RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "seven_star" + ".png")));
-							renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
-									255 << 24 | 255 << 16 | 255 << 8 | 255);
-							release();
+						if (entityiterator instanceof DragonBallE7Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "seven_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
 						}
 					}
 				}

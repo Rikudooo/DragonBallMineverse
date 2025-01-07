@@ -302,6 +302,10 @@ public class DbmModVariables {
 		public String DBCoords5 = "\"\"";
 		public String DBCoords6 = "\"\"";
 		public String DBCoords7 = "\"\"";
+		public boolean ShenronCalled = false;
+		public double ShenronSpawnTimer = 0;
+		public boolean DragonBallsUsable = true;
+		public boolean DragonBallsJumped = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -310,6 +314,9 @@ public class DbmModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
+			if (nbt == null) {
+				nbt = save(new CompoundTag());
+			}
 			OtherWorldGenerated = nbt.getBoolean("OtherWorldGenerated");
 			DragonBallEarth1 = nbt.getString("DragonBallEarth1");
 			DragonBallEarth2 = nbt.getString("DragonBallEarth2");
@@ -328,6 +335,10 @@ public class DbmModVariables {
 			DBCoords5 = nbt.getString("DBCoords5");
 			DBCoords6 = nbt.getString("DBCoords6");
 			DBCoords7 = nbt.getString("DBCoords7");
+			ShenronCalled = nbt.getBoolean("ShenronCalled");
+			ShenronSpawnTimer = nbt.getDouble("ShenronSpawnTimer");
+			DragonBallsUsable = nbt.getBoolean("DragonBallsUsable");
+			DragonBallsJumped = nbt.getBoolean("DragonBallsJumped");
 		}
 
 		@Override
@@ -350,6 +361,10 @@ public class DbmModVariables {
 			nbt.putString("DBCoords5", DBCoords5);
 			nbt.putString("DBCoords6", DBCoords6);
 			nbt.putString("DBCoords7", DBCoords7);
+			nbt.putBoolean("ShenronCalled", ShenronCalled);
+			nbt.putDouble("ShenronSpawnTimer", ShenronSpawnTimer);
+			nbt.putBoolean("DragonBallsUsable", DragonBallsUsable);
+			nbt.putBoolean("DragonBallsJumped", DragonBallsJumped);
 			return nbt;
 		}
 
@@ -711,8 +726,14 @@ public class DbmModVariables {
 			return nbt;
 		}
 
-		public void readNBT(Tag Tag) {
-			CompoundTag nbt = (CompoundTag) Tag;
+		public void readNBT(Tag tag) {
+			if (tag == null) {
+				tag = writeNBT();
+			}
+			CompoundTag nbt = (CompoundTag) tag;
+			if (nbt == null) {
+				nbt = (CompoundTag) writeNBT();
+			}
 			MaxHealth = nbt.getDouble("MaxHealth");
 			MaxKi = nbt.getDouble("MaxKi");
 			Ki = nbt.getDouble("Ki");

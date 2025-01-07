@@ -32,9 +32,9 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.dbm.procedures.DragonBallTickProcedure;
 import net.mcreator.dbm.procedures.DragonBallSpawnProcedure;
 import net.mcreator.dbm.procedures.DragonBallRightClickedProcedure;
+import net.mcreator.dbm.procedures.DragonBall4STickProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
 import javax.annotation.Nullable;
@@ -142,14 +142,14 @@ public class DragonBallE4Entity extends PathfinderMob {
 		Entity entity = this;
 		Level world = this.level();
 
-		DragonBallRightClickedProcedure.execute(entity, sourceentity);
+		DragonBallRightClickedProcedure.execute(world, entity, sourceentity);
 		return retval;
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		DragonBallTickProcedure.execute();
+		DragonBall4STickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

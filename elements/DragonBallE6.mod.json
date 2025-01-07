@@ -21,7 +21,17 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "modelLayers": [],
+    "modelLayers": [
+      {
+        "model": "ModelDragonBall",
+        "texture": "stone.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "DragonBallInStoneDisplayCondition"
+        }
+      }
+    ],
     "modelWidth": 0.19999999999999998,
     "modelHeight": 0.2,
     "modelShadowSize": 0.2,
