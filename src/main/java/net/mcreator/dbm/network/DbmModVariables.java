@@ -215,6 +215,8 @@ public class DbmModVariables {
 			clone.JumpTimer = original.JumpTimer;
 			clone.CanJump = original.CanJump;
 			clone.KiAttackRoll = original.KiAttackRoll;
+			clone.StoryModeProgress = original.StoryModeProgress;
+			clone.SelectedKiMove = original.SelectedKiMove;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -285,13 +287,6 @@ public class DbmModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "dbm_mapvars";
 		public boolean OtherWorldGenerated = false;
-		public String DragonBallEarth1 = "\"\"";
-		public String DragonBallEarth2 = "\"\"";
-		public String DragonBallEarth3 = "\"\"";
-		public String DragonBallEarth4 = "\"\"";
-		public String DragonBallEarth5 = "\"\"";
-		public String DragonBallEarth6 = "\"\"";
-		public String DragonBallEarth7 = "\"\"";
 		public boolean DefaultStructureLoaded = false;
 		public boolean KameHouseSpawned = false;
 		public String KameHouseCoords = "Kame House is unknown";
@@ -318,13 +313,6 @@ public class DbmModVariables {
 				nbt = save(new CompoundTag());
 			}
 			OtherWorldGenerated = nbt.getBoolean("OtherWorldGenerated");
-			DragonBallEarth1 = nbt.getString("DragonBallEarth1");
-			DragonBallEarth2 = nbt.getString("DragonBallEarth2");
-			DragonBallEarth3 = nbt.getString("DragonBallEarth3");
-			DragonBallEarth4 = nbt.getString("DragonBallEarth4");
-			DragonBallEarth5 = nbt.getString("DragonBallEarth5");
-			DragonBallEarth6 = nbt.getString("DragonBallEarth6");
-			DragonBallEarth7 = nbt.getString("DragonBallEarth7");
 			DefaultStructureLoaded = nbt.getBoolean("DefaultStructureLoaded");
 			KameHouseSpawned = nbt.getBoolean("KameHouseSpawned");
 			KameHouseCoords = nbt.getString("KameHouseCoords");
@@ -344,13 +332,6 @@ public class DbmModVariables {
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("OtherWorldGenerated", OtherWorldGenerated);
-			nbt.putString("DragonBallEarth1", DragonBallEarth1);
-			nbt.putString("DragonBallEarth2", DragonBallEarth2);
-			nbt.putString("DragonBallEarth3", DragonBallEarth3);
-			nbt.putString("DragonBallEarth4", DragonBallEarth4);
-			nbt.putString("DragonBallEarth5", DragonBallEarth5);
-			nbt.putString("DragonBallEarth6", DragonBallEarth6);
-			nbt.putString("DragonBallEarth7", DragonBallEarth7);
 			nbt.putBoolean("DefaultStructureLoaded", DefaultStructureLoaded);
 			nbt.putBoolean("KameHouseSpawned", KameHouseSpawned);
 			nbt.putString("KameHouseCoords", KameHouseCoords);
@@ -586,6 +567,8 @@ public class DbmModVariables {
 		public double JumpTimer = 0;
 		public boolean CanJump = false;
 		public double KiAttackRoll = 0;
+		public String StoryModeProgress = "None";
+		public String SelectedKiMove = "None";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -723,6 +706,8 @@ public class DbmModVariables {
 			nbt.putDouble("JumpTimer", JumpTimer);
 			nbt.putBoolean("CanJump", CanJump);
 			nbt.putDouble("KiAttackRoll", KiAttackRoll);
+			nbt.putString("StoryModeProgress", StoryModeProgress);
+			nbt.putString("SelectedKiMove", SelectedKiMove);
 			return nbt;
 		}
 
@@ -863,6 +848,8 @@ public class DbmModVariables {
 			JumpTimer = nbt.getDouble("JumpTimer");
 			CanJump = nbt.getBoolean("CanJump");
 			KiAttackRoll = nbt.getDouble("KiAttackRoll");
+			StoryModeProgress = nbt.getString("StoryModeProgress");
+			SelectedKiMove = nbt.getString("SelectedKiMove");
 		}
 	}
 
@@ -1025,6 +1012,8 @@ public class DbmModVariables {
 					variables.JumpTimer = message.data.JumpTimer;
 					variables.CanJump = message.data.CanJump;
 					variables.KiAttackRoll = message.data.KiAttackRoll;
+					variables.StoryModeProgress = message.data.StoryModeProgress;
+					variables.SelectedKiMove = message.data.SelectedKiMove;
 				}
 			});
 			context.setPacketHandled(true);

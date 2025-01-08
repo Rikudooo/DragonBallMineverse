@@ -11,6 +11,7 @@ import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
@@ -19,9 +20,12 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.entity.StoryTienshinhanEntity;
 
 import javax.annotation.Nullable;
 
+import java.util.List;
+import java.util.Comparator;
 import java.util.ArrayList;
 
 import com.mojang.blaze3d.vertex.VertexFormat;
@@ -187,7 +191,7 @@ public class TribeamRenderProcedure {
 			RenderSystem.enableBlend();
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-			execute(event, level, event.getPartialTick(), event.getRenderTick());
+			execute(event, level, pos.x(), pos.y(), pos.z(), event.getPartialTick(), event.getRenderTick());
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
@@ -195,11 +199,11 @@ public class TribeamRenderProcedure {
 		}
 	}
 
-	public static void execute(LevelAccessor world, double partialTick, double ticks) {
-		execute(null, world, partialTick, ticks);
+	public static void execute(LevelAccessor world, double x, double y, double z, double partialTick, double ticks) {
+		execute(null, world, x, y, z, partialTick, ticks);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double partialTick, double ticks) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, double partialTick, double ticks) {
 		double width = 0;
 		double length = 0;
 		double i = 0;
@@ -241,16 +245,16 @@ public class TribeamRenderProcedure {
 							end();
 						}
 						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
-								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
+								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),
 								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
-								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) (-1.6), (float) 1.6, 1,
+								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) (-3.6), (float) 3.6, 1,
 								32 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
-								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
+								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),
 								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
-								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, 1, 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, 3, 3, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						release();
 					}
 					if (target(2)) {
@@ -283,16 +287,65 @@ public class TribeamRenderProcedure {
 							end();
 						}
 						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
-								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
+								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),
 								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) 1.6, (float) (-1.6), -1,
 								32 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
-								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
+								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),
 								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, -1, -1, -1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+						release();
+					}
+				}
+			}
+		}
+		{
+			final Vec3 _center = new Vec3(x, y, z);
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(256 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if ((entityiterator instanceof StoryTienshinhanEntity _datEntS ? _datEntS.getEntityData().get(StoryTienshinhanEntity.DATA_SelectedKiAttack) : "").equals("Tribeam")) {
+					if (target(2)) {
+						speed = 0.4;
+						width = 1;
+						length = entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_KiAttackSize) : 0;
+						RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "kiattacks/tribeam_wave" + ".png")));
+						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, (!Minecraft.getInstance().isPaused()))) {
+							i = width / (-2);
+							j = width / 2;
+							k = length - 0.5;
+							l = (ticks + partialTick) * speed;
+							m = length + l;
+							add(i, i, k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(i, i, i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(j, i, i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(j, i, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(j, j, k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(j, j, i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(i, j, i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(i, j, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(j, i, k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(j, i, i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(j, j, i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(j, j, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(i, j, k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(i, j, i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(i, i, i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							add(i, i, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+							end();
+						}
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_OldYAW) : 0)) * 4),
+								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),
+								(entityiterator.getZ() + Math.cos(Math.toRadians(entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_OldYAW) : 0)) * 4),
+								(float) (entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_OldYAW) : 0),
+								(float) (entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_OldPITCH) : 0), 0, (float) (-3.6), (float) 3.6, 1, 32 << 24 | 255 << 16 | 255 << 8 | 255);
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_OldYAW) : 0)) * 4),
+								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),
+								(entityiterator.getZ() + Math.cos(Math.toRadians(entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_OldYAW) : 0)) * 4),
+								(float) (entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_OldYAW) : 0),
+								(float) (entityiterator instanceof StoryTienshinhanEntity _datEntI ? _datEntI.getEntityData().get(StoryTienshinhanEntity.DATA_OldPITCH) : 0), 0, 3, 3, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						release();
 					}
 				}

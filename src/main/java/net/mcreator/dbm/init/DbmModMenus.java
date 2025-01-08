@@ -12,6 +12,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.dbm.world.inventory.WelcomeGUIMenu;
+import net.mcreator.dbm.world.inventory.StoryGUIMenu;
 import net.mcreator.dbm.world.inventory.StatisticGUIMenu;
 import net.mcreator.dbm.world.inventory.SkillsGUIMenu;
 import net.mcreator.dbm.world.inventory.SaiyanFormsGUIMenu;
@@ -19,6 +20,7 @@ import net.mcreator.dbm.world.inventory.NorthKaioGUIMenu;
 import net.mcreator.dbm.world.inventory.NorthKaioGUI2Menu;
 import net.mcreator.dbm.world.inventory.KorinGUIMenu;
 import net.mcreator.dbm.world.inventory.KorinDrinkGUIMenu;
+import net.mcreator.dbm.world.inventory.KiAttacksGUIMenu;
 import net.mcreator.dbm.world.inventory.KameSenninGUIMenu;
 import net.mcreator.dbm.world.inventory.KameSenninGUI2Menu;
 import net.mcreator.dbm.world.inventory.FinishGUIMenu;
@@ -45,4 +47,6 @@ public class DbmModMenus {
 	public static final RegistryObject<MenuType<KorinDrinkGUIMenu>> KORIN_DRINK_GUI = REGISTRY.register("korin_drink_gui", () -> IForgeMenuType.create(KorinDrinkGUIMenu::new));
 	public static final RegistryObject<MenuType<KameSenninGUIMenu>> KAME_SENNIN_GUI = REGISTRY.register("kame_sennin_gui", () -> IForgeMenuType.create(KameSenninGUIMenu::new));
 	public static final RegistryObject<MenuType<KameSenninGUI2Menu>> KAME_SENNIN_GUI_2 = REGISTRY.register("kame_sennin_gui_2", () -> IForgeMenuType.create(KameSenninGUI2Menu::new));
+	public static final RegistryObject<MenuType<StoryGUIMenu>> STORY_GUI = REGISTRY.register("story_gui", () -> IForgeMenuType.create(StoryGUIMenu::new));
+	public static final RegistryObject<MenuType<KiAttacksGUIMenu>> KI_ATTACKS_GUI = REGISTRY.register("ki_attacks_gui", () -> IForgeMenuType.create(KiAttacksGUIMenu::new));
 }

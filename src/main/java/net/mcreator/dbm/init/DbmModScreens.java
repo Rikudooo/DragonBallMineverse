@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.dbm.client.gui.WelcomeGUIScreen;
+import net.mcreator.dbm.client.gui.StoryGUIScreen;
 import net.mcreator.dbm.client.gui.StatisticGUIScreen;
 import net.mcreator.dbm.client.gui.SkillsGUIScreen;
 import net.mcreator.dbm.client.gui.SaiyanFormsGUIScreen;
@@ -19,6 +20,7 @@ import net.mcreator.dbm.client.gui.NorthKaioGUIScreen;
 import net.mcreator.dbm.client.gui.NorthKaioGUI2Screen;
 import net.mcreator.dbm.client.gui.KorinGUIScreen;
 import net.mcreator.dbm.client.gui.KorinDrinkGUIScreen;
+import net.mcreator.dbm.client.gui.KiAttacksGUIScreen;
 import net.mcreator.dbm.client.gui.KameSenninGUIScreen;
 import net.mcreator.dbm.client.gui.KameSenninGUI2Screen;
 import net.mcreator.dbm.client.gui.FinishGUIScreen;
@@ -47,6 +49,8 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.KORIN_DRINK_GUI.get(), KorinDrinkGUIScreen::new);
 			MenuScreens.register(DbmModMenus.KAME_SENNIN_GUI.get(), KameSenninGUIScreen::new);
 			MenuScreens.register(DbmModMenus.KAME_SENNIN_GUI_2.get(), KameSenninGUI2Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI.get(), StoryGUIScreen::new);
+			MenuScreens.register(DbmModMenus.KI_ATTACKS_GUI.get(), KiAttacksGUIScreen::new);
 		});
 	}
 }

@@ -252,7 +252,7 @@
           "onClick": {
             "name": "CloseGUI"
           },
-          "x": 376,
+          "x": 377,
           "y": 18
         }
       },
@@ -628,7 +628,7 @@
           "image": "kiattackicon.png",
           "hoveredImage": "kiattackiconhovered.png",
           "onClick": {
-            "name": "OpenSkillsGUI"
+            "name": "OpenKiAttacksGUI"
           },
           "x": 93,
           "y": 216

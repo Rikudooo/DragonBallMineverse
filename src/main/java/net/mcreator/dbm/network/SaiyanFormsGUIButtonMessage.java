@@ -21,6 +21,7 @@ import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStatsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenRacialSkillsGUIProcedure;
+import net.mcreator.dbm.procedures.OpenKiAttacksGUIProcedure;
 import net.mcreator.dbm.procedures.OpenIcon9Procedure;
 import net.mcreator.dbm.procedures.OpenIcon8Procedure;
 import net.mcreator.dbm.procedures.OpenIcon14Procedure;
@@ -93,7 +94,7 @@ public class SaiyanFormsGUIButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			OpenSkillsGUIProcedure.execute(world, x, y, z, entity);
+			OpenKiAttacksGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 

@@ -22,6 +22,7 @@ import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStatsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenRacialSkillsGUIProcedure;
+import net.mcreator.dbm.procedures.OpenKiAttacksGUIProcedure;
 import net.mcreator.dbm.procedures.OpenIcon9Procedure;
 import net.mcreator.dbm.procedures.OpenIcon8Procedure;
 import net.mcreator.dbm.procedures.OpenIcon14Procedure;
@@ -119,7 +120,7 @@ public class StatisticGUIButtonMessage {
 		}
 		if (buttonID == 9) {
 
-			OpenSkillsGUIProcedure.execute(world, x, y, z, entity);
+			OpenKiAttacksGUIProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 10) {
 

@@ -196,7 +196,7 @@ public class StatisticGUIScreen extends AbstractContainerScreen<StatisticGUIMenu
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_quit = new ImageButton(this.leftPos + 162, this.topPos + -102, 9, 9, 0, 0, 9, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_quit.png"), 9, 18, e -> {
+		imagebutton_quit = new ImageButton(this.leftPos + 163, this.topPos + -102, 9, 9, 0, 0, 9, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_quit.png"), 9, 18, e -> {
 			if (true) {
 				DbmMod.PACKET_HANDLER.sendToServer(new StatisticGUIButtonMessage(0, x, y, z));
 				StatisticGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);

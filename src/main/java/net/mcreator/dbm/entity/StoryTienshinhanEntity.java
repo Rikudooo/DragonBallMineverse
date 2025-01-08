@@ -35,8 +35,12 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.procedures.TienshinhanAttackPatternProcedure;
@@ -44,6 +48,12 @@ import net.mcreator.dbm.procedures.StoryMobFlyConditionProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
 public class StoryTienshinhanEntity extends Monster {
+	public static final EntityDataAccessor<String> DATA_SelectedKiAttack = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_KiAttackSize = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_OldYAW = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_OldPITCH = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_KiAttackHits = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
+
 	public StoryTienshinhanEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(DbmModEntities.STORY_TIENSHINHAN.get(), world);
 	}
@@ -59,6 +69,16 @@ public class StoryTienshinhanEntity extends Monster {
 	@Override
 	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
+	protected void defineSynchedData() {
+		super.defineSynchedData();
+		this.entityData.define(DATA_SelectedKiAttack, "None");
+		this.entityData.define(DATA_KiAttackSize, 0);
+		this.entityData.define(DATA_OldYAW, 0);
+		this.entityData.define(DATA_OldPITCH, 0);
+		this.entityData.define(DATA_KiAttackHits, 0);
 	}
 
 	@Override
@@ -159,6 +179,31 @@ public class StoryTienshinhanEntity extends Monster {
 	@Override
 	public boolean fireImmune() {
 		return true;
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putString("DataSelectedKiAttack", this.entityData.get(DATA_SelectedKiAttack));
+		compound.putInt("DataKiAttackSize", this.entityData.get(DATA_KiAttackSize));
+		compound.putInt("DataOldYAW", this.entityData.get(DATA_OldYAW));
+		compound.putInt("DataOldPITCH", this.entityData.get(DATA_OldPITCH));
+		compound.putInt("DataKiAttackHits", this.entityData.get(DATA_KiAttackHits));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("DataSelectedKiAttack"))
+			this.entityData.set(DATA_SelectedKiAttack, compound.getString("DataSelectedKiAttack"));
+		if (compound.contains("DataKiAttackSize"))
+			this.entityData.set(DATA_KiAttackSize, compound.getInt("DataKiAttackSize"));
+		if (compound.contains("DataOldYAW"))
+			this.entityData.set(DATA_OldYAW, compound.getInt("DataOldYAW"));
+		if (compound.contains("DataOldPITCH"))
+			this.entityData.set(DATA_OldPITCH, compound.getInt("DataOldPITCH"));
+		if (compound.contains("DataKiAttackHits"))
+			this.entityData.set(DATA_KiAttackHits, compound.getInt("DataKiAttackHits"));
 	}
 
 	@Override
