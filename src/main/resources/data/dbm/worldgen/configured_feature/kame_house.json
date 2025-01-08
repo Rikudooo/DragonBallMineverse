@@ -1,7 +1,7 @@
 {
-  "type": "dbm:structure_feature",
+  "type": "dbm:kame_house",
   "config": {
-    "structure": "dbm:kame_house",
+    "structure": "dbm:kamehouse_spawner",
     "random_rotation": true,
     "ignored_blocks": [
       "minecraft:structure_block",

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"trianglecharge": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"vector": [-102.48391, -17.03177, 31.8703]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-102.48391, 17.03177, -31.8703]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [0, 0, 5]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [0, 0, -5]
+					}
+				}
+			}
+		}
+	}
+}

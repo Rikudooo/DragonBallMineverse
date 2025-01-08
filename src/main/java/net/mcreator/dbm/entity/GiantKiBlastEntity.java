@@ -24,7 +24,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.dbm.procedures.SpiritBombFlyingProcedure;
+import net.mcreator.dbm.procedures.KiBlastTickProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
 import javax.annotation.Nullable;
@@ -95,7 +95,7 @@ public class GiantKiBlastEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void tick() {
 		super.tick();
-		SpiritBombFlyingProcedure.execute(this.getOwner(), this);
+		KiBlastTickProcedure.execute(this);
 		if (this.inGround)
 			this.discard();
 	}

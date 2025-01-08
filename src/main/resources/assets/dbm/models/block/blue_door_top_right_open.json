@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_top_right_open",
+  "textures": {
+    "particle": "dbm:block/bluedoorbottom",
+    "bottom": "dbm:block/bluedoorbottom",
+    "top": "dbm:block/bluedoortop"
+  },
+  "render_type": "translucent"
+}

@@ -10094,10 +10094,6 @@
             "type": "number"
           },
           {
-            "name": "y",
-            "type": "number"
-          },
-          {
             "name": "z",
             "type": "number"
           },
@@ -10147,25 +10143,12 @@
       "registry_name": "kame_house",
       "metadata": {
         "files": [
-          "src/main/resources/data/dbm/worldgen/configured_feature/kame_house.json"
+          "src/main/java/net/mcreator/dbm/world/features/KameHouseFeature.java",
+          "src/main/resources/data/dbm/worldgen/configured_feature/kame_house.json",
+          "src/main/resources/data/dbm/worldgen/placed_feature/kame_house.json",
+          "src/main/resources/data/dbm/forge/biome_modifier/kame_house_biome_modifier.json"
         ],
         "has_nbt_structure": true
-      }
-    },
-    {
-      "name": "KameHouseSpawn",
-      "type": "feature",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "kame_house_spawn",
-      "metadata": {
-        "has_nbt_structure": true,
-        "files": [
-          "src/main/resources/data/dbm/worldgen/placed_feature/kame_house_spawn.json",
-          "src/main/resources/data/dbm/worldgen/configured_feature/kame_house_spawn.json",
-          "src/main/resources/data/dbm/forge/biome_modifier/kame_house_spawn_biome_modifier.json",
-          "src/main/java/net/mcreator/dbm/world/features/KameHouseSpawnFeature.java"
-        ]
       }
     },
     {
@@ -11139,6 +11122,244 @@
           "src/main/resources/data/dbm/recipes/dragon_radar_recipe.json"
         ]
       }
+    },
+    {
+      "name": "KameHouseSpawnBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kame_house_spawn_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/KameHouseSpawnBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "KameHouseSpawn",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kame_house_spawn",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dbm/models/item/kame_house_spawn.json",
+          "src/main/resources/assets/dbm/blockstates/kame_house_spawn.json",
+          "src/main/resources/assets/dbm/models/block/kame_house_spawn.json",
+          "src/main/resources/data/dbm/loot_tables/blocks/kame_house_spawn.json",
+          "src/main/java/net/mcreator/dbm/block/KameHouseSpawnBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "BlueDoor",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_door",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dbm/models/block/blue_door_bottom_right.json",
+          "src/main/java/net/mcreator/dbm/block/BlueDoorBlock.java",
+          "src/main/resources/data/dbm/loot_tables/blocks/blue_door.json",
+          "src/main/resources/assets/dbm/models/block/blue_door_bottom_right_open.json",
+          "src/main/resources/assets/dbm/models/block/blue_door_top_right.json",
+          "src/main/resources/assets/dbm/models/item/blue_door.json",
+          "src/main/resources/assets/dbm/models/block/blue_door_top_right_open.json",
+          "src/main/resources/assets/dbm/models/block/blue_door_bottom_left.json",
+          "src/main/resources/assets/dbm/models/block/blue_door_top_left_open.json",
+          "src/main/resources/assets/dbm/blockstates/blue_door.json",
+          "src/main/resources/assets/dbm/models/block/blue_door_top_left.json",
+          "src/main/resources/assets/dbm/models/block/blue_door_bottom_left_open.json"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "TribeamRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tribeam_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TribeamRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "ticks",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/Tribeam"
+    },
+    {
+      "name": "LearnTriBeam",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "learn_tri_beam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/LearnTriBeamProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/Tribeam"
+    },
+    {
+      "name": "TribeamNotOwned",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tribeam_not_owned",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TribeamNotOwnedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/Tribeam"
+    },
+    {
+      "name": "StoryMobFlyCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_mob_fly_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/StoryMobFlyConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "TeleportationParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/particle/TeleportationParticleParticle.java",
+          "src/main/resources/assets/dbm/particles/teleportation_particle.json"
+        ]
+      }
+    },
+    {
+      "name": "TienshinhanAttackPattern",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tienshinhan_attack_pattern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TienshinhanAttackPatternProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "StoryTienshinhan",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_tienshinhan",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dbm/forge/biome_modifier/story_tienshinhan_biome_modifier.json",
+          "src/main/java/net/mcreator/dbm/entity/StoryTienshinhanEntity.java",
+          "src/main/java/net/mcreator/dbm/client/renderer/StoryTienshinhanRenderer.java"
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "KiBlastTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ki_blast_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/KiBlastTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/GiantKiBlast"
     }
   ],
   "variable_elements": [
@@ -11974,7 +12195,7 @@
       "name": "KameHouseCoords",
       "type": "string",
       "scope": "map",
-      "value": "\"\""
+      "value": "Kame House is unknown"
     },
     {
       "name": "DBCoords1",
@@ -12153,6 +12374,14 @@
       ],
       "category": "neutral",
       "subtitle": "Spawning Shenron"
+    },
+    {
+      "name": "teleportation",
+      "files": [
+        "quickteleportation"
+      ],
+      "category": "neutral",
+      "subtitle": "Teleportation"
     }
   ],
   "tag_elements": {
@@ -12244,6 +12473,7 @@
       "~CUSTOM:BuildingFenceLightGray",
       "~CUSTOM:BuildingFenceWhite"
     ],
+    "ENTITIES:dbm:storymobs": [],
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:BuildingBricksStairsInvertedBlack",
       "~CUSTOM:BuildingStairsInvertedBlack",
@@ -12301,14 +12531,14 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.dbm.purple_gi_chestplate": "Purple Gi Top",
       "block.dbm.building_bricks_fence_brown": "Building Bricks Fence",
-      "key.dbm.transform": "Transform",
+      "item.dbm.purple_gi_chestplate": "Purple Gi Top",
       "block.dbm.building_bricks_slab_light_gray": "Building Bricks Slab",
+      "key.dbm.transform": "Transform",
       "gui.dbm.statistic_gui.label_agility": "Agility",
-      "subtitles.shenroncalled": "Spawning Shenron",
-      "entity.dbm.dende": "Dende",
       "gui.dbm.character_creation_gui_2.label_fighting_class": "Fighting Class",
+      "entity.dbm.dende": "Dende",
+      "subtitles.shenroncalled": "Spawning Shenron",
       "block.dbm.building_stairs_cyan": "Building Stairs",
       "gui.dbm.skills_gui.label_cost_2000_tp": "Cost: 2,000 TP",
       "block.dbm.hyperbolic_time_chamber_door": "Hyperbolic Time Chamber Door",
@@ -12328,6 +12558,7 @@
       "block.dbm.building_block_yellow": "Building Block",
       "gui.dbm.korin_drink_gui.label_hello_there_so_youre_dead_hu": "Do you wish to drink the sacred water? You will see your potential to",
       "block.dbm.building_fence_black": "Building Fence",
+      "entity.dbm.story_tienshinhan": "Tienshin Han",
       "entity.dbm.sabertooth": "Sabertooth",
       "block.dbm.building_stairs_orange": "Building Stairs",
       "block.dbm.building_bricks_fence_inverted_black": "Building Bricks Fence",
@@ -12447,6 +12678,7 @@
       "block.dbm.building_block_orange": "Building Block",
       "gui.dbm.skills_gui.tooltip_strength_increase_melee_damage": "Strength: Increase Melee Damage and Defense",
       "gui.dbm.welcome_gui.label_on_an_epic_journey_through_the": "on an epic journey through the world of",
+      "block.dbm.kame_house_spawn": "Kame House Spawn",
       "block.dbm.horizontal_ladder": "Ladder",
       "block.dbm.building_bricks_slab_brown": "Building Bricks Slab",
       "block.dbm.invisible_light": "Invisible Light",
@@ -12473,6 +12705,7 @@
       "block.dbm.building_fence_yellow": "Building Fence",
       "subtitles.beamfire_1": "Ki Wave Fired",
       "block.dbm.building_bricks_slab_sky_blue": "Building Bricks Slab",
+      "block.dbm.blue_door": "Blue Door",
       "block.dbm.building_block_tiles_2": "Building Block",
       "block.dbm.horizontal_ladder_support": "Ladder",
       "entity.dbm.king_enma": "King Enma",
@@ -12512,6 +12745,7 @@
       "block.dbm.building_bricks_stairs_cyan": "Building Bricks Stairs",
       "block.dbm.building_bricks_fence_red": "Building Bricks Fence",
       "block.dbm.building_bricks_slab_orange": "Building Bricks Slab",
+      "subtitles.teleportation": "Teleportation",
       "subtitles.transform": "Power Up",
       "block.dbm.building_bricks_fence_sky_blue": "Building Bricks Fence",
       "block.dbm.building_bricks_slab_inverted_black": "Building Bricks Slab",
@@ -12740,6 +12974,10 @@
           {
             "name": "Makankosappo",
             "children": []
+          },
+          {
+            "name": "Tribeam",
+            "children": []
           }
         ]
       },
@@ -12795,6 +13033,15 @@
       {
         "name": "Items",
         "children": []
+      },
+      {
+        "name": "Story",
+        "children": [
+          {
+            "name": "Entities",
+            "children": []
+          }
+        ]
       }
     ]
   },

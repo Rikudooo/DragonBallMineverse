@@ -187,6 +187,7 @@ public class DbmModTabs {
 				tabData.accept(DbmModBlocks.BUILDING_FENCE_INVERTED_BLACK.get().asItem());
 				tabData.accept(DbmModBlocks.BUILDING_BRICKS_FENCE_INVERTED_BLACK.get().asItem());
 				tabData.accept(DbmModBlocks.BUILDING_BLOCK_TILES_2.get().asItem());
+				tabData.accept(DbmModBlocks.BLUE_DOOR.get().asItem());
 			})
 
 					.build());

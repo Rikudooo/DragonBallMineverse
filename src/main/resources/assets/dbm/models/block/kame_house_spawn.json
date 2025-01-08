@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/db1",
+    "up": "dbm:block/db1",
+    "north": "dbm:block/db1",
+    "east": "dbm:block/db1",
+    "south": "dbm:block/db1",
+    "west": "dbm:block/db1",
+    "particle": "dbm:block/db1"
+  },
+  "render_type": "translucent"
+}

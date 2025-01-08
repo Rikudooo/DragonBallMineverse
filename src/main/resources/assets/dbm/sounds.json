@@ -114,5 +114,14 @@
         "stream": false
       }
     ]
+  },
+  "teleportation": {
+    "subtitle": "subtitles.teleportation",
+    "sounds": [
+      {
+        "name": "dbm:quickteleportation",
+        "stream": false
+      }
+    ]
   }
 }

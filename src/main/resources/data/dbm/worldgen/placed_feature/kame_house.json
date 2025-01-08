@@ -1,5 +1,5 @@
 {
-  "feature": "dbm:kame_house_spawn",
+  "feature": "dbm:kame_house",
   "placement": [
     {
       "type": "minecraft:rarity_filter",

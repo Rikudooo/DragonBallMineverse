@@ -28,4 +28,5 @@ public class DbmModSounds {
 	public static final RegistryObject<SoundEvent> BEAMFIRE_1 = REGISTRY.register("beamfire_1", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "beamfire_1")));
 	public static final RegistryObject<SoundEvent> KIWAVE_CHARGE = REGISTRY.register("kiwave_charge", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "kiwave_charge")));
 	public static final RegistryObject<SoundEvent> SHENRONCALLED = REGISTRY.register("shenroncalled", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "shenroncalled")));
+	public static final RegistryObject<SoundEvent> TELEPORTATION = REGISTRY.register("teleportation", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "teleportation")));
 }

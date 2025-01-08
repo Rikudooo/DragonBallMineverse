@@ -213,7 +213,7 @@ public class KamehamehaRenderProcedure {
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
 			if ((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).LaunchKiAttack == true) {
 				if (((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SelectedKiAttack).equals("Kamehameha")) {
-					x = Math.sin(Math.toRadians(entityiterator.getLookAngle().x)) * (-1.5);
+					x = Math.sin(Math.toRadians(entityiterator.getLookAngle().x)) * 1.5;
 					z = Math.cos(Math.toRadians(entityiterator.getLookAngle().z)) * 1.5;
 					if (target(2)) {
 						speed = 0.4;
@@ -244,11 +244,13 @@ public class KamehamehaRenderProcedure {
 							add(i, i, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 							end();
 						}
-						renderShape(shape(), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator.getLookAngle().x)) * 1.5), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
+								(entityiterator.getZ() + Math.cos(Math.toRadians(entityiterator.getLookAngle().z)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) (-1.6), (float) 1.6, 1,
 								32 << 24 | 255 << 16 | 255 << 8 | 255);
-						renderShape(shape(), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator.getLookAngle().x)) * 1.5), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
+								(entityiterator.getZ() + Math.cos(Math.toRadians(entityiterator.getLookAngle().z)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, 1, 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						release();
@@ -282,11 +284,13 @@ public class KamehamehaRenderProcedure {
 							add(i, i, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 							end();
 						}
-						renderShape(shape(), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator.getLookAngle().x)) * 1.5), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
+								(entityiterator.getZ() + Math.cos(Math.toRadians(entityiterator.getLookAngle().z)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) 1.6, (float) (-1.6), -1,
 								32 << 24 | 255 << 16 | 255 << 8 | 255);
-						renderShape(shape(), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator.getLookAngle().x)) * 1.5), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
+								(entityiterator.getZ() + Math.cos(Math.toRadians(entityiterator.getLookAngle().z)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, -1, -1, -1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						release();

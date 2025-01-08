@@ -7,8 +7,8 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.mcreator.dbm.world.features.configurations.StructureFeatureConfiguration;
 import net.mcreator.dbm.procedures.KameHouseAdditionalGenerationConditionProcedure;
 
-public class KameHouseSpawnFeature extends StructureFeature {
-	public KameHouseSpawnFeature() {
+public class KameHouseFeature extends StructureFeature {
+	public KameHouseFeature() {
 		super(StructureFeatureConfiguration.CODEC);
 	}
 

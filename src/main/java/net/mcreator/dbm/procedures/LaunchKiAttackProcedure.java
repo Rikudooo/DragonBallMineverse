@@ -567,6 +567,109 @@ public class LaunchKiAttackProcedure {
 					}
 				}
 			}
+			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SelectedKiAttack).equals("Tribeam")) {
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYawAndPitch == false) {
+					{
+						double _setval = entity.getYRot();
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.OldYAW = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						double _setval = entity.getXRot();
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.OldPitch = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						boolean _setval = true;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.OldYawAndPitch = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(entity.getX(), y, entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:beamfire_1")), SoundSource.PLAYERS, 1, 1);
+						} else {
+							_level.playLocalSound((entity.getX()), y, (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:beamfire_1")), SoundSource.PLAYERS, 1, 1, false);
+						}
+					}
+				}
+				x = Math.sin(Math.toRadians(entity.getYRot())) * (-1.5);
+				z = Math.cos(Math.toRadians(entity.getYRot())) * 1.5;
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackSize < 64) {
+					{
+						double _setval = (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackSize + 4;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.KiAttackSize = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+				entity.setDeltaMovement(new Vec3(0, 0, 0));
+				{
+					Entity _ent = entity;
+					_ent.setYRot((float) (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW);
+					_ent.setXRot((float) (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch);
+					_ent.setYBodyRot(_ent.getYRot());
+					_ent.setYHeadRot(_ent.getYRot());
+					_ent.yRotO = _ent.getYRot();
+					_ent.xRotO = _ent.getXRot();
+					if (_ent instanceof LivingEntity _entity) {
+						_entity.yBodyRotO = _entity.getYRot();
+						_entity.yHeadRotO = _entity.getYRot();
+					}
+				}
+				MakankosappoLoopProcedure.execute(world, entity);
+				if (world.isClientSide()) {
+					if (entity instanceof AbstractClientPlayer player) {
+						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
+						if (animation != null && !animation.isActive()) {
+							animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("dbm", "tribeamcharge"))));
+						}
+					}
+				}
+				if (!world.isClientSide()) {
+					if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+						List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+						synchronized (connections) {
+							Iterator<Connection> iterator = connections.iterator();
+							while (iterator.hasNext()) {
+								Connection connection = iterator.next();
+								if (!connection.isConnecting() && connection.isConnected())
+									DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("tribeamcharge"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
+							}
+						}
+					}
+				}
+				{
+					double _setval = (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackDuration + 4;
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.KiAttackDuration = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackRoll < 360) {
+					{
+						double _setval = (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackRoll + 3;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.KiAttackRoll = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else {
+					{
+						double _setval = 0;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.KiAttackRoll = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+			}
 		}
 	}
 }

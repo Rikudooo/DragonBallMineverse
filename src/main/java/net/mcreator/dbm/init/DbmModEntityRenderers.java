@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.dbm.client.renderer.StoryTienshinhanRenderer;
 import net.mcreator.dbm.client.renderer.ShenronRenderer;
 import net.mcreator.dbm.client.renderer.SabertoothRenderer;
 import net.mcreator.dbm.client.renderer.PunchingBagRenderer;
@@ -67,5 +68,6 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_6.get(), DragonBallE6Renderer::new);
 		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_7.get(), DragonBallE7Renderer::new);
 		event.registerEntityRenderer(DbmModEntities.GIANT_KI_BLAST.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_TIENSHINHAN.get(), StoryTienshinhanRenderer::new);
 	}
 }

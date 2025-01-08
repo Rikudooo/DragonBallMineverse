@@ -11,6 +11,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.dbm.item.TurtleGiKingKaiItem;
@@ -232,10 +233,16 @@ public class DbmModItems {
 	public static final RegistryObject<Item> DRAGON_BALL_6 = REGISTRY.register("dragon_ball_6", () -> new DragonBall6Item());
 	public static final RegistryObject<Item> DRAGON_BALL_7 = REGISTRY.register("dragon_ball_7", () -> new DragonBall7Item());
 	public static final RegistryObject<Item> MAKANKOSAPPO_ITEM = REGISTRY.register("makankosappo_item", () -> new MakankosappoItemItem());
+	public static final RegistryObject<Item> KAME_HOUSE_SPAWN = block(DbmModBlocks.KAME_HOUSE_SPAWN);
+	public static final RegistryObject<Item> BLUE_DOOR = doubleBlock(DbmModBlocks.BLUE_DOOR);
 
 	// Start of user code block custom items
 	// End of user code block custom items
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
+
+	private static RegistryObject<Item> doubleBlock(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties()));
 	}
 }

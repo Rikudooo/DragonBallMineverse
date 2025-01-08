@@ -26,6 +26,7 @@ import net.mcreator.dbm.block.PowerPolePlinthDownBlock;
 import net.mcreator.dbm.block.KorinTowerBlock2Block;
 import net.mcreator.dbm.block.KorinTowerBlock1Block;
 import net.mcreator.dbm.block.KorinTowerBaseBlock;
+import net.mcreator.dbm.block.KameHouseSpawnBlock;
 import net.mcreator.dbm.block.InvisibleLightBlock;
 import net.mcreator.dbm.block.HyperbolicTimeChamberDoorBlock;
 import net.mcreator.dbm.block.HorizontalLadderSupportBlock;
@@ -177,6 +178,7 @@ import net.mcreator.dbm.block.BuildingBlockCyanBlock;
 import net.mcreator.dbm.block.BuildingBlockBrownBlock;
 import net.mcreator.dbm.block.BuildingBlockBlueBlock;
 import net.mcreator.dbm.block.BuildingBlockBlackBlock;
+import net.mcreator.dbm.block.BlueDoorBlock;
 import net.mcreator.dbm.DbmMod;
 
 public class DbmModBlocks {
@@ -348,6 +350,8 @@ public class DbmModBlocks {
 	public static final RegistryObject<Block> KORIN_TOWER_BLOCK_1 = REGISTRY.register("korin_tower_block_1", () -> new KorinTowerBlock1Block());
 	public static final RegistryObject<Block> KORIN_TOWER_BLOCK_2 = REGISTRY.register("korin_tower_block_2", () -> new KorinTowerBlock2Block());
 	public static final RegistryObject<Block> HYPERBOLIC_TIME_CHAMBER_DOOR = REGISTRY.register("hyperbolic_time_chamber_door", () -> new HyperbolicTimeChamberDoorBlock());
+	public static final RegistryObject<Block> KAME_HOUSE_SPAWN = REGISTRY.register("kame_house_spawn", () -> new KameHouseSpawnBlock());
+	public static final RegistryObject<Block> BLUE_DOOR = REGISTRY.register("blue_door", () -> new BlueDoorBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

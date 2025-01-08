@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.dbm.entity.StoryTienshinhanEntity;
 import net.mcreator.dbm.entity.SpiritBombEntity;
 import net.mcreator.dbm.entity.ShenronEntity;
 import net.mcreator.dbm.entity.SabertoothEntity;
@@ -108,6 +109,8 @@ public class DbmModEntities {
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DragonBallE7Entity::new).fireImmune().sized(0.2f, 0.2f));
 	public static final RegistryObject<EntityType<GiantKiBlastEntity>> GIANT_KI_BLAST = register("giant_ki_blast",
 			EntityType.Builder.<GiantKiBlastEntity>of(GiantKiBlastEntity::new, MobCategory.MISC).setCustomClientFactory(GiantKiBlastEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(2f, 2f));
+	public static final RegistryObject<EntityType<StoryTienshinhanEntity>> STORY_TIENSHINHAN = register("story_tienshinhan", EntityType.Builder.<StoryTienshinhanEntity>of(StoryTienshinhanEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryTienshinhanEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -142,6 +145,7 @@ public class DbmModEntities {
 			DragonBallE5Entity.init();
 			DragonBallE6Entity.init();
 			DragonBallE7Entity.init();
+			StoryTienshinhanEntity.init();
 		});
 	}
 
@@ -171,5 +175,6 @@ public class DbmModEntities {
 		event.put(DRAGON_BALL_E_5.get(), DragonBallE5Entity.createAttributes().build());
 		event.put(DRAGON_BALL_E_6.get(), DragonBallE6Entity.createAttributes().build());
 		event.put(DRAGON_BALL_E_7.get(), DragonBallE7Entity.createAttributes().build());
+		event.put(STORY_TIENSHINHAN.get(), StoryTienshinhanEntity.createAttributes().build());
 	}
 }

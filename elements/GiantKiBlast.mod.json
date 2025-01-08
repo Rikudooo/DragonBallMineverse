@@ -18,7 +18,7 @@
     "modelWidth": 2.0,
     "modelHeight": 2.0,
     "onFlyingTick": {
-      "name": "SpiritBombFlying"
+      "name": "KiBlastTick"
     }
   }
 }

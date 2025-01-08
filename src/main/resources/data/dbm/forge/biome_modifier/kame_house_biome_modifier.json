@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "deep_ocean",
+  "features": "dbm:kame_house",
+  "step": "surface_structures"
+}

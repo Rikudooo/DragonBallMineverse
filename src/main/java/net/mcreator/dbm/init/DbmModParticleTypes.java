@@ -19,4 +19,5 @@ public class DbmModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> PARTICLE_PUNCH_2 = REGISTRY.register("particle_punch_2", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> PARTICLE_PUNCH_3 = REGISTRY.register("particle_punch_3", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> PARTICLE_BLOCK = REGISTRY.register("particle_block", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> TELEPORTATION_PARTICLE = REGISTRY.register("teleportation_particle", () -> new SimpleParticleType(true));
 }

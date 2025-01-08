@@ -294,7 +294,7 @@ public class DbmModVariables {
 		public String DragonBallEarth7 = "\"\"";
 		public boolean DefaultStructureLoaded = false;
 		public boolean KameHouseSpawned = false;
-		public String KameHouseCoords = "\"\"";
+		public String KameHouseCoords = "Kame House is unknown";
 		public String DBCoords1 = "\"\"";
 		public String DBCoords2 = "\"\"";
 		public String DBCoords3 = "\"\"";

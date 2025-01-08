@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.dbm.client.model.Modeltien;
 import net.mcreator.dbm.client.model.Modeltail_saiyan_true;
 import net.mcreator.dbm.client.model.Modelssj4_eyeliner;
 import net.mcreator.dbm.client.model.Modelsabertooth;
@@ -152,6 +153,7 @@ public class DbmModModels {
 		event.registerLayerDefinition(ModelGiBottom.LAYER_LOCATION, ModelGiBottom::createBodyLayer);
 		event.registerLayerDefinition(Modelhair_zamasu_2.LAYER_LOCATION, Modelhair_zamasu_2::createBodyLayer);
 		event.registerLayerDefinition(ModelSixStarDragonBallEntity.LAYER_LOCATION, ModelSixStarDragonBallEntity::createBodyLayer);
+		event.registerLayerDefinition(Modeltien.LAYER_LOCATION, Modeltien::createBodyLayer);
 		event.registerLayerDefinition(ModelNorthKaio.LAYER_LOCATION, ModelNorthKaio::createBodyLayer);
 		event.registerLayerDefinition(ModelPiccolo.LAYER_LOCATION, ModelPiccolo::createBodyLayer);
 		event.registerLayerDefinition(Modelhair_zamasu_ssj2.LAYER_LOCATION, Modelhair_zamasu_ssj2::createBodyLayer);

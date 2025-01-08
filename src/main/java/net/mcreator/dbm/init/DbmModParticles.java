@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.dbm.client.particle.TeleportationParticleParticle;
 import net.mcreator.dbm.client.particle.ParticlePunch3Particle;
 import net.mcreator.dbm.client.particle.ParticlePunch2Particle;
 import net.mcreator.dbm.client.particle.ParticlePunch1Particle;
@@ -22,5 +23,6 @@ public class DbmModParticles {
 		event.registerSpriteSet(DbmModParticleTypes.PARTICLE_PUNCH_2.get(), ParticlePunch2Particle::provider);
 		event.registerSpriteSet(DbmModParticleTypes.PARTICLE_PUNCH_3.get(), ParticlePunch3Particle::provider);
 		event.registerSpriteSet(DbmModParticleTypes.PARTICLE_BLOCK.get(), ParticleBlockParticle::provider);
+		event.registerSpriteSet(DbmModParticleTypes.TELEPORTATION_PARTICLE.get(), TeleportationParticleParticle::provider);
 	}
 }
