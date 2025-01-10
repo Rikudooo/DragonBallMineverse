@@ -4,8 +4,8 @@ import net.minecraft.world.level.LevelAccessor;
 
 import net.mcreator.dbm.network.DbmModVariables;
 
-public class ShowThreeStarProcedure {
+public class TextDemandsProcedure {
 	public static String execute(LevelAccessor world) {
-		return DbmModVariables.MapVariables.get(world).DBCoords3;
+		return "Demands: " + new java.text.DecimalFormat("##").format(DbmModVariables.MapVariables.get(world).ShenronDemands);
 	}
 }

@@ -1,0 +1,223 @@
+{
+  "_fv": 69,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "db.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnDragonBallUsable"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 22,
+          "y": 172
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "db.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnDragonBallUsable"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 39,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "db.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnDragonBallUsable"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 66,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "db.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnDragonBallUsable"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 84,
+          "y": 172
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "db.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnDragonBallUsable"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 39,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "db.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnDragonBallUsable"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 53,
+          "y": 190
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "db.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnDragonBallUsable"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 67,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dbselected.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnSelectedDragonBall1"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 22,
+          "y": 172
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dbselected.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnSelectedDragonBall2"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 39,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dbselected.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnSelectedDragonBall3"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 66,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dbselected.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnSelectedDragonBall4"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 84,
+          "y": 172
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dbselected.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnSelectedDragonBall5"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 39,
+          "y": 207
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dbselected.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnSelectedDragonBall6"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 53,
+          "y": 190
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dbselected.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnSelectedDragonBall7"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 67,
+          "y": 207
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_text_db_distance",
+          "text": {
+            "fixedValue": "",
+            "name": "TextDBDistance"
+          },
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnDragonBallUsable"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 39,
+          "y": 136
+        }
+      }
+    ],
+    "baseTexture": "dragonradar.png",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "ReturnDragonRadarInHand"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

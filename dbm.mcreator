@@ -5366,7 +5366,8 @@
           "src/main/java/net/mcreator/dbm/item/DragonRadarItem.java",
           "src/main/resources/assets/dbm/models/item/dragon_radar.json"
         ]
-      }
+      },
+      "path": "~/DragonBalls"
     },
     {
       "name": "DBMItems",
@@ -10899,18 +10900,6 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -11057,61 +11046,7 @@
         "files": [
           "src/main/java/net/mcreator/dbm/procedures/ChunkLoadedDragonBallsProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/DragonBalls"
-    },
-    {
-      "name": "ShowThreeStar",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "show_three_star",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/dbm/procedures/ShowThreeStarProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/DragonBalls"
-    },
-    {
-      "name": "Show",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "show",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dbm/client/screens/ShowOverlay.java"
-        ]
+        "dependencies": []
       },
       "path": "~/DragonBalls"
     },
@@ -11826,6 +11761,701 @@
         ]
       },
       "path": "~/KiAttacks/Tribeam"
+    },
+    {
+      "name": "TienshinhanLoop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tienshinhan_loop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TienshinhanLoopProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "ShenronGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shenron_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/world/inventory/ShenronGUIMenu.java",
+          "src/main/java/net/mcreator/dbm/network/ShenronGUIButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/client/gui/ShenronGUIScreen.java"
+        ]
+      },
+      "path": "~/Entities/SafeZone"
+    },
+    {
+      "name": "ReturnShenron",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_shenron",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnShenronProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone"
+    },
+    {
+      "name": "MakeMeStronger",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "make_me_stronger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/MakeMeStrongerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "TextDemands",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "text_demands",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TextDemandsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "GiveSenzuBeans",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_senzu_beans",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/GiveSenzuBeansProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "ShenronAgeGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shenron_age_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/gui/ShenronAgeGUIScreen.java",
+          "src/main/java/net/mcreator/dbm/network/ShenronAgeGUIButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/world/inventory/ShenronAgeGUIMenu.java"
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "ChangeAgeGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_age_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ChangeAgeGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "ChangeAge",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_age",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ChangeAgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "ChangeAgeCommand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_age_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ChangeAgeCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "Dbm",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dbm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/command/DbmCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenShenronGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_shenron_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/OpenShenronGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "OpenShenronGUIEE",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_shenron_guiee",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/OpenShenronGUIEEProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone/ShenronDemands"
+    },
+    {
+      "name": "ShenronOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shenron_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ShenronOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "MinecraftDayPass",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minecraft_day_pass",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/MinecraftDayPassProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Stats"
+    },
+    {
+      "name": "ReturnDragonBallUsable",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_dragon_ball_usable",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnDragonBallUsableProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "DragonRadarRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_radar_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/DragonRadarRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ReturnDragonRadarInHand",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_dragon_radar_in_hand",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnDragonRadarInHandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ReturnSelectedDragonBall1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_selected_dragon_ball_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnSelectedDragonBall1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ReturnSelectedDragonBall2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_selected_dragon_ball_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnSelectedDragonBall2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ReturnSelectedDragonBall3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_selected_dragon_ball_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnSelectedDragonBall3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ReturnSelectedDragonBall4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_selected_dragon_ball_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnSelectedDragonBall4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ReturnSelectedDragonBall5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_selected_dragon_ball_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnSelectedDragonBall5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ReturnSelectedDragonBall6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_selected_dragon_ball_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnSelectedDragonBall6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "ReturnSelectedDragonBall7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_selected_dragon_ball_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnSelectedDragonBall7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "DragonRadarOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_radar_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/screens/DragonRadarOverlayOverlay.java"
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "TextDBDistance",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "text_db_distance",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TextDBDistanceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
+    },
+    {
+      "name": "DragonRadarItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_radar_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/DragonRadarItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/DragonBalls"
     }
   ],
   "variable_elements": [
@@ -12704,6 +13334,162 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "None"
+    },
+    {
+      "name": "ShenronDemands",
+      "type": "number",
+      "scope": "map",
+      "value": "3.0"
+    },
+    {
+      "name": "ShenronSpawned",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "Aging",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "LastAgeTime",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "DBDistance",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "DBx1",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBx2",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBx3",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBx4",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBx5",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBx6",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBx7",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBy1",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBy2",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBy3",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBy4",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBy5",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBy6",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBy7",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBz1",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBz2",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBz3",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBz4",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBz5",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBz6",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DBz7",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -12967,386 +13753,394 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "block.dbm.building_bricks_fence_brown": "Building Bricks Fence",
       "item.dbm.purple_gi_chestplate": "Purple Gi Top",
+      "block.dbm.building_bricks_fence_brown": "Building Bricks Fence",
       "block.dbm.building_bricks_slab_light_gray": "Building Bricks Slab",
       "key.dbm.transform": "Transform",
-      "gui.dbm.statistic_gui.label_agility": "Agility",
-      "gui.dbm.character_creation_gui_2.label_fighting_class": "Fighting Class",
-      "entity.dbm.dende": "Dende",
       "subtitles.shenroncalled": "Spawning Shenron",
-      "block.dbm.building_stairs_cyan": "Building Stairs",
+      "entity.dbm.dende": "Dende",
+      "gui.dbm.character_creation_gui_2.label_fighting_class": "Fighting Class",
       "gui.dbm.skills_gui.label_cost_2000_tp": "Cost: 2,000 TP",
-      "block.dbm.hyperbolic_time_chamber_door": "Hyperbolic Time Chamber Door",
       "block.dbm.building_bricks_stairs_red": "Building Bricks Stairs",
       "gui.dbm.statistic_gui.tooltip_agility_increase_speed_stamina": "Agility: Increase Speed, Stamina, and Defense",
-      "gui.dbm.kame_sennin_gui_2.label_king_enma": "Kame Sennin",
       "gui.dbm.korin_gui.label_king_enma": "Master Korin",
-      "block.dbm.building_slab_dark_gray": "Building Slab",
       "block.dbm.building_block_sky_blue": "Building Block",
       "subtitles.aura": "",
       "block.dbm.building_stairs_green": "Building Stairs",
-      "block.dbm.building_bricks_fence_purple": "Building Bricks Fence",
       "block.dbm.building_stairs_sky_blue": "Building Stairs",
-      "gui.dbm.character_creation_gui_2.label_focused_on_personal_goals": "focused on personal goals",
       "block.dbm.building_fence_inverted_black": "Building Fence",
       "block.dbm.building_slab_cyan": "Building Slab",
       "block.dbm.building_block_yellow": "Building Block",
       "gui.dbm.ki_attacks_gui.tooltip_fly_gives_the_player_the_abilit": "Fly: Gives the Player the ability to fly",
-      "gui.dbm.korin_drink_gui.label_hello_there_so_youre_dead_hu": "Do you wish to drink the sacred water? You will see your potential to",
-      "block.dbm.building_fence_black": "Building Fence",
       "entity.dbm.story_tienshinhan": "Tienshin Han",
       "entity.dbm.sabertooth": "Sabertooth",
-      "block.dbm.building_stairs_orange": "Building Stairs",
       "block.dbm.building_bricks_fence_inverted_black": "Building Bricks Fence",
-      "block.dbm.building_slab_yellow": "Building Slab",
       "attribute.dbm.scale": "Scale",
-      "gui.dbm.north_kaio_gui_2.label_kaioken_15000_tp": "Kaioken | 15,000 TP",
       "gui.dbm.story_gui.tooltip_body_increase_max_hp_and_stamin": "Body: Increase Max HP and Stamina",
-      "gui.dbm.ki_attacks_gui.label_cost_5000_tp": "Cost: 5,000 TP",
-      "gui.dbm.character_creation_gui_2.label_alignment": "Alignment",
       "gui.dbm.skills_gui.label_player_stats": "Player Skills",
       "block.dbm.building_fence_red": "Building Fence",
       "block.dbm.building_block_light_gray": "Building Block",
-      "gui.dbm.north_kaio_gui_2.label_spirit_bomb_cost_8000_tp": "Spirit Bomb | Cost: 8,000 TP",
-      "block.dbm.unbreakable_full_grass_block": "Unbreakable Full Grass Block",
       "gui.dbm.character_creation_gui_2.label_balanced_between_good_and_evil": "Balanced between good and evil,",
-      "subtitles.detransform": "Power Down",
       "block.dbm.building_bricks_dark_gray": "Building Bricks",
       "gui.dbm.kame_sennin_gui.label_king_enma": "Kame Sennin",
-      "block.dbm.building_bricks_fence_light_gray": "Building Bricks Fence",
-      "block.dbm.building_bricks_fence_orange": "Building Bricks Fence",
-      "block.dbm.building_bricks_fence_pink": "Building Bricks Fence",
       "entity.dbm.admin_punching_bag": "Punching Bag",
       "gui.dbm.north_kaio_gui.label_hello_there_so_youre_dead_hu": "Hey! If you can make me laugh, then i\u0027ll teach you what i know!",
       "block.dbm.building_slab_orange": "Building Slab",
       "block.dbm.building_bricks_slab_blue": "Building Bricks Slab",
-      "gui.dbm.statistic_gui.tooltip_focus_increase_ki_damage": "Focus: Increase Ki Damage",
       "gui.dbm.character_creation_gui_2.label_a_specialist_in_harnessing_ki_en": "A specialist in harnessing ki",
-      "block.dbm.building_block_blue": "Building Block",
       "subtitles.punch1": "Punch",
       "block.dbm.building_stairs_white": "Building Stairs",
       "subtitles.punch2": "Punch",
-      "block.dbm.building_bricks_slab_gray": "Building Bricks Slab",
       "gui.dbm.ki_attacks_gui.label_cost_6000_tp": "Cost: 6,000 TP",
-      "block.dbm.building_block_purple": "Building Block",
       "block.dbm.building_bricks_fence_dark_gray": "Building Bricks Fence",
       "gui.dbm.skills_gui.tooltip_fly_gives_the_player_the_abilit": "Fly: Gives the Player the ability to fly",
       "gui.dbm.character_creation_gui_2.label_power_to_dominate_and": "power to dominate and cause harm",
       "block.dbm.building_block_gray": "Building Block",
       "block.dbm.building_bricks_stairs_lime": "Building Bricks Stairs",
-      "gui.dbm.skills_gui.label_upgradecost": "Cost: 150 TP",
-      "gui.dbm.character_creation_gui_2.label_attacks_and_defense": "attacks and defense",
-      "subtitles.punch3": "Punch",
       "block.dbm.building_stairs_pink": "Building Stairs",
-      "gui.dbm.skills_gui.tooltip_spirit_increase_ki_pool": "Spirit: Increase Ki Pool",
+      "subtitles.punch3": "Punch",
       "block.dbm.building_bricks_stairs_orange": "Building Bricks Stairs",
-      "gui.dbm.ki_attacks_gui.tooltip_jump_allows_you_to_jump_higher": "Jump: Allows you to jump higher",
-      "subtitles.kamehameha_charge": "Charging Kamehameha",
-      "biome.dbm.other_world_biome": "Other World",
-      "entity.dbm.dragon_ball_e_3": "Three-Stars Dragon Ball",
       "gui.dbm.kame_sennin_gui_2.label_giant_ki_blast_560_tp": "Giant Ki Blast | 560 TP",
+      "entity.dbm.dragon_ball_e_3": "Three-Stars Dragon Ball",
       "entity.dbm.dragon_ball_e_2": "Two-Stars Dragon Ball",
       "entity.dbm.dragon_ball_e_1": "One-Star Dragon Ball",
-      "block.dbm.building_bricks_brown": "Building Bricks",
       "entity.dbm.dragon_ball_e_7": "Seven-Stars Dragon Ball",
       "entity.dbm.dragon_ball_e_6": "Six-Stars Dragon Ball",
-      "gui.dbm.welcome_gui.label_dragon_ball_where_power_knows_n": "Dragon Ball, where power knows no limits.",
       "entity.dbm.dragon_ball_e_5": "Five-Stars Dragon Ball",
+      "gui.dbm.welcome_gui.label_dragon_ball_where_power_knows_n": "Dragon Ball, where power knows no limits.",
       "entity.dbm.dragon_ball_e_4": "Four-Stars Dragon Ball",
       "block.dbm.building_slab_dark_green": "Building Slab",
-      "key.dbm.backward_key": "Backward",
-      "block.dbm.building_slab_inverted_black": "Building Slab",
-      "block.dbm.unbreakable_log": "Unbreakable Log",
       "death.attack.kikoha": "%1$s died from a ki based attack",
       "gui.dbm.skills_gui.label_strength": "Strength",
-      "item.dbm.punching_bag_item": "Punching Bag",
-      "gui.dbm.statistic_gui.label_spirit": "Spirit",
-      "gui.dbm.saiyan_forms_gui.label_cost_25000_tp": "Cost: 25,000 TP",
       "gui.dbm.character_creation_gui_2.label_a_balanced_combatant_mastering": "A balanced combatant, mastering",
       "key.dbm.charge_ki": "Charge Ki",
-      "gui.dbm.character_creation_gui_2.label_and_ki_control": "and ki control",
       "block.dbm.building_bricks_slab_white": "Building Bricks Slab",
-      "gui.dbm.character_creation_gui_2.label_combining_precision_agility_an": "combining precision, agility, ",
       "item.dbm.bear_thief_spawn_egg": "Bear Thief Spawn Egg",
       "block.dbm.building_bricks_gray": "Building Bricks",
-      "block.dbm.building_bricks_fence_green": "Building Bricks Fence",
       "block.dbm.building_fence_dark_green": "Building Fence",
       "block.dbm.building_slab_black": "Building Slab",
       "item.dbm.senzu_bean": "Senzu Bean",
       "item.dbm.battle_armor_chestplate": "Battle Armor Top",
       "block.dbm.building_block_cyan": "Building Block",
-      "gui.dbm.skills_gui.tooltip_potential_release_allows_you_to": "Potential Release: Allows you to unleash 100% of your power!",
       "block.dbm.building_block_tiles": "Building Block",
+      "item.dbm.dragon_radar": "Dragon Radar",
+      "block.dbm.unbreakable_sand": "Unbreakable Sand",
+      "block.dbm.building_fence_sky_blue": "Building Fence",
+      "block.dbm.building_bricks_stairs_dark_gray": "Building Bricks Stairs",
+      "gui.dbm.korin_drink_gui.label_theres_only_a_10_it_works_els": "there\u0027s only a 10% it works, else you will die.",
+      "item.dbm.turtle_gi_king_kai_chestplate": "Turtle Gi Top (King Kai)",
+      "key.dbm.fly_key": "Fly",
+      "item.dbm.turtle_gi_chestplate": "Turtle Gi Top",
+      "gui.dbm.shenron_age_gui.label_if_it_is_within_my_power": "it... if it is within my power.",
+      "gui.dbm.saiyan_forms_gui.label_player_stats": "Racial Skills",
+      "gui.dbm.saiyan_forms_gui.label_cost_50000_tp": "Cost: 50,000 TP",
+      "gui.dbm.character_creation_gui_2.label_techniques_and_longrange": "techniques and long-range attacks",
+      "block.dbm.building_bricks_slab_lime": "Building Bricks Slab",
+      "gui.dbm.story_gui.label_ki_power": "Focus",
+      "gui.dbm.shenron_age_gui.playername": "Player Name",
+      "block.dbm.building_bricks_inverted_black": "Building Bricks",
+      "gui.dbm.north_kaio_gui_2.label_hello_there_so_youre_dead_hu": "Hey! If you can make me laugh, then i\u0027ll teach you what i know!",
+      "block.dbm.building_block_red": "Building Block",
+      "block.dbm.building_bricks_slab_green": "Building Bricks Slab",
+      "item.dbm.sabertooth_spawn_egg": "Sabertooth Spawn Egg",
+      "gui.dbm.skills_gui.tooltip_strength_increase_melee_damage": "Strength: Increase Melee Damage and Defense",
+      "entity.dbm.bear_thief": "Bear Thief",
+      "block.dbm.building_slab_purple": "Building Slab",
+      "gui.dbm.story_gui.label_strength": "Strength",
+      "entity.dbm.bubbles": "Bubbles",
+      "block.dbm.building_bricks_fence_lime": "Building Bricks Fence",
+      "gui.dbm.statistic_gui.tooltip_spirit_increase_ki_pool": "Spirit: Increase Ki Pool",
+      "gui.dbm.ki_attacks_gui.label_upgradecost": "Cost: 150 TP",
+      "gui.dbm.korin_drink_gui.label_be_fully_released_you_will_also": "be fully released. You will also get the ability to sense Ki. However,",
+      "entity.dbm.dinosaur_1": "Dinosaur",
+      "gui.dbm.character_creation_gui_2.label_physical_and_spiritual_technique": "physical and spiritual techniques",
+      "block.dbm.building_fence_yellow": "Building Fence",
+      "subtitles.beamfire_1": "Ki Wave Fired",
+      "block.dbm.building_block_tiles_2": "Building Block",
+      "block.dbm.building_stairs_red": "Building Stairs",
+      "block.dbm.unbreakable_stone": "Unbreakable Stone",
+      "block.dbm.building_bricks_slab_red": "Building Bricks Slab",
+      "gui.dbm.skills_gui.label_cost_5000_tp": "Cost: 5,000 TP",
+      "block.dbm.building_bricks_purple": "Building Bricks",
+      "gui.dbm.ki_attacks_gui.label_player_stats": "Ki Attacks",
+      "subtitles.kiwave_charge": "Charging Ki Beam",
+      "block.dbm.building_fence_lime": "Building Fence",
+      "gui.dbm.statistic_gui.tooltip_strength_increase_melee_damage": "Strength: Increase Melee Damage and Defense",
+      "death.attack.kikoha.player": "%1$s died from a ki based attack whilst trying to escape %2$s",
+      "gui.dbm.finish_gui.label_on_an_epic_journey_through_the": "on an epic journey through the world of",
+      "block.dbm.building_block_dark_gray": "Building Block",
+      "gui.dbm.kame_sennin_gui_2.label_kaioken_15000_tp": "Ki Wave | 1,000 TP",
+      "gui.dbm.skills_gui.label_spirit": "Spirit",
+      "block.dbm.building_fence_light_gray": "Building Fence",
+      "gui.dbm.skills_gui.tooltip_body_increase_max_hp_and_stamin": "Body: Increase Max HP and Stamina",
+      "block.dbm.building_block_black": "Building Block",
+      "gui.dbm.north_kaio_gui.label_king_enma": "North Kaio",
+      "block.dbm.building_slab_sky_blue": "Building Slab",
+      "gui.dbm.skills_gui.tooltip_focus_increase_ki_damage": "Focus: Increase Ki Damage",
+      "gui.dbm.finish_gui.label_player_stats": "Player Stats",
+      "block.dbm.building_bricks_fence_red": "Building Bricks Fence",
+      "block.dbm.building_bricks_slab_orange": "Building Bricks Slab",
+      "block.dbm.building_bricks_fence_sky_blue": "Building Bricks Fence",
+      "gui.dbm.story_gui.label_player_stats": "Story",
+      "block.dbm.building_stairs_gray": "Building Stairs",
+      "block.dbm.building_slab_red": "Building Slab",
+      "block.dbm.building_bricks_slab_purple": "Building Bricks Slab",
+      "gui.dbm.story_gui.tooltip_agility_increase_speed_stamina": "Agility: Increase Speed, Stamina, and Defense",
+      "gui.dbm.character_creation_gui_2.label_hrough_energy_manipulation": "hrough energy manipulation",
+      "gui.dbm.enma_gui.label_hello_there_so_youre_dead_hu": "Hello there! So, you\u0027re dead, huh? Let\u0027s see what your fate holds...",
+      "gui.dbm.kame_sennin_gui_2.label_spirit_bomb_cost_8000_tp": "Kamehameha | 6,500 TP",
+      "block.dbm.building_bricks_slab_dark_gray": "Building Bricks Slab",
+      "block.dbm.building_bricks_fence_gray": "Building Bricks Fence",
+      "gui.dbm.character_creation_gui_2.label_righteousness_always_striving": "righteousness. always striving to",
+      "key.dbm.use_ki_attack": "Use/Charge Ki Attack",
+      "block.dbm.building_bricks_lime": "Building Bricks",
+      "gui.dbm.saiyan_forms_gui.label_max_level_4": "Max Level: 4",
+      "gui.dbm.saiyan_forms_gui.label_max_level_6": "Max Level: 6",
+      "block.dbm.building_bricks_slab_pink": "Building Bricks Slab",
+      "gui.dbm.character_creation_gui_2.label_driven_by_selfish_desires_using": "Driven by selfish desires, using",
+      "key.dbm.fire_ki_blast": "Fire Ki Blast",
+      "block.dbm.building_bricks_light_gray": "Building Bricks",
+      "gui.dbm.finish_gui.label_train_hard_unlock_powerful_form": "Train hard, unlock powerful forms, and",
+      "block.dbm.building_block_inverted_black": "Building Block",
+      "block.dbm.building_fence_green": "Building Fence",
+      "block.dbm.building_bricks_slab_dark_green": "Building Bricks Slab",
+      "block.dbm.building_fence_blue": "Building Fence",
+      "entity.dbm.north_kaio": "North Kaio",
+      "gui.dbm.welcome_gui.label_train_hard_unlock_powerful_form": "Train hard, unlock powerful forms, and",
+      "gui.dbm.kame_sennin_gui.label_hello_there_so_youre_dead_hu": "Hey! I can teach you if you bring me... He he.",
+      "item.dbm.turtle_gi_leggings": "Turtle Gi Bottom ",
+      "item.dbm.battle_armor_leggings": "Battle Armor Bottom",
+      "block.dbm.power_pole_plinth_down": "Power Pole Base",
+      "gui.dbm.shenron_gui.label_king_enma": "Shenron",
+      "gui.dbm.statistic_gui.label_player_stats": "Player Stats",
+      "item.dbm.raw_dinosaur": "Raw Dinosaur",
+      "block.dbm.building_bricks_white": "Building Bricks",
+      "item.dbm.old_school_turtle_gi_chestplate": "Old School Turtle Gi Top",
+      "subtitles.kiblast": "Fired Ki Blast",
+      "gui.dbm.statistic_gui.tooltip_body_increase_max_hp_and_stamin": "Body: Increase Max HP and Stamina",
+      "gui.dbm.welcome_gui.label_welcome_to_dragon_ball_mineverse": "Welcome to Dragon Ball Mineverse! Embark",
+      "item_group.dbm.clothes": "Clothes",
+      "gui.dbm.story_gui.label_agility": "Agility",
+      "gui.dbm.story_gui.tooltip_focus_increase_ki_damage": "Focus: Increase Ki Damage",
+      "gui.dbm.ki_attacks_gui.tooltip_ki_sense": "Ki Sense: Allows users to detect life energy, gauge power levels, and locate others by feeling their presence.",
+      "block.dbm.unbreakable_grass_block": "Unbreakable Grass Block",
+      "block.dbm.building_bricks_fence_cyan": "Building Bricks Fence",
+      "block.dbm.unbreakable_dirt": "Unbreakable Dirt",
+      "block.dbm.building_bricks_stairs_light_gray": "Building Bricks Stairs",
+      "gui.dbm.skills_gui.label_cost_6000_tp": "Cost: 6,000 TP",
+      "gui.dbm.character_creation_gui_2.label_strength_and_durability_using_k": "strength and durability, using ki ",
+      "block.dbm.building_bricks_orange": "Building Bricks",
+      "gui.dbm.saiyan_forms_gui.tooltip_jump_allows_you_to_jump_higher": "Super Saiyan: Allow you to transform into a Super Saiyan of the Legend",
+      "gui.dbm.dende_gui.label_hello_there_so_youre_dead_hu": "Oh, Hi. Do you you need anything?",
+      "block.dbm.building_stairs_dark_gray": "Building Stairs",
+      "gui.dbm.shenron_age_gui.label_hello_there_so_youre_dead_hu": "Who\u0027s age shall i change?",
+      "block.dbm.building_block_dark_green": "Building Block",
+      "gui.dbm.story_gui.label_spirit": "Spirit",
+      "block.dbm.building_bricks_fence_black": "Building Bricks Fence",
+      "gui.dbm.character_creation_gui_2.label_without_extreme_morality": "without extreme morality",
+      "block.dbm.building_bricks_stairs_blue": "Building Bricks Stairs",
+      "block.dbm.building_bricks_cyan": "Building Bricks",
+      "gui.dbm.enma_gui.label_king_enma": "King Enma",
+      "block.dbm.building_stairs_yellow": "Building Stairs",
+      "subtitles.block": "Blocking",
+      "item.dbm.power_pole": "Power Pole",
+      "gui.dbm.character_creation_gui_2.label_protect_and_help_others": "protect and help others",
+      "block.dbm.building_block_lime": "Building Block",
+      "key.dbm.space_key": "Space",
+      "gui.dbm.saiyan_forms_gui.tooltip_potential_release_allows_you_to": "Potential Release: Allows you to unleash 100% of your power!",
+      "gui.dbm.shenron_age_gui.label_king_enma": "Shenron",
+      "block.dbm.building_slab_gray": "Building Slab",
+      "block.dbm.building_block_green": "Building Block",
+      "block.dbm.building_bricks_stairs_white": "Building Bricks Stairs",
+      "block.dbm.building_stairs_inverted_black": "Building Stairs",
+      "block.dbm.building_slab_green": "Building Slab",
+      "block.dbm.building_bricks_stairs_brown": "Building Bricks Stairs",
+      "item.dbm.cooked_dinosaur": "Cooked Dinosaur",
+      "gui.dbm.skills_gui.tooltip_ki_sense": "Ki Sense: Allows users to detect life energy, gauge power levels, and locate others by feeling their presence.",
+      "gui.dbm.statistic_gui.label_strength": "Strength",
+      "gui.dbm.statistic_gui.label_agility": "Agility",
+      "block.dbm.building_stairs_cyan": "Building Stairs",
+      "block.dbm.hyperbolic_time_chamber_door": "Hyperbolic Time Chamber Door",
+      "gui.dbm.kame_sennin_gui_2.label_king_enma": "Kame Sennin",
+      "block.dbm.building_slab_dark_gray": "Building Slab",
+      "block.dbm.building_bricks_fence_purple": "Building Bricks Fence",
+      "gui.dbm.character_creation_gui_2.label_focused_on_personal_goals": "focused on personal goals",
+      "gui.dbm.korin_drink_gui.label_hello_there_so_youre_dead_hu": "Do you wish to drink the sacred water? You will see your potential to",
+      "block.dbm.building_fence_black": "Building Fence",
+      "gui.dbm.shenron_age_gui.enterage": "Age   (10-30)",
+      "block.dbm.building_stairs_orange": "Building Stairs",
+      "block.dbm.building_slab_yellow": "Building Slab",
+      "gui.dbm.north_kaio_gui_2.label_kaioken_15000_tp": "Kaioken | 15,000 TP",
+      "gui.dbm.ki_attacks_gui.label_cost_5000_tp": "Cost: 5,000 TP",
+      "gui.dbm.character_creation_gui_2.label_alignment": "Alignment",
+      "gui.dbm.north_kaio_gui_2.label_spirit_bomb_cost_8000_tp": "Spirit Bomb | Cost: 8,000 TP",
+      "block.dbm.unbreakable_full_grass_block": "Unbreakable Full Grass Block",
+      "subtitles.detransform": "Power Down",
+      "block.dbm.building_bricks_fence_light_gray": "Building Bricks Fence",
+      "block.dbm.building_bricks_fence_orange": "Building Bricks Fence",
+      "block.dbm.building_bricks_fence_pink": "Building Bricks Fence",
+      "gui.dbm.statistic_gui.tooltip_focus_increase_ki_damage": "Focus: Increase Ki Damage",
+      "block.dbm.building_block_blue": "Building Block",
+      "block.dbm.building_bricks_slab_gray": "Building Bricks Slab",
+      "block.dbm.building_block_purple": "Building Block",
+      "gui.dbm.skills_gui.label_upgradecost": "Cost: 150 TP",
+      "gui.dbm.character_creation_gui_2.label_attacks_and_defense": "attacks and defense",
+      "gui.dbm.skills_gui.tooltip_spirit_increase_ki_pool": "Spirit: Increase Ki Pool",
+      "gui.dbm.ki_attacks_gui.tooltip_jump_allows_you_to_jump_higher": "Jump: Allows you to jump higher",
+      "subtitles.kamehameha_charge": "Charging Kamehameha",
+      "biome.dbm.other_world_biome": "Other World",
+      "gui.dbm.shenron_gui.label_if_it_is_within_my_power": "it... if it is within my power.",
+      "block.dbm.building_bricks_brown": "Building Bricks",
+      "key.dbm.backward_key": "Backward",
+      "block.dbm.building_slab_inverted_black": "Building Slab",
+      "block.dbm.unbreakable_log": "Unbreakable Log",
+      "item.dbm.punching_bag_item": "Punching Bag",
+      "gui.dbm.statistic_gui.label_spirit": "Spirit",
+      "gui.dbm.saiyan_forms_gui.label_cost_25000_tp": "Cost: 25,000 TP",
+      "gui.dbm.character_creation_gui_2.label_and_ki_control": "and ki control",
+      "gui.dbm.character_creation_gui_2.label_combining_precision_agility_an": "combining precision, agility, ",
+      "block.dbm.building_bricks_fence_green": "Building Bricks Fence",
+      "gui.dbm.skills_gui.tooltip_potential_release_allows_you_to": "Potential Release: Allows you to unleash 100% of your power!",
       "block.dbm.building_stairs_black": "Building Stairs",
       "gui.dbm.ki_attacks_gui.tooltip_potential_release_allows_you_to": "Potential Release: Allows you to unleash 100% of your power!",
-      "item.dbm.dragon_radar": "Dragon Radar",
       "gui.dbm.saiyan_forms_gui.tooltip_fly_gives_the_player_the_abilit": "Fly: Gives the Player the ability to fly",
       "gui.dbm.saiyan_forms_gui.tooltip_kaioken_a_technique_that_gives": "Kaioken: A technique that gives you a boost in power!",
       "key.dbm.right_key": "Right",
-      "block.dbm.unbreakable_sand": "Unbreakable Sand",
       "block.dbm.building_stairs_lime": "Building Stairs",
       "item.dbm.kamehameha_item": "Kamehameha Item",
-      "block.dbm.building_fence_sky_blue": "Building Fence",
       "gui.dbm.north_kaio_gui_2.label_king_enma": "North Kaio",
       "block.dbm.building_stairs_purple": "Building Stairs",
-      "block.dbm.building_bricks_stairs_dark_gray": "Building Bricks Stairs",
       "entity.dbm.master_piccolo": "Piccolo",
-      "gui.dbm.korin_drink_gui.label_theres_only_a_10_it_works_els": "there\u0027s only a 10% it works, else you will die.",
-      "item.dbm.turtle_gi_king_kai_chestplate": "Turtle Gi Top (King Kai)",
       "block.dbm.building_bricks_stairs_black": "Building Bricks Stairs",
-      "key.dbm.fly_key": "Fly",
       "gui.dbm.story_gui.tooltip_strength_increase_melee_damage": "Strength: Increase Melee Damage and Defense",
-      "item.dbm.turtle_gi_chestplate": "Turtle Gi Top",
       "item.dbm.purple_gi_leggings": "Purple Gi Bottom ",
       "gui.dbm.story_gui.label_body": "Body",
       "gui.dbm.finish_gui.label_to_become_the_strongest_begins_n": "to become the strongest begins now!",
       "gui.dbm.story_gui.tooltip_spirit_increase_ki_pool": "Spirit: Increase Ki Pool",
-      "gui.dbm.saiyan_forms_gui.label_player_stats": "Racial Skills",
       "block.dbm.vertical_ladder": "Ladder",
       "block.dbm.building_bricks_stairs_yellow": "Building Bricks Stairs",
       "block.dbm.building_bricks_stairs_inverted_black": "Building Bricks Stairs",
       "gui.dbm.skills_gui.tooltip_agility_increase_speed_stamina": "Agility: Increase Speed, Stamina, and Defense",
-      "gui.dbm.saiyan_forms_gui.label_cost_50000_tp": "Cost: 50,000 TP",
       "block.dbm.building_fence_cyan": "Building Fence",
       "block.dbm.building_slab_pink": "Building Slab",
       "block.dbm.building_bricks_stairs_pink": "Building Bricks Stairs",
-      "gui.dbm.character_creation_gui_2.label_techniques_and_longrange": "techniques and long-range attacks",
-      "block.dbm.building_bricks_slab_lime": "Building Bricks Slab",
-      "gui.dbm.story_gui.label_ki_power": "Focus",
-      "block.dbm.building_bricks_inverted_black": "Building Bricks",
       "block.dbm.building_bricks_fence_white": "Building Bricks Fence",
-      "gui.dbm.north_kaio_gui_2.label_hello_there_so_youre_dead_hu": "Hey! If you can make me laugh, then i\u0027ll teach you what i know!",
-      "block.dbm.building_block_red": "Building Block",
-      "block.dbm.building_bricks_slab_green": "Building Bricks Slab",
       "gui.dbm.ki_attacks_gui.label_cost_2000_tp": "Cost: 2,000 TP",
       "block.dbm.building_stairs_light_gray": "Building Stairs",
-      "item.dbm.sabertooth_spawn_egg": "Sabertooth Spawn Egg",
       "block.dbm.building_block_orange": "Building Block",
-      "gui.dbm.skills_gui.tooltip_strength_increase_melee_damage": "Strength: Increase Melee Damage and Defense",
       "gui.dbm.welcome_gui.label_on_an_epic_journey_through_the": "on an epic journey through the world of",
       "block.dbm.kame_house_spawn": "Kame House Spawn",
       "block.dbm.horizontal_ladder": "Ladder",
       "block.dbm.building_bricks_slab_brown": "Building Bricks Slab",
       "block.dbm.invisible_light": "Invisible Light",
-      "entity.dbm.bear_thief": "Bear Thief",
       "gui.dbm.statistic_gui.label_body": "Body",
       "block.dbm.building_bricks_blue": "Building Bricks",
-      "block.dbm.building_slab_purple": "Building Slab",
       "gui.dbm.character_creation_gui_2.label_acts_with_compassion_and_righteo": "Acts with compassion and",
       "block.dbm.korin_tower_base": "Korin Tower Base",
       "item.dbm.turtle_gi_king_kai_leggings": "Turtle Gi Bottom (King Kai)",
       "block.dbm.unbreakable_leaves": "Unbreakable Leaves",
       "block.dbm.building_bricks_stairs_dark_green": "Building Bricks Stairs",
       "subtitles.jump": "Jumping",
-      "gui.dbm.story_gui.label_strength": "Strength",
-      "entity.dbm.bubbles": "Bubbles",
-      "block.dbm.building_bricks_fence_lime": "Building Bricks Fence",
-      "gui.dbm.statistic_gui.tooltip_spirit_increase_ki_pool": "Spirit: Increase Ki Pool",
-      "gui.dbm.ki_attacks_gui.label_upgradecost": "Cost: 150 TP",
       "entity.dbm.power_pole_entity": "Power Pole Entity",
       "gui.dbm.skills_gui.label_agility": "Agility",
-      "gui.dbm.korin_drink_gui.label_be_fully_released_you_will_also": "be fully released. You will also get the ability to sense Ki. However,",
       "gui.dbm.korin_drink_gui.label_king_enma": "Master Korin",
-      "entity.dbm.dinosaur_1": "Dinosaur",
       "block.dbm.building_slab_light_gray": "Building Slab",
-      "gui.dbm.character_creation_gui_2.label_physical_and_spiritual_technique": "physical and spiritual techniques",
-      "block.dbm.building_fence_yellow": "Building Fence",
-      "subtitles.beamfire_1": "Ki Wave Fired",
       "block.dbm.building_bricks_slab_sky_blue": "Building Bricks Slab",
       "block.dbm.blue_door": "Blue Door",
-      "block.dbm.building_block_tiles_2": "Building Block",
       "block.dbm.horizontal_ladder_support": "Ladder",
       "entity.dbm.king_enma": "King Enma",
-      "block.dbm.building_stairs_red": "Building Stairs",
-      "block.dbm.unbreakable_stone": "Unbreakable Stone",
       "key.dbm.blocking": "Blocking",
-      "block.dbm.building_bricks_slab_red": "Building Bricks Slab",
       "block.dbm.building_fence_brown": "Building Fence",
-      "gui.dbm.skills_gui.label_cost_5000_tp": "Cost: 5,000 TP",
-      "block.dbm.building_bricks_purple": "Building Bricks",
-      "gui.dbm.ki_attacks_gui.label_player_stats": "Ki Attacks",
       "gui.dbm.welcome_gui.label_challenge_legendary_foes_your_a": "challenge legendary foes. Your adventure",
       "key.dbm.detransform": "Detransform",
-      "subtitles.kiwave_charge": "Charging Ki Beam",
-      "block.dbm.building_fence_lime": "Building Fence",
-      "gui.dbm.statistic_gui.tooltip_strength_increase_melee_damage": "Strength: Increase Melee Damage and Defense",
       "block.dbm.building_bricks_slab_yellow": "Building Bricks Slab",
-      "block.dbm.vertical_ladder_support": "Ladder",
-      "gui.dbm.finish_gui.label_on_an_epic_journey_through_the": "on an epic journey through the world of",
       "gui.dbm.statistic_gui.label_ki_power": "Focus",
-      "death.attack.kikoha.player": "%1$s died from a ki based attack whilst trying to escape %2$s",
-      "block.dbm.building_block_dark_gray": "Building Block",
-      "gui.dbm.kame_sennin_gui_2.label_kaioken_15000_tp": "Ki Wave | 1,000 TP",
-      "gui.dbm.skills_gui.label_spirit": "Spirit",
-      "block.dbm.building_fence_light_gray": "Building Fence",
-      "gui.dbm.skills_gui.tooltip_body_increase_max_hp_and_stamin": "Body: Increase Max HP and Stamina",
+      "block.dbm.vertical_ladder_support": "Ladder",
       "block.dbm.building_bricks_stairs_sky_blue": "Building Bricks Stairs",
       "entity.dbm.shenron": "Shenron",
-      "block.dbm.building_block_black": "Building Block",
-      "gui.dbm.north_kaio_gui.label_king_enma": "North Kaio",
       "entity.dbm.kame_sennin": "Kame Sennin",
       "gui.dbm.skills_gui.label_ki_power": "Focus",
-      "block.dbm.building_slab_sky_blue": "Building Slab",
-      "gui.dbm.skills_gui.tooltip_focus_increase_ki_damage": "Focus: Increase Ki Damage",
       "key.dbm.alt_function": "Alternative Function",
-      "gui.dbm.finish_gui.label_player_stats": "Player Stats",
       "gui.dbm.character_creation_gui_2.label_to_enhance_powerful": "to enhance powerful close-range",
       "block.dbm.building_bricks_stairs_cyan": "Building Bricks Stairs",
-      "block.dbm.building_bricks_fence_red": "Building Bricks Fence",
-      "block.dbm.building_bricks_slab_orange": "Building Bricks Slab",
       "subtitles.teleportation": "Teleportation",
       "subtitles.transform": "Power Up",
-      "block.dbm.building_bricks_fence_sky_blue": "Building Bricks Fence",
-      "block.dbm.building_bricks_slab_inverted_black": "Building Bricks Slab",
       "block.dbm.unbreakable_glass": "Unbreakable Glass",
-      "gui.dbm.story_gui.label_player_stats": "Story",
-      "block.dbm.building_stairs_gray": "Building Stairs",
+      "block.dbm.building_bricks_slab_inverted_black": "Building Bricks Slab",
       "block.dbm.building_fence_purple": "Building Fence",
       "block.dbm.diagonal_ladder": "Ladder",
-      "block.dbm.building_slab_red": "Building Slab",
-      "block.dbm.building_bricks_slab_purple": "Building Bricks Slab",
       "block.dbm.building_stairs_blue": "Building Stairs",
-      "gui.dbm.story_gui.tooltip_agility_increase_speed_stamina": "Agility: Increase Speed, Stamina, and Defense",
       "gui.dbm.dende_gui.label_king_enma": "Dende",
       "block.dbm.building_bricks_green": "Building Bricks",
       "block.dbm.building_bricks_yellow": "Building Bricks",
-      "gui.dbm.character_creation_gui_2.label_hrough_energy_manipulation": "hrough energy manipulation",
       "death.attack.kikoha.item": "%1$s was killed by %2$s using a ki based attack",
-      "gui.dbm.enma_gui.label_hello_there_so_youre_dead_hu": "Hello there! So, you\u0027re dead, huh? Let\u0027s see what your fate holds...",
       "entity.dbm.popo": "Mr. Popo",
       "block.dbm.building_fence_white": "Building Fence",
-      "gui.dbm.kame_sennin_gui_2.label_spirit_bomb_cost_8000_tp": "Kamehameha | 6,500 TP",
       "gui.dbm.character_creation_gui_2.label_a_fighter_who_relies_on_physical": "A fighter who relies on physical",
-      "block.dbm.building_bricks_slab_dark_gray": "Building Bricks Slab",
       "key.dbm.left_key": "Left",
-      "block.dbm.building_bricks_fence_gray": "Building Bricks Fence",
-      "gui.dbm.character_creation_gui_2.label_righteousness_always_striving": "righteousness. always striving to",
-      "key.dbm.use_ki_attack": "Use/Charge Ki Attack",
-      "block.dbm.building_bricks_lime": "Building Bricks",
-      "gui.dbm.saiyan_forms_gui.label_max_level_4": "Max Level: 4",
       "entity.dbm.kame_turtle": "Kame Turtle",
-      "block.dbm.building_bricks_slab_pink": "Building Bricks Slab",
       "block.dbm.building_stairs_brown": "Building Stairs",
-      "gui.dbm.saiyan_forms_gui.label_max_level_6": "Max Level: 6",
       "gui.dbm.statistic_gui.label_player_info": "Player Info",
       "block.dbm.building_slab_lime": "Building Slab",
       "item.dbm.old_school_turtle_gi_leggings": "Old School Turtle Gi Bottom ",
-      "gui.dbm.character_creation_gui_2.label_driven_by_selfish_desires_using": "Driven by selfish desires, using",
       "item.dbm.makankosappo_item": "Makankosappo",
-      "key.dbm.fire_ki_blast": "Fire Ki Blast",
+      "gui.dbm.shenron_gui.label_hello_there_so_youre_dead_hu": "I am Shenron, the Eternal Dragon. Speak your demand, so I may grant",
       "block.dbm.building_stairs_dark_green": "Building Stairs",
       "block.dbm.building_fence_pink": "Building Fence",
       "block.dbm.building_bricks_sky_blue": "Building Bricks",
-      "block.dbm.building_bricks_light_gray": "Building Bricks",
       "gui.dbm.finish_gui.label_welcome_to_dragon_ball_mineverse": "Welcome to Dragon Ball Mineverse! Embark",
       "gui.dbm.saiyan_forms_gui.tooltip_super_saiyan_2_upgrade_your_rac": "Super Saiyan 2: Upgrade your Racial Form past level 4",
       "block.dbm.building_block_pink": "Building Block",
       "block.dbm.building_bricks_fence_blue": "Building Bricks Fence",
-      "gui.dbm.finish_gui.label_train_hard_unlock_powerful_form": "Train hard, unlock powerful forms, and",
-      "block.dbm.building_block_inverted_black": "Building Block",
-      "block.dbm.building_fence_green": "Building Fence",
       "item.dbm.dinosaur_1_spawn_egg": "Dinosaur Spawn Egg",
-      "block.dbm.building_bricks_slab_dark_green": "Building Bricks Slab",
-      "block.dbm.building_fence_blue": "Building Fence",
-      "entity.dbm.north_kaio": "North Kaio",
       "block.dbm.building_bricks_pink": "Building Bricks",
-      "gui.dbm.welcome_gui.label_train_hard_unlock_powerful_form": "Train hard, unlock powerful forms, and",
       "gui.dbm.finish_gui.label_dragon_ball_where_power_knows_n": "Dragon Ball, where power knows no limits.",
-      "gui.dbm.kame_sennin_gui.label_hello_there_so_youre_dead_hu": "Hey! I can teach you if you bring me... He he.",
-      "item.dbm.turtle_gi_leggings": "Turtle Gi Bottom ",
-      "item.dbm.battle_armor_leggings": "Battle Armor Bottom",
       "key.dbm.ki_sense": "Ki Sense",
-      "block.dbm.power_pole_plinth_down": "Power Pole Base",
-      "gui.dbm.finish_gui.label_challenge_legendary_foes_your_a": "challenge legendary foes. Your adventure",
       "block.dbm.building_fence_gray": "Building Fence",
-      "gui.dbm.statistic_gui.label_player_stats": "Player Stats",
+      "gui.dbm.finish_gui.label_challenge_legendary_foes_your_a": "challenge legendary foes. Your adventure",
       "gui.dbm.welcome_gui.label_to_become_the_strongest_begins_n": "to become the strongest begins now!",
       "gui.dbm.saiyan_forms_gui.label_max_level": "Max Level: 4",
-      "block.dbm.building_slab_brown": "Building Slab",
-      "block.dbm.building_bricks_white": "Building Bricks",
       "entity.dbm.master_korin": "Master Korin",
-      "item.dbm.raw_dinosaur": "Raw Dinosaur",
-      "item.dbm.old_school_turtle_gi_chestplate": "Old School Turtle Gi Top",
+      "block.dbm.building_slab_brown": "Building Slab",
       "block.dbm.building_bricks_dark_green": "Building Bricks",
       "block.dbm.building_bricks_stairs_purple": "Building Bricks Stairs",
-      "subtitles.kiblast": "Fired Ki Blast",
-      "gui.dbm.statistic_gui.tooltip_body_increase_max_hp_and_stamin": "Body: Increase Max HP and Stamina",
-      "gui.dbm.welcome_gui.label_welcome_to_dragon_ball_mineverse": "Welcome to Dragon Ball Mineverse! Embark",
-      "item_group.dbm.clothes": "Clothes",
-      "gui.dbm.story_gui.label_agility": "Agility",
       "block.dbm.building_bricks_slab_cyan": "Building Bricks Slab",
-      "gui.dbm.story_gui.tooltip_focus_increase_ki_damage": "Focus: Increase Ki Damage",
-      "gui.dbm.ki_attacks_gui.tooltip_ki_sense": "Ki Sense: Allows users to detect life energy, gauge power levels, and locate others by feeling their presence.",
-      "block.dbm.unbreakable_grass_block": "Unbreakable Grass Block",
       "gui.dbm.finish_gui.label_player_info": "Player Info",
-      "block.dbm.building_bricks_fence_cyan": "Building Bricks Fence",
-      "block.dbm.unbreakable_dirt": "Unbreakable Dirt",
-      "block.dbm.building_bricks_stairs_light_gray": "Building Bricks Stairs",
       "key.dbm.forward_key": "Forward Key",
       "block.dbm.building_bricks_black": "Building Bricks",
       "block.dbm.building_bricks_slab_black": "Building Bricks Slab",
       "gui.dbm.character_creation_gui_2.label_to_others": "to others",
-      "gui.dbm.skills_gui.label_cost_6000_tp": "Cost: 6,000 TP",
-      "gui.dbm.character_creation_gui_2.label_strength_and_durability_using_k": "strength and durability, using ki ",
-      "block.dbm.building_bricks_orange": "Building Bricks",
       "block.dbm.korin_tower_block_2": "Korin Tower Block",
       "key.dbm.release_power": "Power Release",
       "block.dbm.korin_tower_block_1": "Korin Tower Block",
       "block.dbm.power_pole_plinth_up": "Power Pole Base",
-      "gui.dbm.saiyan_forms_gui.tooltip_jump_allows_you_to_jump_higher": "Super Saiyan: Allow you to transform into a Super Saiyan of the Legend",
       "key.dbm.menu": "Menu",
       "item_group.dbm.building_blocks": "Blocks",
-      "gui.dbm.dende_gui.label_hello_there_so_youre_dead_hu": "Oh, Hi. Do you you need anything?",
-      "block.dbm.building_stairs_dark_gray": "Building Stairs",
       "block.dbm.building_bricks_fence_yellow": "Building Bricks Fence",
       "gui.dbm.skills_gui.tooltip_jump_allows_you_to_jump_higher": "Jump: Allows you to jump higher",
-      "block.dbm.building_block_dark_green": "Building Block",
-      "gui.dbm.story_gui.label_spirit": "Spirit",
-      "block.dbm.building_bricks_fence_black": "Building Bricks Fence",
       "entity.dbm.gregory": "Gregory",
-      "gui.dbm.character_creation_gui_2.label_without_extreme_morality": "without extreme morality",
       "block.dbm.building_bricks_stairs_green": "Building Bricks Stairs",
       "block.dbm.building_block_brown": "Building Block",
-      "block.dbm.building_bricks_stairs_blue": "Building Bricks Stairs",
-      "block.dbm.building_bricks_cyan": "Building Bricks",
-      "gui.dbm.enma_gui.label_king_enma": "King Enma",
       "item.dbm.dragon_ball_7": "Seven-Stars Dragon Ball",
-      "block.dbm.building_stairs_yellow": "Building Stairs",
       "entity.dbm.punching_bag": "Punching Bag",
       "item.dbm.dragon_ball_6": "Six-Stars Dragon Ball",
-      "subtitles.block": "Blocking",
       "item.dbm.dragon_ball_3": "Three-Stars Dragon Ball",
       "item_group.dbm.dbm_items": "Items",
       "item.dbm.dragon_ball_2": "Two-Stars Dragon Ball",
       "item.dbm.dragon_ball_5": "Five-Stars Dragon Ball",
       "block.dbm.building_bricks_red": "Building Bricks",
-      "item.dbm.power_pole": "Power Pole",
       "item.dbm.dragon_ball_4": "Four-Stars Dragon Ball",
-      "gui.dbm.character_creation_gui_2.label_protect_and_help_others": "protect and help others",
-      "block.dbm.building_block_lime": "Building Block",
       "item.dbm.dragon_ball_1": "One-Star Dragon Ball",
-      "key.dbm.space_key": "Space",
-      "gui.dbm.saiyan_forms_gui.tooltip_potential_release_allows_you_to": "Potential Release: Allows you to unleash 100% of your power!",
       "block.dbm.building_block_white": "Building Block",
       "block.dbm.building_slab_white": "Building Slab",
-      "block.dbm.building_slab_gray": "Building Slab",
-      "block.dbm.building_block_green": "Building Block",
-      "block.dbm.building_bricks_stairs_white": "Building Bricks Stairs",
       "block.dbm.building_fence_orange": "Building Fence",
       "block.dbm.building_slab_blue": "Building Slab",
-      "block.dbm.building_stairs_inverted_black": "Building Stairs",
       "block.dbm.building_bricks_stairs_gray": "Building Bricks Stairs",
       "gui.dbm.korin_gui.label_hello_there_so_youre_dead_hu": "If you climbed all the way up to here, then you deserve a reward.",
       "gui.dbm.character_creation_gui_2.label_energy_focusing_on_advanced": "energy, focusing on advanced",
       "block.dbm.building_bricks_fence_dark_green": "Building Bricks Fence",
       "block.dbm.unbreakable_planks": "Unbreakable Planks",
-      "block.dbm.building_slab_green": "Building Slab",
-      "block.dbm.building_bricks_stairs_brown": "Building Bricks Stairs",
-      "item.dbm.cooked_dinosaur": "Cooked Dinosaur",
-      "gui.dbm.statistic_gui.label_strength": "Strength",
       "block.dbm.building_fence_dark_gray": "Building Fence",
-      "gui.dbm.skills_gui.tooltip_ki_sense": "Ki Sense: Allows users to detect life energy, gauge power levels, and locate others by feeling their presence.",
       "gui.dbm.skills_gui.label_body": "Body"
     }
   },
@@ -13463,6 +14257,10 @@
             "children": [
               {
                 "name": "NorthKaio",
+                "children": []
+              },
+              {
+                "name": "ShenronDemands",
                 "children": []
               }
             ]

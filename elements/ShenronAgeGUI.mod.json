@@ -1,0 +1,151 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "dialogbox.png",
+          "use1Xscale": false,
+          "x": 24,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_enma",
+          "text": {
+            "fixedValue": "Shenron"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 26,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hello_there_so_youre_dead_hu",
+          "text": {
+            "fixedValue": "Who's age shall i change?"
+          },
+          "color": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogexit",
+          "image": "dialogexit.png",
+          "hoveredImage": "dialogexithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 393,
+          "y": 145
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnShenron"
+          },
+          "scale": 3,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 204,
+          "y": 120
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_text_demands",
+          "text": {
+            "fixedValue": "",
+            "name": "TextDemands"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 340,
+          "y": 132
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Player Name",
+          "name": "playername",
+          "width": 135,
+          "height": 20,
+          "x": 42,
+          "y": 170
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Age   (10-30)",
+          "name": "enterage",
+          "width": 27,
+          "height": 20,
+          "x": 42,
+          "y": 197
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogback",
+          "image": "dialogback.png",
+          "hoveredImage": "dialogbackhovered.png",
+          "onClick": {
+            "name": "OpenShenronGUIEE"
+          },
+          "x": 26,
+          "y": 213
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_changebutton",
+          "image": "changebutton.png",
+          "hoveredImage": "changebuttonhovered.png",
+          "onClick": {
+            "name": "ChangeAge"
+          },
+          "x": 116,
+          "y": 200
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

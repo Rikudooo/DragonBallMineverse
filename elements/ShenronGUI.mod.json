@@ -1,0 +1,157 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "dialogbox.png",
+          "use1Xscale": false,
+          "x": 24,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_enma",
+          "text": {
+            "fixedValue": "Shenron"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 26,
+          "y": 131
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hello_there_so_youre_dead_hu",
+          "text": {
+            "fixedValue": "I am Shenron, the Eternal Dragon. Speak your demand, so I may grant"
+          },
+          "color": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogexit",
+          "image": "dialogexit.png",
+          "hoveredImage": "dialogexithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 393,
+          "y": 145
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnShenron"
+          },
+          "scale": 3,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 204,
+          "y": 120
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_if_it_is_within_my_power",
+          "text": {
+            "fixedValue": "it... if it is within my power."
+          },
+          "color": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "x": 33,
+          "y": 161
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_demand1",
+          "image": "demand1.png",
+          "hoveredImage": "demand1hovered.png",
+          "onClick": {
+            "name": "MakeMeStronger"
+          },
+          "x": 34,
+          "y": 186
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_demand2",
+          "image": "demand2.png",
+          "hoveredImage": "demand2hovered.png",
+          "onClick": {
+            "name": "ChangeAgeGUI"
+          },
+          "x": 159,
+          "y": 185
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_demand3",
+          "image": "demand3.png",
+          "hoveredImage": "demand3hovered.png",
+          "onClick": {
+            "name": "GiveSenzuBeans"
+          },
+          "x": 279,
+          "y": 186
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_text_demands",
+          "text": {
+            "fixedValue": "",
+            "name": "TextDemands"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 340,
+          "y": 132
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

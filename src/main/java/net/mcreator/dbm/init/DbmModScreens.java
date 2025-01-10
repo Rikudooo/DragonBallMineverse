@@ -15,6 +15,8 @@ import net.mcreator.dbm.client.gui.WelcomeGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUIScreen;
 import net.mcreator.dbm.client.gui.StatisticGUIScreen;
 import net.mcreator.dbm.client.gui.SkillsGUIScreen;
+import net.mcreator.dbm.client.gui.ShenronGUIScreen;
+import net.mcreator.dbm.client.gui.ShenronAgeGUIScreen;
 import net.mcreator.dbm.client.gui.SaiyanFormsGUIScreen;
 import net.mcreator.dbm.client.gui.NorthKaioGUIScreen;
 import net.mcreator.dbm.client.gui.NorthKaioGUI2Screen;
@@ -51,6 +53,8 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.KAME_SENNIN_GUI_2.get(), KameSenninGUI2Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI.get(), StoryGUIScreen::new);
 			MenuScreens.register(DbmModMenus.KI_ATTACKS_GUI.get(), KiAttacksGUIScreen::new);
+			MenuScreens.register(DbmModMenus.SHENRON_GUI.get(), ShenronGUIScreen::new);
+			MenuScreens.register(DbmModMenus.SHENRON_AGE_GUI.get(), ShenronAgeGUIScreen::new);
 		});
 	}
 }

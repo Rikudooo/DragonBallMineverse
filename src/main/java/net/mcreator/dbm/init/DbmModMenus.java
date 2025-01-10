@@ -15,6 +15,8 @@ import net.mcreator.dbm.world.inventory.WelcomeGUIMenu;
 import net.mcreator.dbm.world.inventory.StoryGUIMenu;
 import net.mcreator.dbm.world.inventory.StatisticGUIMenu;
 import net.mcreator.dbm.world.inventory.SkillsGUIMenu;
+import net.mcreator.dbm.world.inventory.ShenronGUIMenu;
+import net.mcreator.dbm.world.inventory.ShenronAgeGUIMenu;
 import net.mcreator.dbm.world.inventory.SaiyanFormsGUIMenu;
 import net.mcreator.dbm.world.inventory.NorthKaioGUIMenu;
 import net.mcreator.dbm.world.inventory.NorthKaioGUI2Menu;
@@ -49,4 +51,6 @@ public class DbmModMenus {
 	public static final RegistryObject<MenuType<KameSenninGUI2Menu>> KAME_SENNIN_GUI_2 = REGISTRY.register("kame_sennin_gui_2", () -> IForgeMenuType.create(KameSenninGUI2Menu::new));
 	public static final RegistryObject<MenuType<StoryGUIMenu>> STORY_GUI = REGISTRY.register("story_gui", () -> IForgeMenuType.create(StoryGUIMenu::new));
 	public static final RegistryObject<MenuType<KiAttacksGUIMenu>> KI_ATTACKS_GUI = REGISTRY.register("ki_attacks_gui", () -> IForgeMenuType.create(KiAttacksGUIMenu::new));
+	public static final RegistryObject<MenuType<ShenronGUIMenu>> SHENRON_GUI = REGISTRY.register("shenron_gui", () -> IForgeMenuType.create(ShenronGUIMenu::new));
+	public static final RegistryObject<MenuType<ShenronAgeGUIMenu>> SHENRON_AGE_GUI = REGISTRY.register("shenron_age_gui", () -> IForgeMenuType.create(ShenronAgeGUIMenu::new));
 }

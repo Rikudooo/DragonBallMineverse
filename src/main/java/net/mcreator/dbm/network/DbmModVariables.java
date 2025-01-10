@@ -217,6 +217,9 @@ public class DbmModVariables {
 			clone.KiAttackRoll = original.KiAttackRoll;
 			clone.StoryModeProgress = original.StoryModeProgress;
 			clone.SelectedKiMove = original.SelectedKiMove;
+			clone.Aging = original.Aging;
+			clone.LastAgeTime = original.LastAgeTime;
+			clone.DBDistance = original.DBDistance;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -301,6 +304,29 @@ public class DbmModVariables {
 		public double ShenronSpawnTimer = 0;
 		public boolean DragonBallsUsable = true;
 		public boolean DragonBallsJumped = false;
+		public double ShenronDemands = 3.0;
+		public boolean ShenronSpawned = false;
+		public double DBx1 = 0;
+		public double DBx2 = 0;
+		public double DBx3 = 0;
+		public double DBx4 = 0;
+		public double DBx5 = 0;
+		public double DBx6 = 0;
+		public double DBx7 = 0;
+		public double DBy1 = 0;
+		public double DBy2 = 0;
+		public double DBy3 = 0;
+		public double DBy4 = 0;
+		public double DBy5 = 0;
+		public double DBy6 = 0;
+		public double DBy7 = 0;
+		public double DBz1 = 0;
+		public double DBz2 = 0;
+		public double DBz3 = 0;
+		public double DBz4 = 0;
+		public double DBz5 = 0;
+		public double DBz6 = 0;
+		public double DBz7 = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -327,6 +353,29 @@ public class DbmModVariables {
 			ShenronSpawnTimer = nbt.getDouble("ShenronSpawnTimer");
 			DragonBallsUsable = nbt.getBoolean("DragonBallsUsable");
 			DragonBallsJumped = nbt.getBoolean("DragonBallsJumped");
+			ShenronDemands = nbt.getDouble("ShenronDemands");
+			ShenronSpawned = nbt.getBoolean("ShenronSpawned");
+			DBx1 = nbt.getDouble("DBx1");
+			DBx2 = nbt.getDouble("DBx2");
+			DBx3 = nbt.getDouble("DBx3");
+			DBx4 = nbt.getDouble("DBx4");
+			DBx5 = nbt.getDouble("DBx5");
+			DBx6 = nbt.getDouble("DBx6");
+			DBx7 = nbt.getDouble("DBx7");
+			DBy1 = nbt.getDouble("DBy1");
+			DBy2 = nbt.getDouble("DBy2");
+			DBy3 = nbt.getDouble("DBy3");
+			DBy4 = nbt.getDouble("DBy4");
+			DBy5 = nbt.getDouble("DBy5");
+			DBy6 = nbt.getDouble("DBy6");
+			DBy7 = nbt.getDouble("DBy7");
+			DBz1 = nbt.getDouble("DBz1");
+			DBz2 = nbt.getDouble("DBz2");
+			DBz3 = nbt.getDouble("DBz3");
+			DBz4 = nbt.getDouble("DBz4");
+			DBz5 = nbt.getDouble("DBz5");
+			DBz6 = nbt.getDouble("DBz6");
+			DBz7 = nbt.getDouble("DBz7");
 		}
 
 		@Override
@@ -346,6 +395,29 @@ public class DbmModVariables {
 			nbt.putDouble("ShenronSpawnTimer", ShenronSpawnTimer);
 			nbt.putBoolean("DragonBallsUsable", DragonBallsUsable);
 			nbt.putBoolean("DragonBallsJumped", DragonBallsJumped);
+			nbt.putDouble("ShenronDemands", ShenronDemands);
+			nbt.putBoolean("ShenronSpawned", ShenronSpawned);
+			nbt.putDouble("DBx1", DBx1);
+			nbt.putDouble("DBx2", DBx2);
+			nbt.putDouble("DBx3", DBx3);
+			nbt.putDouble("DBx4", DBx4);
+			nbt.putDouble("DBx5", DBx5);
+			nbt.putDouble("DBx6", DBx6);
+			nbt.putDouble("DBx7", DBx7);
+			nbt.putDouble("DBy1", DBy1);
+			nbt.putDouble("DBy2", DBy2);
+			nbt.putDouble("DBy3", DBy3);
+			nbt.putDouble("DBy4", DBy4);
+			nbt.putDouble("DBy5", DBy5);
+			nbt.putDouble("DBy6", DBy6);
+			nbt.putDouble("DBy7", DBy7);
+			nbt.putDouble("DBz1", DBz1);
+			nbt.putDouble("DBz2", DBz2);
+			nbt.putDouble("DBz3", DBz3);
+			nbt.putDouble("DBz4", DBz4);
+			nbt.putDouble("DBz5", DBz5);
+			nbt.putDouble("DBz6", DBz6);
+			nbt.putDouble("DBz7", DBz7);
 			return nbt;
 		}
 
@@ -569,6 +641,9 @@ public class DbmModVariables {
 		public double KiAttackRoll = 0;
 		public String StoryModeProgress = "None";
 		public String SelectedKiMove = "None";
+		public double Aging = 0;
+		public double LastAgeTime = 0;
+		public String DBDistance = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -708,6 +783,9 @@ public class DbmModVariables {
 			nbt.putDouble("KiAttackRoll", KiAttackRoll);
 			nbt.putString("StoryModeProgress", StoryModeProgress);
 			nbt.putString("SelectedKiMove", SelectedKiMove);
+			nbt.putDouble("Aging", Aging);
+			nbt.putDouble("LastAgeTime", LastAgeTime);
+			nbt.putString("DBDistance", DBDistance);
 			return nbt;
 		}
 
@@ -850,6 +928,9 @@ public class DbmModVariables {
 			KiAttackRoll = nbt.getDouble("KiAttackRoll");
 			StoryModeProgress = nbt.getString("StoryModeProgress");
 			SelectedKiMove = nbt.getString("SelectedKiMove");
+			Aging = nbt.getDouble("Aging");
+			LastAgeTime = nbt.getDouble("LastAgeTime");
+			DBDistance = nbt.getString("DBDistance");
 		}
 	}
 
@@ -1014,6 +1095,9 @@ public class DbmModVariables {
 					variables.KiAttackRoll = message.data.KiAttackRoll;
 					variables.StoryModeProgress = message.data.StoryModeProgress;
 					variables.SelectedKiMove = message.data.SelectedKiMove;
+					variables.Aging = message.data.Aging;
+					variables.LastAgeTime = message.data.LastAgeTime;
+					variables.DBDistance = message.data.DBDistance;
 				}
 			});
 			context.setPacketHandled(true);
