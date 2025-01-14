@@ -17,6 +17,9 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.dbm.entity.StoryTienshinhanEntity;
+import net.mcreator.dbm.entity.StoryRaditzEntity;
+import net.mcreator.dbm.entity.StoryPiccoloGiantEntity;
+import net.mcreator.dbm.entity.StoryPiccoloEntity;
 import net.mcreator.dbm.entity.SpiritBombEntity;
 import net.mcreator.dbm.entity.ShenronEntity;
 import net.mcreator.dbm.entity.SabertoothEntity;
@@ -30,6 +33,7 @@ import net.mcreator.dbm.entity.KingEnmaEntity;
 import net.mcreator.dbm.entity.KiBlastEntity;
 import net.mcreator.dbm.entity.KameTurtleEntity;
 import net.mcreator.dbm.entity.KameSenninEntity;
+import net.mcreator.dbm.entity.KameHouseSpawnerEntity;
 import net.mcreator.dbm.entity.GregoryEntity;
 import net.mcreator.dbm.entity.GiantKiBlastEntity;
 import net.mcreator.dbm.entity.DragonBallE7Entity;
@@ -111,6 +115,14 @@ public class DbmModEntities {
 			EntityType.Builder.<GiantKiBlastEntity>of(GiantKiBlastEntity::new, MobCategory.MISC).setCustomClientFactory(GiantKiBlastEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(2f, 2f));
 	public static final RegistryObject<EntityType<StoryTienshinhanEntity>> STORY_TIENSHINHAN = register("story_tienshinhan", EntityType.Builder.<StoryTienshinhanEntity>of(StoryTienshinhanEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryTienshinhanEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryPiccoloEntity>> STORY_PICCOLO = register("story_piccolo", EntityType.Builder.<StoryPiccoloEntity>of(StoryPiccoloEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryPiccoloEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryPiccoloGiantEntity>> STORY_PICCOLO_GIANT = register("story_piccolo_giant", EntityType.Builder.<StoryPiccoloGiantEntity>of(StoryPiccoloGiantEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryPiccoloGiantEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<KameHouseSpawnerEntity>> KAME_HOUSE_SPAWNER = register("kame_house_spawner", EntityType.Builder.<KameHouseSpawnerEntity>of(KameHouseSpawnerEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(KameHouseSpawnerEntity::new).fireImmune().sized(0.01f, 0.01f));
+	public static final RegistryObject<EntityType<StoryRaditzEntity>> STORY_RADITZ = register("story_raditz", EntityType.Builder.<StoryRaditzEntity>of(StoryRaditzEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryRaditzEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -146,6 +158,10 @@ public class DbmModEntities {
 			DragonBallE6Entity.init();
 			DragonBallE7Entity.init();
 			StoryTienshinhanEntity.init();
+			StoryPiccoloEntity.init();
+			StoryPiccoloGiantEntity.init();
+			KameHouseSpawnerEntity.init();
+			StoryRaditzEntity.init();
 		});
 	}
 
@@ -176,5 +192,9 @@ public class DbmModEntities {
 		event.put(DRAGON_BALL_E_6.get(), DragonBallE6Entity.createAttributes().build());
 		event.put(DRAGON_BALL_E_7.get(), DragonBallE7Entity.createAttributes().build());
 		event.put(STORY_TIENSHINHAN.get(), StoryTienshinhanEntity.createAttributes().build());
+		event.put(STORY_PICCOLO.get(), StoryPiccoloEntity.createAttributes().build());
+		event.put(STORY_PICCOLO_GIANT.get(), StoryPiccoloGiantEntity.createAttributes().build());
+		event.put(KAME_HOUSE_SPAWNER.get(), KameHouseSpawnerEntity.createAttributes().build());
+		event.put(STORY_RADITZ.get(), StoryRaditzEntity.createAttributes().build());
 	}
 }

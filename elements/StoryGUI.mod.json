@@ -237,6 +237,49 @@
           "x": 368,
           "y": 216
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hey_looking_for_an_adventure_w",
+          "text": {
+            "fixedValue": "Hey, looking for an adventure? We have what you need!"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_are_you_ready_to_take_on_the_inc",
+          "text": {
+            "fixedValue": "Are you ready to take on the incredible story of Dragon Ball?"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 62
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_start",
+          "image": "start.png",
+          "hoveredImage": "starthovered.png",
+          "onClick": {
+            "name": "SetStory1"
+          },
+          "x": 186,
+          "y": 116
+        }
       }
     ],
     "gridSettings": {

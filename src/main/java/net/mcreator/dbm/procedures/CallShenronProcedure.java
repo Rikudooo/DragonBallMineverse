@@ -40,7 +40,7 @@ public class CallShenronProcedure {
 		if (text == null)
 			return;
 		if (((text).toLowerCase().contains("shenron") || (text).toLowerCase().contains("shenron,") || (text).toLowerCase().contains("shenron!"))
-				&& ((text).toLowerCase().contains("call") || (text).toLowerCase().contains("spawn") || (text).toLowerCase().contains("appear") || (text).toLowerCase().contains("bring"))) {
+				&& ((text).toLowerCase().contains("call") || (text).toLowerCase().contains("spawn") || (text).toLowerCase().contains("appear") || (text).toLowerCase().contains("come") || (text).toLowerCase().contains("bring"))) {
 			if (DbmModVariables.MapVariables.get(world).DragonBallsUsable == true) {
 				if (DbmModVariables.MapVariables.get(world).ShenronCalled == false) {
 					if (world.canSeeSkyFromBelowWater(BlockPos.containing(x, y, z))) {

@@ -6,7 +6,6 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -22,7 +21,6 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,7 +29,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -44,6 +41,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.procedures.TienshinhanAttackPatternProcedure;
+import net.mcreator.dbm.procedures.TienShinHanDefeatedProcedure;
 import net.mcreator.dbm.procedures.StoryMobFlyConditionProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
@@ -53,6 +51,9 @@ public class StoryTienshinhanEntity extends Monster {
 	public static final EntityDataAccessor<Integer> DATA_OldYAW = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_OldPITCH = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_KiAttackHits = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Scale = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_Ki = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_KiCharging = SynchedEntityData.defineId(StoryTienshinhanEntity.class, EntityDataSerializers.BOOLEAN);
 
 	public StoryTienshinhanEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(DbmModEntities.STORY_TIENSHINHAN.get(), world);
@@ -63,6 +64,7 @@ public class StoryTienshinhanEntity extends Monster {
 		setMaxUpStep(0.6f);
 		xpReward = 0;
 		setNoAi(false);
+		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
@@ -79,6 +81,9 @@ public class StoryTienshinhanEntity extends Monster {
 		this.entityData.define(DATA_OldYAW, 0);
 		this.entityData.define(DATA_OldPITCH, 0);
 		this.entityData.define(DATA_KiAttackHits, 0);
+		this.entityData.define(DATA_Scale, 1);
+		this.entityData.define(DATA_Ki, 100);
+		this.entityData.define(DATA_KiCharging, false);
 	}
 
 	@Override
@@ -115,6 +120,16 @@ public class StoryTienshinhanEntity extends Monster {
 				return super.canUse() && StoryMobFlyConditionProcedure.execute(entity);
 			}
 
+			@Override
+			public boolean canContinueToUse() {
+				double x = StoryTienshinhanEntity.this.getX();
+				double y = StoryTienshinhanEntity.this.getY();
+				double z = StoryTienshinhanEntity.this.getZ();
+				Entity entity = StoryTienshinhanEntity.this;
+				Level world = StoryTienshinhanEntity.this.level();
+				return super.canContinueToUse() && StoryMobFlyConditionProcedure.execute(entity);
+			}
+
 		});
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
@@ -125,6 +140,11 @@ public class StoryTienshinhanEntity extends Monster {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override
@@ -182,6 +202,12 @@ public class StoryTienshinhanEntity extends Monster {
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		TienShinHanDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), source.getEntity());
+	}
+
+	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("DataSelectedKiAttack", this.entityData.get(DATA_SelectedKiAttack));
@@ -189,6 +215,9 @@ public class StoryTienshinhanEntity extends Monster {
 		compound.putInt("DataOldYAW", this.entityData.get(DATA_OldYAW));
 		compound.putInt("DataOldPITCH", this.entityData.get(DATA_OldPITCH));
 		compound.putInt("DataKiAttackHits", this.entityData.get(DATA_KiAttackHits));
+		compound.putInt("DataScale", this.entityData.get(DATA_Scale));
+		compound.putInt("DataKi", this.entityData.get(DATA_Ki));
+		compound.putBoolean("DataKiCharging", this.entityData.get(DATA_KiCharging));
 	}
 
 	@Override
@@ -204,6 +233,12 @@ public class StoryTienshinhanEntity extends Monster {
 			this.entityData.set(DATA_OldPITCH, compound.getInt("DataOldPITCH"));
 		if (compound.contains("DataKiAttackHits"))
 			this.entityData.set(DATA_KiAttackHits, compound.getInt("DataKiAttackHits"));
+		if (compound.contains("DataScale"))
+			this.entityData.set(DATA_Scale, compound.getInt("DataScale"));
+		if (compound.contains("DataKi"))
+			this.entityData.set(DATA_Ki, compound.getInt("DataKi"));
+		if (compound.contains("DataKiCharging"))
+			this.entityData.set(DATA_KiCharging, compound.getBoolean("DataKiCharging"));
 	}
 
 	@Override
@@ -227,17 +262,16 @@ public class StoryTienshinhanEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(DbmModEntities.STORY_TIENSHINHAN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 250);
+		builder = builder.add(Attributes.MAX_HEALTH, 500);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 25);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 128);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1000);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}

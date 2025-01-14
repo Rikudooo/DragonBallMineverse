@@ -12,6 +12,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.dbm.client.renderer.StoryTienshinhanRenderer;
+import net.mcreator.dbm.client.renderer.StoryRaditzRenderer;
+import net.mcreator.dbm.client.renderer.StoryPiccoloRenderer;
+import net.mcreator.dbm.client.renderer.StoryPiccoloGiantRenderer;
 import net.mcreator.dbm.client.renderer.ShenronRenderer;
 import net.mcreator.dbm.client.renderer.SabertoothRenderer;
 import net.mcreator.dbm.client.renderer.PunchingBagRenderer;
@@ -23,6 +26,7 @@ import net.mcreator.dbm.client.renderer.MasterKorinRenderer;
 import net.mcreator.dbm.client.renderer.KingEnmaRenderer;
 import net.mcreator.dbm.client.renderer.KameTurtleRenderer;
 import net.mcreator.dbm.client.renderer.KameSenninRenderer;
+import net.mcreator.dbm.client.renderer.KameHouseSpawnerRenderer;
 import net.mcreator.dbm.client.renderer.GregoryRenderer;
 import net.mcreator.dbm.client.renderer.DragonBallE7Renderer;
 import net.mcreator.dbm.client.renderer.DragonBallE6Renderer;
@@ -69,5 +73,9 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.DRAGON_BALL_E_7.get(), DragonBallE7Renderer::new);
 		event.registerEntityRenderer(DbmModEntities.GIANT_KI_BLAST.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_TIENSHINHAN.get(), StoryTienshinhanRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_PICCOLO.get(), StoryPiccoloRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_PICCOLO_GIANT.get(), StoryPiccoloGiantRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.KAME_HOUSE_SPAWNER.get(), KameHouseSpawnerRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_RADITZ.get(), StoryRaditzRenderer::new);
 	}
 }

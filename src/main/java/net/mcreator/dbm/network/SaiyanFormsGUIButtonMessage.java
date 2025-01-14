@@ -14,6 +14,8 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.dbm.world.inventory.SaiyanFormsGUIMenu;
 import net.mcreator.dbm.procedures.UpgradeButtonProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJProcedure;
+import net.mcreator.dbm.procedures.SetFormPathSSJGProcedure;
+import net.mcreator.dbm.procedures.SetFormPathSSJBProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJ2Procedure;
 import net.mcreator.dbm.procedures.SetFormPathKaiokenProcedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
@@ -155,6 +157,14 @@ public class SaiyanFormsGUIButtonMessage {
 		if (buttonID == 18) {
 
 			SetFormPathKaiokenProcedure.execute(entity);
+		}
+		if (buttonID == 19) {
+
+			SetFormPathSSJGProcedure.execute(entity);
+		}
+		if (buttonID == 20) {
+
+			SetFormPathSSJBProcedure.execute(entity);
 		}
 	}
 

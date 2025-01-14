@@ -123,5 +123,13 @@
         "stream": false
       }
     ]
+  },
+  "bip": {
+    "sounds": [
+      {
+        "name": "dbm:bip",
+        "stream": false
+      }
+    ]
   }
 }

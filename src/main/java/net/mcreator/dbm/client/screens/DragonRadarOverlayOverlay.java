@@ -53,7 +53,8 @@ public class DragonRadarOverlayOverlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (ReturnDragonRadarInHandProcedure.execute(entity)) {
-			event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/dragonradar.png"), 0, 0, 0, 0, w, h, w, h);
+			event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/dragonradar.png"), 1, h - 112, 0, 0, 109, 112, 109, 112);
+
 			if (ReturnDragonBallUsableProcedure.execute(world)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/db.png"), 22, h - 68, 0, 0, 6, 6, 6, 6);
 			}
@@ -99,7 +100,7 @@ public class DragonRadarOverlayOverlay {
 			if (ReturnDragonBallUsableProcedure.execute(world))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						TextDBDistanceProcedure.execute(entity), 39, h - 104, -256, false);
+						TextDBDistanceProcedure.execute(entity), 42, h - 99, -256, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

@@ -220,6 +220,10 @@ public class DbmModVariables {
 			clone.Aging = original.Aging;
 			clone.LastAgeTime = original.LastAgeTime;
 			clone.DBDistance = original.DBDistance;
+			clone.SelectedDB = original.SelectedDB;
+			clone.StoryGUI = original.StoryGUI;
+			clone.GKi = original.GKi;
+			clone.Legendary = original.Legendary;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -293,13 +297,6 @@ public class DbmModVariables {
 		public boolean DefaultStructureLoaded = false;
 		public boolean KameHouseSpawned = false;
 		public String KameHouseCoords = "Kame House is unknown";
-		public String DBCoords1 = "\"\"";
-		public String DBCoords2 = "\"\"";
-		public String DBCoords3 = "\"\"";
-		public String DBCoords4 = "\"\"";
-		public String DBCoords5 = "\"\"";
-		public String DBCoords6 = "\"\"";
-		public String DBCoords7 = "\"\"";
 		public boolean ShenronCalled = false;
 		public double ShenronSpawnTimer = 0;
 		public boolean DragonBallsUsable = true;
@@ -327,6 +324,15 @@ public class DbmModVariables {
 		public double DBz5 = 0;
 		public double DBz6 = 0;
 		public double DBz7 = 0;
+		public boolean DBSpawned1 = false;
+		public boolean DBSpawned2 = false;
+		public boolean DBSpawned3 = false;
+		public boolean DBSpawned4 = false;
+		public boolean DBSpawned5 = false;
+		public boolean DBSpawned6 = false;
+		public boolean DBSpawned7 = false;
+		public double DragonBallTimer = 0;
+		public boolean kamehousepspawnerSpawned = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -342,13 +348,6 @@ public class DbmModVariables {
 			DefaultStructureLoaded = nbt.getBoolean("DefaultStructureLoaded");
 			KameHouseSpawned = nbt.getBoolean("KameHouseSpawned");
 			KameHouseCoords = nbt.getString("KameHouseCoords");
-			DBCoords1 = nbt.getString("DBCoords1");
-			DBCoords2 = nbt.getString("DBCoords2");
-			DBCoords3 = nbt.getString("DBCoords3");
-			DBCoords4 = nbt.getString("DBCoords4");
-			DBCoords5 = nbt.getString("DBCoords5");
-			DBCoords6 = nbt.getString("DBCoords6");
-			DBCoords7 = nbt.getString("DBCoords7");
 			ShenronCalled = nbt.getBoolean("ShenronCalled");
 			ShenronSpawnTimer = nbt.getDouble("ShenronSpawnTimer");
 			DragonBallsUsable = nbt.getBoolean("DragonBallsUsable");
@@ -376,6 +375,15 @@ public class DbmModVariables {
 			DBz5 = nbt.getDouble("DBz5");
 			DBz6 = nbt.getDouble("DBz6");
 			DBz7 = nbt.getDouble("DBz7");
+			DBSpawned1 = nbt.getBoolean("DBSpawned1");
+			DBSpawned2 = nbt.getBoolean("DBSpawned2");
+			DBSpawned3 = nbt.getBoolean("DBSpawned3");
+			DBSpawned4 = nbt.getBoolean("DBSpawned4");
+			DBSpawned5 = nbt.getBoolean("DBSpawned5");
+			DBSpawned6 = nbt.getBoolean("DBSpawned6");
+			DBSpawned7 = nbt.getBoolean("DBSpawned7");
+			DragonBallTimer = nbt.getDouble("DragonBallTimer");
+			kamehousepspawnerSpawned = nbt.getBoolean("kamehousepspawnerSpawned");
 		}
 
 		@Override
@@ -384,13 +392,6 @@ public class DbmModVariables {
 			nbt.putBoolean("DefaultStructureLoaded", DefaultStructureLoaded);
 			nbt.putBoolean("KameHouseSpawned", KameHouseSpawned);
 			nbt.putString("KameHouseCoords", KameHouseCoords);
-			nbt.putString("DBCoords1", DBCoords1);
-			nbt.putString("DBCoords2", DBCoords2);
-			nbt.putString("DBCoords3", DBCoords3);
-			nbt.putString("DBCoords4", DBCoords4);
-			nbt.putString("DBCoords5", DBCoords5);
-			nbt.putString("DBCoords6", DBCoords6);
-			nbt.putString("DBCoords7", DBCoords7);
 			nbt.putBoolean("ShenronCalled", ShenronCalled);
 			nbt.putDouble("ShenronSpawnTimer", ShenronSpawnTimer);
 			nbt.putBoolean("DragonBallsUsable", DragonBallsUsable);
@@ -418,6 +419,15 @@ public class DbmModVariables {
 			nbt.putDouble("DBz5", DBz5);
 			nbt.putDouble("DBz6", DBz6);
 			nbt.putDouble("DBz7", DBz7);
+			nbt.putBoolean("DBSpawned1", DBSpawned1);
+			nbt.putBoolean("DBSpawned2", DBSpawned2);
+			nbt.putBoolean("DBSpawned3", DBSpawned3);
+			nbt.putBoolean("DBSpawned4", DBSpawned4);
+			nbt.putBoolean("DBSpawned5", DBSpawned5);
+			nbt.putBoolean("DBSpawned6", DBSpawned6);
+			nbt.putBoolean("DBSpawned7", DBSpawned7);
+			nbt.putDouble("DragonBallTimer", DragonBallTimer);
+			nbt.putBoolean("kamehousepspawnerSpawned", kamehousepspawnerSpawned);
 			return nbt;
 		}
 
@@ -644,6 +654,10 @@ public class DbmModVariables {
 		public double Aging = 0;
 		public double LastAgeTime = 0;
 		public String DBDistance = "\"\"";
+		public double SelectedDB = 0;
+		public double StoryGUI = 0;
+		public boolean GKi = false;
+		public boolean Legendary = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -786,6 +800,10 @@ public class DbmModVariables {
 			nbt.putDouble("Aging", Aging);
 			nbt.putDouble("LastAgeTime", LastAgeTime);
 			nbt.putString("DBDistance", DBDistance);
+			nbt.putDouble("SelectedDB", SelectedDB);
+			nbt.putDouble("StoryGUI", StoryGUI);
+			nbt.putBoolean("GKi", GKi);
+			nbt.putBoolean("Legendary", Legendary);
 			return nbt;
 		}
 
@@ -931,6 +949,10 @@ public class DbmModVariables {
 			Aging = nbt.getDouble("Aging");
 			LastAgeTime = nbt.getDouble("LastAgeTime");
 			DBDistance = nbt.getString("DBDistance");
+			SelectedDB = nbt.getDouble("SelectedDB");
+			StoryGUI = nbt.getDouble("StoryGUI");
+			GKi = nbt.getBoolean("GKi");
+			Legendary = nbt.getBoolean("Legendary");
 		}
 	}
 
@@ -1098,6 +1120,10 @@ public class DbmModVariables {
 					variables.Aging = message.data.Aging;
 					variables.LastAgeTime = message.data.LastAgeTime;
 					variables.DBDistance = message.data.DBDistance;
+					variables.SelectedDB = message.data.SelectedDB;
+					variables.StoryGUI = message.data.StoryGUI;
+					variables.GKi = message.data.GKi;
+					variables.Legendary = message.data.Legendary;
 				}
 			});
 			context.setPacketHandled(true);

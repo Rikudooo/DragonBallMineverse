@@ -15,7 +15,7 @@
         "data": {
           "image": "4stardbgui3.png",
           "use1Xscale": false,
-          "x": 38,
+          "x": 37,
           "y": 16
         }
       },
@@ -30,7 +30,7 @@
             "value": -16777063,
             "falpha": 0.0
           },
-          "x": 42,
+          "x": 41,
           "y": 19
         }
       },
@@ -289,7 +289,7 @@
             "name": "ReturnRacialFormOver4"
           },
           "x": 51,
-          "y": 64
+          "y": 71
         }
       },
       {
@@ -305,7 +305,7 @@
           "width": 18,
           "height": 18,
           "x": 51,
-          "y": 64
+          "y": 71
         }
       },
       {
@@ -492,6 +492,160 @@
           },
           "x": 285,
           "y": 98
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ssjgicon",
+          "image": "ssjgicon.png",
+          "hoveredImage": "ssjgiconhovered.png",
+          "onClick": {
+            "name": "SetFormPathSSJG"
+          },
+          "displayCondition": {
+            "name": "ReturnForm7GKi"
+          },
+          "x": 51,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ssjg_reach_the_next_level_of_sa",
+          "text": {
+            "fixedValue": "SSJG: Reach the next level of Saiyan Evolution!"
+          },
+          "displayCondition": {
+            "name": "ReturnFormGKi"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 51,
+          "y": 107
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ssjbicon",
+          "image": "ssjbicon.png",
+          "hoveredImage": "ssjbiconhovered.png",
+          "onClick": {
+            "name": "SetFormPathSSJB"
+          },
+          "displayCondition": {
+            "name": "ReturnForm7GKi"
+          },
+          "x": 51,
+          "y": 143
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_super_saiyan_blue_ascend_to_a_l",
+          "text": {
+            "fixedValue": "Super Saiyan Blue: Ascend to a level beyond that of an ascended Saiyan"
+          },
+          "displayCondition": {
+            "name": "ReturnForm7GKi"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 51,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_max_level_7",
+          "text": {
+            "fixedValue": "Max Level: 7"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathSSJG"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cost_200000_tp",
+          "text": {
+            "fixedValue": "Cost: 200,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnFormGKi"
+          },
+          "x": 285,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cost_15000_tp",
+          "text": {
+            "fixedValue": "Cost: 15,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathKaioken"
+          },
+          "x": 285,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_max_level_8",
+          "text": {
+            "fixedValue": "Max Level: 8"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathSSJB"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cost_350000_tp",
+          "text": {
+            "fixedValue": "Cost: 350,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathSSJB"
+          },
+          "x": 285,
+          "y": 134
         }
       }
     ],

@@ -37,6 +37,7 @@ public class StoryGUIScreen extends AbstractContainerScreen<StoryGUIMenu> {
 	ImageButton imagebutton_icon12;
 	ImageButton imagebutton_icon13;
 	ImageButton imagebutton_icon14;
+	ImageButton imagebutton_start;
 
 	public StoryGUIScreen(StoryGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -81,6 +82,8 @@ public class StoryGUIScreen extends AbstractContainerScreen<StoryGUIMenu> {
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui.label_player_stats"), -172, -101, -16777063, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui.label_hey_looking_for_an_adventure_w"), -163, -76, -16777216, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui.label_are_you_ready_to_take_on_the_inc"), -163, -58, -16777216, false);
 	}
 
 	@Override
@@ -206,5 +209,13 @@ public class StoryGUIScreen extends AbstractContainerScreen<StoryGUIMenu> {
 		});
 		guistate.put("button:imagebutton_icon14", imagebutton_icon14);
 		this.addRenderableWidget(imagebutton_icon14);
+		imagebutton_start = new ImageButton(this.leftPos + -28, this.topPos + -4, 36, 16, 0, 0, 16, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_start.png"), 36, 32, e -> {
+			if (true) {
+				DbmMod.PACKET_HANDLER.sendToServer(new StoryGUIButtonMessage(15, x, y, z));
+				StoryGUIButtonMessage.handleButtonAction(entity, 15, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_start", imagebutton_start);
+		this.addRenderableWidget(imagebutton_start);
 	}
 }

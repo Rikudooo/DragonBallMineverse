@@ -10,6 +10,8 @@ public class ShenronEntityDiesProcedure {
 		DbmModVariables.MapVariables.get(world).syncData(world);
 		DbmModVariables.MapVariables.get(world).DragonBallsUsable = false;
 		DbmModVariables.MapVariables.get(world).syncData(world);
+		DbmModVariables.MapVariables.get(world).DragonBallTimer = 240000;
+		DbmModVariables.MapVariables.get(world).syncData(world);
 		DbmModVariables.MapVariables.get(world).ShenronSpawned = false;
 		DbmModVariables.MapVariables.get(world).syncData(world);
 		DbmModVariables.MapVariables.get(world).ShenronSpawnTimer = 0;

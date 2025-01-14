@@ -13,10 +13,14 @@ import net.mcreator.dbm.world.inventory.SaiyanFormsGUIMenu;
 import net.mcreator.dbm.procedures.ReturnRacialFormOver4Procedure;
 import net.mcreator.dbm.procedures.ReturnKaiokenOwnedProcedure;
 import net.mcreator.dbm.procedures.ReturnFormPathNotSubformProcedure;
+import net.mcreator.dbm.procedures.ReturnFormGKiProcedure;
+import net.mcreator.dbm.procedures.ReturnForm7GKiProcedure;
 import net.mcreator.dbm.procedures.RacialFormLevelTextProcedure;
 import net.mcreator.dbm.procedures.KaiokenOwnedTextProcedure;
 import net.mcreator.dbm.procedures.FormPathTextProcedure;
 import net.mcreator.dbm.procedures.FormPathSSJProcedure;
+import net.mcreator.dbm.procedures.FormPathSSJGProcedure;
+import net.mcreator.dbm.procedures.FormPathSSJBProcedure;
 import net.mcreator.dbm.procedures.FormPathSSJ2Procedure;
 import net.mcreator.dbm.procedures.FormPathKaiokenProcedure;
 import net.mcreator.dbm.network.SaiyanFormsGUIButtonMessage;
@@ -50,6 +54,8 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 	ImageButton imagebutton_upgradeicon;
 	ImageButton imagebutton_ssjicon;
 	ImageButton imagebutton_kaiokenicon;
+	ImageButton imagebutton_ssjgicon;
+	ImageButton imagebutton_ssjbicon;
 
 	public SaiyanFormsGUIScreen(SaiyanFormsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -70,11 +76,17 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 		if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -85 && mouseY < topPos + -67)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.saiyan_forms_gui.tooltip_jump_allows_you_to_jump_higher"), mouseX, mouseY);
 		if (ReturnRacialFormOver4Procedure.execute(entity))
-			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -56 && mouseY < topPos + -38)
+			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -49 && mouseY < topPos + -31)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.saiyan_forms_gui.tooltip_super_saiyan_2_upgrade_your_rac"), mouseX, mouseY);
 		if (ReturnKaiokenOwnedProcedure.execute(entity))
 			if (mouseX > leftPos + 16 && mouseX < leftPos + 34 && mouseY > topPos + -85 && mouseY < topPos + -67)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.saiyan_forms_gui.tooltip_kaioken_a_technique_that_gives"), mouseX, mouseY);
+		if (ReturnFormGKiProcedure.execute(entity))
+			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -13 && mouseY < topPos + 5)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.saiyan_forms_gui.tooltip_ssjg_reach_the_next_level_of_sa"), mouseX, mouseY);
+		if (ReturnForm7GKiProcedure.execute(entity))
+			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + 23 && mouseY < topPos + 41)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.saiyan_forms_gui.tooltip_super_saiyan_blue_ascend_to_a_l"), mouseX, mouseY);
 	}
 
 	@Override
@@ -83,7 +95,7 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/4stardbgui3.png"), this.leftPos + -176, this.topPos + -104, 0, 0, 224, 200, 224, 200);
+		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/4stardbgui3.png"), this.leftPos + -177, this.topPos + -104, 0, 0, 224, 200, 224, 200);
 
 		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/currenticon.png"), this.leftPos + -98, this.topPos + 94, 0, 0, 24, 24, 24, 24);
 
@@ -103,7 +115,7 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.saiyan_forms_gui.label_player_stats"), -172, -101, -16777063, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.saiyan_forms_gui.label_player_stats"), -173, -101, -16777063, false);
 		guiGraphics.drawString(this.font,
 
 				FormPathTextProcedure.execute(entity), 71, -40, -1, false);
@@ -125,6 +137,16 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 			guiGraphics.drawString(this.font,
 
 					KaiokenOwnedTextProcedure.execute(entity), 71, -22, -1, false);
+		if (FormPathSSJGProcedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.saiyan_forms_gui.label_max_level_7"), 71, -4, -1, false);
+		if (ReturnFormGKiProcedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.saiyan_forms_gui.label_cost_200000_tp"), 71, 14, -1, false);
+		if (FormPathKaiokenProcedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.saiyan_forms_gui.label_cost_15000_tp"), 71, 14, -1, false);
+		if (FormPathSSJBProcedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.saiyan_forms_gui.label_max_level_8"), 71, -4, -1, false);
+		if (FormPathSSJBProcedure.execute(entity))
+			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.saiyan_forms_gui.label_cost_350000_tp"), 71, 14, -1, false);
 	}
 
 	@Override
@@ -250,7 +272,7 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 		});
 		guistate.put("button:imagebutton_icon14", imagebutton_icon14);
 		this.addRenderableWidget(imagebutton_icon14);
-		imagebutton_ssj2icon = new ImageButton(this.leftPos + -163, this.topPos + -56, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_ssj2icon.png"), 18, 36, e -> {
+		imagebutton_ssj2icon = new ImageButton(this.leftPos + -163, this.topPos + -49, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_ssj2icon.png"), 18, 36, e -> {
 			if (ReturnRacialFormOver4Procedure.execute(entity)) {
 				DbmMod.PACKET_HANDLER.sendToServer(new SaiyanFormsGUIButtonMessage(15, x, y, z));
 				SaiyanFormsGUIButtonMessage.handleButtonAction(entity, 15, x, y, z);
@@ -294,5 +316,33 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 		};
 		guistate.put("button:imagebutton_kaiokenicon", imagebutton_kaiokenicon);
 		this.addRenderableWidget(imagebutton_kaiokenicon);
+		imagebutton_ssjgicon = new ImageButton(this.leftPos + -163, this.topPos + -13, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_ssjgicon.png"), 18, 36, e -> {
+			if (ReturnForm7GKiProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new SaiyanFormsGUIButtonMessage(19, x, y, z));
+				SaiyanFormsGUIButtonMessage.handleButtonAction(entity, 19, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnForm7GKiProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_ssjgicon", imagebutton_ssjgicon);
+		this.addRenderableWidget(imagebutton_ssjgicon);
+		imagebutton_ssjbicon = new ImageButton(this.leftPos + -163, this.topPos + 23, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_ssjbicon.png"), 18, 36, e -> {
+			if (ReturnForm7GKiProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new SaiyanFormsGUIButtonMessage(20, x, y, z));
+				SaiyanFormsGUIButtonMessage.handleButtonAction(entity, 20, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnForm7GKiProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_ssjbicon", imagebutton_ssjbicon);
+		this.addRenderableWidget(imagebutton_ssjbicon);
 	}
 }

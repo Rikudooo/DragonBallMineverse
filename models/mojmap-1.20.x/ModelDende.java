@@ -1,4 +1,4 @@
-// Made with Blockbench 4.9.4
+// Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -13,6 +13,9 @@ public class ModelDende<T extends Entity> extends EntityModel<T> {
 	private final ModelPart RightArm;
 	private final ModelPart Body;
 	private final ModelPart Head;
+	private final ModelPart antenna2;
+	private final ModelPart Ears;
+	private final ModelPart Ears2;
 
 	public ModelDende(ModelPart root) {
 		this.LeftLeg = root.getChild("LeftLeg");
@@ -21,6 +24,9 @@ public class ModelDende<T extends Entity> extends EntityModel<T> {
 		this.RightArm = root.getChild("RightArm");
 		this.Body = root.getChild("Body");
 		this.Head = root.getChild("Head");
+		this.antenna2 = this.Head.getChild("antenna2");
+		this.Ears = this.Head.getChild("Ears");
+		this.Ears2 = this.Head.getChild("Ears2");
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -35,10 +41,8 @@ public class ModelDende<T extends Entity> extends EntityModel<T> {
 				.addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(-1.9F, 12.0F, 0.0F));
 
-		PartDefinition LeftArm = partdefinition.addOrReplaceChild("LeftArm",
-				CubeListBuilder.create().texOffs(32, 48)
-						.addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(140, 188)
-						.addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.25F)),
+		PartDefinition LeftArm = partdefinition.addOrReplaceChild("LeftArm", CubeListBuilder.create().texOffs(32, 48)
+				.addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(5.0F, 2.0F, 0.0F));
 
 		PartDefinition RightArm = partdefinition.addOrReplaceChild("RightArm", CubeListBuilder.create().texOffs(40, 16)

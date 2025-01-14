@@ -17,7 +17,7 @@ public class KameHouseFeature extends StructureFeature {
 		int x = context.origin().getX();
 		int y = context.origin().getY();
 		int z = context.origin().getZ();
-		if (!KameHouseAdditionalGenerationConditionProcedure.execute(world, x, y, z))
+		if (!KameHouseAdditionalGenerationConditionProcedure.execute(world, x, z))
 			return false;
 		return super.place(context);
 	}

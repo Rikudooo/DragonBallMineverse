@@ -1,0 +1,674 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "4stardbgui3.png",
+          "use1Xscale": false,
+          "x": 37,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_player_stats",
+          "text": {
+            "fixedValue": "Racial Skills"
+          },
+          "color": {
+            "value": -16777063,
+            "falpha": 0.0
+          },
+          "x": 41,
+          "y": 19
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_quit",
+          "image": "quit.png",
+          "hoveredImage": "quithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 251,
+          "y": 18
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statsicon",
+          "image": "statsicon.png",
+          "hoveredImage": "statsiconhovered.png",
+          "onClick": {
+            "name": "OpenStatsGUI"
+          },
+          "x": 43,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillicon",
+          "image": "skillicon.png",
+          "hoveredImage": "skilliconhovered.png",
+          "onClick": {
+            "name": "OpenSkillsGUI"
+          },
+          "x": 68,
+          "y": 216
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "currenticon.png",
+          "use1Xscale": false,
+          "x": 116,
+          "y": 214
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_kiattackicon",
+          "image": "kiattackicon.png",
+          "hoveredImage": "kiattackiconhovered.png",
+          "onClick": {
+            "name": "OpenKiAttacksGUI"
+          },
+          "x": 93,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_storyiconhovered",
+          "image": "storyicon.png",
+          "hoveredImage": "storyiconhovered.png",
+          "onClick": {
+            "name": "OpenStoryGUI"
+          },
+          "x": 168,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_formicon",
+          "image": "formicon.png",
+          "hoveredImage": "formiconhovered.png",
+          "onClick": {
+            "name": "OpenRacialSkillsGUI"
+          },
+          "x": 118,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ultimateformicon",
+          "image": "ultimateformicon.png",
+          "hoveredImage": "ultimateformiconhovered.png",
+          "onClick": {
+            "name": "OpenUltimateSkillsGUI"
+          },
+          "x": 143,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_groupicon",
+          "image": "groupicon.png",
+          "hoveredImage": "groupiconhovered.png",
+          "onClick": {
+            "name": "OpenGroupGUI"
+          },
+          "x": 193,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon8",
+          "image": "icon8.png",
+          "hoveredImage": "hoveredicon8.png",
+          "onClick": {
+            "name": "OpenIcon8"
+          },
+          "x": 218,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon9",
+          "image": "icon9.png",
+          "hoveredImage": "hoveredicon9.png",
+          "onClick": {
+            "name": "OpenIcon9"
+          },
+          "x": 243,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon10",
+          "image": "icon10.png",
+          "hoveredImage": "hoveredicon10.png",
+          "onClick": {
+            "name": "OpenIcon10"
+          },
+          "x": 268,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon11",
+          "image": "icon11.png",
+          "hoveredImage": "hoveredicon11.png",
+          "onClick": {
+            "name": "OpenIcon11"
+          },
+          "x": 293,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon12",
+          "image": "icon12.png",
+          "hoveredImage": "hoveredicon12.png",
+          "onClick": {
+            "name": "OpenIcon12"
+          },
+          "x": 318,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon13",
+          "image": "icon13.png",
+          "hoveredImage": "hoveredicon13.png",
+          "onClick": {
+            "name": "OpenIcon13"
+          },
+          "x": 343,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon14",
+          "image": "icon14.png",
+          "hoveredImage": "hoveredicon14.png",
+          "onClick": {
+            "name": "OpenIcon14"
+          },
+          "x": 368,
+          "y": 216
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_jump_allows_you_to_jump_higher",
+          "text": {
+            "fixedValue": "Super Saiyan: Allow you to transform into a Super Saiyan of the Legend"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 51,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "4stardbgui4.png",
+          "use1Xscale": false,
+          "x": 276,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_form_path_text",
+          "text": {
+            "fixedValue": "",
+            "name": "FormPathText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 285,
+          "y": 80
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ssj2icon",
+          "image": "ssj2icon.png",
+          "hoveredImage": "ssj2iconhovered.png",
+          "onClick": {
+            "name": "SetFormPathSSJ2"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialFormOver4"
+          },
+          "x": 51,
+          "y": 71
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_super_saiyan_2_upgrade_your_rac",
+          "text": {
+            "fixedValue": "Super Saiyan 2: Upgrade your Racial Form past level 4"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialFormOver4"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 51,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_racial_form_level_text",
+          "text": {
+            "fixedValue": "",
+            "name": "RacialFormLevelText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnFormPathNotSubform"
+          },
+          "x": 285,
+          "y": 98
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_upgradeicon",
+          "image": "upgradeicon.png",
+          "hoveredImage": "upgradeiconhovered.png",
+          "onClick": {
+            "name": "UpgradeButton"
+          },
+          "x": 312,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_max_level",
+          "text": {
+            "fixedValue": "Max Level: 4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathSSJ"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cost_25000_tp",
+          "text": {
+            "fixedValue": "Cost: 25,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathSSJ"
+          },
+          "x": 285,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_max_level_6",
+          "text": {
+            "fixedValue": "Max Level: 6"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathSSJ2"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cost_50000_tp",
+          "text": {
+            "fixedValue": "Cost: 50,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathSSJ2"
+          },
+          "x": 285,
+          "y": 134
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ssjicon",
+          "image": "ssjicon.png",
+          "hoveredImage": "ssjiconhovered.png",
+          "onClick": {
+            "name": "SetFormPathSSJ"
+          },
+          "x": 51,
+          "y": 35
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_kaiokenicon",
+          "image": "kaiokenicon.png",
+          "hoveredImage": "kaiokeniconhovered.png",
+          "onClick": {
+            "name": "SetFormPathKaioken"
+          },
+          "displayCondition": {
+            "name": "ReturnKaiokenOwned"
+          },
+          "x": 230,
+          "y": 35
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_kaioken_a_technique_that_gives",
+          "text": {
+            "fixedValue": "Kaioken: A technique that gives you a boost in power!"
+          },
+          "displayCondition": {
+            "name": "ReturnKaiokenOwned"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 230,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_max_level_4",
+          "text": {
+            "fixedValue": "Max Level: 4"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathKaioken"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_kaiokenlevel",
+          "text": {
+            "fixedValue": "KaiokenLevel",
+            "name": "KaiokenOwnedText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathKaioken"
+          },
+          "x": 285,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_max_level_7",
+          "text": {
+            "fixedValue": "Max Level: 7"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathMystic"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cost_15000_tp",
+          "text": {
+            "fixedValue": "Cost: 15,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathKaioken"
+          },
+          "x": 285,
+          "y": 134
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_mysticicon",
+          "image": "mysticicon.png",
+          "hoveredImage": "mysticiconhovered.png",
+          "onClick": {
+            "name": "SetFormMystic"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialForm6"
+          },
+          "x": 51,
+          "y": 107
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ssjrageicon",
+          "image": "ssjrageicon.png",
+          "hoveredImage": "ssjrageiconhovered.png",
+          "onClick": {
+            "name": "SetFormSSJRage"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialForm7"
+          },
+          "x": 51,
+          "y": 143
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_beasticon",
+          "image": "beasticon.png",
+          "hoveredImage": "beasticonhovered.png",
+          "onClick": {
+            "name": "SetFormBeast"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialForm8"
+          },
+          "x": 51,
+          "y": 179
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ultimate_unleash_your_innate_po",
+          "text": {
+            "fixedValue": "Ultimate: Unleash your innate Potential!"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialForm6"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 51,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_super_saiyan_rage_unleash_your",
+          "text": {
+            "fixedValue": "Super Saiyan Rage: Unleash your rage in a way similar to a Legendary Saiyan"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialForm7"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 51,
+          "y": 143
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_empty",
+          "text": {
+            "fixedValue": "Beast: A form no Saiyan has ever reached before!"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialForm8"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 51,
+          "y": 179
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_max_level_8",
+          "text": {
+            "fixedValue": "Max Level: 8"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathSSJRage"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_max_level_9",
+          "text": {
+            "fixedValue": "Max Level: 9"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathBeast"
+          },
+          "x": 285,
+          "y": 116
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

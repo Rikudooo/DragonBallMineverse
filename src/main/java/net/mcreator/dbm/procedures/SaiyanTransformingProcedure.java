@@ -21,12 +21,22 @@ public class SaiyanTransformingProcedure {
 				}
 			} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan")) {
 				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).RacialFormLevel >= 2) {
-					{
-						String _setval = "Super Saiyan Grade 2";
-						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Form = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+					if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Legendary == false) {
+						{
+							String _setval = "Super Saiyan Grade 2";
+							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Form = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Legendary == true) {
+						{
+							String _setval = "Legendary Super Saiyan";
+							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Form = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 					}
 				}
 			} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan Grade 2")) {
@@ -53,12 +63,22 @@ public class SaiyanTransformingProcedure {
 				}
 			} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan Full Power")) {
 				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).RacialFormLevel >= 5) {
-					{
-						String _setval = "Super Saiyan 2";
-						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Form = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+					if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Legendary == false) {
+						{
+							String _setval = "Super Saiyan 2";
+							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Form = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Legendary == true) {
+						{
+							String _setval = "Legendary Super Saiyan 2";
+							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Form = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 					}
 				}
 			} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan 2")) {

@@ -75,6 +75,7 @@ import net.mcreator.dbm.client.model.ModelSixStarDragonBallEntity;
 import net.mcreator.dbm.client.model.ModelShenron119;
 import net.mcreator.dbm.client.model.ModelSevenStarDragonBallEntity;
 import net.mcreator.dbm.client.model.ModelRaptor;
+import net.mcreator.dbm.client.model.ModelRaditz;
 import net.mcreator.dbm.client.model.ModelPunchingBag;
 import net.mcreator.dbm.client.model.ModelPowerPole;
 import net.mcreator.dbm.client.model.ModelPopo;
@@ -101,6 +102,7 @@ public class DbmModModels {
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(ModelKameSennin.LAYER_LOCATION, ModelKameSennin::createBodyLayer);
 		event.registerLayerDefinition(Modelhair_16_ssj2.LAYER_LOCATION, Modelhair_16_ssj2::createBodyLayer);
+		event.registerLayerDefinition(ModelRaditz.LAYER_LOCATION, ModelRaditz::createBodyLayer);
 		event.registerLayerDefinition(ModelPiccoloCape.LAYER_LOCATION, ModelPiccoloCape::createBodyLayer);
 		event.registerLayerDefinition(ModelDende.LAYER_LOCATION, ModelDende::createBodyLayer);
 		event.registerLayerDefinition(Modelhair_goku_ssj3.LAYER_LOCATION, Modelhair_goku_ssj3::createBodyLayer);

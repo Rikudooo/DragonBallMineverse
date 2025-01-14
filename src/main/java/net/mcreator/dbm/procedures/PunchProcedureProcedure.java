@@ -103,7 +103,7 @@ public class PunchProcedureProcedure {
 							});
 						}
 						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (DbmModParticleTypes.PARTICLE_PUNCH_1.get()), x, y, z, 1, 0, 0, 0, 0);
+							_level.sendParticles((SimpleParticleType) (DbmModParticleTypes.PARTICLE_PUNCH_1.get()), x, (y + 1), z, 1, 0, 0, 0, 0);
 					} else if ((sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).AttackCount == 2) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
@@ -141,7 +141,7 @@ public class PunchProcedureProcedure {
 							});
 						}
 						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (DbmModParticleTypes.PARTICLE_PUNCH_2.get()), x, y, z, 1, 0, 0, 0, 0);
+							_level.sendParticles((SimpleParticleType) (DbmModParticleTypes.PARTICLE_PUNCH_2.get()), x, (y + 1), z, 1, 0, 0, 0, 0);
 					} else if ((sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).AttackCount == 3) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
@@ -179,7 +179,7 @@ public class PunchProcedureProcedure {
 							});
 						}
 						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (DbmModParticleTypes.PARTICLE_PUNCH_3.get()), x, y, z, 1, 0, 0, 0, 0);
+							_level.sendParticles((SimpleParticleType) (DbmModParticleTypes.PARTICLE_PUNCH_3.get()), x, (y + 1), z, 1, 0, 0, 0, 0);
 					}
 					if ((sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).ReleasedPower >= 1) {
 						{

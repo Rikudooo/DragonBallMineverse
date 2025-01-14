@@ -177,32 +177,53 @@ public class DragonBallTickProcedure {
 						_serverPlayer.connection.teleport((x + entity.getPersistentData().getDouble("dragonballScatter")), 320, (z + entity.getPersistentData().getDouble("dragonballScatter")), _ent.getYRot(), _ent.getXRot());
 				}
 				if (entity instanceof DragonBallE1Entity) {
-					DbmModVariables.MapVariables.get(world).DBCoords1 = new java.text.DecimalFormat("##").format(x + entity.getPersistentData().getDouble("dragonballScatter")) + "/" + new java.text.DecimalFormat("##").format(320) + "/"
-							+ new java.text.DecimalFormat("##").format(z + entity.getPersistentData().getDouble("dragonballScatter"));
+					DbmModVariables.MapVariables.get(world).DBx1 = x + entity.getPersistentData().getDouble("dragonballScatter");
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBy1 = 320;
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBz1 = z + entity.getPersistentData().getDouble("dragonballScatter");
 					DbmModVariables.MapVariables.get(world).syncData(world);
 				} else if (entity instanceof DragonBallE2Entity) {
-					DbmModVariables.MapVariables.get(world).DBCoords2 = new java.text.DecimalFormat("##").format(x + entity.getPersistentData().getDouble("dragonballScatter")) + "/" + new java.text.DecimalFormat("##").format(320) + "/"
-							+ new java.text.DecimalFormat("##").format(z + entity.getPersistentData().getDouble("dragonballScatter"));
+					DbmModVariables.MapVariables.get(world).DBx2 = x + entity.getPersistentData().getDouble("dragonballScatter");
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBy2 = 320;
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBz2 = z + entity.getPersistentData().getDouble("dragonballScatter");
 					DbmModVariables.MapVariables.get(world).syncData(world);
 				} else if (entity instanceof DragonBallE3Entity) {
-					DbmModVariables.MapVariables.get(world).DBCoords3 = new java.text.DecimalFormat("##").format(x + entity.getPersistentData().getDouble("dragonballScatter")) + "/" + new java.text.DecimalFormat("##").format(320) + "/"
-							+ new java.text.DecimalFormat("##").format(z + entity.getPersistentData().getDouble("dragonballScatter"));
+					DbmModVariables.MapVariables.get(world).DBx3 = x + entity.getPersistentData().getDouble("dragonballScatter");
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBy3 = 320;
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBz3 = z + entity.getPersistentData().getDouble("dragonballScatter");
 					DbmModVariables.MapVariables.get(world).syncData(world);
 				} else if (entity instanceof DragonBallE4Entity) {
-					DbmModVariables.MapVariables.get(world).DBCoords4 = new java.text.DecimalFormat("##").format(x + entity.getPersistentData().getDouble("dragonballScatter")) + "/" + new java.text.DecimalFormat("##").format(320) + "/"
-							+ new java.text.DecimalFormat("##").format(z + entity.getPersistentData().getDouble("dragonballScatter"));
+					DbmModVariables.MapVariables.get(world).DBx4 = x + entity.getPersistentData().getDouble("dragonballScatter");
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBy4 = 320;
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBz4 = z + entity.getPersistentData().getDouble("dragonballScatter");
 					DbmModVariables.MapVariables.get(world).syncData(world);
 				} else if (entity instanceof DragonBallE5Entity) {
-					DbmModVariables.MapVariables.get(world).DBCoords5 = new java.text.DecimalFormat("##").format(x + entity.getPersistentData().getDouble("dragonballScatter")) + "/" + new java.text.DecimalFormat("##").format(320) + "/"
-							+ new java.text.DecimalFormat("##").format(z + entity.getPersistentData().getDouble("dragonballScatter"));
+					DbmModVariables.MapVariables.get(world).DBx5 = x + entity.getPersistentData().getDouble("dragonballScatter");
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBy5 = 320;
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBz5 = z + entity.getPersistentData().getDouble("dragonballScatter");
 					DbmModVariables.MapVariables.get(world).syncData(world);
 				} else if (entity instanceof DragonBallE6Entity) {
-					DbmModVariables.MapVariables.get(world).DBCoords6 = new java.text.DecimalFormat("##").format(x + entity.getPersistentData().getDouble("dragonballScatter")) + "/" + new java.text.DecimalFormat("##").format(320) + "/"
-							+ new java.text.DecimalFormat("##").format(z + entity.getPersistentData().getDouble("dragonballScatter"));
+					DbmModVariables.MapVariables.get(world).DBx6 = x + entity.getPersistentData().getDouble("dragonballScatter");
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBy6 = 320;
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBz6 = z + entity.getPersistentData().getDouble("dragonballScatter");
 					DbmModVariables.MapVariables.get(world).syncData(world);
 				} else if (entity instanceof DragonBallE7Entity) {
-					DbmModVariables.MapVariables.get(world).DBCoords7 = new java.text.DecimalFormat("##").format(x + entity.getPersistentData().getDouble("dragonballScatter")) + "/" + new java.text.DecimalFormat("##").format(320) + "/"
-							+ new java.text.DecimalFormat("##").format(z + entity.getPersistentData().getDouble("dragonballScatter"));
+					DbmModVariables.MapVariables.get(world).DBx7 = x + entity.getPersistentData().getDouble("dragonballScatter");
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBy7 = 320;
+					DbmModVariables.MapVariables.get(world).syncData(world);
+					DbmModVariables.MapVariables.get(world).DBz7 = z + entity.getPersistentData().getDouble("dragonballScatter");
 					DbmModVariables.MapVariables.get(world).syncData(world);
 				}
 				entity.getPersistentData().putBoolean("dragonballTeleported", true);

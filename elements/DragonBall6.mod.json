@@ -37,6 +37,12 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "DragonBallRightClicked6"
+    },
+    "onItemInInventoryTick": {
+      "name": "DragonBallInventory6"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

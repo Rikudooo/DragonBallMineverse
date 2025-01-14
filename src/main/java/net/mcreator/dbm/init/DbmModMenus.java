@@ -13,11 +13,19 @@ import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.dbm.world.inventory.WelcomeGUIMenu;
 import net.mcreator.dbm.world.inventory.StoryGUIMenu;
+import net.mcreator.dbm.world.inventory.StoryGUI6Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI5Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI4Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI3Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI2Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI1Menu;
 import net.mcreator.dbm.world.inventory.StatisticGUIMenu;
 import net.mcreator.dbm.world.inventory.SkillsGUIMenu;
 import net.mcreator.dbm.world.inventory.ShenronGUIMenu;
 import net.mcreator.dbm.world.inventory.ShenronAgeGUIMenu;
 import net.mcreator.dbm.world.inventory.SaiyanFormsGUIMenu;
+import net.mcreator.dbm.world.inventory.PiccoloGUIMenu;
+import net.mcreator.dbm.world.inventory.PiccoloGUI2Menu;
 import net.mcreator.dbm.world.inventory.NorthKaioGUIMenu;
 import net.mcreator.dbm.world.inventory.NorthKaioGUI2Menu;
 import net.mcreator.dbm.world.inventory.KorinGUIMenu;
@@ -25,11 +33,13 @@ import net.mcreator.dbm.world.inventory.KorinDrinkGUIMenu;
 import net.mcreator.dbm.world.inventory.KiAttacksGUIMenu;
 import net.mcreator.dbm.world.inventory.KameSenninGUIMenu;
 import net.mcreator.dbm.world.inventory.KameSenninGUI2Menu;
+import net.mcreator.dbm.world.inventory.HalfSaiyanFormsGUIMenu;
 import net.mcreator.dbm.world.inventory.FinishGUIMenu;
 import net.mcreator.dbm.world.inventory.EnmaGUIMenu;
 import net.mcreator.dbm.world.inventory.DendeGUIMenu;
 import net.mcreator.dbm.world.inventory.CharacterCreationGUIMenu;
 import net.mcreator.dbm.world.inventory.CharacterCreationGUI2Menu;
+import net.mcreator.dbm.world.inventory.ArcosianFormsGUIMenu;
 import net.mcreator.dbm.DbmMod;
 
 public class DbmModMenus {
@@ -53,4 +63,14 @@ public class DbmModMenus {
 	public static final RegistryObject<MenuType<KiAttacksGUIMenu>> KI_ATTACKS_GUI = REGISTRY.register("ki_attacks_gui", () -> IForgeMenuType.create(KiAttacksGUIMenu::new));
 	public static final RegistryObject<MenuType<ShenronGUIMenu>> SHENRON_GUI = REGISTRY.register("shenron_gui", () -> IForgeMenuType.create(ShenronGUIMenu::new));
 	public static final RegistryObject<MenuType<ShenronAgeGUIMenu>> SHENRON_AGE_GUI = REGISTRY.register("shenron_age_gui", () -> IForgeMenuType.create(ShenronAgeGUIMenu::new));
+	public static final RegistryObject<MenuType<StoryGUI1Menu>> STORY_GUI_1 = REGISTRY.register("story_gui_1", () -> IForgeMenuType.create(StoryGUI1Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI2Menu>> STORY_GUI_2 = REGISTRY.register("story_gui_2", () -> IForgeMenuType.create(StoryGUI2Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI3Menu>> STORY_GUI_3 = REGISTRY.register("story_gui_3", () -> IForgeMenuType.create(StoryGUI3Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI4Menu>> STORY_GUI_4 = REGISTRY.register("story_gui_4", () -> IForgeMenuType.create(StoryGUI4Menu::new));
+	public static final RegistryObject<MenuType<ArcosianFormsGUIMenu>> ARCOSIAN_FORMS_GUI = REGISTRY.register("arcosian_forms_gui", () -> IForgeMenuType.create(ArcosianFormsGUIMenu::new));
+	public static final RegistryObject<MenuType<HalfSaiyanFormsGUIMenu>> HALF_SAIYAN_FORMS_GUI = REGISTRY.register("half_saiyan_forms_gui", () -> IForgeMenuType.create(HalfSaiyanFormsGUIMenu::new));
+	public static final RegistryObject<MenuType<StoryGUI5Menu>> STORY_GUI_5 = REGISTRY.register("story_gui_5", () -> IForgeMenuType.create(StoryGUI5Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI6Menu>> STORY_GUI_6 = REGISTRY.register("story_gui_6", () -> IForgeMenuType.create(StoryGUI6Menu::new));
+	public static final RegistryObject<MenuType<PiccoloGUIMenu>> PICCOLO_GUI = REGISTRY.register("piccolo_gui", () -> IForgeMenuType.create(PiccoloGUIMenu::new));
+	public static final RegistryObject<MenuType<PiccoloGUI2Menu>> PICCOLO_GUI_2 = REGISTRY.register("piccolo_gui_2", () -> IForgeMenuType.create(PiccoloGUI2Menu::new));
 }

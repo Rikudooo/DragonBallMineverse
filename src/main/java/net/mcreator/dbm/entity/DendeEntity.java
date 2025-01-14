@@ -27,6 +27,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.dbm.procedures.DendeOnEntityTickUpdateProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
 public class DendeEntity extends PathfinderMob {
@@ -113,6 +114,12 @@ public class DendeEntity extends PathfinderMob {
 	@Override
 	public boolean fireImmune() {
 		return true;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		DendeOnEntityTickUpdateProcedure.execute(this.level());
 	}
 
 	@Override

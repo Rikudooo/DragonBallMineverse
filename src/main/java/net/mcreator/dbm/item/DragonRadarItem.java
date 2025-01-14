@@ -21,7 +21,7 @@ public class DragonRadarItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		DragonRadarRightclickedProcedure.execute(ar.getObject());
+		DragonRadarRightclickedProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return ar;
 	}
 
@@ -29,6 +29,6 @@ public class DragonRadarItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			DragonRadarItemInHandTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, itemstack);
+			DragonRadarItemInHandTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 }
