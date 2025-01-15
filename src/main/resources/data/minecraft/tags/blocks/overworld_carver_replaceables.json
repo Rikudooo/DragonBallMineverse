@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "dbm:namek_grass_block",
+    "minecraft:stone",
+    "dbm:namek_dirt",
     "dbm:unbreakable_dirt",
     "dbm:unbreakable_grass_block",
     "dbm:unbreakable_stone"

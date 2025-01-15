@@ -13,12 +13,17 @@ import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.dbm.world.inventory.WelcomeGUIMenu;
 import net.mcreator.dbm.world.inventory.StoryGUIMenu;
+import net.mcreator.dbm.world.inventory.StoryGUI9Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI8Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI7Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI6Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI5Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI4Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI3Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI2Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI1Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI11Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI10Menu;
 import net.mcreator.dbm.world.inventory.StatisticGUIMenu;
 import net.mcreator.dbm.world.inventory.SkillsGUIMenu;
 import net.mcreator.dbm.world.inventory.ShenronGUIMenu;
@@ -73,4 +78,9 @@ public class DbmModMenus {
 	public static final RegistryObject<MenuType<StoryGUI6Menu>> STORY_GUI_6 = REGISTRY.register("story_gui_6", () -> IForgeMenuType.create(StoryGUI6Menu::new));
 	public static final RegistryObject<MenuType<PiccoloGUIMenu>> PICCOLO_GUI = REGISTRY.register("piccolo_gui", () -> IForgeMenuType.create(PiccoloGUIMenu::new));
 	public static final RegistryObject<MenuType<PiccoloGUI2Menu>> PICCOLO_GUI_2 = REGISTRY.register("piccolo_gui_2", () -> IForgeMenuType.create(PiccoloGUI2Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI7Menu>> STORY_GUI_7 = REGISTRY.register("story_gui_7", () -> IForgeMenuType.create(StoryGUI7Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI8Menu>> STORY_GUI_8 = REGISTRY.register("story_gui_8", () -> IForgeMenuType.create(StoryGUI8Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI9Menu>> STORY_GUI_9 = REGISTRY.register("story_gui_9", () -> IForgeMenuType.create(StoryGUI9Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI10Menu>> STORY_GUI_10 = REGISTRY.register("story_gui_10", () -> IForgeMenuType.create(StoryGUI10Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI11Menu>> STORY_GUI_11 = REGISTRY.register("story_gui_11", () -> IForgeMenuType.create(StoryGUI11Menu::new));
 }

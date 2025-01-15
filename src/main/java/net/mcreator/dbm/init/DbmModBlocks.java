@@ -21,8 +21,11 @@ import net.mcreator.dbm.block.UnbreakableGrassBlockBlock;
 import net.mcreator.dbm.block.UnbreakableGlassBlock;
 import net.mcreator.dbm.block.UnbreakableFullGrassBlockBlock;
 import net.mcreator.dbm.block.UnbreakableDirtBlock;
+import net.mcreator.dbm.block.SpaceRockBlock;
 import net.mcreator.dbm.block.PowerPolePlinthUpBlock;
 import net.mcreator.dbm.block.PowerPolePlinthDownBlock;
+import net.mcreator.dbm.block.NamekGrassBlockBlock;
+import net.mcreator.dbm.block.NamekDirtBlock;
 import net.mcreator.dbm.block.KorinTowerBlock2Block;
 import net.mcreator.dbm.block.KorinTowerBlock1Block;
 import net.mcreator.dbm.block.KorinTowerBaseBlock;
@@ -352,6 +355,9 @@ public class DbmModBlocks {
 	public static final RegistryObject<Block> HYPERBOLIC_TIME_CHAMBER_DOOR = REGISTRY.register("hyperbolic_time_chamber_door", () -> new HyperbolicTimeChamberDoorBlock());
 	public static final RegistryObject<Block> KAME_HOUSE_SPAWN = REGISTRY.register("kame_house_spawn", () -> new KameHouseSpawnBlock());
 	public static final RegistryObject<Block> BLUE_DOOR = REGISTRY.register("blue_door", () -> new BlueDoorBlock());
+	public static final RegistryObject<Block> NAMEK_GRASS_BLOCK = REGISTRY.register("namek_grass_block", () -> new NamekGrassBlockBlock());
+	public static final RegistryObject<Block> NAMEK_DIRT = REGISTRY.register("namek_dirt", () -> new NamekDirtBlock());
+	public static final RegistryObject<Block> SPACE_ROCK = REGISTRY.register("space_rock", () -> new SpaceRockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -36,6 +36,7 @@ public class DbmModTabs {
 				tabData.accept(DbmModItems.DRAGON_BALL_5.get());
 				tabData.accept(DbmModItems.DRAGON_BALL_6.get());
 				tabData.accept(DbmModItems.DRAGON_BALL_7.get());
+				tabData.accept(DbmModItems.SPACE_POD.get());
 			})
 
 					.build());

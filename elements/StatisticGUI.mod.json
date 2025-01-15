@@ -806,6 +806,38 @@
           "x": 276,
           "y": 62
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spaceicon",
+          "image": "spaceicon.png",
+          "hoveredImage": "spaceiconhovered.png",
+          "onClick": {
+            "name": "EnterSpace"
+          },
+          "displayCondition": {
+            "name": "ReturnInSpacePod"
+          },
+          "x": 388,
+          "y": 188
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_travel_to_space",
+          "text": {
+            "fixedValue": "Travel to Space!"
+          },
+          "displayCondition": {
+            "name": "ReturnInSpacePod"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 388,
+          "y": 188
+        }
       }
     ],
     "gridSettings": {

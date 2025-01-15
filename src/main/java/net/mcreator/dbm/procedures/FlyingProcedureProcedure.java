@@ -1,6 +1,7 @@
 package net.mcreator.dbm.procedures;
 
 import net.minecraftforge.network.NetworkDirection;
+import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -8,6 +9,7 @@ import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
@@ -17,6 +19,7 @@ import net.minecraft.network.Connection;
 import net.minecraft.client.player.AbstractClientPlayer;
 
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.init.DbmModItems;
 import net.mcreator.dbm.DbmMod;
 
 import javax.annotation.Nullable;
@@ -50,7 +53,8 @@ public class FlyingProcedureProcedure {
 		yaw = entity.getYRot();
 		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Flying == true) {
 			if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).ForwardPressed == true) {
-				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).RiddingNimbus == false) {
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).RiddingNimbus == false
+						&& (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SpacePod == false) {
 					if (world.isClientSide()) {
 						if (entity instanceof AbstractClientPlayer player) {
 							var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
@@ -73,7 +77,8 @@ public class FlyingProcedureProcedure {
 						}
 					}
 					entity.setDeltaMovement(new Vec3((2 * Math.cos((yaw + 90) * (Math.PI / 180))), (entity.getXRot() * (-0.015)), (2 * Math.sin((yaw + 90) * (Math.PI / 180)))));
-				} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).RiddingNimbus == true) {
+				}
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).RiddingNimbus == true) {
 					if (world.isClientSide()) {
 						if (entity instanceof AbstractClientPlayer player) {
 							var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
@@ -95,6 +100,9 @@ public class FlyingProcedureProcedure {
 							}
 						}
 					}
+					entity.setDeltaMovement(new Vec3((2.2 * Math.cos((yaw + 90) * (Math.PI / 180))), (entity.getXRot() * (-0.015)), (2.2 * Math.sin((yaw + 90) * (Math.PI / 180)))));
+				}
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SpacePod == true) {
 					entity.setDeltaMovement(new Vec3((2.2 * Math.cos((yaw + 90) * (Math.PI / 180))), (entity.getXRot() * (-0.015)), (2.2 * Math.sin((yaw + 90) * (Math.PI / 180)))));
 				}
 			} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BackwardPressed == true) {
@@ -136,10 +144,24 @@ public class FlyingProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SpacePod == true) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(DbmModItems.SPACE_POD.get()).copy();
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			}
 			{
 				boolean _setval = false;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.RiddingNimbus = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SpacePod = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

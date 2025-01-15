@@ -10,6 +10,8 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dbm.world.inventory.HalfSaiyanFormsGUIMenu;
+import net.mcreator.dbm.procedures.TextRacialTPCostProcedure;
+import net.mcreator.dbm.procedures.TextRacialMaxLevelProcedure;
 import net.mcreator.dbm.procedures.ReturnRacialFormOver4Procedure;
 import net.mcreator.dbm.procedures.ReturnRacialForm8Procedure;
 import net.mcreator.dbm.procedures.ReturnRacialForm7Procedure;
@@ -19,12 +21,7 @@ import net.mcreator.dbm.procedures.ReturnFormPathNotSubformProcedure;
 import net.mcreator.dbm.procedures.RacialFormLevelTextProcedure;
 import net.mcreator.dbm.procedures.KaiokenOwnedTextProcedure;
 import net.mcreator.dbm.procedures.FormPathTextProcedure;
-import net.mcreator.dbm.procedures.FormPathSSJRageProcedure;
-import net.mcreator.dbm.procedures.FormPathSSJProcedure;
-import net.mcreator.dbm.procedures.FormPathSSJ2Procedure;
-import net.mcreator.dbm.procedures.FormPathMysticProcedure;
 import net.mcreator.dbm.procedures.FormPathKaiokenProcedure;
-import net.mcreator.dbm.procedures.FormPathBeastProcedure;
 import net.mcreator.dbm.network.HalfSaiyanFormsGUIButtonMessage;
 import net.mcreator.dbm.DbmMod;
 
@@ -129,28 +126,16 @@ public class HalfSaiyanFormsGUIScreen extends AbstractContainerScreen<HalfSaiyan
 			guiGraphics.drawString(this.font,
 
 					RacialFormLevelTextProcedure.execute(entity), 71, -22, -1, false);
-		if (FormPathSSJProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_max_level"), 71, -4, -1, false);
-		if (FormPathSSJProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_cost_25000_tp"), 71, 14, -1, false);
-		if (FormPathSSJ2Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_max_level_6"), 71, -4, -1, false);
-		if (FormPathSSJ2Procedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_cost_50000_tp"), 71, 14, -1, false);
-		if (FormPathKaiokenProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_max_level_4"), 71, -4, -1, false);
 		if (FormPathKaiokenProcedure.execute(entity))
 			guiGraphics.drawString(this.font,
 
 					KaiokenOwnedTextProcedure.execute(entity), 71, -22, -1, false);
-		if (FormPathMysticProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_max_level_7"), 71, -4, -1, false);
-		if (FormPathKaiokenProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_cost_15000_tp"), 71, 14, -1, false);
-		if (FormPathSSJRageProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_max_level_8"), 71, -4, -1, false);
-		if (FormPathBeastProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.half_saiyan_forms_gui.label_max_level_9"), 71, -4, -1, false);
+		guiGraphics.drawString(this.font,
+
+				TextRacialMaxLevelProcedure.execute(entity), 71, -4, -1, false);
+		guiGraphics.drawString(this.font,
+
+				TextRacialTPCostProcedure.execute(entity), 71, 14, -1, false);
 	}
 
 	@Override

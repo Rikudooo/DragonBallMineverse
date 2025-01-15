@@ -214,6 +214,10 @@ public class StoryGUI5Screen extends AbstractContainerScreen<StoryGUI5Menu> {
 		guistate.put("button:imagebutton_icon14", imagebutton_icon14);
 		this.addRenderableWidget(imagebutton_icon14);
 		imagebutton_next2 = new ImageButton(this.leftPos + 135, this.topPos + 77, 36, 16, 0, 0, 16, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_next2.png"), 36, 32, e -> {
+			if (true) {
+				DbmMod.PACKET_HANDLER.sendToServer(new StoryGUI5ButtonMessage(15, x, y, z));
+				StoryGUI5ButtonMessage.handleButtonAction(entity, 15, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_next2", imagebutton_next2);
 		this.addRenderableWidget(imagebutton_next2);

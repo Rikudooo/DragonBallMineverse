@@ -274,6 +274,9 @@
           "name": "imagebutton_next2",
           "image": "next2.png",
           "hoveredImage": "nexthovered2.png",
+          "onClick": {
+            "name": "SetStory6"
+          },
           "x": 349,
           "y": 197
         }

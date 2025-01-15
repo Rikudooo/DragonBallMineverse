@@ -233,9 +233,9 @@ public class RenderKiBlastProcedure {
 						end();
 					}
 					if (target(2)) {
-						renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + entity.getBbHeight() / 2), (entityiterator.getZ()), 0, 0, 0, (float) 0.2, (float) 0.2, (float) 0.2, 255 << 24 | 255 << 16 | 228 << 8 | 90);
+						renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + entity.getBbHeight() / 10), (entityiterator.getZ()), 0, 0, 0, (float) 0.2, (float) 0.2, (float) 0.2, 255 << 24 | 255 << 16 | 228 << 8 | 90);
 						RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-						renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + entity.getBbHeight() / 2), (entityiterator.getZ()), 0, 0, 0, (float) 0.3, (float) 0.3, (float) 0.3, 255 << 24 | 255 << 16 | 213 << 8 | 0);
+						renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + entity.getBbHeight() / 10), (entityiterator.getZ()), 0, 0, 0, (float) 0.3, (float) 0.3, (float) 0.3, 255 << 24 | 255 << 16 | 213 << 8 | 0);
 						release();
 					}
 				}

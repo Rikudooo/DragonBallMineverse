@@ -2146,6 +2146,22 @@
           {
             "name": "amount",
             "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3390,7 +3406,7 @@
           }
         ]
       },
-      "path": "~/KiAttacks"
+      "path": "~/KiAttacks/GalickGun"
     },
     {
       "name": "BattleArmor",
@@ -3811,7 +3827,7 @@
           }
         ]
       },
-      "path": "~/GUIs"
+      "path": "~/Story"
     },
     {
       "name": "OpenGroupGUI",
@@ -12966,7 +12982,7 @@
           }
         ]
       },
-      "path": "~/Story/TBArc"
+      "path": "~/Story"
     },
     {
       "name": "ReturnTienshinhanDefeated",
@@ -14696,6 +14712,1266 @@
         ]
       },
       "path": "~/Ki/Transforming"
+    },
+    {
+      "name": "TextRacialMaxLevel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "text_racial_max_level",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TextRacialMaxLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/HalfSaiyan"
+    },
+    {
+      "name": "TextRacialTPCost",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "text_racial_tp_cost",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TextRacialTPCostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/HalfSaiyan"
+    },
+    {
+      "name": "FormGUIOpen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_gui_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/FormGUIOpenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/HalfSaiyan"
+    },
+    {
+      "name": "StoryGUI7",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_gui_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/world/inventory/StoryGUI7Menu.java",
+          "src/main/java/net/mcreator/dbm/network/StoryGUI7ButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/client/gui/StoryGUI7Screen.java"
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "SetStory7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_story_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetStory7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "SetStory8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_story_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetStory8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "StoryGUI8",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_gui_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/network/StoryGUI8ButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/client/gui/StoryGUI8Screen.java",
+          "src/main/java/net/mcreator/dbm/world/inventory/StoryGUI8Menu.java"
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "TextDefeatedSaibamans",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "text_defeated_saibamans",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TextDefeatedSaibamansProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "ReturnSaibamanDefeated",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_saibaman_defeated",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnSaibamanDefeatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "SetStory9",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_story_9",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetStory9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "SaibamanDefeated",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saibaman_defeated",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SaibamanDefeatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "SpawnSaibamans",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_saibamans",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SpawnSaibamansProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "Saibaman",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saibaman",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/entity/SaibamanEntity.java",
+          "src/main/java/net/mcreator/dbm/client/renderer/SaibamanRenderer.java"
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "RaditzAttackPattern",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raditz_attack_pattern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/RaditzAttackPatternProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "DoubleSundayRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_sunday_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/DoubleSundayRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "ticks",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/DoubleSunday"
+    },
+    {
+      "name": "DoubleSundayChargingRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_sunday_charging_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/DoubleSundayChargingRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/DoubleSunday"
+    },
+    {
+      "name": "GalickGunRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "galick_gun_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/GalickGunRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "ticks",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/GalickGun"
+    },
+    {
+      "name": "StoryNappa",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_nappa",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/renderer/StoryNappaRenderer.java",
+          "src/main/java/net/mcreator/dbm/entity/StoryNappaEntity.java"
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "StoryVegeta",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_vegeta",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/entity/StoryVegetaEntity.java",
+          "src/main/java/net/mcreator/dbm/client/renderer/StoryVegetaRenderer.java"
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "VegetaAttackPattern",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vegeta_attack_pattern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/VegetaAttackPatternProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "VegetaDefeated",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vegeta_defeated",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/VegetaDefeatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "NappaDefeated",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nappa_defeated",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/NappaDefeatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "ReturnNappaVegetaDefeated",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_nappa_vegeta_defeated",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnNappaVegetaDefeatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "SpawnVegetaNappa",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_vegeta_nappa",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SpawnVegetaNappaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "StoryGUI9",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_gui_9",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/network/StoryGUI9ButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/client/gui/StoryGUI9Screen.java",
+          "src/main/java/net/mcreator/dbm/world/inventory/StoryGUI9Menu.java"
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "ReturnVegetaDefeated",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_vegeta_defeated",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnVegetaDefeatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "ReturnNappaDefeated",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_nappa_defeated",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnNappaDefeatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "SetStory10",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_story_10",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetStory10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "StoryGUI10",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_gui_10",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/world/inventory/StoryGUI10Menu.java",
+          "src/main/java/net/mcreator/dbm/network/StoryGUI10ButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/client/gui/StoryGUI10Screen.java"
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "StoryGUI11",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "story_gui_11",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/network/StoryGUI11ButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/world/inventory/StoryGUI11Menu.java",
+          "src/main/java/net/mcreator/dbm/client/gui/StoryGUI11Screen.java"
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "SetStory11",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_story_11",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetStory11Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/ZSaga/SaiyanArc"
+    },
+    {
+      "name": "NamekGrassBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "namek_grass_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/block/NamekGrassBlockBlock.java",
+          "src/main/resources/assets/dbm/models/item/namek_grass_block.json",
+          "src/main/resources/assets/dbm/blockstates/namek_grass_block.json",
+          "src/main/resources/assets/dbm/models/block/namek_grass_block.json",
+          "src/main/resources/data/dbm/loot_tables/blocks/namek_grass_block.json"
+        ]
+      },
+      "path": "~/Worlds/PlanetNamek"
+    },
+    {
+      "name": "NamekDirt",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "namek_dirt",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dbm/models/item/namek_dirt.json",
+          "src/main/resources/data/dbm/loot_tables/blocks/namek_dirt.json",
+          "src/main/resources/assets/dbm/models/block/namek_dirt.json",
+          "src/main/java/net/mcreator/dbm/block/NamekDirtBlock.java",
+          "src/main/resources/assets/dbm/blockstates/namek_dirt.json"
+        ]
+      },
+      "path": "~/Worlds/PlanetNamek"
+    },
+    {
+      "name": "NamekPlains",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "namek_plains",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dbm/worldgen/biome/namek_plains.json"
+        ]
+      },
+      "path": "~/Worlds/PlanetNamek"
+    },
+    {
+      "name": "Namek",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "namek",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/world/dimension/NamekDimension.java",
+          "src/main/resources/data/dbm/dimension_type/namek.json",
+          "src/main/resources/data/dbm/dimension/namek.json"
+        ]
+      },
+      "path": "~/Worlds/PlanetNamek"
+    },
+    {
+      "name": "ReturnOnNamek",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_on_namek",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnOnNamekProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story"
+    },
+    {
+      "name": "SetStoryEntitiesHealth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_story_entities_health",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetStoryEntitiesHealthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "VegetaOozaruCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vegeta_oozaru_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/VegetaOozaruConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "VegetaWeakenedCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vegeta_weakened_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/VegetaWeakenedConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "SetEntityHitBox",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_entity_hit_box",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetEntityHitBoxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "SaibamanAttackPattern",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saibaman_attack_pattern",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SaibamanAttackPatternProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Story/Entities"
+    },
+    {
+      "name": "SpaceVoid",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_void",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dbm/worldgen/biome/space_void.json"
+        ]
+      },
+      "path": "~/Worlds/Space"
+    },
+    {
+      "name": "Space",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "space",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dbm/dimension_type/space.json",
+          "src/main/java/net/mcreator/dbm/world/dimension/SpaceDimension.java",
+          "src/main/resources/data/dbm/dimension/space.json"
+        ]
+      },
+      "path": "~/Worlds/Space"
+    },
+    {
+      "name": "SetupDimensions",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_dimensions",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetupDimensionsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Worlds"
+    },
+    {
+      "name": "SpaceSky",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_sky",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SpaceSkyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Worlds/Space"
+    },
+    {
+      "name": "SpacePod",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_pod",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dbm/models/item/space_pod.json",
+          "src/main/java/net/mcreator/dbm/item/SpacePodItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SpacePodRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_pod_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SpacePodRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ReturnInSpacePod",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_in_space_pod",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/ReturnInSpacePodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Stats"
+    },
+    {
+      "name": "EnterSpace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_space",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/EnterSpaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Stats"
+    },
+    {
+      "name": "SpaceRock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_rock",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/block/SpaceRockBlock.java",
+          "src/main/resources/data/dbm/loot_tables/blocks/space_rock.json",
+          "src/main/resources/assets/dbm/models/block/space_rock.json",
+          "src/main/resources/assets/dbm/blockstates/space_rock.json",
+          "src/main/resources/assets/dbm/models/item/space_rock.json"
+        ]
+      },
+      "path": "~/Worlds/Space"
+    },
+    {
+      "name": "RenderEarth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_earth",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/RenderEarthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Worlds/Space"
+    },
+    {
+      "name": "SpacePlayerEntersDimension",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_player_enters_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SpacePlayerEntersDimensionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Worlds/Space"
+    },
+    {
+      "name": "EarthE",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_e",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/renderer/EarthERenderer.java",
+          "src/main/java/net/mcreator/dbm/entity/EarthEEntity.java"
+        ]
+      },
+      "path": "~/Worlds/Space"
+    },
+    {
+      "name": "NamekE",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "namek_e",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/entity/NamekEEntity.java",
+          "src/main/java/net/mcreator/dbm/client/renderer/NamekERenderer.java"
+        ]
+      },
+      "path": "~/Worlds/Space"
+    },
+    {
+      "name": "PlayerInSpace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_in_space",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/PlayerInSpaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Worlds/Space"
     }
   ],
   "variable_elements": [
@@ -15766,6 +17042,36 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "MaxRacialLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RacialTPCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SaibamanDefeated",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "EarthSpawned",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "NamekSpawned",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -15979,7 +17285,10 @@
       "~CUSTOM:BuildingFenceLightGray",
       "~CUSTOM:BuildingFenceWhite"
     ],
-    "ENTITIES:dbm:storymobs": [],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:NamekDirt",
+      "~CUSTOM:NamekGrassBlock"
+    ],
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:BuildingBricksStairsInvertedBlack",
       "~CUSTOM:BuildingStairsInvertedBlack",
@@ -16029,6 +17338,9 @@
       "~CUSTOM:PowerPole"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~CUSTOM:NamekGrassBlock",
+      "~Blocks.STONE#0",
+      "~CUSTOM:NamekDirt",
       "~CUSTOM:UnbreakableDirt",
       "~CUSTOM:UnbreakableGrassBlock",
       "~CUSTOM:UnbreakableStone"
@@ -16046,6 +17358,7 @@
       "gui.dbm.character_creation_gui_2.label_fighting_class": "Fighting Class",
       "gui.dbm.skills_gui.label_cost_2000_tp": "Cost: 2,000 TP",
       "gui.dbm.half_saiyan_forms_gui.tooltip_ultimate_unleash_your_innate_po": "Ultimate: Unleash your innate Potential!",
+      "gui.dbm.story_gui_7.label_player_stats": "Story -Z Saga -Saiyan Invasion Arc -Space Warriors",
       "block.dbm.building_bricks_stairs_red": "Building Bricks Stairs",
       "gui.dbm.statistic_gui.tooltip_agility_increase_speed_stamina": "Agility: Increase Speed, Stamina, and Defense",
       "gui.dbm.saiyan_forms_gui.tooltip_super_saiyan_blue_ascend_to_a_l": "Super Saiyan Blue: Ascend to a level beyond that of an ascended Saiyan",
@@ -16054,6 +17367,7 @@
       "subtitles.aura": "",
       "gui.dbm.story_gui_3.label_defeat_tien_shinhan_done": "-Defeat Tien Shinhan -Done",
       "block.dbm.building_stairs_green": "Building Stairs",
+      "gui.dbm.story_gui_7.label_hey_looking_for_an_adventure_w": "You manage to defeat Raditz. However, on his last breath, he",
       "block.dbm.building_stairs_sky_blue": "Building Stairs",
       "block.dbm.building_fence_inverted_black": "Building Fence",
       "block.dbm.building_slab_cyan": "Building Slab",
@@ -16087,16 +17401,18 @@
       "subtitles.punch2": "Punch",
       "gui.dbm.ki_attacks_gui.label_cost_6000_tp": "Cost: 6,000 TP",
       "block.dbm.building_bricks_fence_dark_gray": "Building Bricks Fence",
+      "gui.dbm.story_gui_8.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
       "gui.dbm.story_gui_3.label_are_you_ready_to_take_on_the_inc": "time. Piccolo left to train in another region as he wants to get",
       "gui.dbm.skills_gui.tooltip_fly_gives_the_player_the_abilit": "Fly: Gives the Player the ability to fly",
-      "gui.dbm.story_gui_1.label_are_you_ready_to_take_on_the_inc": "This is the first time you enter such a big tournament, your",
       "gui.dbm.character_creation_gui_2.label_power_to_dominate_and": "power to dominate and cause harm",
+      "gui.dbm.story_gui_1.label_are_you_ready_to_take_on_the_inc": "This is the first time you enter such a big tournament, your",
       "block.dbm.building_block_gray": "Building Block",
       "gui.dbm.saiyan_forms_gui.label_cost_200000_tp": "Cost: 200,000 TP",
       "gui.dbm.saiyan_forms_gui.label_cost_350000_tp": "Cost: 350,000 TP",
+      "gui.dbm.story_gui_10.label_player_stats": "Story -Z Saga -Saiyan Invasion Arc -The End",
       "block.dbm.building_bricks_stairs_lime": "Building Bricks Stairs",
-      "block.dbm.building_stairs_pink": "Building Stairs",
       "subtitles.punch3": "Punch",
+      "block.dbm.building_stairs_pink": "Building Stairs",
       "block.dbm.building_bricks_stairs_orange": "Building Bricks Stairs",
       "gui.dbm.story_gui_1.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
       "gui.dbm.half_saiyan_forms_gui.label_player_stats": "Racial Skills",
@@ -16112,8 +17428,10 @@
       "entity.dbm.dragon_ball_e_4": "Four-Stars Dragon Ball",
       "block.dbm.building_slab_dark_green": "Building Slab",
       "gui.dbm.story_gui_2.label_hey_looking_for_an_adventure_w": "You defeated Tien Shinhan, you are now fighting the last",
+      "entity.dbm.story_nappa": "Nappa",
       "death.attack.kikoha": "%1$s died from a ki based attack",
       "gui.dbm.arcosian_forms_gui.label_cost_25000_tp": "Cost: 25,000 TP",
+      "biome.dbm.namek_plains": "Namek Plains",
       "gui.dbm.skills_gui.label_strength": "Strength",
       "entity.dbm.kame_house_spawner": "Kame House",
       "gui.dbm.character_creation_gui_2.label_a_balanced_combatant_mastering": "A balanced combatant, mastering",
@@ -16122,6 +17440,7 @@
       "item.dbm.bear_thief_spawn_egg": "Bear Thief Spawn Egg",
       "gui.dbm.story_gui.label_hey_looking_for_an_adventure_w": "Hey, looking for an adventure? We have what you need!",
       "gui.dbm.half_saiyan_forms_gui.tooltip_empty": "Beast: A form no Saiyan has ever reached before!",
+      "gui.dbm.statistic_gui.tooltip_travel_to_space": "Travel to Space!",
       "block.dbm.building_bricks_gray": "Building Bricks",
       "block.dbm.building_fence_dark_green": "Building Fence",
       "block.dbm.building_slab_black": "Building Slab",
@@ -16154,16 +17473,18 @@
       "block.dbm.building_bricks_inverted_black": "Building Bricks",
       "gui.dbm.north_kaio_gui_2.label_hello_there_so_youre_dead_hu": "Hey! If you can make me laugh, then i\u0027ll teach you what i know!",
       "block.dbm.building_block_red": "Building Block",
-      "gui.dbm.story_gui_4.label_be_on_planet_earth": "-Be on planet Earth",
       "block.dbm.building_bricks_slab_green": "Building Bricks Slab",
+      "gui.dbm.story_gui_4.label_be_on_planet_earth": "-Be on planet Earth",
       "item.dbm.sabertooth_spawn_egg": "Sabertooth Spawn Egg",
       "gui.dbm.skills_gui.tooltip_strength_increase_melee_damage": "Strength: Increase Melee Damage and Defense",
       "entity.dbm.bear_thief": "Bear Thief",
       "block.dbm.building_slab_purple": "Building Slab",
       "gui.dbm.arcosian_forms_gui.tooltip_super_saiyan_blue_ascend_to_a_l": "Super Saiyan Blue: Ascend to a level beyond that of an ascended Saiyan",
       "gui.dbm.story_gui_1.label_player_stats": "Story -Pre Z Saga -23rd Tenkaichi Budokai Arc -First Match",
+      "gui.dbm.story_gui_9.label_defeat_raditz_done": "-Defeat Raditz -Done",
       "gui.dbm.story_gui_1.label_hey_looking_for_an_adventure_w": "23rd Tenkaichi Budokai, The World Martial Arts Tournament!",
       "gui.dbm.story_gui.label_strength": "Strength",
+      "gui.dbm.story_gui_8.label_be_on_planet_earth": "-Be on planet Earth",
       "entity.dbm.bubbles": "Bubbles",
       "gui.dbm.story_gui_4.label_player_stats": "Story -Pre Z Saga -The End",
       "block.dbm.building_bricks_fence_lime": "Building Bricks Fence",
@@ -16175,9 +17496,13 @@
       "gui.dbm.character_creation_gui_2.label_physical_and_spiritual_technique": "physical and spiritual techniques",
       "block.dbm.building_fence_yellow": "Building Fence",
       "subtitles.beamfire_1": "Ki Wave Fired",
+      "entity.dbm.earth_e": "Earth E",
+      "gui.dbm.story_gui_11.label_x800y100z800space": "space-x800-y100-z800",
       "block.dbm.building_block_tiles_2": "Building Block",
       "block.dbm.building_stairs_red": "Building Stairs",
       "block.dbm.unbreakable_stone": "Unbreakable Stone",
+      "gui.dbm.story_gui_7.label_be_on_planet_earth": "-Be on planet Earth",
+      "gui.dbm.story_gui_11.label_hey_looking_for_an_adventure_w": "Vegeta is heading to Planet Namek. Apparently there would be",
       "block.dbm.building_bricks_slab_red": "Building Bricks Slab",
       "gui.dbm.skills_gui.label_cost_5000_tp": "Cost: 5,000 TP",
       "block.dbm.building_bricks_purple": "Building Bricks",
@@ -16185,10 +17510,12 @@
       "subtitles.kiwave_charge": "Charging Ki Beam",
       "block.dbm.building_fence_lime": "Building Fence",
       "gui.dbm.statistic_gui.tooltip_strength_increase_melee_damage": "Strength: Increase Melee Damage and Defense",
+      "entity.dbm.story_vegeta": "Vegeta",
       "death.attack.kikoha.player": "%1$s died from a ki based attack whilst trying to escape %2$s",
       "gui.dbm.finish_gui.label_on_an_epic_journey_through_the": "on an epic journey through the world of",
       "block.dbm.building_block_dark_gray": "Building Block",
       "gui.dbm.kame_sennin_gui_2.label_kaioken_15000_tp": "Ki Wave | 1,000 TP",
+      "gui.dbm.story_gui_9.label_defeat_nappa_done": "-Defeat Nappa -Done",
       "gui.dbm.skills_gui.label_spirit": "Spirit",
       "block.dbm.building_fence_light_gray": "Building Fence",
       "gui.dbm.skills_gui.tooltip_body_increase_max_hp_and_stamin": "Body: Increase Max HP and Stamina",
@@ -16206,6 +17533,7 @@
       "block.dbm.building_stairs_gray": "Building Stairs",
       "block.dbm.building_slab_red": "Building Slab",
       "block.dbm.building_bricks_slab_purple": "Building Bricks Slab",
+      "gui.dbm.story_gui_8.label_hey_looking_for_an_adventure_w": "The two Saiyans Raditz told you about are here, but first they",
       "gui.dbm.story_gui_6.label_hey_looking_for_an_adventure_w": "Suddenly, a strong warrior appears. He introduce himself to you,",
       "gui.dbm.story_gui.tooltip_agility_increase_speed_stamina": "Agility: Increase Speed, Stamina, and Defense",
       "gui.dbm.character_creation_gui_2.label_hrough_energy_manipulation": "hrough energy manipulation",
@@ -16220,6 +17548,7 @@
       "key.dbm.use_ki_attack": "Use/Charge Ki Attack",
       "block.dbm.building_bricks_lime": "Building Bricks",
       "gui.dbm.saiyan_forms_gui.label_max_level_4": "Max Level: 4",
+      "entity.dbm.saibaman": "Saibaman",
       "gui.dbm.saiyan_forms_gui.label_max_level_6": "Max Level: 6",
       "block.dbm.building_bricks_slab_pink": "Building Bricks Slab",
       "gui.dbm.saiyan_forms_gui.label_max_level_7": "Max Level: 7",
@@ -16233,10 +17562,12 @@
       "block.dbm.building_bricks_slab_dark_green": "Building Bricks Slab",
       "block.dbm.building_fence_blue": "Building Fence",
       "entity.dbm.north_kaio": "North Kaio",
+      "gui.dbm.story_gui_11.label_be_on_planet_earth": "-Be on planet Namek",
       "gui.dbm.welcome_gui.label_train_hard_unlock_powerful_form": "Train hard, unlock powerful forms, and",
       "gui.dbm.kame_sennin_gui.label_hello_there_so_youre_dead_hu": "Hey! I can teach you if you bring me... He he.",
       "item.dbm.turtle_gi_leggings": "Turtle Gi Bottom ",
       "item.dbm.battle_armor_leggings": "Battle Armor Bottom",
+      "gui.dbm.story_gui_7.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
       "block.dbm.power_pole_plinth_down": "Power Pole Base",
       "gui.dbm.shenron_gui.label_king_enma": "Shenron",
       "gui.dbm.statistic_gui.label_player_stats": "Player Stats",
@@ -16244,6 +17575,7 @@
       "item.dbm.raw_dinosaur": "Raw Dinosaur",
       "block.dbm.building_bricks_white": "Building Bricks",
       "item.dbm.old_school_turtle_gi_chestplate": "Old School Turtle Gi Top",
+      "gui.dbm.story_gui_11.label_are_you_ready_to_take_on_the_inc": "some Dragon Balls even more powerful than the ones on Earth.",
       "subtitles.kiblast": "Fired Ki Blast",
       "gui.dbm.piccolo_gui_2.label_spirit_bomb_cost_8000_tp": "Makankosappo | 5,400 TP",
       "gui.dbm.statistic_gui.tooltip_body_increase_max_hp_and_stamin": "Body: Increase Max HP and Stamina",
@@ -16273,6 +17605,7 @@
       "gui.dbm.enma_gui.label_king_enma": "King Enma",
       "block.dbm.building_stairs_yellow": "Building Stairs",
       "subtitles.block": "Blocking",
+      "gui.dbm.story_gui_9.label_defeat_vegeta_done": "-Defeat Vegeta -Done",
       "item.dbm.power_pole": "Power Pole",
       "gui.dbm.character_creation_gui_2.label_protect_and_help_others": "protect and help others",
       "block.dbm.building_block_lime": "Building Block",
@@ -16281,10 +17614,13 @@
       "key.dbm.space_key": "Space",
       "gui.dbm.saiyan_forms_gui.tooltip_potential_release_allows_you_to": "Potential Release: Allows you to unleash 100% of your power!",
       "gui.dbm.shenron_age_gui.label_king_enma": "Shenron",
+      "gui.dbm.story_gui_10.label_are_you_ready_to_take_on_the_inc": "He is almost dead, but on a whim, you spare his life...",
       "block.dbm.building_slab_gray": "Building Slab",
       "block.dbm.building_block_green": "Building Block",
+      "gui.dbm.story_gui_11.label_how_about_you_go_there_and_see_w": "How about you go there and see what happen?",
       "block.dbm.building_bricks_stairs_white": "Building Bricks Stairs",
       "gui.dbm.arcosian_forms_gui.label_max_level_41": "Max Level: 4",
+      "gui.dbm.story_gui_7.label_while": "while.",
       "block.dbm.building_stairs_inverted_black": "Building Stairs",
       "gui.dbm.arcosian_forms_gui.tooltip_jump_allows_you_to_jump_higher": "Suppresion Forms: Unleash your power little by little",
       "block.dbm.building_slab_green": "Building Slab",
@@ -16292,6 +17628,7 @@
       "item.dbm.cooked_dinosaur": "Cooked Dinosaur",
       "gui.dbm.skills_gui.tooltip_ki_sense": "Ki Sense: Allows users to detect life energy, gauge power levels, and locate others by feeling their presence.",
       "gui.dbm.statistic_gui.label_strength": "Strength",
+      "gui.dbm.story_gui_9.label_defeat_nappa": "-Defeat Nappa",
       "gui.dbm.statistic_gui.label_agility": "Agility",
       "block.dbm.building_stairs_cyan": "Building Stairs",
       "block.dbm.hyperbolic_time_chamber_door": "Hyperbolic Time Chamber Door",
@@ -16300,6 +17637,7 @@
       "block.dbm.building_slab_dark_gray": "Building Slab",
       "gui.dbm.arcosian_forms_gui.label_cost_300000_tp": "Cost: 300,000 TP",
       "block.dbm.building_bricks_fence_purple": "Building Bricks Fence",
+      "gui.dbm.story_gui_7.label_destroy_the_planet_a_wise_decis": "destroy the planet! A wise decision would be to train for a",
       "gui.dbm.character_creation_gui_2.label_focused_on_personal_goals": "focused on personal goals",
       "gui.dbm.half_saiyan_forms_gui.label_max_level_4": "Max Level: 4",
       "gui.dbm.story_gui_4.label_hey_looking_for_an_adventure_w": "You finished the Pre Z saga. Are you readty to fight with even",
@@ -16321,16 +17659,22 @@
       "gui.dbm.character_creation_gui_2.label_alignment": "Alignment",
       "gui.dbm.arcosian_forms_gui.label_player_stats": "Racial Skills",
       "gui.dbm.north_kaio_gui_2.label_spirit_bomb_cost_8000_tp": "Spirit Bomb | Cost: 8,000 TP",
+      "gui.dbm.story_gui_11.label_be_on_planet_earth_done": "-Be on planet Namek -Done",
       "block.dbm.unbreakable_full_grass_block": "Unbreakable Full Grass Block",
       "subtitles.detransform": "Power Down",
+      "gui.dbm.story_gui_8.label_known_as_the_saiyan_race": "Be careful! They are as strong as Raditz!",
       "block.dbm.building_bricks_fence_light_gray": "Building Bricks Fence",
       "block.dbm.building_bricks_fence_orange": "Building Bricks Fence",
       "block.dbm.building_bricks_fence_pink": "Building Bricks Fence",
+      "gui.dbm.story_gui_9.label_defeat_raditz": "-Defeat Raditz",
       "gui.dbm.statistic_gui.tooltip_focus_increase_ki_damage": "Focus: Increase Ki Damage",
       "block.dbm.building_block_blue": "Building Block",
+      "gui.dbm.story_gui_9.label_are_you_ready_to_take_on_the_inc": "worthy fighter. You are now fighting Nappa and the Saiyan",
       "block.dbm.building_bricks_slab_gray": "Building Bricks Slab",
       "block.dbm.building_block_purple": "Building Block",
       "gui.dbm.story_gui_4.label_are_you_ready_to_take_on_the_inc": "more powerful foes?",
+      "gui.dbm.story_gui_10.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
+      "gui.dbm.story_gui_11.label_player_stats": "Story -Z Saga -Planet Namek Arc -Space",
       "gui.dbm.story_gui_2.label_are_you_ready_to_take_on_the_inc": "opponent, Piccolo. His plan is to kill you and take control",
       "gui.dbm.skills_gui.label_upgradecost": "Cost: 150 TP",
       "gui.dbm.half_saiyan_forms_gui.tooltip_super_saiyan_rage_unleash_your": "Super Saiyan Rage: Unleash your rage in a way similar to a Legendary Saiyan",
@@ -16345,6 +17689,7 @@
       "key.dbm.backward_key": "Backward",
       "gui.dbm.story_gui_5.label_player_stats": "Story -Z Saga -The Beginning",
       "block.dbm.building_slab_inverted_black": "Building Slab",
+      "gui.dbm.story_gui_9.label_player_stats": "Story -Z Saga -Saiyan Invasion Arc -Vegeta and Nappa",
       "gui.dbm.arcosian_forms_gui.label_cost_15000_tp": "Cost: 15,000 TP",
       "block.dbm.unbreakable_log": "Unbreakable Log",
       "gui.dbm.story_gui_4.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
@@ -16358,6 +17703,7 @@
       "gui.dbm.story_gui_2.label_defeat_tien_shinhan": "-Defeat Piccolo",
       "gui.dbm.arcosian_forms_gui.tooltip_golden_cooler_combine_your_two": "Golden Cooler: Combine your two most powerful forms!",
       "gui.dbm.story_gui_5.label_hey_looking_for_an_adventure_w": "It\u0027s been a long time since the 23th Tenkaichi Budokai. Piccolo",
+      "gui.dbm.story_gui_9.label_known_as_the_saiyan_race": "Prince, Vegeta IV.",
       "gui.dbm.skills_gui.tooltip_potential_release_allows_you_to": "Potential Release: Allows you to unleash 100% of your power!",
       "block.dbm.building_stairs_black": "Building Stairs",
       "gui.dbm.ki_attacks_gui.tooltip_potential_release_allows_you_to": "Potential Release: Allows you to unleash 100% of your power!",
@@ -16379,9 +17725,11 @@
       "block.dbm.vertical_ladder": "Ladder",
       "gui.dbm.story_gui_6.label_player_stats": "Story -Z Saga -Saiyan Invasion Arc -Raditz",
       "gui.dbm.story_gui_6.label_be_on_planet_earth": "-Be on planet Earth",
+      "gui.dbm.story_gui_8.label_player_stats": "Story -Z Saga -Saiyan Invasion Arc -Saibamans",
       "block.dbm.building_bricks_stairs_yellow": "Building Bricks Stairs",
       "block.dbm.building_bricks_stairs_inverted_black": "Building Bricks Stairs",
       "gui.dbm.half_saiyan_forms_gui.label_cost_15000_tp": "Cost: 15,000 TP",
+      "gui.dbm.story_gui_10.label_be_on_planet_earth": "-Be on planet Earth",
       "gui.dbm.skills_gui.tooltip_agility_increase_speed_stamina": "Agility: Increase Speed, Stamina, and Defense",
       "block.dbm.building_fence_cyan": "Building Fence",
       "block.dbm.building_slab_pink": "Building Slab",
@@ -16392,6 +17740,7 @@
       "gui.dbm.ki_attacks_gui.label_cost_2000_tp": "Cost: 2,000 TP",
       "gui.dbm.story_gui_3.label_hey_looking_for_an_adventure_w": "You won the Tenkaichi Budokai, and saved the earth at the same",
       "block.dbm.building_stairs_light_gray": "Building Stairs",
+      "block.dbm.space_rock": "Space Rock",
       "block.dbm.building_block_orange": "Building Block",
       "gui.dbm.welcome_gui.label_on_an_epic_journey_through_the": "on an epic journey through the world of",
       "block.dbm.kame_house_spawn": "Kame House Spawn",
@@ -16405,6 +17754,7 @@
       "block.dbm.korin_tower_base": "Korin Tower Base",
       "item.dbm.turtle_gi_king_kai_leggings": "Turtle Gi Bottom (King Kai)",
       "block.dbm.unbreakable_leaves": "Unbreakable Leaves",
+      "gui.dbm.story_gui_9.label_defeat_vegeta": "-Defeat Vegeta",
       "block.dbm.building_bricks_stairs_dark_green": "Building Bricks Stairs",
       "subtitles.jump": "Jumping",
       "gui.dbm.story_gui_2.label_player_stats": "Story -Pre Z Saga -23rd Tenkaichi Budokai Arc -Piccolo",
@@ -16412,6 +17762,7 @@
       "gui.dbm.story_gui_3.label_player_stats": "Story -Pre Z Saga -23rd Tenkaichi Budokai Arc -Winner",
       "entity.dbm.power_pole_entity": "Power Pole Entity",
       "gui.dbm.skills_gui.label_agility": "Agility",
+      "item.dbm.space_pod": "Space Pod",
       "gui.dbm.korin_drink_gui.label_king_enma": "Master Korin",
       "block.dbm.building_slab_light_gray": "Building Slab",
       "block.dbm.building_bricks_slab_sky_blue": "Building Bricks Slab",
@@ -16428,6 +17779,7 @@
       "block.dbm.building_bricks_slab_yellow": "Building Bricks Slab",
       "gui.dbm.statistic_gui.label_ki_power": "Focus",
       "block.dbm.vertical_ladder_support": "Ladder",
+      "biome.dbm.space_void": "Void",
       "block.dbm.building_bricks_stairs_sky_blue": "Building Bricks Stairs",
       "entity.dbm.shenron": "Shenron",
       "entity.dbm.kame_sennin": "Kame Sennin",
@@ -16438,7 +17790,9 @@
       "block.dbm.building_bricks_stairs_cyan": "Building Bricks Stairs",
       "gui.dbm.half_saiyan_forms_gui.tooltip_jump_allows_you_to_jump_higher": "Super Saiyan: Allow you to transform into a Super Saiyan of the Legend",
       "gui.dbm.arcosian_forms_gui.tooltip_super_saiyan_2_upgrade_your_rac": "Cooler Form: Increase your Racial Skill to level 5",
+      "gui.dbm.story_gui_9.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
       "subtitles.teleportation": "Teleportation",
+      "gui.dbm.story_gui_8.label_defeat_raditz": "-Defeat Raditz",
       "subtitles.transform": "Power Up",
       "block.dbm.unbreakable_glass": "Unbreakable Glass",
       "block.dbm.building_bricks_slab_inverted_black": "Building Bricks Slab",
@@ -16451,10 +17805,13 @@
       "death.attack.kikoha.item": "%1$s was killed by %2$s using a ki based attack",
       "gui.dbm.story_gui_2.label_semifinal_battle_is_against_tie": "of the world, only you can stop him!",
       "entity.dbm.popo": "Mr. Popo",
+      "gui.dbm.story_gui_8.label_are_you_ready_to_take_on_the_inc": "want to see how strong you are by making you fight Saibamans.",
       "block.dbm.building_fence_white": "Building Fence",
+      "gui.dbm.story_gui_7.label_are_you_ready_to_take_on_the_inc": "tells you about two other Saiyans coming to avenge him and ",
       "gui.dbm.character_creation_gui_2.label_a_fighter_who_relies_on_physical": "A fighter who relies on physical",
       "key.dbm.left_key": "Left",
       "gui.dbm.piccolo_gui_2.label_king_enma": "Piccolo",
+      "block.dbm.namek_grass_block": "Namek Grass Block",
       "gui.dbm.saiyan_forms_gui.label_cost_15000_tp": "Cost: 15,000 TP",
       "entity.dbm.kame_turtle": "Kame Turtle",
       "block.dbm.building_stairs_brown": "Building Stairs",
@@ -16473,6 +17830,7 @@
       "block.dbm.building_bricks_fence_blue": "Building Bricks Fence",
       "gui.dbm.story_gui_5.label_are_you_ready_to_take_on_the_inc": "was the strongest foe you ever faced.",
       "gui.dbm.story_gui_6.label_are_you_ready_to_take_on_the_inc": "his name is Raditz. He is a space invader from the warrior race",
+      "gui.dbm.story_gui_9.label_hey_looking_for_an_adventure_w": "You manage to defeat all 6 Saibamans, proving that you are a",
       "item.dbm.dinosaur_1_spawn_egg": "Dinosaur Spawn Egg",
       "block.dbm.building_bricks_pink": "Building Bricks",
       "gui.dbm.finish_gui.label_dragon_ball_where_power_knows_n": "Dragon Ball, where power knows no limits.",
@@ -16491,6 +17849,7 @@
       "gui.dbm.half_saiyan_forms_gui.tooltip_ssjg_reach_the_next_level_of_sa": "SSJG: Reach the next level of Saiyan Evolution!",
       "gui.dbm.story_gui_1.label_be_on_planet_earth": "-Be on planet Earth",
       "block.dbm.building_bricks_slab_cyan": "Building Bricks Slab",
+      "block.dbm.namek_dirt": "Namek Dirt",
       "gui.dbm.arcosian_forms_gui.label_cost_450000_tp": "Cost: 450,000 TP",
       "gui.dbm.finish_gui.label_player_info": "Player Info",
       "key.dbm.forward_key": "Forward Key",
@@ -16520,18 +17879,22 @@
       "block.dbm.building_bricks_red": "Building Bricks",
       "item.dbm.dragon_ball_4": "Four-Stars Dragon Ball",
       "gui.dbm.story_gui_4.label_semifinal_battle_is_against_tie": "stronger, it might be for the worse, who knows, people change.",
+      "gui.dbm.story_gui_10.label_hey_looking_for_an_adventure_w": "You did it! You defeated the Prince of All Saiyan, Vegeta!",
       "item.dbm.dragon_ball_1": "One-Star Dragon Ball",
       "block.dbm.building_block_white": "Building Block",
       "block.dbm.building_slab_white": "Building Slab",
       "block.dbm.building_fence_orange": "Building Fence",
       "block.dbm.building_slab_blue": "Building Slab",
+      "gui.dbm.story_gui_8.label_defeat_raditz_done": "-Defeat Raditz -Done",
       "block.dbm.building_bricks_stairs_gray": "Building Bricks Stairs",
       "gui.dbm.korin_gui.label_hello_there_so_youre_dead_hu": "If you climbed all the way up to here, then you deserve a reward.",
       "gui.dbm.character_creation_gui_2.label_energy_focusing_on_advanced": "energy, focusing on advanced",
       "block.dbm.building_bricks_fence_dark_green": "Building Bricks Fence",
       "block.dbm.unbreakable_planks": "Unbreakable Planks",
+      "entity.dbm.namek_e": "Namek",
       "block.dbm.building_fence_dark_gray": "Building Fence",
-      "gui.dbm.skills_gui.label_body": "Body"
+      "gui.dbm.skills_gui.label_body": "Body",
+      "gui.dbm.story_gui_9.label_be_on_planet_earth": "-Be on planet Earth"
     }
   },
   "foldersRoot": {
@@ -16622,6 +17985,14 @@
           {
             "name": "Tribeam",
             "children": []
+          },
+          {
+            "name": "DoubleSunday",
+            "children": []
+          },
+          {
+            "name": "GalickGun",
+            "children": []
           }
         ]
       },
@@ -16630,6 +18001,14 @@
         "children": [
           {
             "name": "OtherWorld",
+            "children": []
+          },
+          {
+            "name": "PlanetNamek",
+            "children": []
+          },
+          {
+            "name": "Space",
             "children": []
           }
         ]

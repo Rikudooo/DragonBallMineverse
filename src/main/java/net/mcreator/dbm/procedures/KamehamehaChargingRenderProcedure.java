@@ -278,7 +278,7 @@ public class KamehamehaChargingRenderProcedure {
 					if (target(2)) {
 						renderShape(shape(), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
-								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) 1.5, (float) 1.5, (float) 1.5,
+								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) 1.8, (float) 1.8, (float) 1.8,
 								255 << 24 | 244 << 16 | 253 << 8 | 253);
 						RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 						renderShape(shape(), (entityiterator.getX() + x), (entityiterator.getY() + entityiterator.getEyeHeight() * 0.8), (entityiterator.getZ() + z),

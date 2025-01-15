@@ -181,25 +181,13 @@ public class PunchProcedureProcedure {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles((SimpleParticleType) (DbmModParticleTypes.PARTICLE_PUNCH_3.get()), x, (y + 1), z, 1, 0, 0, 0, 0);
 					}
-					if ((sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).ReleasedPower >= 1) {
-						{
-							double _setval = (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Stamina
-									- (amount / (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TotalFormBoost) * 0.8;
-							sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Stamina = _setval;
-								capability.syncPlayerVariables(sourceentity);
-							});
-						}
-					} else if ((sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).ReleasedPower < 1) {
-						{
-							double _setval = (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Stamina
-									- ((amount / (1 - (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).ReleasedPower))
-											/ (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TotalFormBoost) * 0.8;
-							sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Stamina = _setval;
-								capability.syncPlayerVariables(sourceentity);
-							});
-						}
+					{
+						double _setval = (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Stamina
+								- (amount / (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TotalFormBoost) * 0.8;
+						sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Stamina = _setval;
+							capability.syncPlayerVariables(sourceentity);
+						});
 					}
 					{
 						double _setval = 0;

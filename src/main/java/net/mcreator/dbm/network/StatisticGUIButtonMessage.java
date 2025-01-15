@@ -31,6 +31,7 @@ import net.mcreator.dbm.procedures.OpenIcon12Procedure;
 import net.mcreator.dbm.procedures.OpenIcon11Procedure;
 import net.mcreator.dbm.procedures.OpenIcon10Procedure;
 import net.mcreator.dbm.procedures.OpenGroupGUIProcedure;
+import net.mcreator.dbm.procedures.EnterSpaceProcedure;
 import net.mcreator.dbm.procedures.CloseGUIProcedure;
 import net.mcreator.dbm.procedures.ChangeStatIncreaseProcedure;
 import net.mcreator.dbm.DbmMod;
@@ -165,6 +166,10 @@ public class StatisticGUIButtonMessage {
 		if (buttonID == 20) {
 
 			OpenIcon14Procedure.execute();
+		}
+		if (buttonID == 21) {
+
+			EnterSpaceProcedure.execute(world, entity);
 		}
 	}
 

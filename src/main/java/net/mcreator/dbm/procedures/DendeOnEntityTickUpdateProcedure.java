@@ -11,6 +11,10 @@ public class DendeOnEntityTickUpdateProcedure {
 				DbmModVariables.MapVariables.get(world).DragonBallTimer = DbmModVariables.MapVariables.get(world).DragonBallTimer - 1;
 				DbmModVariables.MapVariables.get(world).syncData(world);
 			}
+			if (DbmModVariables.MapVariables.get(world).DragonBallTimer <= 0) {
+				DbmModVariables.MapVariables.get(world).DragonBallsUsable = true;
+				DbmModVariables.MapVariables.get(world).syncData(world);
+			}
 		}
 	}
 }

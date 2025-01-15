@@ -13,6 +13,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.init.DbmModEntities;
+import net.mcreator.dbm.entity.StoryVegetaEntity;
 import net.mcreator.dbm.entity.StoryPiccoloEntity;
 
 import javax.annotation.Nullable;
@@ -61,6 +62,29 @@ public class EntityTransformProcedure {
 						entityToSpawn.setXRot((float) nPitch);
 						entityToSpawn.setDeltaMovement(nVx, nVy, nVz);
 					}
+				}
+			}
+		}
+		if (entity instanceof StoryVegetaEntity) {
+			if ((entity instanceof StoryVegetaEntity _datEntS ? _datEntS.getEntityData().get(StoryVegetaEntity.DATA_Form) : "").equals("Base")) {
+				if (amount >= (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
+					damage = 0;
+					if (event instanceof LivingHurtEvent event2) {
+						event2.setAmount((float) damage);
+					}
+					if (entity instanceof StoryVegetaEntity _datEntSetS)
+						_datEntSetS.getEntityData().set(StoryVegetaEntity.DATA_Form, "Oozaru");
+					entity.refreshDimensions();
+				}
+			} else if ((entity instanceof StoryVegetaEntity _datEntS ? _datEntS.getEntityData().get(StoryVegetaEntity.DATA_Form) : "").equals("Oozaru")) {
+				if (amount >= (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
+					damage = 0;
+					if (event instanceof LivingHurtEvent event2) {
+						event2.setAmount((float) damage);
+					}
+					if (entity instanceof StoryVegetaEntity _datEntSetS)
+						_datEntSetS.getEntityData().set(StoryVegetaEntity.DATA_Form, "Weakened");
+					entity.refreshDimensions();
 				}
 			}
 		}

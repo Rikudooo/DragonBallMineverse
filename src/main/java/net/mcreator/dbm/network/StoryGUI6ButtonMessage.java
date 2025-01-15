@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.StoryGUI6Menu;
 import net.mcreator.dbm.procedures.SpawnRaditzProcedure;
+import net.mcreator.dbm.procedures.SetStory7Procedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStatsGUIProcedure;
@@ -136,6 +137,10 @@ public class StoryGUI6ButtonMessage {
 		if (buttonID == 14) {
 
 			OpenIcon14Procedure.execute();
+		}
+		if (buttonID == 15) {
+
+			SetStory7Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 16) {
 

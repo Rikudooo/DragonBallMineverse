@@ -63,7 +63,7 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 35,
+    "attackStrength": 50,
     "attackKnockback": 0.0,
     "knockbackResistance": 1000.0,
     "movementSpeed": 0.3,
@@ -71,7 +71,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 128,
     "followRange": 128,
-    "health": 700,
+    "health": 1000,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
@@ -177,7 +177,7 @@
       "name": "RaditzDefeated"
     },
     "onMobTickUpdate": {
-      "name": "PiccoloAttackPattern"
+      "name": "RaditzAttackPattern"
     },
     "hasAI": true,
     "aiBase": "(none)",

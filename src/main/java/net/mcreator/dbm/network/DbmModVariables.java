@@ -224,6 +224,9 @@ public class DbmModVariables {
 			clone.StoryGUI = original.StoryGUI;
 			clone.GKi = original.GKi;
 			clone.Legendary = original.Legendary;
+			clone.MaxRacialLevel = original.MaxRacialLevel;
+			clone.RacialTPCost = original.RacialTPCost;
+			clone.SaibamanDefeated = original.SaibamanDefeated;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -333,6 +336,8 @@ public class DbmModVariables {
 		public boolean DBSpawned7 = false;
 		public double DragonBallTimer = 0;
 		public boolean kamehousepspawnerSpawned = false;
+		public boolean EarthSpawned = false;
+		public boolean NamekSpawned = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -384,6 +389,8 @@ public class DbmModVariables {
 			DBSpawned7 = nbt.getBoolean("DBSpawned7");
 			DragonBallTimer = nbt.getDouble("DragonBallTimer");
 			kamehousepspawnerSpawned = nbt.getBoolean("kamehousepspawnerSpawned");
+			EarthSpawned = nbt.getBoolean("EarthSpawned");
+			NamekSpawned = nbt.getBoolean("NamekSpawned");
 		}
 
 		@Override
@@ -428,6 +435,8 @@ public class DbmModVariables {
 			nbt.putBoolean("DBSpawned7", DBSpawned7);
 			nbt.putDouble("DragonBallTimer", DragonBallTimer);
 			nbt.putBoolean("kamehousepspawnerSpawned", kamehousepspawnerSpawned);
+			nbt.putBoolean("EarthSpawned", EarthSpawned);
+			nbt.putBoolean("NamekSpawned", NamekSpawned);
 			return nbt;
 		}
 
@@ -658,6 +667,9 @@ public class DbmModVariables {
 		public double StoryGUI = 0;
 		public boolean GKi = false;
 		public boolean Legendary = false;
+		public double MaxRacialLevel = 0;
+		public double RacialTPCost = 0;
+		public double SaibamanDefeated = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -804,6 +816,9 @@ public class DbmModVariables {
 			nbt.putDouble("StoryGUI", StoryGUI);
 			nbt.putBoolean("GKi", GKi);
 			nbt.putBoolean("Legendary", Legendary);
+			nbt.putDouble("MaxRacialLevel", MaxRacialLevel);
+			nbt.putDouble("RacialTPCost", RacialTPCost);
+			nbt.putDouble("SaibamanDefeated", SaibamanDefeated);
 			return nbt;
 		}
 
@@ -953,6 +968,9 @@ public class DbmModVariables {
 			StoryGUI = nbt.getDouble("StoryGUI");
 			GKi = nbt.getBoolean("GKi");
 			Legendary = nbt.getBoolean("Legendary");
+			MaxRacialLevel = nbt.getDouble("MaxRacialLevel");
+			RacialTPCost = nbt.getDouble("RacialTPCost");
+			SaibamanDefeated = nbt.getDouble("SaibamanDefeated");
 		}
 	}
 
@@ -1124,6 +1142,9 @@ public class DbmModVariables {
 					variables.StoryGUI = message.data.StoryGUI;
 					variables.GKi = message.data.GKi;
 					variables.Legendary = message.data.Legendary;
+					variables.MaxRacialLevel = message.data.MaxRacialLevel;
+					variables.RacialTPCost = message.data.RacialTPCost;
+					variables.SaibamanDefeated = message.data.SaibamanDefeated;
 				}
 			});
 			context.setPacketHandled(true);

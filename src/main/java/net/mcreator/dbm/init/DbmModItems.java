@@ -16,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.dbm.item.TurtleGiKingKaiItem;
 import net.mcreator.dbm.item.TurtleGiItem;
+import net.mcreator.dbm.item.SpacePodItem;
 import net.mcreator.dbm.item.SenzuBeanItem;
 import net.mcreator.dbm.item.RawDinosaurItem;
 import net.mcreator.dbm.item.PurpleGiItem;
@@ -235,6 +236,10 @@ public class DbmModItems {
 	public static final RegistryObject<Item> MAKANKOSAPPO_ITEM = REGISTRY.register("makankosappo_item", () -> new MakankosappoItemItem());
 	public static final RegistryObject<Item> KAME_HOUSE_SPAWN = block(DbmModBlocks.KAME_HOUSE_SPAWN);
 	public static final RegistryObject<Item> BLUE_DOOR = doubleBlock(DbmModBlocks.BLUE_DOOR);
+	public static final RegistryObject<Item> NAMEK_GRASS_BLOCK = block(DbmModBlocks.NAMEK_GRASS_BLOCK);
+	public static final RegistryObject<Item> NAMEK_DIRT = block(DbmModBlocks.NAMEK_DIRT);
+	public static final RegistryObject<Item> SPACE_POD = REGISTRY.register("space_pod", () -> new SpacePodItem());
+	public static final RegistryObject<Item> SPACE_ROCK = block(DbmModBlocks.SPACE_ROCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

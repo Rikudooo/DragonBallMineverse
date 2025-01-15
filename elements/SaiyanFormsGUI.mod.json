@@ -341,78 +341,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_max_level",
-          "text": {
-            "fixedValue": "Max Level: 4"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSSJ"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_25000_tp",
-          "text": {
-            "fixedValue": "Cost: 25,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSSJ"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_max_level_6",
-          "text": {
-            "fixedValue": "Max Level: 6"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSSJ2"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_50000_tp",
-          "text": {
-            "fixedValue": "Cost: 50,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSSJ2"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_ssjicon",
@@ -455,24 +383,6 @@
           "height": 18,
           "x": 230,
           "y": 35
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_max_level_4",
-          "text": {
-            "fixedValue": "Max Level: 4"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathKaioken"
-          },
-          "x": 285,
-          "y": 116
         }
       },
       {
@@ -561,16 +471,14 @@
       {
         "type": "label",
         "data": {
-          "name": "label_max_level_7",
+          "name": "label_proc_text_racial_max_level",
           "text": {
-            "fixedValue": "Max Level: 7"
+            "fixedValue": "",
+            "name": "TextRacialMaxLevel"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSSJG"
           },
           "x": 285,
           "y": 116
@@ -579,82 +487,29 @@
       {
         "type": "label",
         "data": {
-          "name": "label_cost_200000_tp",
+          "name": "label_proc_text_racial_tp_cost",
           "text": {
-            "fixedValue": "Cost: 200,000 TP"
+            "fixedValue": "",
+            "name": "TextRacialTPCost"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "ReturnFormGKi"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_15000_tp",
-          "text": {
-            "fixedValue": "Cost: 15,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathKaioken"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_max_level_8",
-          "text": {
-            "fixedValue": "Max Level: 8"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSSJB"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_350000_tp",
-          "text": {
-            "fixedValue": "Cost: 350,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSSJB"
           },
           "x": 285,
           "y": 134
         }
       }
     ],
+    "onTick": {
+      "name": "FormGUIOpen"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

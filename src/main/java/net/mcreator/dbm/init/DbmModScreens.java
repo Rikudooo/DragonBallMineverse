@@ -13,12 +13,17 @@ import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.dbm.client.gui.WelcomeGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUIScreen;
+import net.mcreator.dbm.client.gui.StoryGUI9Screen;
+import net.mcreator.dbm.client.gui.StoryGUI8Screen;
+import net.mcreator.dbm.client.gui.StoryGUI7Screen;
 import net.mcreator.dbm.client.gui.StoryGUI6Screen;
 import net.mcreator.dbm.client.gui.StoryGUI5Screen;
 import net.mcreator.dbm.client.gui.StoryGUI4Screen;
 import net.mcreator.dbm.client.gui.StoryGUI3Screen;
 import net.mcreator.dbm.client.gui.StoryGUI2Screen;
 import net.mcreator.dbm.client.gui.StoryGUI1Screen;
+import net.mcreator.dbm.client.gui.StoryGUI11Screen;
+import net.mcreator.dbm.client.gui.StoryGUI10Screen;
 import net.mcreator.dbm.client.gui.StatisticGUIScreen;
 import net.mcreator.dbm.client.gui.SkillsGUIScreen;
 import net.mcreator.dbm.client.gui.ShenronGUIScreen;
@@ -75,6 +80,11 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.STORY_GUI_6.get(), StoryGUI6Screen::new);
 			MenuScreens.register(DbmModMenus.PICCOLO_GUI.get(), PiccoloGUIScreen::new);
 			MenuScreens.register(DbmModMenus.PICCOLO_GUI_2.get(), PiccoloGUI2Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_7.get(), StoryGUI7Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_8.get(), StoryGUI8Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_9.get(), StoryGUI9Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_10.get(), StoryGUI10Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_11.get(), StoryGUI11Screen::new);
 		});
 	}
 }

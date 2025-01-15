@@ -8,7 +8,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -77,8 +76,6 @@ public class BubblesEntity extends PathfinderMob {
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		if (damagesource.getDirectEntity() instanceof Player)
-			return false;
 		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
 		if (damagesource.is(DamageTypes.FALL))
@@ -145,6 +142,7 @@ public class BubblesEntity extends PathfinderMob {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1000);
 		return builder;
 	}
 }

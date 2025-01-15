@@ -10,6 +10,8 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dbm.world.inventory.ArcosianFormsGUIMenu;
+import net.mcreator.dbm.procedures.TextRacialTPCostProcedure;
+import net.mcreator.dbm.procedures.TextRacialMaxLevelProcedure;
 import net.mcreator.dbm.procedures.ReturnRacialLevel5Procedure;
 import net.mcreator.dbm.procedures.ReturnRacialFormOver4Procedure;
 import net.mcreator.dbm.procedures.ReturnRacialForm8Procedure;
@@ -20,12 +22,7 @@ import net.mcreator.dbm.procedures.ReturnFormGKiProcedure;
 import net.mcreator.dbm.procedures.RacialFormLevelTextProcedure;
 import net.mcreator.dbm.procedures.KaiokenOwnedTextProcedure;
 import net.mcreator.dbm.procedures.FormPathTextProcedure;
-import net.mcreator.dbm.procedures.FormPathSuppressionProcedure;
 import net.mcreator.dbm.procedures.FormPathKaiokenProcedure;
-import net.mcreator.dbm.procedures.FormPathGoldenProcedure;
-import net.mcreator.dbm.procedures.FormPathGoldenCoolerProcedure;
-import net.mcreator.dbm.procedures.FormPathCoolerProcedure;
-import net.mcreator.dbm.procedures.FormPathBlackProcedure;
 import net.mcreator.dbm.network.ArcosianFormsGUIButtonMessage;
 import net.mcreator.dbm.DbmMod;
 
@@ -104,7 +101,7 @@ public class ArcosianFormsGUIScreen extends AbstractContainerScreen<ArcosianForm
 
 		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/currenticon.png"), this.leftPos + -98, this.topPos + 94, 0, 0, 24, 24, 24, 24);
 
-		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/4stardbgui4.png"), this.leftPos + 62, this.topPos + -50, 0, 0, 120, 101, 120, 101);
+		guiGraphics.blit(new ResourceLocation("dbm:textures/screens/4stardbgui4.png"), this.leftPos + 61, this.topPos + -50, 0, 0, 120, 101, 120, 101);
 
 		RenderSystem.disableBlend();
 	}
@@ -132,30 +129,12 @@ public class ArcosianFormsGUIScreen extends AbstractContainerScreen<ArcosianForm
 			guiGraphics.drawString(this.font,
 
 					KaiokenOwnedTextProcedure.execute(entity), 71, -22, -1, false);
-		if (FormPathSuppressionProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_max_level_4"), 71, -4, -1, false);
-		if (FormPathKaiokenProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_max_level_41"), 71, -4, -1, false);
-		if (FormPathCoolerProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_max_level_5"), 71, -4, -1, false);
-		if (FormPathGoldenProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_max_level_7"), 71, -4, -1, false);
-		if (FormPathGoldenCoolerProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_max_level_8"), 71, -4, -1, false);
-		if (FormPathBlackProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_max_level_9"), 71, -4, -1, false);
-		if (FormPathKaiokenProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_cost_15000_tp"), 71, 14, -1, false);
-		if (FormPathSuppressionProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_cost_5000_tp"), 71, 14, -1, false);
-		if (FormPathCoolerProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_cost_50000_tp"), 71, 14, -1, false);
-		if (FormPathGoldenProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_cost_250000_tp"), 71, 14, -1, false);
-		if (FormPathGoldenCoolerProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_cost_300000_tp"), 71, 14, -1, false);
-		if (FormPathBlackProcedure.execute(entity))
-			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.arcosian_forms_gui.label_cost_450000_tp"), 71, 14, -1, false);
+		guiGraphics.drawString(this.font,
+
+				TextRacialMaxLevelProcedure.execute(entity), 71, -4, -1, false);
+		guiGraphics.drawString(this.font,
+
+				TextRacialTPCostProcedure.execute(entity), 71, 14, -1, false);
 	}
 
 	@Override

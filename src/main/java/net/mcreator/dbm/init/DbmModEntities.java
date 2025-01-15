@@ -16,17 +16,21 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.dbm.entity.StoryVegetaEntity;
 import net.mcreator.dbm.entity.StoryTienshinhanEntity;
 import net.mcreator.dbm.entity.StoryRaditzEntity;
 import net.mcreator.dbm.entity.StoryPiccoloGiantEntity;
 import net.mcreator.dbm.entity.StoryPiccoloEntity;
+import net.mcreator.dbm.entity.StoryNappaEntity;
 import net.mcreator.dbm.entity.SpiritBombEntity;
 import net.mcreator.dbm.entity.ShenronEntity;
+import net.mcreator.dbm.entity.SaibamanEntity;
 import net.mcreator.dbm.entity.SabertoothEntity;
 import net.mcreator.dbm.entity.PunchingBagEntity;
 import net.mcreator.dbm.entity.PowerPoleEntityEntity;
 import net.mcreator.dbm.entity.PopoEntity;
 import net.mcreator.dbm.entity.NorthKaioEntity;
+import net.mcreator.dbm.entity.NamekEEntity;
 import net.mcreator.dbm.entity.MasterPiccoloEntity;
 import net.mcreator.dbm.entity.MasterKorinEntity;
 import net.mcreator.dbm.entity.KingEnmaEntity;
@@ -36,6 +40,7 @@ import net.mcreator.dbm.entity.KameSenninEntity;
 import net.mcreator.dbm.entity.KameHouseSpawnerEntity;
 import net.mcreator.dbm.entity.GregoryEntity;
 import net.mcreator.dbm.entity.GiantKiBlastEntity;
+import net.mcreator.dbm.entity.EarthEEntity;
 import net.mcreator.dbm.entity.DragonBallE7Entity;
 import net.mcreator.dbm.entity.DragonBallE6Entity;
 import net.mcreator.dbm.entity.DragonBallE5Entity;
@@ -123,6 +128,16 @@ public class DbmModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(KameHouseSpawnerEntity::new).fireImmune().sized(0.01f, 0.01f));
 	public static final RegistryObject<EntityType<StoryRaditzEntity>> STORY_RADITZ = register("story_raditz", EntityType.Builder.<StoryRaditzEntity>of(StoryRaditzEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryRaditzEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SaibamanEntity>> SAIBAMAN = register("saibaman",
+			EntityType.Builder.<SaibamanEntity>of(SaibamanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(SaibamanEntity::new).fireImmune().sized(0.6f, 1.1f));
+	public static final RegistryObject<EntityType<StoryNappaEntity>> STORY_NAPPA = register("story_nappa", EntityType.Builder.<StoryNappaEntity>of(StoryNappaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128)
+			.setUpdateInterval(3).setCustomClientFactory(StoryNappaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryVegetaEntity>> STORY_VEGETA = register("story_vegeta", EntityType.Builder.<StoryVegetaEntity>of(StoryVegetaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryVegetaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<EarthEEntity>> EARTH_E = register("earth_e",
+			EntityType.Builder.<EarthEEntity>of(EarthEEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EarthEEntity::new).fireImmune().sized(0.01f, 0.01f));
+	public static final RegistryObject<EntityType<NamekEEntity>> NAMEK_E = register("namek_e",
+			EntityType.Builder.<NamekEEntity>of(NamekEEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekEEntity::new).fireImmune().sized(0.01f, 0.01f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -162,6 +177,11 @@ public class DbmModEntities {
 			StoryPiccoloGiantEntity.init();
 			KameHouseSpawnerEntity.init();
 			StoryRaditzEntity.init();
+			SaibamanEntity.init();
+			StoryNappaEntity.init();
+			StoryVegetaEntity.init();
+			EarthEEntity.init();
+			NamekEEntity.init();
 		});
 	}
 
@@ -196,5 +216,10 @@ public class DbmModEntities {
 		event.put(STORY_PICCOLO_GIANT.get(), StoryPiccoloGiantEntity.createAttributes().build());
 		event.put(KAME_HOUSE_SPAWNER.get(), KameHouseSpawnerEntity.createAttributes().build());
 		event.put(STORY_RADITZ.get(), StoryRaditzEntity.createAttributes().build());
+		event.put(SAIBAMAN.get(), SaibamanEntity.createAttributes().build());
+		event.put(STORY_NAPPA.get(), StoryNappaEntity.createAttributes().build());
+		event.put(STORY_VEGETA.get(), StoryVegetaEntity.createAttributes().build());
+		event.put(EARTH_E.get(), EarthEEntity.createAttributes().build());
+		event.put(NAMEK_E.get(), NamekEEntity.createAttributes().build());
 	}
 }

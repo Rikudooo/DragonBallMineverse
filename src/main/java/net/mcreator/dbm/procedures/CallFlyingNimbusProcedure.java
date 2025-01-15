@@ -1,14 +1,18 @@
 package net.mcreator.dbm.procedures;
 
+import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.ServerChatEvent;
 
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.init.DbmModItems;
 
 import javax.annotation.Nullable;
 
@@ -53,49 +57,41 @@ public class CallFlyingNimbusProcedure {
 				} else if (event != null && event.hasResult()) {
 					event.setResult(Event.Result.DENY);
 				}
-			} else if ((text).equals("Exit") || (text).equals("exit") || (text).equals("EXIT") || (text).equals("eXit") || (text).equals("EXit") || (text).equals("EXIt") || (text).equals("exIT") || (text).equals("eXiT")) {
-				{
-					boolean _setval = false;
-					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Flying = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					boolean _setval = false;
-					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.RiddingNimbus = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (event != null && event.isCancelable()) {
-					event.setCanceled(true);
-				} else if (event != null && event.hasResult()) {
-					event.setResult(Event.Result.DENY);
-				}
 			}
 		}
-		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SpacePod == true) {
-			if ((text).equals("Exit") || (text).equals("exit") || (text).equals("EXIT") || (text).equals("eXit") || (text).equals("EXit") || (text).equals("EXIt") || (text).equals("exIT") || (text).equals("eXiT")) {
-				{
-					boolean _setval = false;
-					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Flying = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+		if (((text).toLowerCase()).equals("exit")) {
+			{
+				boolean _setval = false;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Flying = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.RiddingNimbus = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SpacePod == true) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(DbmModItems.SPACE_POD.get()).copy();
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-				{
-					boolean _setval = false;
-					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SpacePod = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (event != null && event.isCancelable()) {
-					event.setCanceled(true);
-				} else if (event != null && event.hasResult()) {
-					event.setResult(Event.Result.DENY);
-				}
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SpacePod = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			if (event != null && event.isCancelable()) {
+				event.setCanceled(true);
+			} else if (event != null && event.hasResult()) {
+				event.setResult(Event.Result.DENY);
 			}
 		}
 	}

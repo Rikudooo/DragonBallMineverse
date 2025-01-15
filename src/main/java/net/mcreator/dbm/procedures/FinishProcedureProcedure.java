@@ -64,104 +64,128 @@ public class FinishProcedureProcedure {
 		}
 		if (DbmModVariables.MapVariables.get(world).DBSpawned1 == false) {
 			dbx1 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbx2 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbx3 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbx4 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbx5 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbx6 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbx7 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			dbz1 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbz2 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbz3 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbz4 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbz5 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbz6 = Mth.nextInt(RandomSource.create(), -10000, 10000);
-			dbz7 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = DbmModEntities.DRAGON_BALL_E_1.get().spawn(_level, BlockPos.containing(dbx1, 320, dbz1), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
 			}
+			DbmModVariables.MapVariables.get(world).DBx1 = dbx1;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBy1 = 320;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBz1 = dbz1;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBSpawned1 = true;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+		}
+		if (DbmModVariables.MapVariables.get(world).DBSpawned2 == false) {
+			dbx2 = Mth.nextInt(RandomSource.create(), -10000, 10000);
+			dbz2 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = DbmModEntities.DRAGON_BALL_E_2.get().spawn(_level, BlockPos.containing(dbx2, 320, dbz2), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
 			}
+			DbmModVariables.MapVariables.get(world).DBx2 = dbx2;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBy2 = 320;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBz2 = dbz2;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBSpawned2 = true;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+		}
+		if (DbmModVariables.MapVariables.get(world).DBSpawned3 == false) {
+			dbx3 = Mth.nextInt(RandomSource.create(), -10000, 10000);
+			dbz3 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = DbmModEntities.DRAGON_BALL_E_3.get().spawn(_level, BlockPos.containing(dbx3, 320, dbz3), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
 			}
+			DbmModVariables.MapVariables.get(world).DBx3 = dbx3;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBy3 = 320;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBz3 = dbz3;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBSpawned3 = true;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+		}
+		if (DbmModVariables.MapVariables.get(world).DBSpawned4 == false) {
+			dbx4 = Mth.nextInt(RandomSource.create(), -10000, 10000);
+			dbz4 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = DbmModEntities.DRAGON_BALL_E_4.get().spawn(_level, BlockPos.containing(dbx4, 320, dbz4), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
 			}
+			DbmModVariables.MapVariables.get(world).DBx4 = dbx4;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBy4 = 320;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBz4 = dbz4;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBSpawned4 = true;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+		}
+		if (DbmModVariables.MapVariables.get(world).DBSpawned5 == false) {
+			dbx5 = Mth.nextInt(RandomSource.create(), -10000, 10000);
+			dbz5 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = DbmModEntities.DRAGON_BALL_E_5.get().spawn(_level, BlockPos.containing(dbx5, 320, dbz5), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
 			}
+			DbmModVariables.MapVariables.get(world).DBx5 = dbx5;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBy5 = 320;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBz5 = dbz5;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBSpawned5 = true;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+		}
+		if (DbmModVariables.MapVariables.get(world).DBSpawned6 == false) {
+			dbx6 = Mth.nextInt(RandomSource.create(), -10000, 10000);
+			dbz6 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = DbmModEntities.DRAGON_BALL_E_6.get().spawn(_level, BlockPos.containing(dbx6, 320, dbz6), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
 			}
+			DbmModVariables.MapVariables.get(world).DBx6 = dbx6;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBy6 = 320;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBz6 = dbz6;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+			DbmModVariables.MapVariables.get(world).DBSpawned6 = true;
+			DbmModVariables.MapVariables.get(world).syncData(world);
+		}
+		if (DbmModVariables.MapVariables.get(world).DBSpawned7 == false) {
+			dbx7 = Mth.nextInt(RandomSource.create(), -10000, 10000);
+			dbz7 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = DbmModEntities.DRAGON_BALL_E_7.get().spawn(_level, BlockPos.containing(dbx7, 320, dbz7), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
 			}
-			DbmModVariables.MapVariables.get(world).DBx1 = dbx1;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBx2 = dbx2;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBx3 = dbx3;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBx4 = dbx4;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBx5 = dbx5;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBx6 = dbx6;
-			DbmModVariables.MapVariables.get(world).syncData(world);
 			DbmModVariables.MapVariables.get(world).DBx7 = dbx7;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBy1 = 320;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBy2 = 320;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBy3 = 320;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBy4 = 320;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBy5 = 320;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBy6 = 320;
 			DbmModVariables.MapVariables.get(world).syncData(world);
 			DbmModVariables.MapVariables.get(world).DBy7 = 320;
 			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBz1 = dbz1;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBz2 = dbz2;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBz3 = dbz3;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBz4 = dbz4;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBz5 = dbz5;
-			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBz6 = dbz6;
-			DbmModVariables.MapVariables.get(world).syncData(world);
 			DbmModVariables.MapVariables.get(world).DBz7 = dbz7;
 			DbmModVariables.MapVariables.get(world).syncData(world);
-			DbmModVariables.MapVariables.get(world).DBSpawned1 = true;
+			DbmModVariables.MapVariables.get(world).DBSpawned7 = true;
 			DbmModVariables.MapVariables.get(world).syncData(world);
 		}
 		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Arcosian")) {

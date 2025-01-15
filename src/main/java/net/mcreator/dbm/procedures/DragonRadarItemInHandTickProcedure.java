@@ -39,8 +39,7 @@ public class DragonRadarItemInHandTickProcedure {
 				}
 			} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SelectedDB == 3) {
 				{
-					String _setval = new java.text.DecimalFormat("##").format(
-							new Vec3(x, y, z).distanceTo(new Vec3(Math.round(DbmModVariables.MapVariables.get(world).DBx3), Math.round(DbmModVariables.MapVariables.get(world).DBy3), Math.round(DbmModVariables.MapVariables.get(world).DBz3)))) + " m";
+					String _setval = new java.text.DecimalFormat("##").format(new Vec3(x, y, z).distanceTo(new Vec3(Math.round(DbmModVariables.MapVariables.get(world).DBx3), y, Math.round(DbmModVariables.MapVariables.get(world).DBz3)))) + " m";
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.DBDistance = _setval;
 						capability.syncPlayerVariables(entity);

@@ -256,7 +256,7 @@
         "data": {
           "image": "4stardbgui4.png",
           "use1Xscale": false,
-          "x": 276,
+          "x": 275,
           "y": 70
         }
       },
@@ -497,16 +497,14 @@
       {
         "type": "label",
         "data": {
-          "name": "label_max_level_4",
+          "name": "label_proc_text_racial_max_level",
           "text": {
-            "fixedValue": "Max Level: 4"
+            "fixedValue": "",
+            "name": "TextRacialMaxLevel"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSuppression"
           },
           "x": 285,
           "y": 116
@@ -515,202 +513,23 @@
       {
         "type": "label",
         "data": {
-          "name": "label_max_level_41",
+          "name": "label_proc_text_racial_tp_cost",
           "text": {
-            "fixedValue": "Max Level: 4"
+            "fixedValue": "",
+            "name": "TextRacialTPCost"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathKaioken"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_max_level_5",
-          "text": {
-            "fixedValue": "Max Level: 5"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathCooler"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_max_level_7",
-          "text": {
-            "fixedValue": "Max Level: 7"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathGolden"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_max_level_8",
-          "text": {
-            "fixedValue": "Max Level: 8"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathGoldenCooler"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_max_level_9",
-          "text": {
-            "fixedValue": "Max Level: 9"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathBlack"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_15000_tp",
-          "text": {
-            "fixedValue": "Cost: 15,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathKaioken"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_5000_tp",
-          "text": {
-            "fixedValue": "Cost: 5,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathSuppression"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_50000_tp",
-          "text": {
-            "fixedValue": "Cost: 30,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathCooler"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_250000_tp",
-          "text": {
-            "fixedValue": "Cost: 250,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathGolden"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_300000_tp",
-          "text": {
-            "fixedValue": "Cost: 300,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathGoldenCooler"
-          },
-          "x": 285,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_cost_450000_tp",
-          "text": {
-            "fixedValue": "Cost: 450,000 TP"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "FormPathBlack"
           },
           "x": 285,
           "y": 134
         }
       }
     ],
+    "onTick": {
+      "name": "FormGUIOpen"
+    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

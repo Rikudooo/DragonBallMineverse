@@ -11,16 +11,20 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.dbm.client.renderer.StoryVegetaRenderer;
 import net.mcreator.dbm.client.renderer.StoryTienshinhanRenderer;
 import net.mcreator.dbm.client.renderer.StoryRaditzRenderer;
 import net.mcreator.dbm.client.renderer.StoryPiccoloRenderer;
 import net.mcreator.dbm.client.renderer.StoryPiccoloGiantRenderer;
+import net.mcreator.dbm.client.renderer.StoryNappaRenderer;
 import net.mcreator.dbm.client.renderer.ShenronRenderer;
+import net.mcreator.dbm.client.renderer.SaibamanRenderer;
 import net.mcreator.dbm.client.renderer.SabertoothRenderer;
 import net.mcreator.dbm.client.renderer.PunchingBagRenderer;
 import net.mcreator.dbm.client.renderer.PowerPoleEntityRenderer;
 import net.mcreator.dbm.client.renderer.PopoRenderer;
 import net.mcreator.dbm.client.renderer.NorthKaioRenderer;
+import net.mcreator.dbm.client.renderer.NamekERenderer;
 import net.mcreator.dbm.client.renderer.MasterPiccoloRenderer;
 import net.mcreator.dbm.client.renderer.MasterKorinRenderer;
 import net.mcreator.dbm.client.renderer.KingEnmaRenderer;
@@ -28,6 +32,7 @@ import net.mcreator.dbm.client.renderer.KameTurtleRenderer;
 import net.mcreator.dbm.client.renderer.KameSenninRenderer;
 import net.mcreator.dbm.client.renderer.KameHouseSpawnerRenderer;
 import net.mcreator.dbm.client.renderer.GregoryRenderer;
+import net.mcreator.dbm.client.renderer.EarthERenderer;
 import net.mcreator.dbm.client.renderer.DragonBallE7Renderer;
 import net.mcreator.dbm.client.renderer.DragonBallE6Renderer;
 import net.mcreator.dbm.client.renderer.DragonBallE5Renderer;
@@ -77,5 +82,10 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.STORY_PICCOLO_GIANT.get(), StoryPiccoloGiantRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.KAME_HOUSE_SPAWNER.get(), KameHouseSpawnerRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_RADITZ.get(), StoryRaditzRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.SAIBAMAN.get(), SaibamanRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_NAPPA.get(), StoryNappaRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_VEGETA.get(), StoryVegetaRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.EARTH_E.get(), EarthERenderer::new);
+		event.registerEntityRenderer(DbmModEntities.NAMEK_E.get(), NamekERenderer::new);
 	}
 }

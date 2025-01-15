@@ -20,6 +20,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.dbm.network.DbmModVariables;
 import net.mcreator.dbm.client.model.Modeltail_saiyan_true;
+import net.mcreator.dbm.client.model.Modelspacepod;
 import net.mcreator.dbm.client.model.Modelnamekian_antenna;
 import net.mcreator.dbm.client.model.Modelhorn_arcosian_third_2;
 import net.mcreator.dbm.client.model.Modelhorn_arcosian_third;
@@ -1581,6 +1582,26 @@ public class RenderPlayerCustomizationProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 					poseStack.popPose();
 				}
+			}
+		}
+		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SpacePod == true) {
+			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+				if (ResourceLocation.tryParse("dbm:textures/entities/spacepod.png") != null) {
+					_texture = new ResourceLocation("dbm:textures/entities/spacepod.png");
+				}
+				Modelspacepod newModel = new Modelspacepod(context.bakeLayer(Modelspacepod.LAYER_LOCATION));
+				newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+				newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+				newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+				newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+				newModel.Body.copyFrom(_pr.getModel().body);
+				newModel.Head.copyFrom(_pr.getModel().head);
+				poseStack.pushPose();
+				poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+				new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+						_evt.getMultiBufferSource(), _evt.getPackedLight());
+				poseStack.popPose();
 			}
 		}
 		if (entity instanceof Player || entity instanceof ServerPlayer) {

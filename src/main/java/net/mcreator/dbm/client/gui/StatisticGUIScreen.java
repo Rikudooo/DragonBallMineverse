@@ -16,6 +16,7 @@ import net.mcreator.dbm.procedures.TPTextProcedure;
 import net.mcreator.dbm.procedures.SubFormTextProcedure;
 import net.mcreator.dbm.procedures.StrengthTextProcedure;
 import net.mcreator.dbm.procedures.SpeedTextProcedure;
+import net.mcreator.dbm.procedures.ReturnInSpacePodProcedure;
 import net.mcreator.dbm.procedures.ReturnFormTextProcedure;
 import net.mcreator.dbm.procedures.ResilienceTextProcedure;
 import net.mcreator.dbm.procedures.RaceTextProcedure;
@@ -65,6 +66,7 @@ public class StatisticGUIScreen extends AbstractContainerScreen<StatisticGUIMenu
 	ImageButton imagebutton_icon12;
 	ImageButton imagebutton_icon13;
 	ImageButton imagebutton_icon14;
+	ImageButton imagebutton_spaceicon;
 
 	public StatisticGUIScreen(StatisticGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -97,6 +99,9 @@ public class StatisticGUIScreen extends AbstractContainerScreen<StatisticGUIMenu
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.statistic_gui.tooltip_focus_increase_ki_damage"), mouseX, mouseY);
 		if (mouseX > leftPos + -164 && mouseX < leftPos + -120 && mouseY > topPos + -85 && mouseY < topPos + -75)
 			guiGraphics.renderTooltip(font, Component.literal(ReturnFormTextProcedure.execute(entity)), mouseX, mouseY);
+		if (ReturnInSpacePodProcedure.execute(entity))
+			if (mouseX > leftPos + 174 && mouseX < leftPos + 194 && mouseY > topPos + 68 && mouseY < topPos + 88)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.statistic_gui.tooltip_travel_to_space"), mouseX, mouseY);
 	}
 
 	@Override
@@ -364,5 +369,19 @@ public class StatisticGUIScreen extends AbstractContainerScreen<StatisticGUIMenu
 		});
 		guistate.put("button:imagebutton_icon14", imagebutton_icon14);
 		this.addRenderableWidget(imagebutton_icon14);
+		imagebutton_spaceicon = new ImageButton(this.leftPos + 174, this.topPos + 68, 20, 20, 0, 0, 20, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_spaceicon.png"), 20, 40, e -> {
+			if (ReturnInSpacePodProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new StatisticGUIButtonMessage(21, x, y, z));
+				StatisticGUIButtonMessage.handleButtonAction(entity, 21, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnInSpacePodProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_spaceicon", imagebutton_spaceicon);
+		this.addRenderableWidget(imagebutton_spaceicon);
 	}
 }

@@ -251,48 +251,12 @@ public class KiWaveRenderProcedure {
 								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, 1, 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-						release();
-					}
-					if (target(2)) {
-						speed = 0.4;
-						width = 1;
-						length = (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackSize * (-1);
-						RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "kiattacks/kiwave_wave" + ".png")));
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, (!Minecraft.getInstance().isPaused()))) {
-							i = width / (-2);
-							j = width / 2;
-							k = length - 0.5;
-							l = (ticks + partialTick) * speed;
-							m = length + l;
-							add(i, i, k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(i, i, i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(j, i, i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(j, i, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(j, j, k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(j, j, i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(i, j, i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(i, j, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(j, i, k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(j, i, i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(j, j, i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(j, j, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(i, j, k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(i, j, i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(i, i, i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							add(i, i, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-							end();
-						}
+						RenderSystem.disableCull();
 						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
 								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
-								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) 1.6, (float) (-1.6), -1,
-								32 << 24 | 255 << 16 | 255 << 8 | 255);
-						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
-								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
-								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
-								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
-								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, -1, -1, -1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, 1, 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						release();
 					}
 				}

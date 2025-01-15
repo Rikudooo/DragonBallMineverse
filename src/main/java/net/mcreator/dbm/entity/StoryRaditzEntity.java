@@ -42,7 +42,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.procedures.StoryMobFlyConditionProcedure;
 import net.mcreator.dbm.procedures.RaditzDefeatedProcedure;
-import net.mcreator.dbm.procedures.PiccoloAttackPatternProcedure;
+import net.mcreator.dbm.procedures.RaditzAttackPatternProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
 public class StoryRaditzEntity extends Monster {
@@ -234,7 +234,7 @@ public class StoryRaditzEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		PiccoloAttackPatternProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		RaditzAttackPatternProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
@@ -257,9 +257,9 @@ public class StoryRaditzEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 700);
+		builder = builder.add(Attributes.MAX_HEALTH, 1000);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 35);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 50);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 128);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1000);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
