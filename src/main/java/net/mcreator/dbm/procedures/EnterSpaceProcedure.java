@@ -26,6 +26,10 @@ public class EnterSpaceProcedure {
 		String CurrentPlanet = "";
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
 			CurrentPlanet = "Earth";
+		} else if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:namek"))) {
+			CurrentPlanet = "Namek";
+		} else if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:yardrat"))) {
+			CurrentPlanet = "Yardrat";
 		}
 		if ((CurrentPlanet).equals("Earth")) {
 			if (world instanceof ServerLevel _currentLevel) {
@@ -122,6 +126,59 @@ public class EnterSpaceProcedure {
 								_ent.teleportTo(2100, 300, 2100);
 								if (_ent instanceof ServerPlayer _serverPlayer)
 									_serverPlayer.connection.teleport(2100, 300, 2100, _ent.getYRot(), _ent.getXRot());
+							}
+						}
+					};
+					if (_entity instanceof ServerPlayer _serverPlayer) {
+						_iTeleporter.placeEntity(_serverPlayer, _currentLevel, _nextLevel, 0.0F, null);
+					} else {
+						_entity.changeDimension(_nextLevel, _iTeleporter);
+					}
+				}
+			}
+		}
+		if ((CurrentPlanet).equals("Yardrat")) {
+			if (world instanceof ServerLevel _currentLevel) {
+				Entity _entity = entity;
+				ServerLevel _nextLevel = _currentLevel.getServer().getLevel(ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:space")));
+				if (_entity.canChangeDimensions() && _nextLevel != null && !_nextLevel.dimension().equals(_currentLevel.dimension())) {
+					ITeleporter _iTeleporter = new ITeleporter() {
+						@Override
+						public Entity placeEntity(Entity currentEntity, ServerLevel currentLevel, ServerLevel nextLevel, float rotation, Function<Boolean, Entity> function) {
+							if (currentEntity instanceof ServerPlayer serverPlayer) {
+								serverPlayer.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0.0F));
+								serverPlayer.teleportTo(nextLevel, serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), serverPlayer.getYRot(), serverPlayer.getXRot());
+								this.execute(nextLevel, serverPlayer);
+								serverPlayer.connection.send(new ClientboundPlayerAbilitiesPacket(serverPlayer.getAbilities()));
+								for (MobEffectInstance mobEffectInstance : serverPlayer.getActiveEffects())
+									serverPlayer.connection.send(new ClientboundUpdateMobEffectPacket(serverPlayer.getId(), mobEffectInstance));
+								serverPlayer.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
+								return serverPlayer;
+							} else {
+								Entity nextEntity = currentEntity.getType().create(nextLevel);
+								if (nextEntity == null) {
+									return currentEntity;
+								} else {
+									nextEntity.restoreFrom(currentEntity);
+									nextEntity.moveTo(currentEntity.getX(), currentEntity.getY(), currentEntity.getZ(), currentEntity.getYRot(), currentEntity.getXRot());
+									this.execute(nextLevel, nextEntity);
+									nextLevel.addDuringTeleport(nextEntity);
+									return nextEntity;
+								}
+							}
+						}
+
+						@Override
+						public boolean isVanilla() {
+							return false;
+						}
+
+						public void execute(LevelAccessor world, Entity entityinstance) {
+							{
+								Entity _ent = entityinstance;
+								_ent.teleportTo(4600, 300, (-4600));
+								if (_ent instanceof ServerPlayer _serverPlayer)
+									_serverPlayer.connection.teleport(4600, 300, (-4600), _ent.getYRot(), _ent.getXRot());
 							}
 						}
 					};

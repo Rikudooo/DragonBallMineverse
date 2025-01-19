@@ -16,21 +16,55 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.dbm.entity.YardrattanEntity;
+import net.mcreator.dbm.entity.SupernovaEntity;
+import net.mcreator.dbm.entity.StoryZarbonEntity;
 import net.mcreator.dbm.entity.StoryVegetaEntity;
 import net.mcreator.dbm.entity.StoryTienshinhanEntity;
+import net.mcreator.dbm.entity.StoryRecoomeEntity;
 import net.mcreator.dbm.entity.StoryRaditzEntity;
 import net.mcreator.dbm.entity.StoryPiccoloGiantEntity;
 import net.mcreator.dbm.entity.StoryPiccoloEntity;
 import net.mcreator.dbm.entity.StoryNappaEntity;
+import net.mcreator.dbm.entity.StoryMysteriousYoungManEntity;
+import net.mcreator.dbm.entity.StoryMechaFriezaEntity;
+import net.mcreator.dbm.entity.StoryKingColdEntity;
+import net.mcreator.dbm.entity.StoryJeiceEntity;
+import net.mcreator.dbm.entity.StoryGuldoEntity;
+import net.mcreator.dbm.entity.StoryGinyuEntity;
+import net.mcreator.dbm.entity.StoryFriezaSoldierEntity;
+import net.mcreator.dbm.entity.StoryFriezaEntity;
+import net.mcreator.dbm.entity.StoryDodoriaEntity;
+import net.mcreator.dbm.entity.StoryCuiEntity;
+import net.mcreator.dbm.entity.StoryCellJrEntity;
+import net.mcreator.dbm.entity.StoryCellEntity;
+import net.mcreator.dbm.entity.StoryCell4Entity;
+import net.mcreator.dbm.entity.StoryCell3Entity;
+import net.mcreator.dbm.entity.StoryCell2Entity;
+import net.mcreator.dbm.entity.StoryBurterEntity;
+import net.mcreator.dbm.entity.StoryAndroid20Entity;
+import net.mcreator.dbm.entity.StoryAndroid19Entity;
+import net.mcreator.dbm.entity.StoryAndroid18Entity;
+import net.mcreator.dbm.entity.StoryAndroid17Entity;
 import net.mcreator.dbm.entity.SpiritBombEntity;
 import net.mcreator.dbm.entity.ShenronEntity;
 import net.mcreator.dbm.entity.SaibamanEntity;
 import net.mcreator.dbm.entity.SabertoothEntity;
 import net.mcreator.dbm.entity.PunchingBagEntity;
 import net.mcreator.dbm.entity.PowerPoleEntityEntity;
+import net.mcreator.dbm.entity.PorungaEntity;
 import net.mcreator.dbm.entity.PopoEntity;
 import net.mcreator.dbm.entity.NorthKaioEntity;
+import net.mcreator.dbm.entity.NamekianEntity;
 import net.mcreator.dbm.entity.NamekEEntity;
+import net.mcreator.dbm.entity.NamekDragonBallE7Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE6Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE5Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE4Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE3Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE2Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE1Entity;
+import net.mcreator.dbm.entity.NamekChunkLoaderEntity;
 import net.mcreator.dbm.entity.MasterPiccoloEntity;
 import net.mcreator.dbm.entity.MasterKorinEntity;
 import net.mcreator.dbm.entity.KingEnmaEntity;
@@ -50,6 +84,7 @@ import net.mcreator.dbm.entity.DragonBallE2Entity;
 import net.mcreator.dbm.entity.DragonBallE1Entity;
 import net.mcreator.dbm.entity.Dinosaur1Entity;
 import net.mcreator.dbm.entity.DendeEntity;
+import net.mcreator.dbm.entity.DeathBallEntity;
 import net.mcreator.dbm.entity.BubblesEntity;
 import net.mcreator.dbm.entity.BearThiefEntity;
 import net.mcreator.dbm.entity.AdminPunchingBagEntity;
@@ -138,6 +173,77 @@ public class DbmModEntities {
 			EntityType.Builder.<EarthEEntity>of(EarthEEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EarthEEntity::new).fireImmune().sized(0.01f, 0.01f));
 	public static final RegistryObject<EntityType<NamekEEntity>> NAMEK_E = register("namek_e",
 			EntityType.Builder.<NamekEEntity>of(NamekEEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekEEntity::new).fireImmune().sized(0.01f, 0.01f));
+	public static final RegistryObject<EntityType<StoryFriezaSoldierEntity>> STORY_FRIEZA_SOLDIER = register("story_frieza_soldier", EntityType.Builder.<StoryFriezaSoldierEntity>of(StoryFriezaSoldierEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryFriezaSoldierEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryCuiEntity>> STORY_CUI = register("story_cui",
+			EntityType.Builder.<StoryCuiEntity>of(StoryCuiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryCuiEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryDodoriaEntity>> STORY_DODORIA = register("story_dodoria", EntityType.Builder.<StoryDodoriaEntity>of(StoryDodoriaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryDodoriaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryZarbonEntity>> STORY_ZARBON = register("story_zarbon", EntityType.Builder.<StoryZarbonEntity>of(StoryZarbonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryZarbonEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryGinyuEntity>> STORY_GINYU = register("story_ginyu", EntityType.Builder.<StoryGinyuEntity>of(StoryGinyuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128)
+			.setUpdateInterval(3).setCustomClientFactory(StoryGinyuEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryGuldoEntity>> STORY_GULDO = register("story_guldo", EntityType.Builder.<StoryGuldoEntity>of(StoryGuldoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128)
+			.setUpdateInterval(3).setCustomClientFactory(StoryGuldoEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryRecoomeEntity>> STORY_RECOOME = register("story_recoome", EntityType.Builder.<StoryRecoomeEntity>of(StoryRecoomeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryRecoomeEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryJeiceEntity>> STORY_JEICE = register("story_jeice", EntityType.Builder.<StoryJeiceEntity>of(StoryJeiceEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128)
+			.setUpdateInterval(3).setCustomClientFactory(StoryJeiceEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryBurterEntity>> STORY_BURTER = register("story_burter", EntityType.Builder.<StoryBurterEntity>of(StoryBurterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryBurterEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryFriezaEntity>> STORY_FRIEZA = register("story_frieza", EntityType.Builder.<StoryFriezaEntity>of(StoryFriezaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryFriezaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SupernovaEntity>> SUPERNOVA = register("supernova",
+			EntityType.Builder.<SupernovaEntity>of(SupernovaEntity::new, MobCategory.MISC).setCustomClientFactory(SupernovaEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(10f, 10f));
+	public static final RegistryObject<EntityType<DeathBallEntity>> DEATH_BALL = register("death_ball",
+			EntityType.Builder.<DeathBallEntity>of(DeathBallEntity::new, MobCategory.MISC).setCustomClientFactory(DeathBallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(2f, 2f));
+	public static final RegistryObject<EntityType<NamekDragonBallE1Entity>> NAMEK_DRAGON_BALL_E_1 = register("namek_dragon_ball_e_1", EntityType.Builder.<NamekDragonBallE1Entity>of(NamekDragonBallE1Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekDragonBallE1Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<NamekDragonBallE2Entity>> NAMEK_DRAGON_BALL_E_2 = register("namek_dragon_ball_e_2", EntityType.Builder.<NamekDragonBallE2Entity>of(NamekDragonBallE2Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekDragonBallE2Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<NamekDragonBallE3Entity>> NAMEK_DRAGON_BALL_E_3 = register("namek_dragon_ball_e_3", EntityType.Builder.<NamekDragonBallE3Entity>of(NamekDragonBallE3Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekDragonBallE3Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<NamekDragonBallE4Entity>> NAMEK_DRAGON_BALL_E_4 = register("namek_dragon_ball_e_4", EntityType.Builder.<NamekDragonBallE4Entity>of(NamekDragonBallE4Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekDragonBallE4Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<NamekDragonBallE5Entity>> NAMEK_DRAGON_BALL_E_5 = register("namek_dragon_ball_e_5", EntityType.Builder.<NamekDragonBallE5Entity>of(NamekDragonBallE5Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekDragonBallE5Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<NamekDragonBallE6Entity>> NAMEK_DRAGON_BALL_E_6 = register("namek_dragon_ball_e_6", EntityType.Builder.<NamekDragonBallE6Entity>of(NamekDragonBallE6Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekDragonBallE6Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<NamekDragonBallE7Entity>> NAMEK_DRAGON_BALL_E_7 = register("namek_dragon_ball_e_7", EntityType.Builder.<NamekDragonBallE7Entity>of(NamekDragonBallE7Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekDragonBallE7Entity::new).fireImmune().sized(0.2f, 0.2f));
+	public static final RegistryObject<EntityType<PorungaEntity>> PORUNGA = register("porunga",
+			EntityType.Builder.<PorungaEntity>of(PorungaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PorungaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<NamekChunkLoaderEntity>> NAMEK_CHUNK_LOADER = register("namek_chunk_loader", EntityType.Builder.<NamekChunkLoaderEntity>of(NamekChunkLoaderEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekChunkLoaderEntity::new).fireImmune().sized(0.01f, 0.01f));
+	public static final RegistryObject<EntityType<NamekianEntity>> NAMEKIAN = register("namekian",
+			EntityType.Builder.<NamekianEntity>of(NamekianEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NamekianEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryMechaFriezaEntity>> STORY_MECHA_FRIEZA = register("story_mecha_frieza", EntityType.Builder.<StoryMechaFriezaEntity>of(StoryMechaFriezaEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryMechaFriezaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryKingColdEntity>> STORY_KING_COLD = register("story_king_cold", EntityType.Builder.<StoryKingColdEntity>of(StoryKingColdEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryKingColdEntity::new).fireImmune().sized(1.2f, 3f));
+	public static final RegistryObject<EntityType<StoryMysteriousYoungManEntity>> STORY_MYSTERIOUS_YOUNG_MAN = register("story_mysterious_young_man",
+			EntityType.Builder.<StoryMysteriousYoungManEntity>of(StoryMysteriousYoungManEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3)
+					.setCustomClientFactory(StoryMysteriousYoungManEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryAndroid19Entity>> STORY_ANDROID_19 = register("story_android_19", EntityType.Builder.<StoryAndroid19Entity>of(StoryAndroid19Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryAndroid19Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryAndroid20Entity>> STORY_ANDROID_20 = register("story_android_20", EntityType.Builder.<StoryAndroid20Entity>of(StoryAndroid20Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryAndroid20Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryAndroid18Entity>> STORY_ANDROID_18 = register("story_android_18", EntityType.Builder.<StoryAndroid18Entity>of(StoryAndroid18Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryAndroid18Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryAndroid17Entity>> STORY_ANDROID_17 = register("story_android_17", EntityType.Builder.<StoryAndroid17Entity>of(StoryAndroid17Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryAndroid17Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryCellEntity>> STORY_CELL = register("story_cell", EntityType.Builder.<StoryCellEntity>of(StoryCellEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128)
+			.setUpdateInterval(3).setCustomClientFactory(StoryCellEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryCell2Entity>> STORY_CELL_2 = register("story_cell_2", EntityType.Builder.<StoryCell2Entity>of(StoryCell2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryCell2Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryCell3Entity>> STORY_CELL_3 = register("story_cell_3", EntityType.Builder.<StoryCell3Entity>of(StoryCell3Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryCell3Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryCellJrEntity>> STORY_CELL_JR = register("story_cell_jr", EntityType.Builder.<StoryCellJrEntity>of(StoryCellJrEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryCellJrEntity::new).fireImmune().sized(0.6f, 1.2f));
+	public static final RegistryObject<EntityType<StoryCell4Entity>> STORY_CELL_4 = register("story_cell_4", EntityType.Builder.<StoryCell4Entity>of(StoryCell4Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryCell4Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<YardrattanEntity>> YARDRATTAN = register("yardrattan", EntityType.Builder.<YardrattanEntity>of(YardrattanEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(YardrattanEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -182,6 +288,39 @@ public class DbmModEntities {
 			StoryVegetaEntity.init();
 			EarthEEntity.init();
 			NamekEEntity.init();
+			StoryFriezaSoldierEntity.init();
+			StoryCuiEntity.init();
+			StoryDodoriaEntity.init();
+			StoryZarbonEntity.init();
+			StoryGinyuEntity.init();
+			StoryGuldoEntity.init();
+			StoryRecoomeEntity.init();
+			StoryJeiceEntity.init();
+			StoryBurterEntity.init();
+			StoryFriezaEntity.init();
+			NamekDragonBallE1Entity.init();
+			NamekDragonBallE2Entity.init();
+			NamekDragonBallE3Entity.init();
+			NamekDragonBallE4Entity.init();
+			NamekDragonBallE5Entity.init();
+			NamekDragonBallE6Entity.init();
+			NamekDragonBallE7Entity.init();
+			PorungaEntity.init();
+			NamekChunkLoaderEntity.init();
+			NamekianEntity.init();
+			StoryMechaFriezaEntity.init();
+			StoryKingColdEntity.init();
+			StoryMysteriousYoungManEntity.init();
+			StoryAndroid19Entity.init();
+			StoryAndroid20Entity.init();
+			StoryAndroid18Entity.init();
+			StoryAndroid17Entity.init();
+			StoryCellEntity.init();
+			StoryCell2Entity.init();
+			StoryCell3Entity.init();
+			StoryCellJrEntity.init();
+			StoryCell4Entity.init();
+			YardrattanEntity.init();
 		});
 	}
 
@@ -221,5 +360,38 @@ public class DbmModEntities {
 		event.put(STORY_VEGETA.get(), StoryVegetaEntity.createAttributes().build());
 		event.put(EARTH_E.get(), EarthEEntity.createAttributes().build());
 		event.put(NAMEK_E.get(), NamekEEntity.createAttributes().build());
+		event.put(STORY_FRIEZA_SOLDIER.get(), StoryFriezaSoldierEntity.createAttributes().build());
+		event.put(STORY_CUI.get(), StoryCuiEntity.createAttributes().build());
+		event.put(STORY_DODORIA.get(), StoryDodoriaEntity.createAttributes().build());
+		event.put(STORY_ZARBON.get(), StoryZarbonEntity.createAttributes().build());
+		event.put(STORY_GINYU.get(), StoryGinyuEntity.createAttributes().build());
+		event.put(STORY_GULDO.get(), StoryGuldoEntity.createAttributes().build());
+		event.put(STORY_RECOOME.get(), StoryRecoomeEntity.createAttributes().build());
+		event.put(STORY_JEICE.get(), StoryJeiceEntity.createAttributes().build());
+		event.put(STORY_BURTER.get(), StoryBurterEntity.createAttributes().build());
+		event.put(STORY_FRIEZA.get(), StoryFriezaEntity.createAttributes().build());
+		event.put(NAMEK_DRAGON_BALL_E_1.get(), NamekDragonBallE1Entity.createAttributes().build());
+		event.put(NAMEK_DRAGON_BALL_E_2.get(), NamekDragonBallE2Entity.createAttributes().build());
+		event.put(NAMEK_DRAGON_BALL_E_3.get(), NamekDragonBallE3Entity.createAttributes().build());
+		event.put(NAMEK_DRAGON_BALL_E_4.get(), NamekDragonBallE4Entity.createAttributes().build());
+		event.put(NAMEK_DRAGON_BALL_E_5.get(), NamekDragonBallE5Entity.createAttributes().build());
+		event.put(NAMEK_DRAGON_BALL_E_6.get(), NamekDragonBallE6Entity.createAttributes().build());
+		event.put(NAMEK_DRAGON_BALL_E_7.get(), NamekDragonBallE7Entity.createAttributes().build());
+		event.put(PORUNGA.get(), PorungaEntity.createAttributes().build());
+		event.put(NAMEK_CHUNK_LOADER.get(), NamekChunkLoaderEntity.createAttributes().build());
+		event.put(NAMEKIAN.get(), NamekianEntity.createAttributes().build());
+		event.put(STORY_MECHA_FRIEZA.get(), StoryMechaFriezaEntity.createAttributes().build());
+		event.put(STORY_KING_COLD.get(), StoryKingColdEntity.createAttributes().build());
+		event.put(STORY_MYSTERIOUS_YOUNG_MAN.get(), StoryMysteriousYoungManEntity.createAttributes().build());
+		event.put(STORY_ANDROID_19.get(), StoryAndroid19Entity.createAttributes().build());
+		event.put(STORY_ANDROID_20.get(), StoryAndroid20Entity.createAttributes().build());
+		event.put(STORY_ANDROID_18.get(), StoryAndroid18Entity.createAttributes().build());
+		event.put(STORY_ANDROID_17.get(), StoryAndroid17Entity.createAttributes().build());
+		event.put(STORY_CELL.get(), StoryCellEntity.createAttributes().build());
+		event.put(STORY_CELL_2.get(), StoryCell2Entity.createAttributes().build());
+		event.put(STORY_CELL_3.get(), StoryCell3Entity.createAttributes().build());
+		event.put(STORY_CELL_JR.get(), StoryCellJrEntity.createAttributes().build());
+		event.put(STORY_CELL_4.get(), StoryCell4Entity.createAttributes().build());
+		event.put(YARDRATTAN.get(), YardrattanEntity.createAttributes().build());
 	}
 }

@@ -197,7 +197,7 @@ public class StoryPiccoloGiantEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		PiccoloDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), source.getEntity());
+		PiccoloDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

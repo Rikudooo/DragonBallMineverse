@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "dbm:namek_forest",
+    "dbm:namek_plains"
+  ],
+  "spawners": {
+    "type": "dbm:namekian",
+    "weight": 10,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}

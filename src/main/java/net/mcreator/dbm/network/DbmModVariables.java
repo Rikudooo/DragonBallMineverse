@@ -1,5 +1,7 @@
 package net.mcreator.dbm.network;
 
+import org.spongepowered.asm.mixin.injection.Group;
+
 import org.jetbrains.annotations.Blocking;
 
 import org.checkerframework.checker.units.qual.Speed;
@@ -227,6 +229,22 @@ public class DbmModVariables {
 			clone.MaxRacialLevel = original.MaxRacialLevel;
 			clone.RacialTPCost = original.RacialTPCost;
 			clone.SaibamanDefeated = original.SaibamanDefeated;
+			clone.FriezaSoldierDefeated = original.FriezaSoldierDefeated;
+			clone.CurrentInvite = original.CurrentInvite;
+			clone.Member1 = original.Member1;
+			clone.Member2 = original.Member2;
+			clone.Member3 = original.Member3;
+			clone.Member4 = original.Member4;
+			clone.Member5 = original.Member5;
+			clone.Group = original.Group;
+			clone.HealthDrainTimer = original.HealthDrainTimer;
+			clone.DefeatedFriezaSoldiers2 = original.DefeatedFriezaSoldiers2;
+			clone.TimeChamberTimeLimit = original.TimeChamberTimeLimit;
+			clone.TimeChamberLocked = original.TimeChamberLocked;
+			clone.DefeatedCellJr = original.DefeatedCellJr;
+			clone.EarthToHTCTimeLimit = original.EarthToHTCTimeLimit;
+			clone.InstantTransmissionSkill = original.InstantTransmissionSkill;
+			clone.InstantTransmission = original.InstantTransmission;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -338,6 +356,41 @@ public class DbmModVariables {
 		public boolean kamehousepspawnerSpawned = false;
 		public boolean EarthSpawned = false;
 		public boolean NamekSpawned = false;
+		public boolean NamekDragonBallsUsable = true;
+		public boolean PorungaCalled = false;
+		public double NDBx1 = 0;
+		public double NDBy1 = 0;
+		public double NDBz1 = 0;
+		public double NDBx2 = 0;
+		public double NDBy2 = 0;
+		public double NDBz2 = 0;
+		public double NDBx3 = 0;
+		public double NDBy3 = 0;
+		public double NDBz3 = 0;
+		public double NDBx4 = 0;
+		public double NDBy4 = 0;
+		public double NDBz4 = 0;
+		public double NDBx5 = 0;
+		public double NDBy5 = 0;
+		public double NDBz5 = 0;
+		public double NDBx6 = 0;
+		public double NDBy6 = 0;
+		public double NDBz6 = 0;
+		public double NDBx7 = 0;
+		public double NDBy7 = 0;
+		public double NDBz7 = 0;
+		public double PorungaSpawnTimer = 0;
+		public boolean PorungaSpawned = false;
+		public double NamekDragonBallTimer = 0;
+		public double PorungaDemands = 3.0;
+		public boolean NDBSpawned1 = false;
+		public boolean NDBSpawned2 = false;
+		public boolean NDBSpawned3 = false;
+		public boolean NDBSpawned4 = false;
+		public boolean NDBSpawned5 = false;
+		public boolean NDBSpawned6 = false;
+		public boolean NDBSpawned7 = false;
+		public boolean HTCSpawned = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -391,6 +444,41 @@ public class DbmModVariables {
 			kamehousepspawnerSpawned = nbt.getBoolean("kamehousepspawnerSpawned");
 			EarthSpawned = nbt.getBoolean("EarthSpawned");
 			NamekSpawned = nbt.getBoolean("NamekSpawned");
+			NamekDragonBallsUsable = nbt.getBoolean("NamekDragonBallsUsable");
+			PorungaCalled = nbt.getBoolean("PorungaCalled");
+			NDBx1 = nbt.getDouble("NDBx1");
+			NDBy1 = nbt.getDouble("NDBy1");
+			NDBz1 = nbt.getDouble("NDBz1");
+			NDBx2 = nbt.getDouble("NDBx2");
+			NDBy2 = nbt.getDouble("NDBy2");
+			NDBz2 = nbt.getDouble("NDBz2");
+			NDBx3 = nbt.getDouble("NDBx3");
+			NDBy3 = nbt.getDouble("NDBy3");
+			NDBz3 = nbt.getDouble("NDBz3");
+			NDBx4 = nbt.getDouble("NDBx4");
+			NDBy4 = nbt.getDouble("NDBy4");
+			NDBz4 = nbt.getDouble("NDBz4");
+			NDBx5 = nbt.getDouble("NDBx5");
+			NDBy5 = nbt.getDouble("NDBy5");
+			NDBz5 = nbt.getDouble("NDBz5");
+			NDBx6 = nbt.getDouble("NDBx6");
+			NDBy6 = nbt.getDouble("NDBy6");
+			NDBz6 = nbt.getDouble("NDBz6");
+			NDBx7 = nbt.getDouble("NDBx7");
+			NDBy7 = nbt.getDouble("NDBy7");
+			NDBz7 = nbt.getDouble("NDBz7");
+			PorungaSpawnTimer = nbt.getDouble("PorungaSpawnTimer");
+			PorungaSpawned = nbt.getBoolean("PorungaSpawned");
+			NamekDragonBallTimer = nbt.getDouble("NamekDragonBallTimer");
+			PorungaDemands = nbt.getDouble("PorungaDemands");
+			NDBSpawned1 = nbt.getBoolean("NDBSpawned1");
+			NDBSpawned2 = nbt.getBoolean("NDBSpawned2");
+			NDBSpawned3 = nbt.getBoolean("NDBSpawned3");
+			NDBSpawned4 = nbt.getBoolean("NDBSpawned4");
+			NDBSpawned5 = nbt.getBoolean("NDBSpawned5");
+			NDBSpawned6 = nbt.getBoolean("NDBSpawned6");
+			NDBSpawned7 = nbt.getBoolean("NDBSpawned7");
+			HTCSpawned = nbt.getBoolean("HTCSpawned");
 		}
 
 		@Override
@@ -437,6 +525,41 @@ public class DbmModVariables {
 			nbt.putBoolean("kamehousepspawnerSpawned", kamehousepspawnerSpawned);
 			nbt.putBoolean("EarthSpawned", EarthSpawned);
 			nbt.putBoolean("NamekSpawned", NamekSpawned);
+			nbt.putBoolean("NamekDragonBallsUsable", NamekDragonBallsUsable);
+			nbt.putBoolean("PorungaCalled", PorungaCalled);
+			nbt.putDouble("NDBx1", NDBx1);
+			nbt.putDouble("NDBy1", NDBy1);
+			nbt.putDouble("NDBz1", NDBz1);
+			nbt.putDouble("NDBx2", NDBx2);
+			nbt.putDouble("NDBy2", NDBy2);
+			nbt.putDouble("NDBz2", NDBz2);
+			nbt.putDouble("NDBx3", NDBx3);
+			nbt.putDouble("NDBy3", NDBy3);
+			nbt.putDouble("NDBz3", NDBz3);
+			nbt.putDouble("NDBx4", NDBx4);
+			nbt.putDouble("NDBy4", NDBy4);
+			nbt.putDouble("NDBz4", NDBz4);
+			nbt.putDouble("NDBx5", NDBx5);
+			nbt.putDouble("NDBy5", NDBy5);
+			nbt.putDouble("NDBz5", NDBz5);
+			nbt.putDouble("NDBx6", NDBx6);
+			nbt.putDouble("NDBy6", NDBy6);
+			nbt.putDouble("NDBz6", NDBz6);
+			nbt.putDouble("NDBx7", NDBx7);
+			nbt.putDouble("NDBy7", NDBy7);
+			nbt.putDouble("NDBz7", NDBz7);
+			nbt.putDouble("PorungaSpawnTimer", PorungaSpawnTimer);
+			nbt.putBoolean("PorungaSpawned", PorungaSpawned);
+			nbt.putDouble("NamekDragonBallTimer", NamekDragonBallTimer);
+			nbt.putDouble("PorungaDemands", PorungaDemands);
+			nbt.putBoolean("NDBSpawned1", NDBSpawned1);
+			nbt.putBoolean("NDBSpawned2", NDBSpawned2);
+			nbt.putBoolean("NDBSpawned3", NDBSpawned3);
+			nbt.putBoolean("NDBSpawned4", NDBSpawned4);
+			nbt.putBoolean("NDBSpawned5", NDBSpawned5);
+			nbt.putBoolean("NDBSpawned6", NDBSpawned6);
+			nbt.putBoolean("NDBSpawned7", NDBSpawned7);
+			nbt.putBoolean("HTCSpawned", HTCSpawned);
 			return nbt;
 		}
 
@@ -670,6 +793,22 @@ public class DbmModVariables {
 		public double MaxRacialLevel = 0;
 		public double RacialTPCost = 0;
 		public double SaibamanDefeated = 0;
+		public double FriezaSoldierDefeated = 0;
+		public String CurrentInvite = "None";
+		public String Member1 = "None";
+		public String Member2 = "None";
+		public String Member3 = "None";
+		public String Member4 = "None";
+		public String Member5 = "None";
+		public boolean Group = false;
+		public double HealthDrainTimer = 0;
+		public double DefeatedFriezaSoldiers2 = 0;
+		public double TimeChamberTimeLimit = 24000.0;
+		public boolean TimeChamberLocked = false;
+		public double DefeatedCellJr = 0;
+		public double EarthToHTCTimeLimit = 0;
+		public boolean InstantTransmissionSkill = false;
+		public boolean InstantTransmission = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -819,6 +958,22 @@ public class DbmModVariables {
 			nbt.putDouble("MaxRacialLevel", MaxRacialLevel);
 			nbt.putDouble("RacialTPCost", RacialTPCost);
 			nbt.putDouble("SaibamanDefeated", SaibamanDefeated);
+			nbt.putDouble("FriezaSoldierDefeated", FriezaSoldierDefeated);
+			nbt.putString("CurrentInvite", CurrentInvite);
+			nbt.putString("Member1", Member1);
+			nbt.putString("Member2", Member2);
+			nbt.putString("Member3", Member3);
+			nbt.putString("Member4", Member4);
+			nbt.putString("Member5", Member5);
+			nbt.putBoolean("Group", Group);
+			nbt.putDouble("HealthDrainTimer", HealthDrainTimer);
+			nbt.putDouble("DefeatedFriezaSoldiers2", DefeatedFriezaSoldiers2);
+			nbt.putDouble("TimeChamberTimeLimit", TimeChamberTimeLimit);
+			nbt.putBoolean("TimeChamberLocked", TimeChamberLocked);
+			nbt.putDouble("DefeatedCellJr", DefeatedCellJr);
+			nbt.putDouble("EarthToHTCTimeLimit", EarthToHTCTimeLimit);
+			nbt.putBoolean("InstantTransmissionSkill", InstantTransmissionSkill);
+			nbt.putBoolean("InstantTransmission", InstantTransmission);
 			return nbt;
 		}
 
@@ -971,6 +1126,22 @@ public class DbmModVariables {
 			MaxRacialLevel = nbt.getDouble("MaxRacialLevel");
 			RacialTPCost = nbt.getDouble("RacialTPCost");
 			SaibamanDefeated = nbt.getDouble("SaibamanDefeated");
+			FriezaSoldierDefeated = nbt.getDouble("FriezaSoldierDefeated");
+			CurrentInvite = nbt.getString("CurrentInvite");
+			Member1 = nbt.getString("Member1");
+			Member2 = nbt.getString("Member2");
+			Member3 = nbt.getString("Member3");
+			Member4 = nbt.getString("Member4");
+			Member5 = nbt.getString("Member5");
+			Group = nbt.getBoolean("Group");
+			HealthDrainTimer = nbt.getDouble("HealthDrainTimer");
+			DefeatedFriezaSoldiers2 = nbt.getDouble("DefeatedFriezaSoldiers2");
+			TimeChamberTimeLimit = nbt.getDouble("TimeChamberTimeLimit");
+			TimeChamberLocked = nbt.getBoolean("TimeChamberLocked");
+			DefeatedCellJr = nbt.getDouble("DefeatedCellJr");
+			EarthToHTCTimeLimit = nbt.getDouble("EarthToHTCTimeLimit");
+			InstantTransmissionSkill = nbt.getBoolean("InstantTransmissionSkill");
+			InstantTransmission = nbt.getBoolean("InstantTransmission");
 		}
 	}
 
@@ -1145,6 +1316,22 @@ public class DbmModVariables {
 					variables.MaxRacialLevel = message.data.MaxRacialLevel;
 					variables.RacialTPCost = message.data.RacialTPCost;
 					variables.SaibamanDefeated = message.data.SaibamanDefeated;
+					variables.FriezaSoldierDefeated = message.data.FriezaSoldierDefeated;
+					variables.CurrentInvite = message.data.CurrentInvite;
+					variables.Member1 = message.data.Member1;
+					variables.Member2 = message.data.Member2;
+					variables.Member3 = message.data.Member3;
+					variables.Member4 = message.data.Member4;
+					variables.Member5 = message.data.Member5;
+					variables.Group = message.data.Group;
+					variables.HealthDrainTimer = message.data.HealthDrainTimer;
+					variables.DefeatedFriezaSoldiers2 = message.data.DefeatedFriezaSoldiers2;
+					variables.TimeChamberTimeLimit = message.data.TimeChamberTimeLimit;
+					variables.TimeChamberLocked = message.data.TimeChamberLocked;
+					variables.DefeatedCellJr = message.data.DefeatedCellJr;
+					variables.EarthToHTCTimeLimit = message.data.EarthToHTCTimeLimit;
+					variables.InstantTransmissionSkill = message.data.InstantTransmissionSkill;
+					variables.InstantTransmission = message.data.InstantTransmission;
 				}
 			});
 			context.setPacketHandled(true);

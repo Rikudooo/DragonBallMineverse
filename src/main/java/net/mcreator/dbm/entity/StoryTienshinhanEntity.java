@@ -204,7 +204,7 @@ public class StoryTienshinhanEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		TienShinHanDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), source.getEntity());
+		TienShinHanDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

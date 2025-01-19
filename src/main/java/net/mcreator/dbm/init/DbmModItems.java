@@ -23,6 +23,13 @@ import net.mcreator.dbm.item.PurpleGiItem;
 import net.mcreator.dbm.item.PunchingBagItemItem;
 import net.mcreator.dbm.item.PowerPoleItem;
 import net.mcreator.dbm.item.OldSchoolTurtleGiItem;
+import net.mcreator.dbm.item.NamekDragonBall7Item;
+import net.mcreator.dbm.item.NamekDragonBall6Item;
+import net.mcreator.dbm.item.NamekDragonBall5Item;
+import net.mcreator.dbm.item.NamekDragonBall4Item;
+import net.mcreator.dbm.item.NamekDragonBall3Item;
+import net.mcreator.dbm.item.NamekDragonBall2Item;
+import net.mcreator.dbm.item.NamekDragonBall1Item;
 import net.mcreator.dbm.item.MakankosappoItemItem;
 import net.mcreator.dbm.item.KamehamehaItemItem;
 import net.mcreator.dbm.item.DragonRadarItem;
@@ -240,6 +247,21 @@ public class DbmModItems {
 	public static final RegistryObject<Item> NAMEK_DIRT = block(DbmModBlocks.NAMEK_DIRT);
 	public static final RegistryObject<Item> SPACE_POD = REGISTRY.register("space_pod", () -> new SpacePodItem());
 	public static final RegistryObject<Item> SPACE_ROCK = block(DbmModBlocks.SPACE_ROCK);
+	public static final RegistryObject<Item> AJISA_LOG = block(DbmModBlocks.AJISA_LOG);
+	public static final RegistryObject<Item> AJISA_LEAVES = block(DbmModBlocks.AJISA_LEAVES);
+	public static final RegistryObject<Item> AJISA_PLANKS = block(DbmModBlocks.AJISA_PLANKS);
+	public static final RegistryObject<Item> NAMEK_DRAGON_BALL_1 = REGISTRY.register("namek_dragon_ball_1", () -> new NamekDragonBall1Item());
+	public static final RegistryObject<Item> NAMEK_DRAGON_BALL_2 = REGISTRY.register("namek_dragon_ball_2", () -> new NamekDragonBall2Item());
+	public static final RegistryObject<Item> NAMEK_DRAGON_BALL_3 = REGISTRY.register("namek_dragon_ball_3", () -> new NamekDragonBall3Item());
+	public static final RegistryObject<Item> NAMEK_DRAGON_BALL_4 = REGISTRY.register("namek_dragon_ball_4", () -> new NamekDragonBall4Item());
+	public static final RegistryObject<Item> NAMEK_DRAGON_BALL_5 = REGISTRY.register("namek_dragon_ball_5", () -> new NamekDragonBall5Item());
+	public static final RegistryObject<Item> NAMEK_DRAGON_BALL_6 = REGISTRY.register("namek_dragon_ball_6", () -> new NamekDragonBall6Item());
+	public static final RegistryObject<Item> NAMEK_DRAGON_BALL_7 = REGISTRY.register("namek_dragon_ball_7", () -> new NamekDragonBall7Item());
+	public static final RegistryObject<Item> NAMEKIAN_SPAWN_EGG = REGISTRY.register("namekian_spawn_egg", () -> new ForgeSpawnEggItem(DbmModEntities.NAMEKIAN, -16724992, -3407872, new Item.Properties()));
+	public static final RegistryObject<Item> NAMEK_GRASS = block(DbmModBlocks.NAMEK_GRASS);
+	public static final RegistryObject<Item> HYPERBOLIC_TIME_CHAMBER_FLOOR = block(DbmModBlocks.HYPERBOLIC_TIME_CHAMBER_FLOOR);
+	public static final RegistryObject<Item> YARDRAT_ROCK = block(DbmModBlocks.YARDRAT_ROCK);
+	public static final RegistryObject<Item> YARDRATTAN_SPAWN_EGG = REGISTRY.register("yardrattan_spawn_egg", () -> new ForgeSpawnEggItem(DbmModEntities.YARDRATTAN, -13057, -16724992, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

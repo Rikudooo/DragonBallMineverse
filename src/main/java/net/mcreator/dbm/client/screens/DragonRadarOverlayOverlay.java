@@ -55,25 +55,25 @@ public class DragonRadarOverlayOverlay {
 		if (ReturnDragonRadarInHandProcedure.execute(entity)) {
 			event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/dragonradar.png"), 1, h - 112, 0, 0, 109, 112, 109, 112);
 
-			if (ReturnDragonBallUsableProcedure.execute(world)) {
+			if (ReturnDragonBallUsableProcedure.execute(world, entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/db.png"), 22, h - 68, 0, 0, 6, 6, 6, 6);
 			}
-			if (ReturnDragonBallUsableProcedure.execute(world)) {
+			if (ReturnDragonBallUsableProcedure.execute(world, entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/db.png"), 39, h - 85, 0, 0, 6, 6, 6, 6);
 			}
-			if (ReturnDragonBallUsableProcedure.execute(world)) {
+			if (ReturnDragonBallUsableProcedure.execute(world, entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/db.png"), 66, h - 85, 0, 0, 6, 6, 6, 6);
 			}
-			if (ReturnDragonBallUsableProcedure.execute(world)) {
+			if (ReturnDragonBallUsableProcedure.execute(world, entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/db.png"), 84, h - 68, 0, 0, 6, 6, 6, 6);
 			}
-			if (ReturnDragonBallUsableProcedure.execute(world)) {
+			if (ReturnDragonBallUsableProcedure.execute(world, entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/db.png"), 39, h - 33, 0, 0, 6, 6, 6, 6);
 			}
-			if (ReturnDragonBallUsableProcedure.execute(world)) {
+			if (ReturnDragonBallUsableProcedure.execute(world, entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/db.png"), 53, h - 50, 0, 0, 6, 6, 6, 6);
 			}
-			if (ReturnDragonBallUsableProcedure.execute(world)) {
+			if (ReturnDragonBallUsableProcedure.execute(world, entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/db.png"), 67, h - 33, 0, 0, 6, 6, 6, 6);
 			}
 			if (ReturnSelectedDragonBall1Procedure.execute(world, entity)) {
@@ -97,7 +97,7 @@ public class DragonRadarOverlayOverlay {
 			if (ReturnSelectedDragonBall7Procedure.execute(world, entity)) {
 				event.getGuiGraphics().blit(new ResourceLocation("dbm:textures/screens/dbselected.png"), 67, h - 33, 0, 0, 6, 6, 6, 6);
 			}
-			if (ReturnDragonBallUsableProcedure.execute(world))
+			if (ReturnDragonBallUsableProcedure.execute(world, entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						TextDBDistanceProcedure.execute(entity), 42, h - 99, -256, false);

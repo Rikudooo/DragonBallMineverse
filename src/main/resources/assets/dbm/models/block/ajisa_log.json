@@ -1,0 +1,9 @@
+{
+  "parent": "dbm:custom/ajisatree",
+  "textures": {
+    "all": "dbm:block/ajisatreetexture",
+    "particle": "dbm:block/ajisatreetexture",
+    "0": "dbm:block/ajisatreetexture.png"
+  },
+  "render_type": "solid"
+}

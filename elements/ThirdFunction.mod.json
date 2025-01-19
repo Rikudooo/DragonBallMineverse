@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "L",
+    "keyBindingName": "Third Function",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "ThirdFunctionOnKeyPressed"
+    }
+  }
+}

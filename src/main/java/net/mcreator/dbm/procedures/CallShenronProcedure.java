@@ -15,6 +15,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.entity.NamekDragonBallE7Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE6Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE5Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE4Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE3Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE2Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE1Entity;
 import net.mcreator.dbm.entity.DragonBallE7Entity;
 import net.mcreator.dbm.entity.DragonBallE6Entity;
 import net.mcreator.dbm.entity.DragonBallE5Entity;
@@ -63,6 +70,32 @@ public class CallShenronProcedure {
 							DbmModVariables.MapVariables.get(world).ShenronCalled = true;
 							DbmModVariables.MapVariables.get(world).syncData(world);
 						}
+					}
+				}
+			}
+		}
+		if ((text).toLowerCase().contains("porunga")
+				&& ((text).toLowerCase().contains("call") || (text).toLowerCase().contains("spawn") || (text).toLowerCase().contains("appear") || (text).toLowerCase().contains("come") || (text).toLowerCase().contains("bring"))) {
+			if (DbmModVariables.MapVariables.get(world).NamekDragonBallsUsable == true) {
+				if (DbmModVariables.MapVariables.get(world).PorungaCalled == false) {
+					if (!world.getEntitiesOfClass(NamekDragonBallE1Entity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).isEmpty()
+							&& !world.getEntitiesOfClass(NamekDragonBallE2Entity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).isEmpty()
+							&& !world.getEntitiesOfClass(NamekDragonBallE3Entity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).isEmpty()
+							&& !world.getEntitiesOfClass(NamekDragonBallE4Entity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).isEmpty()
+							&& !world.getEntitiesOfClass(NamekDragonBallE5Entity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).isEmpty()
+							&& !world.getEntitiesOfClass(NamekDragonBallE6Entity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).isEmpty()
+							&& !world.getEntitiesOfClass(NamekDragonBallE7Entity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).isEmpty()) {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:shenroncalled")), SoundSource.NEUTRAL, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:shenroncalled")), SoundSource.NEUTRAL, 1, 1, false);
+							}
+						}
+						DbmModVariables.MapVariables.get(world).PorungaSpawnTimer = 0;
+						DbmModVariables.MapVariables.get(world).syncData(world);
+						DbmModVariables.MapVariables.get(world).PorungaCalled = true;
+						DbmModVariables.MapVariables.get(world).syncData(world);
 					}
 				}
 			}

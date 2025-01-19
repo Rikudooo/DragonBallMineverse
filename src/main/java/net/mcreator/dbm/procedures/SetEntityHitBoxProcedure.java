@@ -9,6 +9,7 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.dbm.entity.StoryVegetaEntity;
+import net.mcreator.dbm.entity.StoryFriezaEntity;
 
 import javax.annotation.Nullable;
 
@@ -34,6 +35,15 @@ public class SetEntityHitBoxProcedure {
 				_sizeEvt.setNewSize(new EntityDimensions((float) (0.6 * 4), (float) (1.8 * 4), false));
 				_sizeEvt.setNewEyeHeight((float) ((1.8 * 4) / 1.125));
 			} else if (!((entity instanceof StoryVegetaEntity _datEntS ? _datEntS.getEntityData().get(StoryVegetaEntity.DATA_Form) : "").equals("Oozaru"))) {
+				_sizeEvt.setNewSize(new EntityDimensions((float) (0.6 * 1), (float) (1.8 * 1), false));
+				_sizeEvt.setNewEyeHeight((float) ((1.8 * 1) / 1.125));
+			}
+		}
+		if (entity instanceof StoryFriezaEntity) {
+			if ((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Second")) {
+				_sizeEvt.setNewSize(new EntityDimensions((float) (0.6 * 2), (float) (1.8 * 2), false));
+				_sizeEvt.setNewEyeHeight((float) ((1.8 * 2) / 1.125));
+			} else if (!((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Second"))) {
 				_sizeEvt.setNewSize(new EntityDimensions((float) (0.6 * 1), (float) (1.8 * 1), false));
 				_sizeEvt.setNewEyeHeight((float) ((1.8 * 1) / 1.125));
 			}

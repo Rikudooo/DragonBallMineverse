@@ -197,7 +197,7 @@ public class StoryNappaEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		NappaDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), source.getEntity());
+		NappaDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

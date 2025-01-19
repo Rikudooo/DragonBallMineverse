@@ -28,6 +28,6 @@ public class DragonBall7Item extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		DragonBallInventory7Procedure.execute(world, entity);
+		DragonBallInventory7Procedure.execute(world, entity, itemstack);
 	}
 }

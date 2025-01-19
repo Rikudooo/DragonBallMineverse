@@ -14,12 +14,15 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.dbm.network.DbmModVariables;
 import net.mcreator.dbm.entity.ShenronEntity;
+import net.mcreator.dbm.entity.PorungaEntity;
 
 import javax.annotation.Nullable;
 
@@ -204,6 +207,44 @@ public class ShenronThereProcedure {
 		double size = 0;
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
 			if (DbmModVariables.MapVariables.get(world).ShenronCalled || !world.getEntitiesOfClass(ShenronEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).isEmpty()) {
+				if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, false)) {
+					add((-0.5), (-0.5), (-0.5), 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), (-0.5), 0.5, 0, (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, (-0.5), 0.5, (float) (1.0 / 3.0), (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, (-0.5), (-0.5), (float) (1.0 / 3.0), 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), 0.5, 0.5, (float) (1.0 / 3.0), 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), 0.5, (-0.5), (float) (1.0 / 3.0), (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, 0.5, (-0.5), (float) (2.0 / 3.0), (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, 0.5, 0.5, (float) (2.0 / 3.0), 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, 0.5, 0.5, (float) (2.0 / 3.0), 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, (-0.5), 0.5, (float) (2.0 / 3.0), (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), (-0.5), 0.5, 1, (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), 0.5, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), 0.5, 0.5, 0, (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), (-0.5), 0.5, 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), (-0.5), (-0.5), (float) (1.0 / 3.0), 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), 0.5, (-0.5), (float) (1.0 / 3.0), (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), 0.5, (-0.5), (float) (1.0 / 3.0), (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add((-0.5), (-0.5), (-0.5), (float) (1.0 / 3.0), 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, (-0.5), (-0.5), (float) (2.0 / 3.0), 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, 0.5, (-0.5), (float) (2.0 / 3.0), (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, 0.5, (-0.5), (float) (2.0 / 3.0), (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, (-0.5), (-0.5), (float) (2.0 / 3.0), 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, (-0.5), 0.5, 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					add(0.5, 0.5, 0.5, 1, (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					end();
+				}
+				if (target(1)) {
+					system(false);
+					size = Minecraft.getInstance().gameRenderer.getRenderDistance() * 2;
+					RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "blacksky" + ".png")));
+					renderShape(shape(), 0, 0, 0, 0, 0, 0, (float) size, (float) size, (float) size, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+					release();
+				}
+			}
+		}
+		if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:namek"))) {
+			if (DbmModVariables.MapVariables.get(world).PorungaCalled || !world.getEntitiesOfClass(PorungaEntity.class, AABB.ofSize(new Vec3(x, y, z), 1000, 1000, 1000), e -> true).isEmpty()) {
 				if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, false)) {
 					add((-0.5), (-0.5), (-0.5), 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 					add((-0.5), (-0.5), 0.5, 0, (float) 0.5, 255 << 24 | 255 << 16 | 255 << 8 | 255);

@@ -21,6 +21,13 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.entity.NamekDragonBallE7Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE6Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE5Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE4Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE3Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE2Entity;
+import net.mcreator.dbm.entity.NamekDragonBallE1Entity;
 import net.mcreator.dbm.entity.DragonBallE7Entity;
 import net.mcreator.dbm.entity.DragonBallE6Entity;
 import net.mcreator.dbm.entity.DragonBallE5Entity;
@@ -393,6 +400,157 @@ public class RenderStarsOnDragonBallsProcedure {
 								RenderSystem.disableDepthTest();
 								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "seven_star" + ".png")));
 								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.1), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.15, (float) 0.15, (float) 0.15,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
+						}
+					}
+				}
+				if (DbmModVariables.MapVariables.get(world).NamekDragonBallsUsable == true) {
+					if (entity instanceof LivingEntity _entity ? _entity.hasLineOfSight(entityiterator) : false) {
+						if (entityiterator instanceof NamekDragonBallE1Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "one_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.4), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.6, (float) 0.6, (float) 0.6,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
+						}
+						if (entityiterator instanceof NamekDragonBallE2Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "two_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.4), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.6, (float) 0.6, (float) 0.6,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
+						}
+						if (entityiterator instanceof NamekDragonBallE3Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "three_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.4), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.6, (float) 0.6, (float) 0.6,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
+						}
+						if (entityiterator instanceof NamekDragonBallE4Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "four_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.4), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.6, (float) 0.6, (float) 0.6,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
+						}
+						if (entityiterator instanceof NamekDragonBallE5Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "five_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.4), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.6, (float) 0.6, (float) 0.6,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
+						}
+						if (entityiterator instanceof NamekDragonBallE6Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "six_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.4), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.6, (float) 0.6, (float) 0.6,
+										255 << 24 | 255 << 16 | 255 << 8 | 255);
+								release();
+							}
+						}
+						if (entityiterator instanceof NamekDragonBallE7Entity) {
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, 0.5, 1, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((-0.5), 0, (-0.5), 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, (-0.5), 0, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add(0.5, 0, 0.5, 0, 0, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							if (target(2)) {
+								RenderSystem.depthMask(false);
+								RenderSystem.disableDepthTest();
+								RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "seven_star" + ".png")));
+								renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + 0.4), (entityiterator.getZ()), entity.getYRot(), (float) (entity.getXRot() - 90), 0, (float) 0.6, (float) 0.6, (float) 0.6,
 										255 << 24 | 255 << 16 | 255 << 8 | 255);
 								release();
 							}

@@ -61,7 +61,6 @@ import net.mcreator.dbm.client.model.Modeleyebrows_4;
 import net.mcreator.dbm.client.model.Modeleyebrows_3;
 import net.mcreator.dbm.client.model.Modeleyebrows_2;
 import net.mcreator.dbm.client.model.Modeleyebrows_1;
-import net.mcreator.dbm.client.model.Modelarcosian_tail_2;
 import net.mcreator.dbm.client.model.Modelarcosian_tail_1;
 import net.mcreator.dbm.client.model.Modelarcosian_ear;
 import net.mcreator.dbm.client.model.Modelarcosian_cooler_3;
@@ -1252,7 +1251,7 @@ public class RenderPlayerCustomizationProcedure {
 					poseStack.popPose();
 				}
 			}
-			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Second Form")) {
+			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Second")) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
 					if (ResourceLocation.tryParse("dbm:textures/entities/hair1big.png") != null) {
@@ -1290,7 +1289,7 @@ public class RenderPlayerCustomizationProcedure {
 					poseStack.popPose();
 				}
 			}
-			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Third Form")) {
+			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Third")) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
 					if (ResourceLocation.tryParse(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1ID)) != null) {
@@ -1401,6 +1400,24 @@ public class RenderPlayerCustomizationProcedure {
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
 					poseStack.popPose();
 				}
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3ID)) != null) {
+						_texture = new ResourceLocation(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3ID));
+					}
+					Modelarcosian_tail_1 newModel = new Modelarcosian_tail_1(context.bakeLayer(Modelarcosian_tail_1.LAYER_LOCATION));
+					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+					newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+					newModel.Body.copyFrom(_pr.getModel().body);
+					newModel.Head.copyFrom(_pr.getModel().head);
+					poseStack.pushPose();
+					poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+					new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+							_evt.getMultiBufferSource(), _evt.getPackedLight());
+					poseStack.popPose();
+				}
 			}
 			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Golden Cooler")) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
@@ -1462,10 +1479,10 @@ public class RenderPlayerCustomizationProcedure {
 					|| ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Cooler")) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1ID)) != null) {
-						_texture = new ResourceLocation(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1ID));
+					if (ResourceLocation.tryParse(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3ID)) != null) {
+						_texture = new ResourceLocation(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3ID));
 					}
-					Modelarcosian_tail_2 newModel = new Modelarcosian_tail_2(context.bakeLayer(Modelarcosian_tail_2.LAYER_LOCATION));
+					Modelarcosian_tail_1 newModel = new Modelarcosian_tail_1(context.bakeLayer(Modelarcosian_tail_1.LAYER_LOCATION));
 					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
 					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
 					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
@@ -1487,7 +1504,7 @@ public class RenderPlayerCustomizationProcedure {
 					if (ResourceLocation.tryParse(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3ID)) != null) {
 						_texture = new ResourceLocation(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3ID));
 					}
-					Modelarcosian_tail_2 newModel = new Modelarcosian_tail_2(context.bakeLayer(Modelarcosian_tail_2.LAYER_LOCATION));
+					Modelarcosian_tail_1 newModel = new Modelarcosian_tail_1(context.bakeLayer(Modelarcosian_tail_1.LAYER_LOCATION));
 					newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
 					newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
 					newModel.LeftArm.copyFrom(_pr.getModel().leftArm);

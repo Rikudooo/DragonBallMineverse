@@ -2,7 +2,7 @@
   "_fv": 69,
   "_type": "block",
   "definition": {
-    "texture": "sand",
+    "texture": "namekdirt",
     "textureTop": "namekgrass",
     "textureLeft": "namekgras",
     "textureFront": "namekgras",
@@ -42,7 +42,11 @@
     "resistance": 2.5,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:DBMBlocks"
+      }
+    ],
     "destroyTool": "shovel",
     "customDrop": {
       "value": ""
@@ -51,7 +55,7 @@
     "useLootTableForDrops": false,
     "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
-    "plantsGrowOn": false,
+    "plantsGrowOn": true,
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {

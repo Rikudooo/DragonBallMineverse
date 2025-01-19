@@ -233,10 +233,39 @@ public class RenderEarthProcedure {
 				release();
 			}
 			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/earth_2" + ".png")));
+				renderShape(shape(), 100, 160, 100, 0, 0, 0, 152, 152, 152, 200 << 24 | 255 << 16 | 255 << 8 | 255);
+				RenderSystem.disableCull();
+				renderShape(shape(), 100, 160, 100, 0, 0, 0, 152, 152, 152, 200 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/earth_3" + ".png")));
+				renderShape(shape(), 100, 160, 100, 0, 0, 0, 160, 160, 160, 80 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
 				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/namek" + ".png")));
 				renderShape(shape(), 2000, 160, 2000, 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 				RenderSystem.disableCull();
 				renderShape(shape(), 2000, 160, 2000, 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/namek_2" + ".png")));
+				renderShape(shape(), 2000, 160, 2000, 0, 0, 0, 160, 160, 160, 60 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/yardrat" + ".png")));
+				renderShape(shape(), 4500, 160, (-4500), 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				RenderSystem.disableCull();
+				renderShape(shape(), 4500, 160, (-4500), 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/yardrat_2" + ".png")));
+				renderShape(shape(), 4500, 160, (-4500), 0, 0, 0, 160, 160, 160, 60 << 24 | 255 << 16 | 255 << 8 | 255);
 				release();
 			}
 		}

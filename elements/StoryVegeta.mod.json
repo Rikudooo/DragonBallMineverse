@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Vegeta",
     "mobLabel": "",
-    "mobModelName": "ModelVegetaSaiyanSaga",
-    "mobModelTexture": "vegetasaiyansagatexture.png",
+    "mobModelName": "Biped",
+    "mobModelTexture": "notexture.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -38,6 +38,15 @@
         "glow": false,
         "condition": {
           "name": "VegetaWeakenedCondition"
+        }
+      },
+      {
+        "model": "ModelVegetaSaiyanSaga",
+        "texture": "vegeta_sayian_saga.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "VegetaBase"
         }
       }
     ],

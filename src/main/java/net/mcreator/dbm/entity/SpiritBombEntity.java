@@ -95,7 +95,7 @@ public class SpiritBombEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void tick() {
 		super.tick();
-		SpiritBombFlyingProcedure.execute(this.getOwner(), this);
+		SpiritBombFlyingProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
 		if (this.inGround)
 			this.discard();
 	}

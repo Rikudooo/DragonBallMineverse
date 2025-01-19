@@ -18,7 +18,7 @@ public class EyesLeftProcedure {
 			}
 		} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).EyesType == 1) {
 			{
-				double _setval = 3;
+				double _setval = 5;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.EyesType = _setval;
 					capability.syncPlayerVariables(entity);

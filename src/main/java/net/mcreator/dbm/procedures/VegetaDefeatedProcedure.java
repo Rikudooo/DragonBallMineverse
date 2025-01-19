@@ -1,35 +1,44 @@
 package net.mcreator.dbm.procedures;
 
+import net.minecraftforge.items.ItemHandlerHelper;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.init.DbmModItems;
 
 import java.util.List;
 import java.util.Comparator;
 
 public class VegetaDefeatedProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity sourceentity) {
-		if (sourceentity == null)
-			return;
-		if (!((sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).StoryModeProgress).contains("vegeta")) {
-			{
-				String _setval = (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).StoryModeProgress + " " + "vegeta";
-				sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.StoryModeProgress = _setval;
-					capability.syncPlayerVariables(sourceentity);
-				});
-			}
-			{
-				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(60 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-				for (Entity entityiterator : _entfound) {
+	public static void execute(LevelAccessor world, double x, double y, double z) {
+		{
+			final Vec3 _center = new Vec3(x, y, z);
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(100 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (!((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).StoryModeProgress).contains("vegeta")) {
+					{
+						String _setval = (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).StoryModeProgress + " " + "vegeta";
+						entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.StoryModeProgress = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
 					if (entityiterator instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(("<" + "Vegeta" + "> " + "GAaagh... This isn't the end. I WILL come back!")), false);
+					if (!(entityiterator instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(DbmModItems.SPACE_POD.get())) : false)) {
+						if (entityiterator instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(DbmModItems.SPACE_POD.get()).copy();
+							_setstack.setCount(1);
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+					}
 				}
 			}
 		}

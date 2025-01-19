@@ -24,7 +24,7 @@
       "name": "DespawnKiBlast"
     },
     "onFlyingTick": {
-      "name": "KiBlastNoGravity"
+      "name": "KiBlastWhileProjectileFlyingTick"
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dbm:death_ball",
+    "dbm:giant_ki_blast",
+    "dbm:ki_blast",
+    "dbm:spirit_bomb",
+    "dbm:supernova"
+  ]
+}

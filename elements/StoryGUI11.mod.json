@@ -274,6 +274,12 @@
           "name": "imagebutton_next2",
           "image": "next2.png",
           "hoveredImage": "nexthovered2.png",
+          "onClick": {
+            "name": "SetStory12"
+          },
+          "displayCondition": {
+            "name": "ReturnOnNamek"
+          },
           "x": 349,
           "y": 197
         }
@@ -331,7 +337,7 @@
         "data": {
           "name": "label_x800y100z800space",
           "text": {
-            "fixedValue": "space-x800-y100-z800"
+            "fixedValue": "space-x2000-y160-z2000"
           },
           "color": {
             "value": -16777012,

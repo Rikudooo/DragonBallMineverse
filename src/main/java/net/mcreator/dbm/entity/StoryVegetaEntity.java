@@ -140,6 +140,11 @@ public class StoryVegetaEntity extends Monster {
 	}
 
 	@Override
+	public double getMyRidingOffset() {
+		return -0.35D;
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}
@@ -196,7 +201,7 @@ public class StoryVegetaEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		VegetaDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), source.getEntity());
+		VegetaDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

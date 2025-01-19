@@ -21,7 +21,6 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.dbm.network.DbmModVariables;
 import net.mcreator.dbm.entity.StoryVegetaEntity;
-import net.mcreator.dbm.entity.StoryTienshinhanEntity;
 
 import javax.annotation.Nullable;
 
@@ -192,7 +191,7 @@ public class GalickGunRenderProcedure {
 			RenderSystem.enableBlend();
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-			execute(event, level, pos.x(), pos.y(), pos.z(), entity, event.getPartialTick(), event.getRenderTick());
+			execute(event, level, pos.x(), pos.y(), pos.z(), event.getPartialTick(), event.getRenderTick());
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
@@ -200,13 +199,11 @@ public class GalickGunRenderProcedure {
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, double partialTick, double ticks) {
-		execute(null, world, x, y, z, entity, partialTick, ticks);
+	public static void execute(LevelAccessor world, double x, double y, double z, double partialTick, double ticks) {
+		execute(null, world, x, y, z, partialTick, ticks);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, double partialTick, double ticks) {
-		if (entity == null)
-			return;
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, double partialTick, double ticks) {
 		double width = 0;
 		double length = 0;
 		double i = 0;
@@ -247,21 +244,21 @@ public class GalickGunRenderProcedure {
 							add(i, i, k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 							end();
 						}
-						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
-								(entityiterator.getZ() + Math.cos(Math.toRadians((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
+								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, (float) (-1.6), (float) 1.6, 1,
 								32 << 24 | 255 << 16 | 255 << 8 | 255);
-						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
-								(entityiterator.getZ() + Math.cos(Math.toRadians((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
+								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, 1, 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						RenderSystem.disableCull();
-						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
+						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.8),
-								(entityiterator.getZ() + Math.cos(Math.toRadians((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
+								(entityiterator.getZ() + Math.cos(Math.toRadians((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW)) * 1.5),
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldYAW,
 								(float) (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).OldPitch, 0, 1, 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						release();
@@ -273,7 +270,7 @@ public class GalickGunRenderProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(256 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if ((entityiterator instanceof StoryTienshinhanEntity _datEntS ? _datEntS.getEntityData().get(StoryTienshinhanEntity.DATA_SelectedKiAttack) : "").equals("Galick Gun")) {
+				if ((entityiterator instanceof StoryVegetaEntity _datEntS ? _datEntS.getEntityData().get(StoryVegetaEntity.DATA_SelectedKiAttack) : "").equals("Galick Gun")) {
 					if (target(2)) {
 						speed = 0.4;
 						width = 0.5;

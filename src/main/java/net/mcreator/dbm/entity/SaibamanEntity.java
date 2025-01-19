@@ -194,7 +194,7 @@ public class SaibamanEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		SaibamanDefeatedProcedure.execute(source.getEntity());
+		SaibamanDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

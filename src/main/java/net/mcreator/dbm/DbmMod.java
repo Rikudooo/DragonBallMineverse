@@ -21,6 +21,7 @@ import net.mcreator.dbm.world.features.StructureFeature;
 import net.mcreator.dbm.init.DbmModTabs;
 import net.mcreator.dbm.init.DbmModSounds;
 import net.mcreator.dbm.init.DbmModParticleTypes;
+import net.mcreator.dbm.init.DbmModMobEffects;
 import net.mcreator.dbm.init.DbmModMenus;
 import net.mcreator.dbm.init.DbmModItems;
 import net.mcreator.dbm.init.DbmModFeatures;
@@ -56,6 +57,7 @@ public class DbmMod {
 		DbmModTabs.REGISTRY.register(bus);
 		DbmModFeatures.REGISTRY.register(bus);
 		StructureFeature.REGISTRY.register(bus);
+		DbmModMobEffects.REGISTRY.register(bus);
 
 		DbmModParticleTypes.REGISTRY.register(bus);
 

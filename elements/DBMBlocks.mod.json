@@ -1,0 +1,11 @@
+{
+  "_fv": 69,
+  "_type": "tab",
+  "definition": {
+    "name": "Blocks",
+    "icon": {
+      "value": "CUSTOM:NamekGrassBlock"
+    },
+    "showSearch": false
+  }
+}

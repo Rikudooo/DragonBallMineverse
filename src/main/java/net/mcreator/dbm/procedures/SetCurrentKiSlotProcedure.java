@@ -5,9 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.dbm.network.DbmModVariables;
 
@@ -92,26 +90,6 @@ public class SetCurrentKiSlotProcedure {
 					capability.CurrentKiAttack = _setval;
 					capability.syncPlayerVariables(entity);
 				});
-			}
-		}
-		Player player = Minecraft.getInstance().player;
-		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SelectedKiSlot != player.getInventory().selected) {
-			if (player.getInventory().selected != 0) {
-				{
-					double _setval = player.getInventory().selected;
-					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SelectedKiSlot = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else {
-				{
-					double _setval = 1;
-					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SelectedKiSlot = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 			}
 		}
 	}

@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.dbm.block.YardratRockBlock;
 import net.mcreator.dbm.block.VerticalLadderSupportBlock;
 import net.mcreator.dbm.block.VerticalLadderBlock;
 import net.mcreator.dbm.block.UnbreakableStoneBlock;
@@ -25,12 +26,14 @@ import net.mcreator.dbm.block.SpaceRockBlock;
 import net.mcreator.dbm.block.PowerPolePlinthUpBlock;
 import net.mcreator.dbm.block.PowerPolePlinthDownBlock;
 import net.mcreator.dbm.block.NamekGrassBlockBlock;
+import net.mcreator.dbm.block.NamekGrassBlock;
 import net.mcreator.dbm.block.NamekDirtBlock;
 import net.mcreator.dbm.block.KorinTowerBlock2Block;
 import net.mcreator.dbm.block.KorinTowerBlock1Block;
 import net.mcreator.dbm.block.KorinTowerBaseBlock;
 import net.mcreator.dbm.block.KameHouseSpawnBlock;
 import net.mcreator.dbm.block.InvisibleLightBlock;
+import net.mcreator.dbm.block.HyperbolicTimeChamberFloorBlock;
 import net.mcreator.dbm.block.HyperbolicTimeChamberDoorBlock;
 import net.mcreator.dbm.block.HorizontalLadderSupportBlock;
 import net.mcreator.dbm.block.HorizontalLadderBlock;
@@ -182,6 +185,9 @@ import net.mcreator.dbm.block.BuildingBlockBrownBlock;
 import net.mcreator.dbm.block.BuildingBlockBlueBlock;
 import net.mcreator.dbm.block.BuildingBlockBlackBlock;
 import net.mcreator.dbm.block.BlueDoorBlock;
+import net.mcreator.dbm.block.AjisaPlanksBlock;
+import net.mcreator.dbm.block.AjisaLogBlock;
+import net.mcreator.dbm.block.AjisaLeavesBlock;
 import net.mcreator.dbm.DbmMod;
 
 public class DbmModBlocks {
@@ -358,6 +364,12 @@ public class DbmModBlocks {
 	public static final RegistryObject<Block> NAMEK_GRASS_BLOCK = REGISTRY.register("namek_grass_block", () -> new NamekGrassBlockBlock());
 	public static final RegistryObject<Block> NAMEK_DIRT = REGISTRY.register("namek_dirt", () -> new NamekDirtBlock());
 	public static final RegistryObject<Block> SPACE_ROCK = REGISTRY.register("space_rock", () -> new SpaceRockBlock());
+	public static final RegistryObject<Block> AJISA_LOG = REGISTRY.register("ajisa_log", () -> new AjisaLogBlock());
+	public static final RegistryObject<Block> AJISA_LEAVES = REGISTRY.register("ajisa_leaves", () -> new AjisaLeavesBlock());
+	public static final RegistryObject<Block> AJISA_PLANKS = REGISTRY.register("ajisa_planks", () -> new AjisaPlanksBlock());
+	public static final RegistryObject<Block> NAMEK_GRASS = REGISTRY.register("namek_grass", () -> new NamekGrassBlock());
+	public static final RegistryObject<Block> HYPERBOLIC_TIME_CHAMBER_FLOOR = REGISTRY.register("hyperbolic_time_chamber_floor", () -> new HyperbolicTimeChamberFloorBlock());
+	public static final RegistryObject<Block> YARDRAT_ROCK = REGISTRY.register("yardrat_rock", () -> new YardratRockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

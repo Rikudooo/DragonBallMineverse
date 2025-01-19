@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "dbm:block/sand",
+    "down": "dbm:block/namekdirt",
     "up": "dbm:block/namekgrass",
     "north": "dbm:block/namekgras",
     "east": "dbm:block/namekgras",
     "south": "dbm:block/namekgras",
     "west": "dbm:block/namekgras",
-    "particle": "dbm:block/sand"
+    "particle": "dbm:block/namekdirt"
   },
   "render_type": "solid"
 }

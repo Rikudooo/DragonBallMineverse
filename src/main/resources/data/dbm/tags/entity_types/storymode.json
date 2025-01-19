@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "dbm:story_android_17",
+    "dbm:story_android_18",
+    "dbm:story_android_19",
+    "dbm:story_android_20",
+    "dbm:story_burter",
+    "dbm:story_cell",
+    "dbm:story_cell_2",
+    "dbm:story_cui",
+    "dbm:story_dodoria",
+    "dbm:story_frieza",
+    "dbm:story_frieza_soldier",
+    "dbm:story_ginyu",
+    "dbm:story_guldo",
+    "dbm:story_jeice",
+    "dbm:story_king_cold",
+    "dbm:story_mecha_frieza",
+    "dbm:story_mysterious_young_man",
+    "dbm:story_nappa",
+    "dbm:story_piccolo",
+    "dbm:story_piccolo_giant",
+    "dbm:story_raditz",
+    "dbm:story_recoome",
+    "dbm:story_tienshinhan",
+    "dbm:story_vegeta",
+    "dbm:story_zarbon"
+  ]
+}

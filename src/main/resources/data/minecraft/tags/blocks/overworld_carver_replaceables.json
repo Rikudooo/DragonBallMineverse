@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "dbm:yardrat_rock",
+    "dbm:hyperbolic_time_chamber_floor",
     "dbm:namek_grass_block",
     "minecraft:stone",
     "dbm:namek_dirt",

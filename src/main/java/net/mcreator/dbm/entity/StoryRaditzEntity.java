@@ -194,7 +194,7 @@ public class StoryRaditzEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		RaditzDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), source.getEntity());
+		RaditzDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

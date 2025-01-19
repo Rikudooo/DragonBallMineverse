@@ -17,10 +17,13 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.dbm.network.UseKiAttackMessage;
 import net.mcreator.dbm.network.TransformMessage;
+import net.mcreator.dbm.network.ThirdFunctionMessage;
 import net.mcreator.dbm.network.SpaceKeyMessage;
+import net.mcreator.dbm.network.RightMessage;
 import net.mcreator.dbm.network.RightKeyMessage;
 import net.mcreator.dbm.network.ReleasePowerMessage;
 import net.mcreator.dbm.network.MenuMessage;
+import net.mcreator.dbm.network.LeftMessage;
 import net.mcreator.dbm.network.LeftKeyMessage;
 import net.mcreator.dbm.network.KiSenseMessage;
 import net.mcreator.dbm.network.ForwardKeyMessage;
@@ -313,6 +316,51 @@ public class DbmModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping LEFT = new KeyMapping("key.dbm.left", GLFW.GLFW_KEY_LEFT, "key.categories.dbm") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				LEFT_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - LEFT_LASTPRESS);
+				DbmMod.PACKET_HANDLER.sendToServer(new LeftMessage(1, dt));
+				LeftMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping RIGHT = new KeyMapping("key.dbm.right", GLFW.GLFW_KEY_RIGHT, "key.categories.dbm") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				RIGHT_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - RIGHT_LASTPRESS);
+				DbmMod.PACKET_HANDLER.sendToServer(new RightMessage(1, dt));
+				RightMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping THIRD_FUNCTION = new KeyMapping("key.dbm.third_function", GLFW.GLFW_KEY_L, "key.categories.dbm") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				DbmMod.PACKET_HANDLER.sendToServer(new ThirdFunctionMessage(0, 0));
+				ThirdFunctionMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long MENU_LASTPRESS = 0;
 	private static long CHARGE_KI_LASTPRESS = 0;
 	private static long TRANSFORM_LASTPRESS = 0;
@@ -327,6 +375,8 @@ public class DbmModKeyMappings {
 	private static long RELEASE_POWER_LASTPRESS = 0;
 	private static long BLOCKING_LASTPRESS = 0;
 	private static long KI_SENSE_LASTPRESS = 0;
+	private static long LEFT_LASTPRESS = 0;
+	private static long RIGHT_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -346,6 +396,9 @@ public class DbmModKeyMappings {
 		event.register(RELEASE_POWER);
 		event.register(BLOCKING);
 		event.register(KI_SENSE);
+		event.register(LEFT);
+		event.register(RIGHT);
+		event.register(THIRD_FUNCTION);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -369,6 +422,9 @@ public class DbmModKeyMappings {
 				RELEASE_POWER.consumeClick();
 				BLOCKING.consumeClick();
 				KI_SENSE.consumeClick();
+				LEFT.consumeClick();
+				RIGHT.consumeClick();
+				THIRD_FUNCTION.consumeClick();
 			}
 		}
 	}

@@ -23,7 +23,7 @@ public class SpacePlayerEntersDimensionProcedure {
 		}
 		if (DbmModVariables.MapVariables.get(world).NamekSpawned == false) {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = DbmModEntities.NAMEK_E.get().spawn(_level, new BlockPos(100, 160, 100), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = DbmModEntities.NAMEK_E.get().spawn(_level, new BlockPos(2000, 160, 2000), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}

@@ -9,7 +9,11 @@ public class LearnMakankosappoProcedure {
 		if (entity == null)
 			return;
 		String KiAttackPurchase = "";
-		KiAttackPurchase = "Makankosappo";
+		if (!(entity.getDisplayName().getString()).equals("Froku_26")) {
+			KiAttackPurchase = "Makankosappo";
+		} else if ((entity.getDisplayName().getString()).equals("Froku_26")) {
+			KiAttackPurchase = "Frokankusappo";
+		}
 		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TrainingPoints >= 5400) {
 			if (!((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiSlot1).equals(KiAttackPurchase)
 					&& !((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiSlot2).equals(KiAttackPurchase)

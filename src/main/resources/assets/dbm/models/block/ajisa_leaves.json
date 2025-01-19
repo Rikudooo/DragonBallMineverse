@@ -9,5 +9,5 @@
     "west": "dbm:block/ajisaleaves",
     "particle": "dbm:block/ajisaleaves"
   },
-  "render_type": "solid"
+  "render_type": "cutout_mipped"
 }

@@ -339,7 +339,7 @@
           "image": "start.png",
           "hoveredImage": "starthovered.png",
           "onClick": {
-            "name": "SpawnRaditz"
+            "name": "SpawnVegetaNappa"
           },
           "x": 312,
           "y": 197

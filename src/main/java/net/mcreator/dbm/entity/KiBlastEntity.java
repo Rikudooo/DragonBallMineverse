@@ -22,7 +22,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.dbm.procedures.KiBlastNoGravityProcedure;
+import net.mcreator.dbm.procedures.KiBlastWhileProjectileFlyingTickProcedure;
 import net.mcreator.dbm.procedures.DespawnKiBlastProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
@@ -71,19 +71,19 @@ public class KiBlastEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		DespawnKiBlastProcedure.execute(this);
+		DespawnKiBlastProcedure.execute(this.level(), entityHitResult.getEntity(), this);
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		DespawnKiBlastProcedure.execute(this);
+		DespawnKiBlastProcedure.execute(this.level(), this.getOwner(), this);
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		KiBlastNoGravityProcedure.execute(this);
+		KiBlastWhileProjectileFlyingTickProcedure.execute(this);
 		if (this.inGround)
 			this.discard();
 	}

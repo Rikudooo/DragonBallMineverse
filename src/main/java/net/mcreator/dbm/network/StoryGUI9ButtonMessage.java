@@ -12,7 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.StoryGUI9Menu;
-import net.mcreator.dbm.procedures.SpawnRaditzProcedure;
+import net.mcreator.dbm.procedures.SpawnVegetaNappaProcedure;
 import net.mcreator.dbm.procedures.SetStory10Procedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
@@ -144,7 +144,7 @@ public class StoryGUI9ButtonMessage {
 		}
 		if (buttonID == 16) {
 
-			SpawnRaditzProcedure.execute(world, x, y, z, entity);
+			SpawnVegetaNappaProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

@@ -26,16 +26,16 @@ public class GainTPProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getSource(), event.getSource().getDirectEntity(), event.getAmount());
+			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getSource(), event.getEntity(), event.getSource().getDirectEntity(), event.getAmount());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity immediatesourceentity, double amount) {
-		execute(null, world, x, y, z, damagesource, immediatesourceentity, amount);
+	public static void execute(LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity, Entity immediatesourceentity, double amount) {
+		execute(null, world, x, y, z, damagesource, entity, immediatesourceentity, amount);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity immediatesourceentity, double amount) {
-		if (damagesource == null || immediatesourceentity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity, Entity immediatesourceentity, double amount) {
+		if (damagesource == null || entity == null || immediatesourceentity == null)
 			return;
 		double DamageSource = 0;
 		if (immediatesourceentity instanceof Player || immediatesourceentity instanceof ServerPlayer) {
@@ -124,6 +124,51 @@ public class GainTPProcedure {
 							{
 								double _setval = (immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TrainingPoints
 										+ (20 + Math.pow(Math.sqrt(amount), 1.1)) * DamageSource * 2;
+								immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.TrainingPoints = _setval;
+									capability.syncPlayerVariables(immediatesourceentity);
+								});
+							}
+						}
+					}
+				}
+			}
+			if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:hyperbolic_time_chamber"))) {
+				if (Math.random() < 0.4) {
+					if (Math.random() < 0.5) {
+						if (Math.random() < 0.5) {
+							{
+								double _setval = (immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TrainingPoints
+										+ (2 + Math.pow(Math.sqrt(amount), 1.1)) * DamageSource * 4;
+								immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.TrainingPoints = _setval;
+									capability.syncPlayerVariables(immediatesourceentity);
+								});
+							}
+						} else {
+							{
+								double _setval = (immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TrainingPoints
+										+ (5 + Math.pow(Math.sqrt(amount), 1.1)) * DamageSource * 4;
+								immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.TrainingPoints = _setval;
+									capability.syncPlayerVariables(immediatesourceentity);
+								});
+							}
+						}
+					} else {
+						if (Math.random() < 0.5) {
+							{
+								double _setval = (immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TrainingPoints
+										+ (10 + Math.pow(Math.sqrt(amount), 1.1)) * DamageSource * 4;
+								immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.TrainingPoints = _setval;
+									capability.syncPlayerVariables(immediatesourceentity);
+								});
+							}
+						} else {
+							{
+								double _setval = (immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TrainingPoints
+										+ (20 + Math.pow(Math.sqrt(amount), 1.1)) * DamageSource * 4;
 								immediatesourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.TrainingPoints = _setval;
 									capability.syncPlayerVariables(immediatesourceentity);

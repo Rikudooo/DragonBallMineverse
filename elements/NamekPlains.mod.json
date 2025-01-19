@@ -12,6 +12,14 @@
     "underwaterBlock": {
       "value": "CUSTOM:NamekDirt"
     },
+    "foliageColor": {
+      "value": -11426101,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -16737997,
+      "falpha": 0.0
+    },
     "ambientSound": {
       "value": ""
     },

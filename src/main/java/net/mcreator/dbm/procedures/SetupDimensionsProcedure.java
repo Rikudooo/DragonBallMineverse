@@ -201,5 +201,6 @@ public class SetupDimensionsProcedure {
 
 	private static void execute(@Nullable Event event) {
 		register(ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:space")), createOverworldEffects(false, false, false));
+		register(ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:hyperbolic_time_chamber")), createOverworldEffects(false, false, false));
 	}
 }

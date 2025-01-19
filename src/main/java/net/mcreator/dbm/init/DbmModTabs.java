@@ -21,6 +21,17 @@ import net.mcreator.dbm.DbmMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DbmModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DbmMod.MODID);
+	public static final RegistryObject<CreativeModeTab> DBM_BLOCKS = REGISTRY.register("dbm_blocks",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.dbm.dbm_blocks")).icon(() -> new ItemStack(DbmModBlocks.NAMEK_GRASS_BLOCK.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(DbmModBlocks.NAMEK_GRASS_BLOCK.get().asItem());
+				tabData.accept(DbmModBlocks.NAMEK_DIRT.get().asItem());
+				tabData.accept(DbmModBlocks.AJISA_LOG.get().asItem());
+				tabData.accept(DbmModBlocks.AJISA_LEAVES.get().asItem());
+				tabData.accept(DbmModBlocks.AJISA_PLANKS.get().asItem());
+				tabData.accept(DbmModBlocks.NAMEK_GRASS.get().asItem());
+			})
+
+					.build());
 	public static final RegistryObject<CreativeModeTab> DBM_ITEMS = REGISTRY.register("dbm_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.dbm.dbm_items")).icon(() -> new ItemStack(DbmModItems.DRAGON_RADAR.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(DbmModItems.SENZU_BEAN.get());
@@ -37,6 +48,13 @@ public class DbmModTabs {
 				tabData.accept(DbmModItems.DRAGON_BALL_6.get());
 				tabData.accept(DbmModItems.DRAGON_BALL_7.get());
 				tabData.accept(DbmModItems.SPACE_POD.get());
+				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_1.get());
+				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_2.get());
+				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_3.get());
+				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_4.get());
+				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_5.get());
+				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_6.get());
+				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_7.get());
 			})
 
 					.build());
@@ -215,6 +233,8 @@ public class DbmModTabs {
 			tabData.accept(DbmModItems.SABERTOOTH_SPAWN_EGG.get());
 			tabData.accept(DbmModItems.BEAR_THIEF_SPAWN_EGG.get());
 			tabData.accept(DbmModItems.DINOSAUR_1_SPAWN_EGG.get());
+			tabData.accept(DbmModItems.NAMEKIAN_SPAWN_EGG.get());
+			tabData.accept(DbmModItems.YARDRATTAN_SPAWN_EGG.get());
 
 		}
 	}
