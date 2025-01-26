@@ -21,6 +21,9 @@ public class LocateStructureProcedure {
 		} else if ((StringArgumentType.getString(arguments, "structure")).equals("kame_house")) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(DbmModVariables.MapVariables.get(world).KameHouseCoords), false);
+		} else if ((StringArgumentType.getString(arguments, "structure")).equals("babidi_ship")) {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal(DbmModVariables.MapVariables.get(world).BabidiShipCoords), false);
 		}
 	}
 }

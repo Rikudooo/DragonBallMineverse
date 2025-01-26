@@ -1,0 +1,311 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "4stardbgui2.png",
+          "use1Xscale": false,
+          "x": 38,
+          "y": 16
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_player_stats",
+          "text": {
+            "fixedValue": "Story -Z Saga -The End"
+          },
+          "color": {
+            "value": -16777063,
+            "falpha": 0.0
+          },
+          "x": 42,
+          "y": 19
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_quit",
+          "image": "quit.png",
+          "hoveredImage": "quithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 377,
+          "y": 18
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_statsicon",
+          "image": "statsicon.png",
+          "hoveredImage": "statsiconhovered.png",
+          "onClick": {
+            "name": "OpenStatsGUI"
+          },
+          "x": 43,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillicon",
+          "image": "skillicon.png",
+          "hoveredImage": "skilliconhovered.png",
+          "onClick": {
+            "name": "OpenSkillsGUI"
+          },
+          "x": 68,
+          "y": 216
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "currenticon.png",
+          "use1Xscale": false,
+          "x": 166,
+          "y": 214
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_kiattackicon",
+          "image": "kiattackicon.png",
+          "hoveredImage": "kiattackiconhovered.png",
+          "onClick": {
+            "name": "OpenKiAttacksGUI"
+          },
+          "x": 93,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_storyiconhovered",
+          "image": "storyicon.png",
+          "hoveredImage": "storyiconhovered.png",
+          "onClick": {
+            "name": "OpenStoryGUI"
+          },
+          "x": 168,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_formicon",
+          "image": "formicon.png",
+          "hoveredImage": "formiconhovered.png",
+          "onClick": {
+            "name": "OpenRacialSkillsGUI"
+          },
+          "x": 118,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ultimateformicon",
+          "image": "ultimateformicon.png",
+          "hoveredImage": "ultimateformiconhovered.png",
+          "onClick": {
+            "name": "OpenUltimateSkillsGUI"
+          },
+          "x": 143,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_groupicon",
+          "image": "groupicon.png",
+          "hoveredImage": "groupiconhovered.png",
+          "onClick": {
+            "name": "OpenGroupGUI"
+          },
+          "x": 193,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon8",
+          "image": "icon8.png",
+          "hoveredImage": "hoveredicon8.png",
+          "onClick": {
+            "name": "OpenIcon8"
+          },
+          "x": 218,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon9",
+          "image": "icon9.png",
+          "hoveredImage": "hoveredicon9.png",
+          "onClick": {
+            "name": "OpenIcon9"
+          },
+          "x": 243,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon10",
+          "image": "icon10.png",
+          "hoveredImage": "hoveredicon10.png",
+          "onClick": {
+            "name": "OpenIcon10"
+          },
+          "x": 268,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon11",
+          "image": "icon11.png",
+          "hoveredImage": "hoveredicon11.png",
+          "onClick": {
+            "name": "OpenIcon11"
+          },
+          "x": 293,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon12",
+          "image": "icon12.png",
+          "hoveredImage": "hoveredicon12.png",
+          "onClick": {
+            "name": "OpenIcon12"
+          },
+          "x": 318,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon13",
+          "image": "icon13.png",
+          "hoveredImage": "hoveredicon13.png",
+          "onClick": {
+            "name": "OpenIcon13"
+          },
+          "x": 343,
+          "y": 216
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon14",
+          "image": "icon14.png",
+          "hoveredImage": "hoveredicon14.png",
+          "onClick": {
+            "name": "OpenIcon14"
+          },
+          "x": 368,
+          "y": 216
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_hey_looking_for_an_adventure_w",
+          "text": {
+            "fixedValue": "Congratulations! You finished the Z Saga!"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_next2",
+          "image": "next2.png",
+          "hoveredImage": "nexthovered2.png",
+          "displayCondition": {
+            "name": "ReturnOnEarth"
+          },
+          "x": 349,
+          "y": 197
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_be_on_planet_earth",
+          "text": {
+            "fixedValue": "-Be on planet Earth"
+          },
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "x": 60,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_be_on_planet_earth_done",
+          "text": {
+            "fixedValue": "-Be on planet Earth -Done"
+          },
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ReturnOnEarth"
+          },
+          "x": 60,
+          "y": 125
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

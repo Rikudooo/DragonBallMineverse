@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "dbm:yardrat_master_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 7,
+    "salt": 10955385
+  }
+}

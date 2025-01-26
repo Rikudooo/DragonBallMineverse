@@ -36,46 +36,47 @@ public class FriezaAttackPatternProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		entity.refreshDimensions();
 		if ((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Base")) {
-			if ((entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity1.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 15000) {
-				if (entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
-					_livingEntity2.getAttribute(Attributes.MAX_HEALTH).setBaseValue(15000);
+			if ((entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity2.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 15000) {
+				if (entity instanceof LivingEntity _livingEntity3 && _livingEntity3.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+					_livingEntity3.getAttribute(Attributes.MAX_HEALTH).setBaseValue(15000);
 			}
 		} else if ((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Second")) {
-			if ((entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity4.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 17000) {
-				if (entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
-					_livingEntity5.getAttribute(Attributes.MAX_HEALTH).setBaseValue(17000);
+			if ((entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity5.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 17000) {
+				if (entity instanceof LivingEntity _livingEntity6 && _livingEntity6.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+					_livingEntity6.getAttribute(Attributes.MAX_HEALTH).setBaseValue(17000);
 			}
-			if ((entity instanceof LivingEntity _livingEntity6 && _livingEntity6.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity6.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 400) {
-				if (entity instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
-					_livingEntity7.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(400);
+			if ((entity instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity7.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 400) {
+				if (entity instanceof LivingEntity _livingEntity8 && _livingEntity8.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+					_livingEntity8.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(400);
 			}
 		} else if ((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Third")) {
-			if ((entity instanceof LivingEntity _livingEntity9 && _livingEntity9.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity9.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 20000) {
-				if (entity instanceof LivingEntity _livingEntity10 && _livingEntity10.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
-					_livingEntity10.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20000);
+			if ((entity instanceof LivingEntity _livingEntity10 && _livingEntity10.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity10.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 20000) {
+				if (entity instanceof LivingEntity _livingEntity11 && _livingEntity11.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+					_livingEntity11.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20000);
 			}
-			if ((entity instanceof LivingEntity _livingEntity11 && _livingEntity11.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity11.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 450) {
-				if (entity instanceof LivingEntity _livingEntity12 && _livingEntity12.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
-					_livingEntity12.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(450);
+			if ((entity instanceof LivingEntity _livingEntity12 && _livingEntity12.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity12.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 450) {
+				if (entity instanceof LivingEntity _livingEntity13 && _livingEntity13.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+					_livingEntity13.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(450);
 			}
 		} else if ((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Final")) {
-			if ((entity instanceof LivingEntity _livingEntity14 && _livingEntity14.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity14.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 25000) {
-				if (entity instanceof LivingEntity _livingEntity15 && _livingEntity15.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
-					_livingEntity15.getAttribute(Attributes.MAX_HEALTH).setBaseValue(25000);
+			if ((entity instanceof LivingEntity _livingEntity15 && _livingEntity15.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity15.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 25000) {
+				if (entity instanceof LivingEntity _livingEntity16 && _livingEntity16.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+					_livingEntity16.getAttribute(Attributes.MAX_HEALTH).setBaseValue(25000);
 			}
-			if ((entity instanceof LivingEntity _livingEntity16 && _livingEntity16.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity16.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 500) {
-				if (entity instanceof LivingEntity _livingEntity17 && _livingEntity17.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
-					_livingEntity17.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(500);
+			if ((entity instanceof LivingEntity _livingEntity17 && _livingEntity17.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity17.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 500) {
+				if (entity instanceof LivingEntity _livingEntity18 && _livingEntity18.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+					_livingEntity18.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(500);
 			}
 		} else if ((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Full Power")) {
-			if ((entity instanceof LivingEntity _livingEntity19 && _livingEntity19.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity19.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 30000) {
-				if (entity instanceof LivingEntity _livingEntity20 && _livingEntity20.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
-					_livingEntity20.getAttribute(Attributes.MAX_HEALTH).setBaseValue(30000);
+			if ((entity instanceof LivingEntity _livingEntity20 && _livingEntity20.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity20.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 30000) {
+				if (entity instanceof LivingEntity _livingEntity21 && _livingEntity21.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+					_livingEntity21.getAttribute(Attributes.MAX_HEALTH).setBaseValue(30000);
 			}
-			if ((entity instanceof LivingEntity _livingEntity21 && _livingEntity21.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity21.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 550) {
-				if (entity instanceof LivingEntity _livingEntity22 && _livingEntity22.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
-					_livingEntity22.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(550);
+			if ((entity instanceof LivingEntity _livingEntity22 && _livingEntity22.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity22.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 550) {
+				if (entity instanceof LivingEntity _livingEntity23 && _livingEntity23.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+					_livingEntity23.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(550);
 			}
 		}
 		if (entity.getPersistentData().getDouble("attackInterval") < 90) {
@@ -133,8 +134,8 @@ public class FriezaAttackPatternProcedure {
 											return entityToSpawn;
 										}
 									}.getArrow(projectileLevel, entity,
-											(float) ((entity instanceof LivingEntity _livingEntity55 && _livingEntity55.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
-													? _livingEntity55.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
+											(float) ((entity instanceof LivingEntity _livingEntity56 && _livingEntity56.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
+													? _livingEntity56.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
 													: 0) * 3.5),
 											1, (byte) 1);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
@@ -163,8 +164,8 @@ public class FriezaAttackPatternProcedure {
 											return entityToSpawn;
 										}
 									}.getArrow(projectileLevel, entity,
-											(float) ((entity instanceof LivingEntity _livingEntity65 && _livingEntity65.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
-													? _livingEntity65.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
+											(float) ((entity instanceof LivingEntity _livingEntity66 && _livingEntity66.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
+													? _livingEntity66.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
 													: 0) * 6),
 											1, (byte) 1);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
@@ -218,8 +219,8 @@ public class FriezaAttackPatternProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entity == entityiterator)) {
 										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("dbm:kikoha")))),
-												(float) ((entity instanceof LivingEntity _livingEntity105 && _livingEntity105.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
-														? _livingEntity105.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
+												(float) ((entity instanceof LivingEntity _livingEntity106 && _livingEntity106.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
+														? _livingEntity106.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
 														: 0) * 3));
 										entityiterator.setDeltaMovement(new Vec3(0, 0, 0));
 									}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "bab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blue_wool"
+    },
+    "b": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "result": {
+    "item": "dbm:royal_blue_fit_chestplate",
+    "count": 1
+  }
+}

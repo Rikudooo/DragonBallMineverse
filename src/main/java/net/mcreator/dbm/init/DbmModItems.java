@@ -18,6 +18,7 @@ import net.mcreator.dbm.item.TurtleGiKingKaiItem;
 import net.mcreator.dbm.item.TurtleGiItem;
 import net.mcreator.dbm.item.SpacePodItem;
 import net.mcreator.dbm.item.SenzuBeanItem;
+import net.mcreator.dbm.item.RoyalBlueFitItem;
 import net.mcreator.dbm.item.RawDinosaurItem;
 import net.mcreator.dbm.item.PurpleGiItem;
 import net.mcreator.dbm.item.PunchingBagItemItem;
@@ -31,6 +32,7 @@ import net.mcreator.dbm.item.NamekDragonBall3Item;
 import net.mcreator.dbm.item.NamekDragonBall2Item;
 import net.mcreator.dbm.item.NamekDragonBall1Item;
 import net.mcreator.dbm.item.MakankosappoItemItem;
+import net.mcreator.dbm.item.LegendaryItemItem;
 import net.mcreator.dbm.item.KamehamehaItemItem;
 import net.mcreator.dbm.item.DragonRadarItem;
 import net.mcreator.dbm.item.DragonBall7Item;
@@ -262,6 +264,9 @@ public class DbmModItems {
 	public static final RegistryObject<Item> HYPERBOLIC_TIME_CHAMBER_FLOOR = block(DbmModBlocks.HYPERBOLIC_TIME_CHAMBER_FLOOR);
 	public static final RegistryObject<Item> YARDRAT_ROCK = block(DbmModBlocks.YARDRAT_ROCK);
 	public static final RegistryObject<Item> YARDRATTAN_SPAWN_EGG = REGISTRY.register("yardrattan_spawn_egg", () -> new ForgeSpawnEggItem(DbmModEntities.YARDRATTAN, -13057, -16724992, new Item.Properties()));
+	public static final RegistryObject<Item> ROYAL_BLUE_FIT_CHESTPLATE = REGISTRY.register("royal_blue_fit_chestplate", () -> new RoyalBlueFitItem.Chestplate());
+	public static final RegistryObject<Item> ROYAL_BLUE_FIT_LEGGINGS = REGISTRY.register("royal_blue_fit_leggings", () -> new RoyalBlueFitItem.Leggings());
+	public static final RegistryObject<Item> LEGENDARY_ITEM = REGISTRY.register("legendary_item", () -> new LegendaryItemItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

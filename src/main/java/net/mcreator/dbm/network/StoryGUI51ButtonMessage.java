@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.StoryGUI51Menu;
+import net.mcreator.dbm.procedures.SetStory52Procedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStatsGUIProcedure;
@@ -135,6 +136,10 @@ public class StoryGUI51ButtonMessage {
 		if (buttonID == 14) {
 
 			OpenIcon14Procedure.execute();
+		}
+		if (buttonID == 15) {
+
+			SetStory52Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

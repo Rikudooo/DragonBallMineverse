@@ -12,23 +12,33 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.dbm.client.renderer.YardrattanRenderer;
+import net.mcreator.dbm.client.renderer.YardrattanMasterRenderer;
 import net.mcreator.dbm.client.renderer.StoryZarbonRenderer;
+import net.mcreator.dbm.client.renderer.StoryYakonRenderer;
 import net.mcreator.dbm.client.renderer.StoryVegetaRenderer;
 import net.mcreator.dbm.client.renderer.StoryTienshinhanRenderer;
+import net.mcreator.dbm.client.renderer.StorySuperBuuRenderer;
+import net.mcreator.dbm.client.renderer.StorySpopovichRenderer;
 import net.mcreator.dbm.client.renderer.StoryRecoomeRenderer;
 import net.mcreator.dbm.client.renderer.StoryRaditzRenderer;
+import net.mcreator.dbm.client.renderer.StoryPuipuiRenderer;
 import net.mcreator.dbm.client.renderer.StoryPiccoloRenderer;
 import net.mcreator.dbm.client.renderer.StoryPiccoloGiantRenderer;
 import net.mcreator.dbm.client.renderer.StoryNappaRenderer;
 import net.mcreator.dbm.client.renderer.StoryMysteriousYoungManRenderer;
 import net.mcreator.dbm.client.renderer.StoryMechaFriezaRenderer;
+import net.mcreator.dbm.client.renderer.StoryMajinBuuRenderer;
 import net.mcreator.dbm.client.renderer.StoryKingColdRenderer;
+import net.mcreator.dbm.client.renderer.StoryKidBuuRenderer;
+import net.mcreator.dbm.client.renderer.StoryKibitoRenderer;
 import net.mcreator.dbm.client.renderer.StoryJeiceRenderer;
 import net.mcreator.dbm.client.renderer.StoryGuldoRenderer;
 import net.mcreator.dbm.client.renderer.StoryGinyuRenderer;
+import net.mcreator.dbm.client.renderer.StoryFusedBuuRenderer;
 import net.mcreator.dbm.client.renderer.StoryFriezaSoldierRenderer;
 import net.mcreator.dbm.client.renderer.StoryFriezaRenderer;
 import net.mcreator.dbm.client.renderer.StoryDodoriaRenderer;
+import net.mcreator.dbm.client.renderer.StoryDaburaRenderer;
 import net.mcreator.dbm.client.renderer.StoryCuiRenderer;
 import net.mcreator.dbm.client.renderer.StoryCellRenderer;
 import net.mcreator.dbm.client.renderer.StoryCellJrRenderer;
@@ -77,6 +87,8 @@ import net.mcreator.dbm.client.renderer.Dinosaur1Renderer;
 import net.mcreator.dbm.client.renderer.DendeRenderer;
 import net.mcreator.dbm.client.renderer.BubblesRenderer;
 import net.mcreator.dbm.client.renderer.BearThiefRenderer;
+import net.mcreator.dbm.client.renderer.BabidiShipSpawnerRenderer;
+import net.mcreator.dbm.client.renderer.BabidiRenderer;
 import net.mcreator.dbm.client.renderer.AdminPunchingBagRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -155,5 +167,17 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.STORY_CELL_JR.get(), StoryCellJrRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_CELL_4.get(), StoryCell4Renderer::new);
 		event.registerEntityRenderer(DbmModEntities.YARDRATTAN.get(), YardrattanRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.BABIDI.get(), BabidiRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.YARDRATTAN_MASTER.get(), YardrattanMasterRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.BABIDI_SHIP_SPAWNER.get(), BabidiShipSpawnerRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_KIBITO.get(), StoryKibitoRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_SPOPOVICH.get(), StorySpopovichRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_PUIPUI.get(), StoryPuipuiRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_DABURA.get(), StoryDaburaRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_YAKON.get(), StoryYakonRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_MAJIN_BUU.get(), StoryMajinBuuRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_SUPER_BUU.get(), StorySuperBuuRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_FUSED_BUU.get(), StoryFusedBuuRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_KID_BUU.get(), StoryKidBuuRenderer::new);
 	}
 }

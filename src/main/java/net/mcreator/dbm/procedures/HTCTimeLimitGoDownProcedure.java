@@ -46,7 +46,7 @@ public class HTCTimeLimitGoDownProcedure {
 					});
 				}
 				{
-					boolean _setval = true;
+					boolean _setval = false;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.TimeChamberLocked = _setval;
 						capability.syncPlayerVariables(entity);

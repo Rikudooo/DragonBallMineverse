@@ -147,11 +147,8 @@
         "value": 1
       }
     ],
-    "onRightClickedOn": {
-      "name": "OpenPiccoloGUI"
-    },
     "onInitialSpawn": {
-      "name": "NamekianOnInitialEntitySpawn"
+      "name": "YardratOnInitialSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

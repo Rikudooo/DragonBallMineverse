@@ -16,25 +16,35 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.dbm.entity.YardrattanMasterEntity;
 import net.mcreator.dbm.entity.YardrattanEntity;
 import net.mcreator.dbm.entity.SupernovaEntity;
 import net.mcreator.dbm.entity.StoryZarbonEntity;
+import net.mcreator.dbm.entity.StoryYakonEntity;
 import net.mcreator.dbm.entity.StoryVegetaEntity;
 import net.mcreator.dbm.entity.StoryTienshinhanEntity;
+import net.mcreator.dbm.entity.StorySuperBuuEntity;
+import net.mcreator.dbm.entity.StorySpopovichEntity;
 import net.mcreator.dbm.entity.StoryRecoomeEntity;
 import net.mcreator.dbm.entity.StoryRaditzEntity;
+import net.mcreator.dbm.entity.StoryPuipuiEntity;
 import net.mcreator.dbm.entity.StoryPiccoloGiantEntity;
 import net.mcreator.dbm.entity.StoryPiccoloEntity;
 import net.mcreator.dbm.entity.StoryNappaEntity;
 import net.mcreator.dbm.entity.StoryMysteriousYoungManEntity;
 import net.mcreator.dbm.entity.StoryMechaFriezaEntity;
+import net.mcreator.dbm.entity.StoryMajinBuuEntity;
 import net.mcreator.dbm.entity.StoryKingColdEntity;
+import net.mcreator.dbm.entity.StoryKidBuuEntity;
+import net.mcreator.dbm.entity.StoryKibitoEntity;
 import net.mcreator.dbm.entity.StoryJeiceEntity;
 import net.mcreator.dbm.entity.StoryGuldoEntity;
 import net.mcreator.dbm.entity.StoryGinyuEntity;
+import net.mcreator.dbm.entity.StoryFusedBuuEntity;
 import net.mcreator.dbm.entity.StoryFriezaSoldierEntity;
 import net.mcreator.dbm.entity.StoryFriezaEntity;
 import net.mcreator.dbm.entity.StoryDodoriaEntity;
+import net.mcreator.dbm.entity.StoryDaburaEntity;
 import net.mcreator.dbm.entity.StoryCuiEntity;
 import net.mcreator.dbm.entity.StoryCellJrEntity;
 import net.mcreator.dbm.entity.StoryCellEntity;
@@ -87,6 +97,8 @@ import net.mcreator.dbm.entity.DendeEntity;
 import net.mcreator.dbm.entity.DeathBallEntity;
 import net.mcreator.dbm.entity.BubblesEntity;
 import net.mcreator.dbm.entity.BearThiefEntity;
+import net.mcreator.dbm.entity.BabidiShipSpawnerEntity;
+import net.mcreator.dbm.entity.BabidiEntity;
 import net.mcreator.dbm.entity.AdminPunchingBagEntity;
 import net.mcreator.dbm.DbmMod;
 
@@ -106,7 +118,7 @@ public class DbmModEntities {
 	public static final RegistryObject<EntityType<GregoryEntity>> GREGORY = register("gregory",
 			EntityType.Builder.<GregoryEntity>of(GregoryEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GregoryEntity::new).fireImmune().sized(0.4f, 0.9f));
 	public static final RegistryObject<EntityType<SpiritBombEntity>> SPIRIT_BOMB = register("spirit_bomb",
-			EntityType.Builder.<SpiritBombEntity>of(SpiritBombEntity::new, MobCategory.MISC).setCustomClientFactory(SpiritBombEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(10f, 10f));
+			EntityType.Builder.<SpiritBombEntity>of(SpiritBombEntity::new, MobCategory.MISC).setCustomClientFactory(SpiritBombEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(15f, 15f));
 	public static final RegistryObject<EntityType<PunchingBagEntity>> PUNCHING_BAG = register("punching_bag", EntityType.Builder.<PunchingBagEntity>of(PunchingBagEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(PunchingBagEntity::new).fireImmune().sized(1.1f, 1.9f));
 	public static final RegistryObject<EntityType<AdminPunchingBagEntity>> ADMIN_PUNCHING_BAG = register("admin_punching_bag", EntityType.Builder.<AdminPunchingBagEntity>of(AdminPunchingBagEntity::new, MobCategory.MONSTER)
@@ -244,6 +256,30 @@ public class DbmModEntities {
 			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryCell4Entity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<YardrattanEntity>> YARDRATTAN = register("yardrattan", EntityType.Builder.<YardrattanEntity>of(YardrattanEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(YardrattanEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BabidiEntity>> BABIDI = register("babidi",
+			EntityType.Builder.<BabidiEntity>of(BabidiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabidiEntity::new).fireImmune().sized(0.6f, 1.2f));
+	public static final RegistryObject<EntityType<YardrattanMasterEntity>> YARDRATTAN_MASTER = register("yardrattan_master", EntityType.Builder.<YardrattanMasterEntity>of(YardrattanMasterEntity::new, MobCategory.AMBIENT)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(YardrattanMasterEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BabidiShipSpawnerEntity>> BABIDI_SHIP_SPAWNER = register("babidi_ship_spawner", EntityType.Builder.<BabidiShipSpawnerEntity>of(BabidiShipSpawnerEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(BabidiShipSpawnerEntity::new).fireImmune().sized(0.01f, 0.01f));
+	public static final RegistryObject<EntityType<StoryKibitoEntity>> STORY_KIBITO = register("story_kibito", EntityType.Builder.<StoryKibitoEntity>of(StoryKibitoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryKibitoEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StorySpopovichEntity>> STORY_SPOPOVICH = register("story_spopovich", EntityType.Builder.<StorySpopovichEntity>of(StorySpopovichEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StorySpopovichEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryPuipuiEntity>> STORY_PUIPUI = register("story_puipui", EntityType.Builder.<StoryPuipuiEntity>of(StoryPuipuiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryPuipuiEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryDaburaEntity>> STORY_DABURA = register("story_dabura", EntityType.Builder.<StoryDaburaEntity>of(StoryDaburaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryDaburaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryYakonEntity>> STORY_YAKON = register("story_yakon", EntityType.Builder.<StoryYakonEntity>of(StoryYakonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128)
+			.setUpdateInterval(3).setCustomClientFactory(StoryYakonEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryMajinBuuEntity>> STORY_MAJIN_BUU = register("story_majin_buu", EntityType.Builder.<StoryMajinBuuEntity>of(StoryMajinBuuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryMajinBuuEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StorySuperBuuEntity>> STORY_SUPER_BUU = register("story_super_buu", EntityType.Builder.<StorySuperBuuEntity>of(StorySuperBuuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StorySuperBuuEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryFusedBuuEntity>> STORY_FUSED_BUU = register("story_fused_buu", EntityType.Builder.<StoryFusedBuuEntity>of(StoryFusedBuuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryFusedBuuEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryKidBuuEntity>> STORY_KID_BUU = register("story_kid_buu", EntityType.Builder.<StoryKidBuuEntity>of(StoryKidBuuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryKidBuuEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -321,6 +357,18 @@ public class DbmModEntities {
 			StoryCellJrEntity.init();
 			StoryCell4Entity.init();
 			YardrattanEntity.init();
+			BabidiEntity.init();
+			YardrattanMasterEntity.init();
+			BabidiShipSpawnerEntity.init();
+			StoryKibitoEntity.init();
+			StorySpopovichEntity.init();
+			StoryPuipuiEntity.init();
+			StoryDaburaEntity.init();
+			StoryYakonEntity.init();
+			StoryMajinBuuEntity.init();
+			StorySuperBuuEntity.init();
+			StoryFusedBuuEntity.init();
+			StoryKidBuuEntity.init();
 		});
 	}
 
@@ -393,5 +441,17 @@ public class DbmModEntities {
 		event.put(STORY_CELL_JR.get(), StoryCellJrEntity.createAttributes().build());
 		event.put(STORY_CELL_4.get(), StoryCell4Entity.createAttributes().build());
 		event.put(YARDRATTAN.get(), YardrattanEntity.createAttributes().build());
+		event.put(BABIDI.get(), BabidiEntity.createAttributes().build());
+		event.put(YARDRATTAN_MASTER.get(), YardrattanMasterEntity.createAttributes().build());
+		event.put(BABIDI_SHIP_SPAWNER.get(), BabidiShipSpawnerEntity.createAttributes().build());
+		event.put(STORY_KIBITO.get(), StoryKibitoEntity.createAttributes().build());
+		event.put(STORY_SPOPOVICH.get(), StorySpopovichEntity.createAttributes().build());
+		event.put(STORY_PUIPUI.get(), StoryPuipuiEntity.createAttributes().build());
+		event.put(STORY_DABURA.get(), StoryDaburaEntity.createAttributes().build());
+		event.put(STORY_YAKON.get(), StoryYakonEntity.createAttributes().build());
+		event.put(STORY_MAJIN_BUU.get(), StoryMajinBuuEntity.createAttributes().build());
+		event.put(STORY_SUPER_BUU.get(), StorySuperBuuEntity.createAttributes().build());
+		event.put(STORY_FUSED_BUU.get(), StoryFusedBuuEntity.createAttributes().build());
+		event.put(STORY_KID_BUU.get(), StoryKidBuuEntity.createAttributes().build());
 	}
 }

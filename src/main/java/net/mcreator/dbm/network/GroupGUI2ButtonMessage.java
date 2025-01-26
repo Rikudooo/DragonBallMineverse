@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.GroupGUI2Menu;
+import net.mcreator.dbm.procedures.SetFriendlyFireProcedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStatsGUIProcedure;
@@ -26,6 +27,7 @@ import net.mcreator.dbm.procedures.OpenIcon12Procedure;
 import net.mcreator.dbm.procedures.OpenIcon11Procedure;
 import net.mcreator.dbm.procedures.OpenIcon10Procedure;
 import net.mcreator.dbm.procedures.OpenGroupGUIProcedure;
+import net.mcreator.dbm.procedures.LeaveGroupProcedure;
 import net.mcreator.dbm.procedures.CloseGUIProcedure;
 import net.mcreator.dbm.DbmMod;
 
@@ -135,6 +137,14 @@ public class GroupGUI2ButtonMessage {
 		if (buttonID == 14) {
 
 			OpenIcon14Procedure.execute();
+		}
+		if (buttonID == 15) {
+
+			LeaveGroupProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 16) {
+
+			SetFriendlyFireProcedure.execute(entity);
 		}
 	}
 

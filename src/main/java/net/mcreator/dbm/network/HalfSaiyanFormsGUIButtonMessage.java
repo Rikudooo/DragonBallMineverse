@@ -17,6 +17,7 @@ import net.mcreator.dbm.procedures.SetFormSSJRageProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJ2Procedure;
 import net.mcreator.dbm.procedures.SetFormPathKaiokenProcedure;
+import net.mcreator.dbm.procedures.SetFormPathBabidiMagicProcedure;
 import net.mcreator.dbm.procedures.SetFormMysticProcedure;
 import net.mcreator.dbm.procedures.SetFormBeastProcedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
@@ -170,6 +171,10 @@ public class HalfSaiyanFormsGUIButtonMessage {
 		if (buttonID == 21) {
 
 			SetFormBeastProcedure.execute(entity);
+		}
+		if (buttonID == 22) {
+
+			SetFormPathBabidiMagicProcedure.execute(entity);
 		}
 	}
 

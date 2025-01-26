@@ -18,6 +18,7 @@ import net.mcreator.dbm.procedures.SetFormPathSSJGProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJBProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJ2Procedure;
 import net.mcreator.dbm.procedures.SetFormPathKaiokenProcedure;
+import net.mcreator.dbm.procedures.SetFormPathBabidiMagicProcedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStatsGUIProcedure;
@@ -165,6 +166,10 @@ public class SaiyanFormsGUIButtonMessage {
 		if (buttonID == 20) {
 
 			SetFormPathSSJBProcedure.execute(entity);
+		}
+		if (buttonID == 21) {
+
+			SetFormPathBabidiMagicProcedure.execute(entity);
 		}
 	}
 

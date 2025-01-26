@@ -15,11 +15,8 @@ import net.mcreator.dbm.procedures.TextMember4Procedure;
 import net.mcreator.dbm.procedures.TextMember3Procedure;
 import net.mcreator.dbm.procedures.TextMember2Procedure;
 import net.mcreator.dbm.procedures.TextMember1Procedure;
-import net.mcreator.dbm.procedures.ReturnMember5Procedure;
-import net.mcreator.dbm.procedures.ReturnMember4Procedure;
-import net.mcreator.dbm.procedures.ReturnMember3Procedure;
-import net.mcreator.dbm.procedures.ReturnMember2Procedure;
-import net.mcreator.dbm.procedures.ReturnMember1Procedure;
+import net.mcreator.dbm.procedures.ReturnGroupLeaderProcedure;
+import net.mcreator.dbm.procedures.FriendlyFireProcedure;
 import net.mcreator.dbm.network.GroupGUI2ButtonMessage;
 import net.mcreator.dbm.DbmMod;
 
@@ -47,6 +44,8 @@ public class GroupGUI2Screen extends AbstractContainerScreen<GroupGUI2Menu> {
 	ImageButton imagebutton_icon12;
 	ImageButton imagebutton_icon13;
 	ImageButton imagebutton_icon14;
+	ImageButton imagebutton_leaveicon;
+	ImageButton imagebutton_button;
 
 	public GroupGUI2Screen(GroupGUI2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -91,26 +90,25 @@ public class GroupGUI2Screen extends AbstractContainerScreen<GroupGUI2Menu> {
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.group_gui_2.label_player_stats"), -172, -101, -16777063, false);
-		if (ReturnMember1Procedure.execute(world, entity))
-			guiGraphics.drawString(this.font,
+		guiGraphics.drawString(this.font,
 
-					TextMember1Procedure.execute(world, entity), -154, -76, -1, false);
-		if (ReturnMember2Procedure.execute(world, entity))
-			guiGraphics.drawString(this.font,
+				TextMember1Procedure.execute(entity), -154, -76, -1, false);
+		guiGraphics.drawString(this.font,
 
-					TextMember2Procedure.execute(world, entity), -154, -58, -1, false);
-		if (ReturnMember3Procedure.execute(world, entity))
-			guiGraphics.drawString(this.font,
+				TextMember2Procedure.execute(entity), -154, -58, -1, false);
+		guiGraphics.drawString(this.font,
 
-					TextMember3Procedure.execute(world, entity), -154, -40, -1, false);
-		if (ReturnMember4Procedure.execute(world, entity))
-			guiGraphics.drawString(this.font,
+				TextMember3Procedure.execute(entity), -154, -40, -1, false);
+		guiGraphics.drawString(this.font,
 
-					TextMember4Procedure.execute(world, entity), -154, -22, -1, false);
-		if (ReturnMember5Procedure.execute(world, entity))
-			guiGraphics.drawString(this.font,
+				TextMember4Procedure.execute(entity), -154, -22, -1, false);
+		guiGraphics.drawString(this.font,
 
-					TextMember5Procedure.execute(world, entity), -154, -4, -1, false);
+				TextMember5Procedure.execute(entity), -154, -4, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.group_gui_2.label_story_synced"), -172, 84, -16776961, false);
+		guiGraphics.drawString(this.font,
+
+				FriendlyFireProcedure.execute(entity), 83, -72, -16776961, false);
 	}
 
 	@Override
@@ -236,5 +234,27 @@ public class GroupGUI2Screen extends AbstractContainerScreen<GroupGUI2Menu> {
 		});
 		guistate.put("button:imagebutton_icon14", imagebutton_icon14);
 		this.addRenderableWidget(imagebutton_icon14);
+		imagebutton_leaveicon = new ImageButton(this.leftPos + 123, this.topPos + 78, 48, 16, 0, 0, 16, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_leaveicon.png"), 48, 32, e -> {
+			if (true) {
+				DbmMod.PACKET_HANDLER.sendToServer(new GroupGUI2ButtonMessage(15, x, y, z));
+				GroupGUI2ButtonMessage.handleButtonAction(entity, 15, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_leaveicon", imagebutton_leaveicon);
+		this.addRenderableWidget(imagebutton_leaveicon);
+		imagebutton_button = new ImageButton(this.leftPos + 75, this.topPos + -71, 8, 8, 0, 0, 8, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_button.png"), 8, 16, e -> {
+			if (ReturnGroupLeaderProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new GroupGUI2ButtonMessage(16, x, y, z));
+				GroupGUI2ButtonMessage.handleButtonAction(entity, 16, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnGroupLeaderProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_button", imagebutton_button);
+		this.addRenderableWidget(imagebutton_button);
 	}
 }

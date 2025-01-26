@@ -7,7 +7,6 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.util.ITeleporter;
 
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
@@ -22,9 +21,6 @@ import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
-
-import net.mcreator.dbm.entity.NamekEEntity;
-import net.mcreator.dbm.entity.EarthEEntity;
 
 import javax.annotation.Nullable;
 
@@ -50,10 +46,10 @@ public class PlayerInSpaceProcedure {
 			if (!entity.isNoGravity()) {
 				entity.setNoGravity(true);
 			}
-			if (!world.getEntitiesOfClass(EarthEEntity.class, AABB.ofSize(new Vec3(x, y, z), 95, 95, 95), e -> true).isEmpty()) {
+			if (new Vec3(x, y, z).distanceTo(new Vec3(2000, 160, 2000)) <= 120) {
 				if (world instanceof ServerLevel _currentLevel) {
 					Entity _entity = entity;
-					ServerLevel _nextLevel = _currentLevel.getServer().getLevel(Level.OVERWORLD);
+					ServerLevel _nextLevel = _currentLevel.getServer().getLevel(ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:namek")));
 					if (_entity.canChangeDimensions() && _nextLevel != null && !_nextLevel.dimension().equals(_currentLevel.dimension())) {
 						ITeleporter _iTeleporter = new ITeleporter() {
 							@Override
@@ -103,10 +99,10 @@ public class PlayerInSpaceProcedure {
 					}
 				}
 			}
-			if (!world.getEntitiesOfClass(NamekEEntity.class, AABB.ofSize(new Vec3(x, y, z), 95, 95, 95), e -> true).isEmpty()) {
+			if (new Vec3(x, y, z).distanceTo(new Vec3(100, 160, 100)) <= 120) {
 				if (world instanceof ServerLevel _currentLevel) {
 					Entity _entity = entity;
-					ServerLevel _nextLevel = _currentLevel.getServer().getLevel(ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:namek")));
+					ServerLevel _nextLevel = _currentLevel.getServer().getLevel(Level.OVERWORLD);
 					if (_entity.canChangeDimensions() && _nextLevel != null && !_nextLevel.dimension().equals(_currentLevel.dimension())) {
 						ITeleporter _iTeleporter = new ITeleporter() {
 							@Override

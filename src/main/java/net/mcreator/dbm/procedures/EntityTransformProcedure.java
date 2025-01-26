@@ -18,6 +18,7 @@ import net.mcreator.dbm.entity.StoryZarbonEntity;
 import net.mcreator.dbm.entity.StoryVegetaEntity;
 import net.mcreator.dbm.entity.StoryPiccoloEntity;
 import net.mcreator.dbm.entity.StoryMysteriousYoungManEntity;
+import net.mcreator.dbm.entity.StoryFusedBuuEntity;
 import net.mcreator.dbm.entity.StoryFriezaEntity;
 import net.mcreator.dbm.entity.StoryCell4Entity;
 import net.mcreator.dbm.entity.StoryCell2Entity;
@@ -216,6 +217,45 @@ public class EntityTransformProcedure {
 						_datEntSetS.getEntityData().set(StoryCell4Entity.DATA_Form, "Super Perfect");
 					if (entity instanceof LivingEntity _entity)
 						_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity77 && _livingEntity77.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity77.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+					entity.refreshDimensions();
+				}
+			}
+		}
+		if (entity instanceof StoryFusedBuuEntity) {
+			if ((entity instanceof StoryFusedBuuEntity _datEntS ? _datEntS.getEntityData().get(StoryFusedBuuEntity.DATA_Form) : "").equals("Base")) {
+				if (amount >= (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
+					damage = 0;
+					if (event instanceof LivingHurtEvent event2) {
+						event2.setAmount((float) damage);
+					}
+					if (entity instanceof StoryFusedBuuEntity _datEntSetS)
+						_datEntSetS.getEntityData().set(StoryFusedBuuEntity.DATA_Form, "Gotenks");
+					if (entity instanceof LivingEntity _entity)
+						_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity84 && _livingEntity84.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity84.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+					entity.refreshDimensions();
+				}
+			} else if ((entity instanceof StoryFusedBuuEntity _datEntS ? _datEntS.getEntityData().get(StoryFusedBuuEntity.DATA_Form) : "").equals("Gotenks")) {
+				if (amount >= (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
+					damage = 0;
+					if (event instanceof LivingHurtEvent event2) {
+						event2.setAmount((float) damage);
+					}
+					if (entity instanceof StoryFusedBuuEntity _datEntSetS)
+						_datEntSetS.getEntityData().set(StoryFusedBuuEntity.DATA_Form, "Piccolo");
+					if (entity instanceof LivingEntity _entity)
+						_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity90 && _livingEntity90.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity90.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+					entity.refreshDimensions();
+				}
+			} else if ((entity instanceof StoryFusedBuuEntity _datEntS ? _datEntS.getEntityData().get(StoryFusedBuuEntity.DATA_Form) : "").equals("Piccolo")) {
+				if (amount >= (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
+					damage = 0;
+					if (event instanceof LivingHurtEvent event2) {
+						event2.setAmount((float) damage);
+					}
+					if (entity instanceof StoryFusedBuuEntity _datEntSetS)
+						_datEntSetS.getEntityData().set(StoryFusedBuuEntity.DATA_Form, "Gohan");
+					if (entity instanceof LivingEntity _entity)
+						_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity96 && _livingEntity96.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity96.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
 					entity.refreshDimensions();
 				}
 			}

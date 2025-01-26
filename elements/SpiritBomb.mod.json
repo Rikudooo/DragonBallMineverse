@@ -15,8 +15,8 @@
     "knockback": 5,
     "entityModel": "Default",
     "customModelTexture": "",
-    "modelWidth": 10.0,
-    "modelHeight": 10.0,
+    "modelWidth": 15.0,
+    "modelHeight": 15.0,
     "onFlyingTick": {
       "name": "SpiritBombFlying"
     }

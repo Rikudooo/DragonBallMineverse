@@ -3,6 +3,8 @@ package net.mcreator.dbm.procedures;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 
 import net.mcreator.dbm.network.DbmModVariables;
 
@@ -10,8 +12,10 @@ public class DrinkWaterProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
+		double random = 0;
 		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).WaterDrank == false) {
-			if (Math.random() < 0.1) {
+			random = Mth.nextInt(RandomSource.create(), 1, 10);
+			if (random == 1) {
 				{
 					double _setval = (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Body * 1.1;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

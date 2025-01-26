@@ -35,24 +35,25 @@ public class VegetaAttackPatternProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		entity.refreshDimensions();
 		if ((entity instanceof StoryVegetaEntity _datEntS ? _datEntS.getEntityData().get(StoryVegetaEntity.DATA_Form) : "").equals("Base")) {
-			if ((entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity1.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 2000) {
-				if (entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
-					_livingEntity2.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2000);
+			if ((entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity2.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 2000) {
+				if (entity instanceof LivingEntity _livingEntity3 && _livingEntity3.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+					_livingEntity3.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2000);
 			}
 		} else if ((entity instanceof StoryVegetaEntity _datEntS ? _datEntS.getEntityData().get(StoryVegetaEntity.DATA_Form) : "").equals("Oozaru")) {
-			if ((entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity4.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 3500) {
-				if (entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
-					_livingEntity5.getAttribute(Attributes.MAX_HEALTH).setBaseValue(3500);
+			if ((entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity5.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 3500) {
+				if (entity instanceof LivingEntity _livingEntity6 && _livingEntity6.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+					_livingEntity6.getAttribute(Attributes.MAX_HEALTH).setBaseValue(3500);
 			}
-			if ((entity instanceof LivingEntity _livingEntity6 && _livingEntity6.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity6.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 160) {
-				if (entity instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
-					_livingEntity7.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(160);
+			if ((entity instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity7.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0) != 160) {
+				if (entity instanceof LivingEntity _livingEntity8 && _livingEntity8.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+					_livingEntity8.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(160);
 			}
 		} else if ((entity instanceof StoryVegetaEntity _datEntS ? _datEntS.getEntityData().get(StoryVegetaEntity.DATA_Form) : "").equals("Weakened")) {
-			if ((entity instanceof LivingEntity _livingEntity9 && _livingEntity9.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity9.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 2000) {
-				if (entity instanceof LivingEntity _livingEntity10 && _livingEntity10.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
-					_livingEntity10.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2000);
+			if ((entity instanceof LivingEntity _livingEntity10 && _livingEntity10.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity10.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0) != 2000) {
+				if (entity instanceof LivingEntity _livingEntity11 && _livingEntity11.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+					_livingEntity11.getAttribute(Attributes.MAX_HEALTH).setBaseValue(2000);
 			}
 		}
 		if (entity.getPersistentData().getDouble("attackInterval") < 90) {
@@ -109,8 +110,8 @@ public class VegetaAttackPatternProcedure {
 											return entityToSpawn;
 										}
 									}.getArrow(projectileLevel, entity,
-											(float) ((entity instanceof LivingEntity _livingEntity41 && _livingEntity41.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
-													? _livingEntity41.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
+											(float) ((entity instanceof LivingEntity _livingEntity42 && _livingEntity42.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
+													? _livingEntity42.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
 													: 0) * 3.5),
 											1, (byte) 1);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
@@ -164,8 +165,8 @@ public class VegetaAttackPatternProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entity == entityiterator)) {
 										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("dbm:kikoha")))),
-												(float) ((entity instanceof LivingEntity _livingEntity81 && _livingEntity81.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
-														? _livingEntity81.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
+												(float) ((entity instanceof LivingEntity _livingEntity82 && _livingEntity82.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE)
+														? _livingEntity82.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()
 														: 0) * 3));
 										entityiterator.setDeltaMovement(new Vec3(0, 0, 0));
 									}

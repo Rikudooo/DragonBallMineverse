@@ -531,6 +531,41 @@
           "x": 285,
           "y": 134
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_babidiicon",
+          "image": "babidiicon.png",
+          "hoveredImage": "babidiiconhovered.png",
+          "onClick": {
+            "name": "SetFormPathBabidiMagic"
+          },
+          "displayCondition": {
+            "name": "ReturnBabidiMagicOwned"
+          },
+          "x": 230,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_babidi_magic_text",
+          "text": {
+            "fixedValue": "",
+            "name": "BabidiMagicText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathBabidiMagic"
+          },
+          "x": 285,
+          "y": 98
+        }
       }
     ],
     "onTick": {

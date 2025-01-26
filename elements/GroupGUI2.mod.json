@@ -250,9 +250,6 @@
             "value": -1,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "ReturnMember1"
-          },
           "x": 60,
           "y": 44
         }
@@ -268,9 +265,6 @@
           "color": {
             "value": -1,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "ReturnMember2"
           },
           "x": 60,
           "y": 62
@@ -288,9 +282,6 @@
             "value": -1,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "ReturnMember3"
-          },
           "x": 60,
           "y": 80
         }
@@ -306,9 +297,6 @@
           "color": {
             "value": -1,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "ReturnMember4"
           },
           "x": 60,
           "y": 98
@@ -326,11 +314,68 @@
             "value": -1,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "ReturnMember5"
-          },
           "x": 60,
           "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_story_synced",
+          "text": {
+            "fixedValue": "Story Synced"
+          },
+          "color": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "x": 42,
+          "y": 204
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_leaveicon",
+          "image": "leaveicon.png",
+          "hoveredImage": "leavehovered.png",
+          "onClick": {
+            "name": "LeaveGroup"
+          },
+          "x": 337,
+          "y": 198
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_friendly_fire",
+          "text": {
+            "fixedValue": "",
+            "name": "FriendlyFire"
+          },
+          "color": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "x": 297,
+          "y": 48
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button",
+          "image": "button.png",
+          "hoveredImage": "hoveredbutton.png",
+          "onClick": {
+            "name": "SetFriendlyFire"
+          },
+          "displayCondition": {
+            "name": "ReturnGroupLeader"
+          },
+          "x": 289,
+          "y": 49
         }
       }
     ],

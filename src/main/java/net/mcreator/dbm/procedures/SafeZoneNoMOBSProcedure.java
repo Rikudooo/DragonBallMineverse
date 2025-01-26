@@ -10,6 +10,9 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.dbm.entity.PopoEntity;
 import net.mcreator.dbm.entity.NorthKaioEntity;
@@ -18,6 +21,7 @@ import net.mcreator.dbm.entity.MasterKorinEntity;
 import net.mcreator.dbm.entity.KingEnmaEntity;
 import net.mcreator.dbm.entity.KameSenninEntity;
 import net.mcreator.dbm.entity.DendeEntity;
+import net.mcreator.dbm.entity.BabidiEntity;
 
 import javax.annotation.Nullable;
 
@@ -36,16 +40,20 @@ public class SafeZoneNoMOBSProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof Monster) {
-			if (!world.getEntitiesOfClass(DendeEntity.class, AABB.ofSize(new Vec3(x, y, z), 200, 200, 200), e -> true).isEmpty() || !world.getEntitiesOfClass(KingEnmaEntity.class, AABB.ofSize(new Vec3(x, y, z), 200, 200, 200), e -> true).isEmpty()
-					|| !world.getEntitiesOfClass(PopoEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
-					|| !world.getEntitiesOfClass(MasterPiccoloEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
-					|| !world.getEntitiesOfClass(NorthKaioEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
-					|| !world.getEntitiesOfClass(MasterKorinEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
-					|| !world.getEntitiesOfClass(KameSenninEntity.class, AABB.ofSize(new Vec3(x, y, z), 50, 50, 50), e -> true).isEmpty()) {
-				if (event != null && event.isCancelable()) {
-					event.setCanceled(true);
-				} else if (event != null && event.hasResult()) {
-					event.setResult(Event.Result.DENY);
+			if (!entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("dbm:storymode")))) {
+				if (!world.getEntitiesOfClass(DendeEntity.class, AABB.ofSize(new Vec3(x, y, z), 200, 200, 200), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(KingEnmaEntity.class, AABB.ofSize(new Vec3(x, y, z), 200, 200, 200), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(PopoEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(MasterPiccoloEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(NorthKaioEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(MasterKorinEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(BabidiEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).isEmpty()
+						|| !world.getEntitiesOfClass(KameSenninEntity.class, AABB.ofSize(new Vec3(x, y, z), 50, 50, 50), e -> true).isEmpty()) {
+					if (event != null && event.isCancelable()) {
+						event.setCanceled(true);
+					} else if (event != null && event.hasResult()) {
+						event.setResult(Event.Result.DENY);
+					}
 				}
 			}
 		}

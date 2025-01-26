@@ -15,6 +15,7 @@ import net.mcreator.dbm.world.inventory.ArcosianFormsGUIMenu;
 import net.mcreator.dbm.procedures.UpgradeButtonProcedure;
 import net.mcreator.dbm.procedures.SetFormSuppressionProcedure;
 import net.mcreator.dbm.procedures.SetFormPathKaiokenProcedure;
+import net.mcreator.dbm.procedures.SetFormPathBabidiMagicProcedure;
 import net.mcreator.dbm.procedures.SetFormGoldenProcedure;
 import net.mcreator.dbm.procedures.SetFormGoldenCoolerProcedure;
 import net.mcreator.dbm.procedures.SetFormCoolerProcedure;
@@ -170,6 +171,10 @@ public class ArcosianFormsGUIButtonMessage {
 		if (buttonID == 21) {
 
 			SetFormBlackProcedure.execute(entity);
+		}
+		if (buttonID == 22) {
+
+			SetFormPathBabidiMagicProcedure.execute(entity);
 		}
 	}
 

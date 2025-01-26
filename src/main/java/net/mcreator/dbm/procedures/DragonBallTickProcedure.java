@@ -48,7 +48,7 @@ public class DragonBallTickProcedure {
 				DbmModVariables.MapVariables.get(world).syncData(world);
 			}
 			if (!(DbmModVariables.MapVariables.get(world).DBz2 == entity.getZ())) {
-				DbmModVariables.MapVariables.get(world).DBz3 = entity.getZ();
+				DbmModVariables.MapVariables.get(world).DBz2 = entity.getZ();
 				DbmModVariables.MapVariables.get(world).syncData(world);
 			}
 		} else if (entity instanceof DragonBallE3Entity) {

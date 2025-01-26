@@ -9,9 +9,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
@@ -31,8 +29,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -44,8 +40,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.dbm.procedures.OpenPiccoloGUIProcedure;
-import net.mcreator.dbm.procedures.NamekianOnInitialEntitySpawnProcedure;
+import net.mcreator.dbm.procedures.YardratOnInitialSpawnProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
 import javax.annotation.Nullable;
@@ -155,7 +150,7 @@ public class YardrattanEntity extends Monster {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		NamekianOnInitialEntitySpawnProcedure.execute(this);
+		YardratOnInitialSpawnProcedure.execute(this);
 		return retval;
 	}
 
@@ -170,21 +165,6 @@ public class YardrattanEntity extends Monster {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("DataTexture"))
 			this.entityData.set(DATA_Texture, compound.getInt("DataTexture"));
-	}
-
-	@Override
-	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
-		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
-		super.mobInteract(sourceentity, hand);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level();
-
-		OpenPiccoloGUIProcedure.execute(world, x, y, z, sourceentity);
-		return retval;
 	}
 
 	@Override

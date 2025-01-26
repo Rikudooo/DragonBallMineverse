@@ -62,6 +62,21 @@ public class FinishProcedureProcedure {
 				}
 			}, _bpos);
 		}
+		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Saiyan")) {
+			if (DbmModVariables.MapVariables.get(world).LegendarySpawned == false) {
+				if (Math.random() < 0.1) {
+					{
+						boolean _setval = true;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Legendary = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					DbmModVariables.MapVariables.get(world).LegendarySpawned = true;
+					DbmModVariables.MapVariables.get(world).syncData(world);
+				}
+			}
+		}
 		if (DbmModVariables.MapVariables.get(world).DBSpawned1 == false) {
 			dbx1 = Mth.nextInt(RandomSource.create(), -10000, 10000);
 			dbz1 = Mth.nextInt(RandomSource.create(), -10000, 10000);

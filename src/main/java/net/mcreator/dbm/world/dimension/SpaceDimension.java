@@ -48,7 +48,7 @@ public class SpaceDimension {
 		double y = entity.getY();
 		double z = entity.getZ();
 		if (event.getTo() == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:space"))) {
-			SpacePlayerEntersDimensionProcedure.execute(world);
+			SpacePlayerEntersDimensionProcedure.execute();
 		}
 	}
 }

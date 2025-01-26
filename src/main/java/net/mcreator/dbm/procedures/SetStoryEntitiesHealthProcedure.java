@@ -10,17 +10,26 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.dbm.entity.StoryZarbonEntity;
+import net.mcreator.dbm.entity.StoryYakonEntity;
+import net.mcreator.dbm.entity.StorySuperBuuEntity;
+import net.mcreator.dbm.entity.StorySpopovichEntity;
 import net.mcreator.dbm.entity.StoryRecoomeEntity;
+import net.mcreator.dbm.entity.StoryPuipuiEntity;
 import net.mcreator.dbm.entity.StoryNappaEntity;
 import net.mcreator.dbm.entity.StoryMysteriousYoungManEntity;
 import net.mcreator.dbm.entity.StoryMechaFriezaEntity;
+import net.mcreator.dbm.entity.StoryMajinBuuEntity;
 import net.mcreator.dbm.entity.StoryKingColdEntity;
+import net.mcreator.dbm.entity.StoryKidBuuEntity;
+import net.mcreator.dbm.entity.StoryKibitoEntity;
 import net.mcreator.dbm.entity.StoryJeiceEntity;
 import net.mcreator.dbm.entity.StoryGuldoEntity;
 import net.mcreator.dbm.entity.StoryGinyuEntity;
+import net.mcreator.dbm.entity.StoryFusedBuuEntity;
 import net.mcreator.dbm.entity.StoryFriezaSoldierEntity;
 import net.mcreator.dbm.entity.StoryFriezaEntity;
 import net.mcreator.dbm.entity.StoryDodoriaEntity;
+import net.mcreator.dbm.entity.StoryDaburaEntity;
 import net.mcreator.dbm.entity.StoryCellJrEntity;
 import net.mcreator.dbm.entity.StoryCellEntity;
 import net.mcreator.dbm.entity.StoryCell4Entity;
@@ -179,6 +188,60 @@ public class SetStoryEntitiesHealthProcedure {
 				_livingEntity86.getAttribute(Attributes.MAX_HEALTH).setBaseValue(70000);
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity87 && _livingEntity87.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity87.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryKibitoEntity) {
+			if (entity instanceof LivingEntity _livingEntity91 && _livingEntity91.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity91.getAttribute(Attributes.MAX_HEALTH).setBaseValue(35000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity92 && _livingEntity92.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity92.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StorySpopovichEntity) {
+			if (entity instanceof LivingEntity _livingEntity95 && _livingEntity95.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity95.getAttribute(Attributes.MAX_HEALTH).setBaseValue(38000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity96 && _livingEntity96.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity96.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryPuipuiEntity) {
+			if (entity instanceof LivingEntity _livingEntity99 && _livingEntity99.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity99.getAttribute(Attributes.MAX_HEALTH).setBaseValue(45000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity100 && _livingEntity100.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity100.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryYakonEntity) {
+			if (entity instanceof LivingEntity _livingEntity103 && _livingEntity103.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity103.getAttribute(Attributes.MAX_HEALTH).setBaseValue(50000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity104 && _livingEntity104.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity104.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryDaburaEntity) {
+			if (entity instanceof LivingEntity _livingEntity107 && _livingEntity107.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity107.getAttribute(Attributes.MAX_HEALTH).setBaseValue(71000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity108 && _livingEntity108.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity108.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryMajinBuuEntity) {
+			if (entity instanceof LivingEntity _livingEntity111 && _livingEntity111.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity111.getAttribute(Attributes.MAX_HEALTH).setBaseValue(82000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity112 && _livingEntity112.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity112.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StorySuperBuuEntity) {
+			if (entity instanceof LivingEntity _livingEntity115 && _livingEntity115.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity115.getAttribute(Attributes.MAX_HEALTH).setBaseValue(85000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity116 && _livingEntity116.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity116.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryFusedBuuEntity) {
+			if (entity instanceof LivingEntity _livingEntity119 && _livingEntity119.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity119.getAttribute(Attributes.MAX_HEALTH).setBaseValue(85000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity120 && _livingEntity120.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity120.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryKidBuuEntity) {
+			if (entity instanceof LivingEntity _livingEntity123 && _livingEntity123.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity123.getAttribute(Attributes.MAX_HEALTH).setBaseValue(90000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity124 && _livingEntity124.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity124.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
 		}
 	}
 }

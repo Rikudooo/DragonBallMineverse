@@ -19,10 +19,13 @@ import net.mcreator.dbm.procedures.ReturnRacialForm7Procedure;
 import net.mcreator.dbm.procedures.ReturnKaiokenOwnedProcedure;
 import net.mcreator.dbm.procedures.ReturnFormPathNotSubformProcedure;
 import net.mcreator.dbm.procedures.ReturnFormGKiProcedure;
+import net.mcreator.dbm.procedures.ReturnBabidiMagicOwnedProcedure;
 import net.mcreator.dbm.procedures.RacialFormLevelTextProcedure;
 import net.mcreator.dbm.procedures.KaiokenOwnedTextProcedure;
 import net.mcreator.dbm.procedures.FormPathTextProcedure;
 import net.mcreator.dbm.procedures.FormPathKaiokenProcedure;
+import net.mcreator.dbm.procedures.FormPathBabidiMagicProcedure;
+import net.mcreator.dbm.procedures.BabidiMagicTextProcedure;
 import net.mcreator.dbm.network.ArcosianFormsGUIButtonMessage;
 import net.mcreator.dbm.DbmMod;
 
@@ -57,6 +60,7 @@ public class ArcosianFormsGUIScreen extends AbstractContainerScreen<ArcosianForm
 	ImageButton imagebutton_goldenicon;
 	ImageButton imagebutton_goldencoolericon;
 	ImageButton imagebutton_blackicon;
+	ImageButton imagebutton_babidiicon;
 
 	public ArcosianFormsGUIScreen(ArcosianFormsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -135,6 +139,10 @@ public class ArcosianFormsGUIScreen extends AbstractContainerScreen<ArcosianForm
 		guiGraphics.drawString(this.font,
 
 				TextRacialTPCostProcedure.execute(entity), 71, 14, -1, false);
+		if (FormPathBabidiMagicProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					BabidiMagicTextProcedure.execute(entity), 71, -22, -1, false);
 	}
 
 	@Override
@@ -346,5 +354,19 @@ public class ArcosianFormsGUIScreen extends AbstractContainerScreen<ArcosianForm
 		};
 		guistate.put("button:imagebutton_blackicon", imagebutton_blackicon);
 		this.addRenderableWidget(imagebutton_blackicon);
+		imagebutton_babidiicon = new ImageButton(this.leftPos + 16, this.topPos + -58, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_babidiicon.png"), 18, 36, e -> {
+			if (ReturnBabidiMagicOwnedProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new ArcosianFormsGUIButtonMessage(22, x, y, z));
+				ArcosianFormsGUIButtonMessage.handleButtonAction(entity, 22, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnBabidiMagicOwnedProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_babidiicon", imagebutton_babidiicon);
+		this.addRenderableWidget(imagebutton_babidiicon);
 	}
 }

@@ -222,6 +222,8 @@ public class DbmModTabs {
 				tabData.accept(DbmModItems.OLD_SCHOOL_TURTLE_GI_LEGGINGS.get());
 				tabData.accept(DbmModItems.PURPLE_GI_CHESTPLATE.get());
 				tabData.accept(DbmModItems.PURPLE_GI_LEGGINGS.get());
+				tabData.accept(DbmModItems.ROYAL_BLUE_FIT_CHESTPLATE.get());
+				tabData.accept(DbmModItems.ROYAL_BLUE_FIT_LEGGINGS.get());
 			})
 
 					.build());

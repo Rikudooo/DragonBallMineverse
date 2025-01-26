@@ -218,13 +218,6 @@ public class SuperSaiyanProcedure {
 				});
 			}
 			{
-				double _setval = 5.5;
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.FormBoost = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
 				double _setval = 3;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.KiDrain = _setval;
@@ -238,18 +231,28 @@ public class SuperSaiyanProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			if ((entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
+				{
+					double _setval = 8.5;
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.FormBoost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if (!(entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
+				{
+					double _setval = 5.5;
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.FormBoost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Legendary Super Saiyan")) {
 			{
 				String _setval = "Super Saiyan";
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormLike = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = 5.5;
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -266,6 +269,23 @@ public class SuperSaiyanProcedure {
 					capability.Scale = _setval;
 					capability.syncPlayerVariables(entity);
 				});
+			}
+			if ((entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
+				{
+					double _setval = 8.65;
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.FormBoost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if (!(entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
+				{
+					double _setval = 5.65;
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.FormBoost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}

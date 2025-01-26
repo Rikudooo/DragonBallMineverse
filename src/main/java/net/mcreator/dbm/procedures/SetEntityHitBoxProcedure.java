@@ -43,7 +43,11 @@ public class SetEntityHitBoxProcedure {
 			if ((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Second")) {
 				_sizeEvt.setNewSize(new EntityDimensions((float) (0.6 * 2), (float) (1.8 * 2), false));
 				_sizeEvt.setNewEyeHeight((float) ((1.8 * 2) / 1.125));
-			} else if (!((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Second"))) {
+			} else if ((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Full Power")) {
+				_sizeEvt.setNewSize(new EntityDimensions((float) (0.6 * 1.5), (float) (1.8 * 1.5), false));
+				_sizeEvt.setNewEyeHeight((float) ((1.8 * 1.5) / 1.125));
+			} else if (!((entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Second")
+					|| (entity instanceof StoryFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryFriezaEntity.DATA_Form) : "").equals("Full Power"))) {
 				_sizeEvt.setNewSize(new EntityDimensions((float) (0.6 * 1), (float) (1.8 * 1), false));
 				_sizeEvt.setNewEyeHeight((float) ((1.8 * 1) / 1.125));
 			}

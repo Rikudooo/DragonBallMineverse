@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "minecraft:air",
+    "dbm:space_rock",
     "dbm:yardrat_rock",
     "dbm:hyperbolic_time_chamber_floor",
     "dbm:namek_grass_block",

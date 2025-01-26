@@ -245,6 +245,15 @@ public class DbmModVariables {
 			clone.EarthToHTCTimeLimit = original.EarthToHTCTimeLimit;
 			clone.InstantTransmissionSkill = original.InstantTransmissionSkill;
 			clone.InstantTransmission = original.InstantTransmission;
+			clone.BabidiMagic = original.BabidiMagic;
+			clone.KOed = original.KOed;
+			clone.KOTimer = original.KOTimer;
+			clone.MemberName1 = original.MemberName1;
+			clone.MemberName2 = original.MemberName2;
+			clone.MemberName3 = original.MemberName3;
+			clone.MemberName4 = original.MemberName4;
+			clone.MemberName5 = original.MemberName5;
+			clone.FriendlyFire = original.FriendlyFire;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -391,6 +400,10 @@ public class DbmModVariables {
 		public boolean NDBSpawned6 = false;
 		public boolean NDBSpawned7 = false;
 		public boolean HTCSpawned = false;
+		public String BabidiShipCoords = "Babidi's Ship is unknown";
+		public boolean BabidiShip = false;
+		public boolean BabidiShipSpawner = false;
+		public boolean LegendarySpawned = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -479,6 +492,10 @@ public class DbmModVariables {
 			NDBSpawned6 = nbt.getBoolean("NDBSpawned6");
 			NDBSpawned7 = nbt.getBoolean("NDBSpawned7");
 			HTCSpawned = nbt.getBoolean("HTCSpawned");
+			BabidiShipCoords = nbt.getString("BabidiShipCoords");
+			BabidiShip = nbt.getBoolean("BabidiShip");
+			BabidiShipSpawner = nbt.getBoolean("BabidiShipSpawner");
+			LegendarySpawned = nbt.getBoolean("LegendarySpawned");
 		}
 
 		@Override
@@ -560,6 +577,10 @@ public class DbmModVariables {
 			nbt.putBoolean("NDBSpawned6", NDBSpawned6);
 			nbt.putBoolean("NDBSpawned7", NDBSpawned7);
 			nbt.putBoolean("HTCSpawned", HTCSpawned);
+			nbt.putString("BabidiShipCoords", BabidiShipCoords);
+			nbt.putBoolean("BabidiShip", BabidiShip);
+			nbt.putBoolean("BabidiShipSpawner", BabidiShipSpawner);
+			nbt.putBoolean("LegendarySpawned", LegendarySpawned);
 			return nbt;
 		}
 
@@ -809,6 +830,15 @@ public class DbmModVariables {
 		public double EarthToHTCTimeLimit = 0;
 		public boolean InstantTransmissionSkill = false;
 		public boolean InstantTransmission = false;
+		public boolean BabidiMagic = false;
+		public boolean KOed = false;
+		public double KOTimer = 0;
+		public String MemberName1 = "None";
+		public String MemberName2 = "None";
+		public String MemberName3 = "None";
+		public String MemberName4 = "None";
+		public String MemberName5 = "None";
+		public String FriendlyFire = "Off";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -974,6 +1004,15 @@ public class DbmModVariables {
 			nbt.putDouble("EarthToHTCTimeLimit", EarthToHTCTimeLimit);
 			nbt.putBoolean("InstantTransmissionSkill", InstantTransmissionSkill);
 			nbt.putBoolean("InstantTransmission", InstantTransmission);
+			nbt.putBoolean("BabidiMagic", BabidiMagic);
+			nbt.putBoolean("KOed", KOed);
+			nbt.putDouble("KOTimer", KOTimer);
+			nbt.putString("MemberName1", MemberName1);
+			nbt.putString("MemberName2", MemberName2);
+			nbt.putString("MemberName3", MemberName3);
+			nbt.putString("MemberName4", MemberName4);
+			nbt.putString("MemberName5", MemberName5);
+			nbt.putString("FriendlyFire", FriendlyFire);
 			return nbt;
 		}
 
@@ -1142,6 +1181,15 @@ public class DbmModVariables {
 			EarthToHTCTimeLimit = nbt.getDouble("EarthToHTCTimeLimit");
 			InstantTransmissionSkill = nbt.getBoolean("InstantTransmissionSkill");
 			InstantTransmission = nbt.getBoolean("InstantTransmission");
+			BabidiMagic = nbt.getBoolean("BabidiMagic");
+			KOed = nbt.getBoolean("KOed");
+			KOTimer = nbt.getDouble("KOTimer");
+			MemberName1 = nbt.getString("MemberName1");
+			MemberName2 = nbt.getString("MemberName2");
+			MemberName3 = nbt.getString("MemberName3");
+			MemberName4 = nbt.getString("MemberName4");
+			MemberName5 = nbt.getString("MemberName5");
+			FriendlyFire = nbt.getString("FriendlyFire");
 		}
 	}
 
@@ -1332,6 +1380,15 @@ public class DbmModVariables {
 					variables.EarthToHTCTimeLimit = message.data.EarthToHTCTimeLimit;
 					variables.InstantTransmissionSkill = message.data.InstantTransmissionSkill;
 					variables.InstantTransmission = message.data.InstantTransmission;
+					variables.BabidiMagic = message.data.BabidiMagic;
+					variables.KOed = message.data.KOed;
+					variables.KOTimer = message.data.KOTimer;
+					variables.MemberName1 = message.data.MemberName1;
+					variables.MemberName2 = message.data.MemberName2;
+					variables.MemberName3 = message.data.MemberName3;
+					variables.MemberName4 = message.data.MemberName4;
+					variables.MemberName5 = message.data.MemberName5;
+					variables.FriendlyFire = message.data.FriendlyFire;
 				}
 			});
 			context.setPacketHandled(true);

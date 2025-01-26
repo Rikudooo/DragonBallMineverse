@@ -11,13 +11,37 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.dbm.client.gui.YardrattanGUIScreen;
+import net.mcreator.dbm.client.gui.YardratGUI2Screen;
 import net.mcreator.dbm.client.gui.WelcomeGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUI9Screen;
 import net.mcreator.dbm.client.gui.StoryGUI8Screen;
 import net.mcreator.dbm.client.gui.StoryGUI7Screen;
+import net.mcreator.dbm.client.gui.StoryGUI73Screen;
+import net.mcreator.dbm.client.gui.StoryGUI72Screen;
+import net.mcreator.dbm.client.gui.StoryGUI71Screen;
+import net.mcreator.dbm.client.gui.StoryGUI70Screen;
 import net.mcreator.dbm.client.gui.StoryGUI6Screen;
+import net.mcreator.dbm.client.gui.StoryGUI69Screen;
+import net.mcreator.dbm.client.gui.StoryGUI68Screen;
+import net.mcreator.dbm.client.gui.StoryGUI67Screen;
+import net.mcreator.dbm.client.gui.StoryGUI66Screen;
+import net.mcreator.dbm.client.gui.StoryGUI65Screen;
+import net.mcreator.dbm.client.gui.StoryGUI64Screen;
+import net.mcreator.dbm.client.gui.StoryGUI63Screen;
+import net.mcreator.dbm.client.gui.StoryGUI62Screen;
+import net.mcreator.dbm.client.gui.StoryGUI61Screen;
+import net.mcreator.dbm.client.gui.StoryGUI60Screen;
 import net.mcreator.dbm.client.gui.StoryGUI5Screen;
+import net.mcreator.dbm.client.gui.StoryGUI59Screen;
+import net.mcreator.dbm.client.gui.StoryGUI58Screen;
+import net.mcreator.dbm.client.gui.StoryGUI57Screen;
+import net.mcreator.dbm.client.gui.StoryGUI56Screen;
+import net.mcreator.dbm.client.gui.StoryGUI55Screen;
+import net.mcreator.dbm.client.gui.StoryGUI54Screen;
+import net.mcreator.dbm.client.gui.StoryGUI53Screen;
+import net.mcreator.dbm.client.gui.StoryGUI52Screen;
 import net.mcreator.dbm.client.gui.StoryGUI51Screen;
 import net.mcreator.dbm.client.gui.StoryGUI50Screen;
 import net.mcreator.dbm.client.gui.StoryGUI4Screen;
@@ -86,6 +110,7 @@ import net.mcreator.dbm.client.gui.EnmaGUIScreen;
 import net.mcreator.dbm.client.gui.DendeGUIScreen;
 import net.mcreator.dbm.client.gui.CharacterCreationGUIScreen;
 import net.mcreator.dbm.client.gui.CharacterCreationGUI2Screen;
+import net.mcreator.dbm.client.gui.BabidiGUIScreen;
 import net.mcreator.dbm.client.gui.ArcosianFormsGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -169,6 +194,31 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.STORY_GUI_49.get(), StoryGUI49Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI_50.get(), StoryGUI50Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI_51.get(), StoryGUI51Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_52.get(), StoryGUI52Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_53.get(), StoryGUI53Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_54.get(), StoryGUI54Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_55.get(), StoryGUI55Screen::new);
+			MenuScreens.register(DbmModMenus.YARDRATTAN_GUI.get(), YardrattanGUIScreen::new);
+			MenuScreens.register(DbmModMenus.YARDRAT_GUI_2.get(), YardratGUI2Screen::new);
+			MenuScreens.register(DbmModMenus.BABIDI_GUI.get(), BabidiGUIScreen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_56.get(), StoryGUI56Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_57.get(), StoryGUI57Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_58.get(), StoryGUI58Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_59.get(), StoryGUI59Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_60.get(), StoryGUI60Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_61.get(), StoryGUI61Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_62.get(), StoryGUI62Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_63.get(), StoryGUI63Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_64.get(), StoryGUI64Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_65.get(), StoryGUI65Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_66.get(), StoryGUI66Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_67.get(), StoryGUI67Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_68.get(), StoryGUI68Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_69.get(), StoryGUI69Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_70.get(), StoryGUI70Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_71.get(), StoryGUI71Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_72.get(), StoryGUI72Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_73.get(), StoryGUI73Screen::new);
 		});
 	}
 }

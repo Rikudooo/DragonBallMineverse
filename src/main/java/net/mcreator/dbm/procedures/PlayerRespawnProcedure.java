@@ -47,6 +47,8 @@ public class PlayerRespawnProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxHealth);
 		});
 		{
 			String _setval = "Base";

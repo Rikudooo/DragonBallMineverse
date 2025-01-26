@@ -216,6 +216,10 @@ public class StoryGUI51Screen extends AbstractContainerScreen<StoryGUI51Menu> {
 		guistate.put("button:imagebutton_icon14", imagebutton_icon14);
 		this.addRenderableWidget(imagebutton_icon14);
 		imagebutton_next2 = new ImageButton(this.leftPos + 135, this.topPos + 77, 36, 16, 0, 0, 16, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_next2.png"), 36, 32, e -> {
+			if (ReturnOnEarthProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new StoryGUI51ButtonMessage(15, x, y, z));
+				StoryGUI51ButtonMessage.handleButtonAction(entity, 15, x, y, z);
+			}
 		}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
