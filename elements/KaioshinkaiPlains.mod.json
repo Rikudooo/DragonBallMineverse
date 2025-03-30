@@ -2,23 +2,15 @@
   "_fv": 69,
   "_type": "biome",
   "definition": {
-    "name": "Namek Plains",
+    "name": "Kaioshinkai Plains",
     "groundBlock": {
-      "value": "CUSTOM:NamekGrassBlock"
+      "value": "CUSTOM:KaioshinkaiGrassBlock"
     },
     "undergroundBlock": {
-      "value": "CUSTOM:NamekDirt"
+      "value": "CUSTOM:KaioshinkaiDirt"
     },
     "underwaterBlock": {
-      "value": "CUSTOM:NamekDirt"
-    },
-    "foliageColor": {
-      "value": -11426101,
-      "falpha": 0.0
-    },
-    "waterColor": {
-      "value": -16737997,
-      "falpha": 0.0
+      "value": "CUSTOM:KaioshinkaiDirt"
     },
     "ambientSound": {
       "value": ""

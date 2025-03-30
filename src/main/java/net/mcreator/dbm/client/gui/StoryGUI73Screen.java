@@ -87,6 +87,7 @@ public class StoryGUI73Screen extends AbstractContainerScreen<StoryGUI73Menu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui_73.label_be_on_planet_earth"), -154, 5, -256, false);
 		if (ReturnOnEarthProcedure.execute(entity))
 			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui_73.label_be_on_planet_earth_done"), -154, 5, -256, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui_73.label_only_time_will_tell"), -163, -67, -16777216, false);
 	}
 
 	@Override
@@ -213,6 +214,10 @@ public class StoryGUI73Screen extends AbstractContainerScreen<StoryGUI73Menu> {
 		guistate.put("button:imagebutton_icon14", imagebutton_icon14);
 		this.addRenderableWidget(imagebutton_icon14);
 		imagebutton_next2 = new ImageButton(this.leftPos + 135, this.topPos + 77, 36, 16, 0, 0, 16, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_next2.png"), 36, 32, e -> {
+			if (ReturnOnEarthProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new StoryGUI73ButtonMessage(15, x, y, z));
+				StoryGUI73ButtonMessage.handleButtonAction(entity, 15, x, y, z);
+			}
 		}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {

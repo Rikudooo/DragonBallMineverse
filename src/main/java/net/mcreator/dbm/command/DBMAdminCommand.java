@@ -18,12 +18,13 @@ import net.minecraft.commands.Commands;
 import net.mcreator.dbm.procedures.SetTPCMDProcedure;
 import net.mcreator.dbm.procedures.SetStrengthProcedure;
 import net.mcreator.dbm.procedures.SetSpiritProcedure;
-import net.mcreator.dbm.procedures.SetFormCommandProcedure;
+import net.mcreator.dbm.procedures.SetLegendaryProcedure;
 import net.mcreator.dbm.procedures.SetFocusProcedure;
 import net.mcreator.dbm.procedures.SetBodyProcedure;
 import net.mcreator.dbm.procedures.SetAgilityProcedure;
 import net.mcreator.dbm.procedures.SetAgeCMDProcedure;
 import net.mcreator.dbm.procedures.SendPlayerDBTextProcedure;
+import net.mcreator.dbm.procedures.RemoveLegendaryProcedure;
 import net.mcreator.dbm.procedures.PlaceStructureProcedure;
 import net.mcreator.dbm.procedures.LocateStructureProcedure;
 import net.mcreator.dbm.procedures.GiveTPCMDProcedure;
@@ -195,6 +196,34 @@ public class DBMAdminCommand {
 
 					SetFocusProcedure.execute(arguments);
 					return 0;
+				}))))).then(Commands.literal("effect").then(Commands.argument("Player", EntityArgument.player()).then(Commands.literal("set").then(Commands.literal("legendary").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					SetLegendaryProcedure.execute(world, arguments);
+					return 0;
+				}))).then(Commands.literal("remove").then(Commands.literal("legendary").executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					RemoveLegendaryProcedure.execute(world, arguments);
+					return 0;
 				})))))).then(Commands.literal("tp").then(Commands.argument("Player", EntityArgument.player()).then(Commands.literal("add").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
@@ -237,21 +266,7 @@ public class DBMAdminCommand {
 
 					SetAgeCMDProcedure.execute(arguments);
 					return 0;
-				})))))).then(Commands.literal("form").then(Commands.literal("set").then(Commands.argument("Player", EntityArgument.player()).then(Commands.argument("Form", StringArgumentType.string()).executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
-
-					SetFormCommandProcedure.execute(arguments);
-					return 0;
-				}))))).then(Commands.literal("world").then(Commands.literal("dragonballs").executes(arguments -> {
+				})))))).then(Commands.literal("world").then(Commands.literal("dragonballs").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

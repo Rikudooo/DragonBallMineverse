@@ -243,7 +243,7 @@
         "data": {
           "name": "label_hey_looking_for_an_adventure_w",
           "text": {
-            "fixedValue": "Congratulations! You finished the Z Saga!"
+            "fixedValue": "Congratulations! You finished the Z Saga! Who knows what's next?"
           },
           "color": {
             "value": -16777216,
@@ -259,6 +259,9 @@
           "name": "imagebutton_next2",
           "image": "next2.png",
           "hoveredImage": "nexthovered2.png",
+          "onClick": {
+            "name": "SetStory74"
+          },
           "displayCondition": {
             "name": "ReturnOnEarth"
           },
@@ -297,6 +300,21 @@
           },
           "x": 60,
           "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_only_time_will_tell",
+          "text": {
+            "fixedValue": "Only time will tell!"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 53
         }
       }
     ],

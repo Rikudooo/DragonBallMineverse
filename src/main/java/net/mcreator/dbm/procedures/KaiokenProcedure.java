@@ -32,7 +32,7 @@ public class KaiokenProcedure {
 		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SubForm).equals("Kaioken")) {
 			if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 1) {
 				{
-					double _setval = 1.2;
+					double _setval = 1.5;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SubFormBoost = _setval;
 						capability.syncPlayerVariables(entity);
@@ -47,7 +47,7 @@ public class KaiokenProcedure {
 				}
 			} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 2) {
 				{
-					double _setval = 1.35;
+					double _setval = 1.75;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SubFormBoost = _setval;
 						capability.syncPlayerVariables(entity);
@@ -62,7 +62,7 @@ public class KaiokenProcedure {
 				}
 			} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 3) {
 				{
-					double _setval = 1.5;
+					double _setval = 2;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SubFormBoost = _setval;
 						capability.syncPlayerVariables(entity);
@@ -77,7 +77,7 @@ public class KaiokenProcedure {
 				}
 			} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 4) {
 				{
-					double _setval = 2.25;
+					double _setval = 3;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SubFormBoost = _setval;
 						capability.syncPlayerVariables(entity);

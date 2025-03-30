@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.SaiyanFormsGUIMenu;
 import net.mcreator.dbm.procedures.UpgradeButtonProcedure;
+import net.mcreator.dbm.procedures.SetFormPathZenkaiProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJGProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJBProcedure;
@@ -170,6 +171,10 @@ public class SaiyanFormsGUIButtonMessage {
 		if (buttonID == 21) {
 
 			SetFormPathBabidiMagicProcedure.execute(entity);
+		}
+		if (buttonID == 22) {
+
+			SetFormPathZenkaiProcedure.execute(entity);
 		}
 	}
 

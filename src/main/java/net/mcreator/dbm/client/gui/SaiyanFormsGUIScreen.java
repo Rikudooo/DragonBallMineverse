@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dbm.world.inventory.SaiyanFormsGUIMenu;
+import net.mcreator.dbm.procedures.ZenkaiLevelTextProcedure;
 import net.mcreator.dbm.procedures.TextRacialTPCostProcedure;
 import net.mcreator.dbm.procedures.TextRacialMaxLevelProcedure;
 import net.mcreator.dbm.procedures.ReturnRacialFormOver4Procedure;
@@ -20,6 +21,7 @@ import net.mcreator.dbm.procedures.ReturnForm7GKiProcedure;
 import net.mcreator.dbm.procedures.ReturnBabidiMagicOwnedProcedure;
 import net.mcreator.dbm.procedures.RacialFormLevelTextProcedure;
 import net.mcreator.dbm.procedures.KaiokenOwnedTextProcedure;
+import net.mcreator.dbm.procedures.FormPathZenkaiProcedure;
 import net.mcreator.dbm.procedures.FormPathTextProcedure;
 import net.mcreator.dbm.procedures.FormPathKaiokenProcedure;
 import net.mcreator.dbm.procedures.FormPathBabidiMagicProcedure;
@@ -58,6 +60,7 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 	ImageButton imagebutton_ssjgicon;
 	ImageButton imagebutton_ssjbicon;
 	ImageButton imagebutton_babidiicon;
+	ImageButton imagebutton_zenkaiboosticon;
 
 	public SaiyanFormsGUIScreen(SaiyanFormsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -89,6 +92,8 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 		if (ReturnForm7GKiProcedure.execute(entity))
 			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + 23 && mouseY < topPos + 41)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.saiyan_forms_gui.tooltip_super_saiyan_blue_ascend_to_a_l"), mouseX, mouseY);
+		if (mouseX > leftPos + -119 && mouseX < leftPos + -101 && mouseY > topPos + -85 && mouseY < topPos + -67)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.saiyan_forms_gui.tooltip_zenkai_boost_a_racial_ability_e"), mouseX, mouseY);
 	}
 
 	@Override
@@ -139,6 +144,10 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 			guiGraphics.drawString(this.font,
 
 					BabidiMagicTextProcedure.execute(entity), 71, -22, -1, false);
+		if (FormPathZenkaiProcedure.execute(entity))
+			guiGraphics.drawString(this.font,
+
+					ZenkaiLevelTextProcedure.execute(entity), 71, -22, -1, false);
 	}
 
 	@Override
@@ -350,5 +359,13 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 		};
 		guistate.put("button:imagebutton_babidiicon", imagebutton_babidiicon);
 		this.addRenderableWidget(imagebutton_babidiicon);
+		imagebutton_zenkaiboosticon = new ImageButton(this.leftPos + -119, this.topPos + -85, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_zenkaiboosticon.png"), 18, 36, e -> {
+			if (true) {
+				DbmMod.PACKET_HANDLER.sendToServer(new SaiyanFormsGUIButtonMessage(22, x, y, z));
+				SaiyanFormsGUIButtonMessage.handleButtonAction(entity, 22, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_zenkaiboosticon", imagebutton_zenkaiboosticon);
+		this.addRenderableWidget(imagebutton_zenkaiboosticon);
 	}
 }

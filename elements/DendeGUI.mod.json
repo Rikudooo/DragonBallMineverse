@@ -70,6 +70,58 @@
           "x": 393,
           "y": 145
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_grow_tail",
+          "text": {
+            "fixedValue": "Grow Tail:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "DontHaveTail"
+          },
+          "x": 321,
+          "y": 215
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cut_tail",
+          "text": {
+            "fixedValue": " Cut Tail:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "HasTail"
+          },
+          "x": 321,
+          "y": 215
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button",
+          "image": "button.png",
+          "hoveredImage": "hoveredbutton.png",
+          "onClick": {
+            "name": "GrowOrCutTail"
+          },
+          "displayCondition": {
+            "name": "ReturnSaiyanOrHalfSaiyan"
+          },
+          "x": 375,
+          "y": 215
+        }
       }
     ],
     "gridSettings": {

@@ -87,5 +87,74 @@ public class SetSkinProcedure {
 				});
 			}
 		}
+		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BodyType).equals("Arcosian")) {
+			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormLike).equals("Base")) {
+				{
+					String _setval = "dbm:textures/entities/arcosian_1_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1)
+							+ ".png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Skin1ID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "dbm:textures/entities/arcosian_2_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin2)
+							+ ".png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Skin2ID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "dbm:textures/entities/arcosian_3_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3)
+							+ ".png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Skin3ID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "dbm:textures/entities/arcosian_4_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin4)
+							+ ".png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Skin4ID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormLike).equals("Final")) {
+				{
+					String _setval = "dbm:textures/entities/arcosian_1_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1)
+							+ ".png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Skin1ID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "dbm:textures/entities/arcosian_2_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin2)
+							+ ".png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Skin2ID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "dbm:textures/entities/arcosian_final_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1)
+							+ ".png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Skin3ID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "dbm:textures/entities/arcosian_4_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin4)
+							+ ".png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Skin4ID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		}
 	}
 }

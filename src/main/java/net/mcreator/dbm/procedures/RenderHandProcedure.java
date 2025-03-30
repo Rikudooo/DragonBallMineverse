@@ -120,6 +120,52 @@ public class RenderHandProcedure {
 					newModel.rightArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
 				}
 			}
+			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Oozaru")) {
+				{
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse("dbm:textures/entities/oozaru.png") != null) {
+						_texture = new ResourceLocation("dbm:textures/entities/oozaru.png");
+					}
+					PlayerModel<AbstractClientPlayer> newModel = new PlayerModel<>(context.bakeLayer(false ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), false);
+					newModel.leftArm.copyFrom(playerModel.leftArm);
+					newModel.rightArm.copyFrom(playerModel.rightArm);
+					if (arm == HumanoidArm.LEFT) {
+						newModel.leftArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
+					} else {
+						newModel.rightArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
+					}
+				}
+			} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Golden Oozaru")) {
+				{
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse("dbm:textures/entities/goldenoozaru.png") != null) {
+						_texture = new ResourceLocation("dbm:textures/entities/goldenoozaru.png");
+					}
+					PlayerModel<AbstractClientPlayer> newModel = new PlayerModel<>(context.bakeLayer(false ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), false);
+					newModel.leftArm.copyFrom(playerModel.leftArm);
+					newModel.rightArm.copyFrom(playerModel.rightArm);
+					if (arm == HumanoidArm.LEFT) {
+						newModel.leftArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
+					} else {
+						newModel.rightArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
+					}
+				}
+			} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan 4")) {
+				{
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse("dbm:textures/entities/skin_ssj4.png") != null) {
+						_texture = new ResourceLocation("dbm:textures/entities/skin_ssj4.png");
+					}
+					PlayerModel<AbstractClientPlayer> newModel = new PlayerModel<>(context.bakeLayer(false ? ModelLayers.PLAYER_SLIM : ModelLayers.PLAYER), false);
+					newModel.leftArm.copyFrom(playerModel.leftArm);
+					newModel.rightArm.copyFrom(playerModel.rightArm);
+					if (arm == HumanoidArm.LEFT) {
+						newModel.leftArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
+					} else {
+						newModel.rightArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
+					}
+				}
+			}
 			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Android")) {
 				{
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");

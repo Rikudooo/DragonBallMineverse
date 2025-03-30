@@ -8,6 +8,6 @@ public class ReturnFusedBuuDefeatedProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).StoryModeProgress).contains("kibito");
+		return ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).StoryModeProgress).contains("fusedbuu");
 	}
 }

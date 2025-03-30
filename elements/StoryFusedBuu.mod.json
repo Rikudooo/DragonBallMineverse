@@ -216,10 +216,10 @@
       }
     ],
     "whenMobDies": {
-      "name": "SpawnFusedBuu"
+      "name": "FusedBuuDefeated"
     },
     "onMobTickUpdate": {
-      "name": "SpawnFusedBuu"
+      "name": "BasicAttackPattern"
     },
     "hasAI": true,
     "aiBase": "(none)",

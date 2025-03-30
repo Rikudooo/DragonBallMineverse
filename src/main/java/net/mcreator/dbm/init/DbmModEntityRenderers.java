@@ -46,6 +46,8 @@ import net.mcreator.dbm.client.renderer.StoryCell4Renderer;
 import net.mcreator.dbm.client.renderer.StoryCell3Renderer;
 import net.mcreator.dbm.client.renderer.StoryCell2Renderer;
 import net.mcreator.dbm.client.renderer.StoryBurterRenderer;
+import net.mcreator.dbm.client.renderer.StoryBeerusRenderer;
+import net.mcreator.dbm.client.renderer.StoryBeerus2Renderer;
 import net.mcreator.dbm.client.renderer.StoryAndroid20Renderer;
 import net.mcreator.dbm.client.renderer.StoryAndroid19Renderer;
 import net.mcreator.dbm.client.renderer.StoryAndroid18Renderer;
@@ -179,5 +181,9 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.STORY_SUPER_BUU.get(), StorySuperBuuRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_FUSED_BUU.get(), StoryFusedBuuRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_KID_BUU.get(), StoryKidBuuRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_BEERUS.get(), StoryBeerusRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.SPHERE_OF_DESTRUCTION.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.BEERUS_BALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_BEERUS_2.get(), StoryBeerus2Renderer::new);
 	}
 }

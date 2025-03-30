@@ -18,7 +18,9 @@ import net.mcreator.dbm.item.TurtleGiKingKaiItem;
 import net.mcreator.dbm.item.TurtleGiItem;
 import net.mcreator.dbm.item.SpacePodItem;
 import net.mcreator.dbm.item.SenzuBeanItem;
+import net.mcreator.dbm.item.Scouter1Item;
 import net.mcreator.dbm.item.RoyalBlueFitItem;
+import net.mcreator.dbm.item.RikudoGiItem;
 import net.mcreator.dbm.item.RawDinosaurItem;
 import net.mcreator.dbm.item.PurpleGiItem;
 import net.mcreator.dbm.item.PunchingBagItemItem;
@@ -34,6 +36,7 @@ import net.mcreator.dbm.item.NamekDragonBall1Item;
 import net.mcreator.dbm.item.MakankosappoItemItem;
 import net.mcreator.dbm.item.LegendaryItemItem;
 import net.mcreator.dbm.item.KamehamehaItemItem;
+import net.mcreator.dbm.item.FutureFitItem;
 import net.mcreator.dbm.item.DragonRadarItem;
 import net.mcreator.dbm.item.DragonBall7Item;
 import net.mcreator.dbm.item.DragonBall6Item;
@@ -43,6 +46,8 @@ import net.mcreator.dbm.item.DragonBall3Item;
 import net.mcreator.dbm.item.DragonBall2Item;
 import net.mcreator.dbm.item.DragonBall1Item;
 import net.mcreator.dbm.item.CookedDinosaurItem;
+import net.mcreator.dbm.item.ChargingItem;
+import net.mcreator.dbm.item.BlackWhiteFitItem;
 import net.mcreator.dbm.item.BattleArmorItem;
 import net.mcreator.dbm.DbmMod;
 
@@ -267,6 +272,18 @@ public class DbmModItems {
 	public static final RegistryObject<Item> ROYAL_BLUE_FIT_CHESTPLATE = REGISTRY.register("royal_blue_fit_chestplate", () -> new RoyalBlueFitItem.Chestplate());
 	public static final RegistryObject<Item> ROYAL_BLUE_FIT_LEGGINGS = REGISTRY.register("royal_blue_fit_leggings", () -> new RoyalBlueFitItem.Leggings());
 	public static final RegistryObject<Item> LEGENDARY_ITEM = REGISTRY.register("legendary_item", () -> new LegendaryItemItem());
+	public static final RegistryObject<Item> RIKUDO_GI_CHESTPLATE = REGISTRY.register("rikudo_gi_chestplate", () -> new RikudoGiItem.Chestplate());
+	public static final RegistryObject<Item> RIKUDO_GI_LEGGINGS = REGISTRY.register("rikudo_gi_leggings", () -> new RikudoGiItem.Leggings());
+	public static final RegistryObject<Item> CHARGING = REGISTRY.register("charging", () -> new ChargingItem());
+	public static final RegistryObject<Item> FUTURE_FIT_CHESTPLATE = REGISTRY.register("future_fit_chestplate", () -> new FutureFitItem.Chestplate());
+	public static final RegistryObject<Item> FUTURE_FIT_LEGGINGS = REGISTRY.register("future_fit_leggings", () -> new FutureFitItem.Leggings());
+	public static final RegistryObject<Item> KAIOSHINKAI_GRASS_BLOCK = block(DbmModBlocks.KAIOSHINKAI_GRASS_BLOCK);
+	public static final RegistryObject<Item> KAIOSHINKAI_DIRT = block(DbmModBlocks.KAIOSHINKAI_DIRT);
+	public static final RegistryObject<Item> KAIOSHINKAI_LEAVES = block(DbmModBlocks.KAIOSHINKAI_LEAVES);
+	public static final RegistryObject<Item> KAIOSHINKAI_LOG = block(DbmModBlocks.KAIOSHINKAI_LOG);
+	public static final RegistryObject<Item> SCOUTER_1 = REGISTRY.register("scouter_1", () -> new Scouter1Item());
+	public static final RegistryObject<Item> BLACK_WHITE_FIT_CHESTPLATE = REGISTRY.register("black_white_fit_chestplate", () -> new BlackWhiteFitItem.Chestplate());
+	public static final RegistryObject<Item> BLACK_WHITE_FIT_LEGGINGS = REGISTRY.register("black_white_fit_leggings", () -> new BlackWhiteFitItem.Leggings());
 
 	// Start of user code block custom items
 	// End of user code block custom items

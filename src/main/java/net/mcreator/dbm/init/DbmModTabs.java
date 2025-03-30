@@ -29,6 +29,10 @@ public class DbmModTabs {
 				tabData.accept(DbmModBlocks.AJISA_LEAVES.get().asItem());
 				tabData.accept(DbmModBlocks.AJISA_PLANKS.get().asItem());
 				tabData.accept(DbmModBlocks.NAMEK_GRASS.get().asItem());
+				tabData.accept(DbmModBlocks.KAIOSHINKAI_GRASS_BLOCK.get().asItem());
+				tabData.accept(DbmModBlocks.KAIOSHINKAI_DIRT.get().asItem());
+				tabData.accept(DbmModBlocks.KAIOSHINKAI_LEAVES.get().asItem());
+				tabData.accept(DbmModBlocks.KAIOSHINKAI_LOG.get().asItem());
 			})
 
 					.build());
@@ -224,6 +228,12 @@ public class DbmModTabs {
 				tabData.accept(DbmModItems.PURPLE_GI_LEGGINGS.get());
 				tabData.accept(DbmModItems.ROYAL_BLUE_FIT_CHESTPLATE.get());
 				tabData.accept(DbmModItems.ROYAL_BLUE_FIT_LEGGINGS.get());
+				tabData.accept(DbmModItems.RIKUDO_GI_CHESTPLATE.get());
+				tabData.accept(DbmModItems.RIKUDO_GI_LEGGINGS.get());
+				tabData.accept(DbmModItems.FUTURE_FIT_CHESTPLATE.get());
+				tabData.accept(DbmModItems.FUTURE_FIT_LEGGINGS.get());
+				tabData.accept(DbmModItems.BLACK_WHITE_FIT_CHESTPLATE.get());
+				tabData.accept(DbmModItems.BLACK_WHITE_FIT_LEGGINGS.get());
 			})
 
 					.build());

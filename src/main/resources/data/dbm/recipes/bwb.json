@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "a a",
+    "b b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:white_wool"
+    },
+    "b": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "item": "dbm:black_white_fit_leggings",
+    "count": 1
+  }
+}

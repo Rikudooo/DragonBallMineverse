@@ -33,11 +33,13 @@ public class HyperbolicTimeChamberDoorEntityCollidesInTheBlockProcedure {
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
-			{
-				Entity _ent = entity;
-				_ent.teleportTo(15, 280, 0);
-				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(15, 280, 0, _ent.getYRot(), _ent.getXRot());
+			if (!((entity.level().dimension()) == Level.OVERWORLD)) {
+				{
+					Entity _ent = entity;
+					_ent.teleportTo(54, 263, 5);
+					if (_ent instanceof ServerPlayer _serverPlayer)
+						_serverPlayer.connection.teleport(54, 263, 5, _ent.getYRot(), _ent.getXRot());
+				}
 			}
 		} else if ((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:hyperbolic_time_chamber"))) {
 			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
@@ -54,11 +56,13 @@ public class HyperbolicTimeChamberDoorEntityCollidesInTheBlockProcedure {
 					_player.connection.send(new ClientboundLevelEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
-			{
-				Entity _ent = entity;
-				_ent.teleportTo(54, 263, 5);
-				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(54, 263, 5, _ent.getYRot(), _ent.getXRot());
+			if (!((entity.level().dimension()) == ResourceKey.create(Registries.DIMENSION, new ResourceLocation("dbm:hyperbolic_time_chamber")))) {
+				{
+					Entity _ent = entity;
+					_ent.teleportTo(15, 280, 0);
+					if (_ent instanceof ServerPlayer _serverPlayer)
+						_serverPlayer.connection.teleport(15, 280, 0, _ent.getYRot(), _ent.getXRot());
+				}
 			}
 		}
 	}

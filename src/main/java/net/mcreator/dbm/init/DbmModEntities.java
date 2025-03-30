@@ -52,11 +52,14 @@ import net.mcreator.dbm.entity.StoryCell4Entity;
 import net.mcreator.dbm.entity.StoryCell3Entity;
 import net.mcreator.dbm.entity.StoryCell2Entity;
 import net.mcreator.dbm.entity.StoryBurterEntity;
+import net.mcreator.dbm.entity.StoryBeerusEntity;
+import net.mcreator.dbm.entity.StoryBeerus2Entity;
 import net.mcreator.dbm.entity.StoryAndroid20Entity;
 import net.mcreator.dbm.entity.StoryAndroid19Entity;
 import net.mcreator.dbm.entity.StoryAndroid18Entity;
 import net.mcreator.dbm.entity.StoryAndroid17Entity;
 import net.mcreator.dbm.entity.SpiritBombEntity;
+import net.mcreator.dbm.entity.SphereOfDestructionEntity;
 import net.mcreator.dbm.entity.ShenronEntity;
 import net.mcreator.dbm.entity.SaibamanEntity;
 import net.mcreator.dbm.entity.SabertoothEntity;
@@ -96,6 +99,7 @@ import net.mcreator.dbm.entity.Dinosaur1Entity;
 import net.mcreator.dbm.entity.DendeEntity;
 import net.mcreator.dbm.entity.DeathBallEntity;
 import net.mcreator.dbm.entity.BubblesEntity;
+import net.mcreator.dbm.entity.BeerusBallEntity;
 import net.mcreator.dbm.entity.BearThiefEntity;
 import net.mcreator.dbm.entity.BabidiShipSpawnerEntity;
 import net.mcreator.dbm.entity.BabidiEntity;
@@ -279,7 +283,15 @@ public class DbmModEntities {
 	public static final RegistryObject<EntityType<StoryFusedBuuEntity>> STORY_FUSED_BUU = register("story_fused_buu", EntityType.Builder.<StoryFusedBuuEntity>of(StoryFusedBuuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryFusedBuuEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<StoryKidBuuEntity>> STORY_KID_BUU = register("story_kid_buu", EntityType.Builder.<StoryKidBuuEntity>of(StoryKidBuuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryKidBuuEntity::new).fireImmune().sized(0.6f, 1.8f));
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryKidBuuEntity::new).fireImmune().sized(0.6f, 1.5f));
+	public static final RegistryObject<EntityType<StoryBeerusEntity>> STORY_BEERUS = register("story_beerus", EntityType.Builder.<StoryBeerusEntity>of(StoryBeerusEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryBeerusEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SphereOfDestructionEntity>> SPHERE_OF_DESTRUCTION = register("sphere_of_destruction", EntityType.Builder.<SphereOfDestructionEntity>of(SphereOfDestructionEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(SphereOfDestructionEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(2f, 2f));
+	public static final RegistryObject<EntityType<BeerusBallEntity>> BEERUS_BALL = register("beerus_ball",
+			EntityType.Builder.<BeerusBallEntity>of(BeerusBallEntity::new, MobCategory.MISC).setCustomClientFactory(BeerusBallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(10f, 10f));
+	public static final RegistryObject<EntityType<StoryBeerus2Entity>> STORY_BEERUS_2 = register("story_beerus_2", EntityType.Builder.<StoryBeerus2Entity>of(StoryBeerus2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryBeerus2Entity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -369,6 +381,8 @@ public class DbmModEntities {
 			StorySuperBuuEntity.init();
 			StoryFusedBuuEntity.init();
 			StoryKidBuuEntity.init();
+			StoryBeerusEntity.init();
+			StoryBeerus2Entity.init();
 		});
 	}
 
@@ -453,5 +467,7 @@ public class DbmModEntities {
 		event.put(STORY_SUPER_BUU.get(), StorySuperBuuEntity.createAttributes().build());
 		event.put(STORY_FUSED_BUU.get(), StoryFusedBuuEntity.createAttributes().build());
 		event.put(STORY_KID_BUU.get(), StoryKidBuuEntity.createAttributes().build());
+		event.put(STORY_BEERUS.get(), StoryBeerusEntity.createAttributes().build());
+		event.put(STORY_BEERUS_2.get(), StoryBeerus2Entity.createAttributes().build());
 	}
 }

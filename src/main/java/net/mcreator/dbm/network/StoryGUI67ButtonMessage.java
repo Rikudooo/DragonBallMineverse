@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.StoryGUI67Menu;
+import net.mcreator.dbm.procedures.SpawnFusedBuuProcedure;
 import net.mcreator.dbm.procedures.SetStory68Procedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
@@ -27,7 +28,6 @@ import net.mcreator.dbm.procedures.OpenIcon12Procedure;
 import net.mcreator.dbm.procedures.OpenIcon11Procedure;
 import net.mcreator.dbm.procedures.OpenIcon10Procedure;
 import net.mcreator.dbm.procedures.OpenGroupGUIProcedure;
-import net.mcreator.dbm.procedures.FusedBuuDefeatedProcedure;
 import net.mcreator.dbm.procedures.CloseGUIProcedure;
 import net.mcreator.dbm.DbmMod;
 
@@ -144,7 +144,7 @@ public class StoryGUI67ButtonMessage {
 		}
 		if (buttonID == 16) {
 
-			FusedBuuDefeatedProcedure.execute(world, x, y, z);
+			SpawnFusedBuuProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

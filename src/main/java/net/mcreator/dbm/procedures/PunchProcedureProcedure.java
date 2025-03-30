@@ -183,7 +183,7 @@ public class PunchProcedureProcedure {
 					}
 					{
 						double _setval = (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Stamina
-								- (amount / (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TotalFormBoost) * 0.8;
+								- (amount / (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TotalFormBoost) * 1.1;
 						sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Stamina = _setval;
 							capability.syncPlayerVariables(sourceentity);
@@ -209,8 +209,7 @@ public class PunchProcedureProcedure {
 				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Blocking == true) {
 					{
 						double _setval = (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Stamina
-								- ((amount / (1 - (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).ReleasedPower))
-										/ (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TotalFormBoost) * 1.6;
+								- (amount / (sourceentity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TotalFormBoost) * 2;
 						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Stamina = _setval;
 							capability.syncPlayerVariables(entity);
@@ -241,7 +240,7 @@ public class PunchProcedureProcedure {
 							if (world.isClientSide()) {
 								if (entity instanceof AbstractClientPlayer player) {
 									var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
-									if (animation != null && !animation.isActive()) {
+									if (animation != null) {
 										animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("dbm", "sway1"))));
 									}
 								}
@@ -254,7 +253,7 @@ public class PunchProcedureProcedure {
 										while (iterator.hasNext()) {
 											Connection connection = iterator.next();
 											if (!connection.isConnecting() && connection.isConnected())
-												DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("sway1"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
+												DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("sway1"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
 										}
 									}
 								}
@@ -263,7 +262,7 @@ public class PunchProcedureProcedure {
 							if (world.isClientSide()) {
 								if (entity instanceof AbstractClientPlayer player) {
 									var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
-									if (animation != null && !animation.isActive()) {
+									if (animation != null) {
 										animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("dbm", "sway2"))));
 									}
 								}
@@ -276,7 +275,7 @@ public class PunchProcedureProcedure {
 										while (iterator.hasNext()) {
 											Connection connection = iterator.next();
 											if (!connection.isConnecting() && connection.isConnected())
-												DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("sway2"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
+												DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("sway2"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
 										}
 									}
 								}

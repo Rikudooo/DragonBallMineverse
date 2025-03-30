@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "dbm:kaioshinkai_dirt",
+    "dbm:kaioshinkai_grass_block",
     "dbm:namek_dirt",
     "dbm:namek_grass_block"
   ]

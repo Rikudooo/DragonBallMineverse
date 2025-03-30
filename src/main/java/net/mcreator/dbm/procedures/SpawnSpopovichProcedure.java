@@ -26,7 +26,7 @@ public class SpawnSpopovichProcedure {
 			if (!(!world.getEntitiesOfClass(StorySpopovichEntity.class, AABB.ofSize(new Vec3(x, y, z), 250, 250, 250), e -> true).isEmpty()
 					&& ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).StoryModeProgress).contains("spopovich"))) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = DbmModEntities.STORY_ANDROID_17.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = DbmModEntities.STORY_SPOPOVICH.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 						entityToSpawn.setDeltaMovement(0, 0, 0);
 					}

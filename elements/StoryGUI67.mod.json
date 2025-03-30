@@ -309,7 +309,7 @@
           "image": "start.png",
           "hoveredImage": "starthovered.png",
           "onClick": {
-            "name": "FusedBuuDefeated"
+            "name": "SpawnFusedBuu"
           },
           "displayCondition": {
             "name": "ReturnOnEarth"

@@ -14,6 +14,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.dbm.world.inventory.HalfSaiyanFormsGUIMenu;
 import net.mcreator.dbm.procedures.UpgradeButtonProcedure;
 import net.mcreator.dbm.procedures.SetFormSSJRageProcedure;
+import net.mcreator.dbm.procedures.SetFormPathZenkaiProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJProcedure;
 import net.mcreator.dbm.procedures.SetFormPathSSJ2Procedure;
 import net.mcreator.dbm.procedures.SetFormPathKaiokenProcedure;
@@ -175,6 +176,10 @@ public class HalfSaiyanFormsGUIButtonMessage {
 		if (buttonID == 22) {
 
 			SetFormPathBabidiMagicProcedure.execute(entity);
+		}
+		if (buttonID == 23) {
+
+			SetFormPathZenkaiProcedure.execute(entity);
 		}
 	}
 

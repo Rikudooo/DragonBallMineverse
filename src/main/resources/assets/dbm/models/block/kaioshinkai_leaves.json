@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/kaioakleaves",
+    "up": "dbm:block/kaioakleaves",
+    "north": "dbm:block/kaioakleaves",
+    "east": "dbm:block/kaioakleaves",
+    "south": "dbm:block/kaioakleaves",
+    "west": "dbm:block/kaioakleaves",
+    "particle": "dbm:block/kaioakleaves"
+  },
+  "render_type": "cutout_mipped"
+}

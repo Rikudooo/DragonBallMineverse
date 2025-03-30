@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "dbm:kaioshinkai_dirt",
+    "dbm:kaioshinkai_grass_block",
     "minecraft:air",
     "dbm:space_rock",
     "dbm:yardrat_rock",

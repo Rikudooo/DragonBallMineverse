@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.DendeGUIMenu;
+import net.mcreator.dbm.procedures.GrowOrCutTailProcedure;
 import net.mcreator.dbm.procedures.CloseGUIProcedure;
 import net.mcreator.dbm.DbmMod;
 
@@ -65,6 +66,10 @@ public class DendeGUIButtonMessage {
 		if (buttonID == 0) {
 
 			CloseGUIProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			GrowOrCutTailProcedure.execute(entity);
 		}
 	}
 

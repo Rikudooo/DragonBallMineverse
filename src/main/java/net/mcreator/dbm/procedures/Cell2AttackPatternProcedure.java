@@ -128,8 +128,8 @@ public class Cell2AttackPatternProcedure {
 											.toList();
 									for (Entity entityiterator : _entfound) {
 										if (!(entityiterator == entity)) {
-											if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-												_entity.addEffect(new MobEffectInstance(DbmModMobEffects.TAIYOKEN_EFFECT.get(), 90, 1));
+											if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+												_entity.addEffect(new MobEffectInstance(DbmModMobEffects.TAIYOKEN_EFFECT.get(), 90, 1, false, false));
 										}
 									}
 								}

@@ -24,6 +24,13 @@ public class LeaveGroupProcedure {
 			return;
 		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Group == true) {
 			{
+				boolean _setval = false;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Group = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
 				String _setval = "None";
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Member1 = _setval;
@@ -71,13 +78,6 @@ public class LeaveGroupProcedure {
 						return new GroupGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
-			}
-			{
-				boolean _setval = false;
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Group = _setval;
-					capability.syncPlayerVariables(entity);
-				});
 			}
 		}
 	}

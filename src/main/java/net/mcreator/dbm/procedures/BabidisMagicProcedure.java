@@ -29,7 +29,7 @@ public class BabidisMagicProcedure {
 			return;
 		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SubForm).equals("Babidi's Magic")) {
 			{
-				double _setval = 2.1;
+				double _setval = 3.4;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.SubFormBoost = _setval;
 					capability.syncPlayerVariables(entity);

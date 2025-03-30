@@ -64,7 +64,7 @@ public class CoolerNUpProcedure {
 				});
 			}
 			{
-				double _setval = 6;
+				double _setval = 7.5;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -121,7 +121,7 @@ public class CoolerNUpProcedure {
 				});
 			}
 			{
-				double _setval = 7.5;
+				double _setval = 14.5;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -178,7 +178,7 @@ public class CoolerNUpProcedure {
 				});
 			}
 			{
-				double _setval = 8;
+				double _setval = 14.75;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -235,7 +235,7 @@ public class CoolerNUpProcedure {
 				});
 			}
 			{
-				double _setval = 9;
+				double _setval = 16;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -293,7 +293,7 @@ public class CoolerNUpProcedure {
 				});
 			}
 			{
-				double _setval = 12;
+				double _setval = 20;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);

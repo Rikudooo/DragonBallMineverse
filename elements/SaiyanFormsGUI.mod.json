@@ -534,6 +534,51 @@
           "x": 285,
           "y": 98
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_zenkaiboosticon",
+          "image": "zenkaiboosticon.png",
+          "hoveredImage": "zenkaiboosticonhovered.png",
+          "onClick": {
+            "name": "SetFormPathZenkai"
+          },
+          "x": 95,
+          "y": 35
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_zenkai_boost_a_racial_ability_e",
+          "text": {
+            "fixedValue": "Zenkai Boost: A Racial ability exclusive to Saiyans and Hybrids."
+          },
+          "width": 18,
+          "height": 18,
+          "x": 95,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_zenkai_level_text",
+          "text": {
+            "fixedValue": "",
+            "name": "ZenkaiLevelText"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FormPathZenkai"
+          },
+          "x": 285,
+          "y": 98
+        }
       }
     ],
     "onTick": {
@@ -544,7 +589,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

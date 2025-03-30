@@ -17,7 +17,14 @@ import net.mcreator.dbm.client.gui.WelcomeGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUI9Screen;
 import net.mcreator.dbm.client.gui.StoryGUI8Screen;
+import net.mcreator.dbm.client.gui.StoryGUI80Screen;
 import net.mcreator.dbm.client.gui.StoryGUI7Screen;
+import net.mcreator.dbm.client.gui.StoryGUI79Screen;
+import net.mcreator.dbm.client.gui.StoryGUI78Screen;
+import net.mcreator.dbm.client.gui.StoryGUI77Screen;
+import net.mcreator.dbm.client.gui.StoryGUI76Screen;
+import net.mcreator.dbm.client.gui.StoryGUI75Screen;
+import net.mcreator.dbm.client.gui.StoryGUI74Screen;
 import net.mcreator.dbm.client.gui.StoryGUI73Screen;
 import net.mcreator.dbm.client.gui.StoryGUI72Screen;
 import net.mcreator.dbm.client.gui.StoryGUI71Screen;
@@ -97,6 +104,7 @@ import net.mcreator.dbm.client.gui.PiccoloGUIScreen;
 import net.mcreator.dbm.client.gui.PiccoloGUI2Screen;
 import net.mcreator.dbm.client.gui.NorthKaioGUIScreen;
 import net.mcreator.dbm.client.gui.NorthKaioGUI2Screen;
+import net.mcreator.dbm.client.gui.NamekianFormsGUIScreen;
 import net.mcreator.dbm.client.gui.KorinGUIScreen;
 import net.mcreator.dbm.client.gui.KorinDrinkGUIScreen;
 import net.mcreator.dbm.client.gui.KiAttacksGUIScreen;
@@ -219,6 +227,14 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.STORY_GUI_71.get(), StoryGUI71Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI_72.get(), StoryGUI72Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI_73.get(), StoryGUI73Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_74.get(), StoryGUI74Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_75.get(), StoryGUI75Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_76.get(), StoryGUI76Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_77.get(), StoryGUI77Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_78.get(), StoryGUI78Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_79.get(), StoryGUI79Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_80.get(), StoryGUI80Screen::new);
+			MenuScreens.register(DbmModMenus.NAMEKIAN_FORMS_GUI.get(), NamekianFormsGUIScreen::new);
 		});
 	}
 }

@@ -41,7 +41,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.procedures.StoryMobFlyConditionProcedure;
-import net.mcreator.dbm.procedures.SpawnFusedBuuProcedure;
+import net.mcreator.dbm.procedures.FusedBuuDefeatedProcedure;
+import net.mcreator.dbm.procedures.BasicAttackPatternProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
 public class StoryFusedBuuEntity extends Monster {
@@ -200,7 +201,7 @@ public class StoryFusedBuuEntity extends Monster {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		SpawnFusedBuuProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		FusedBuuDefeatedProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
@@ -243,7 +244,7 @@ public class StoryFusedBuuEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		SpawnFusedBuuProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		BasicAttackPatternProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

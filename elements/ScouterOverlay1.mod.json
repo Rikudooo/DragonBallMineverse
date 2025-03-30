@@ -1,0 +1,126 @@
+{
+  "_fv": 69,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "scouterstrongest.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ScouterStrongest"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 59,
+          "y": 123
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "scouterunlocked.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ScouterOn"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 70,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_powerlevel",
+          "text": {
+            "fixedValue": "PowerLevel",
+            "name": "TextScouterPL"
+          },
+          "color": {
+            "value": -5888,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ScouterOn"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 107,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_distance",
+          "text": {
+            "fixedValue": "Distance",
+            "name": "TextScouterDistance"
+          },
+          "color": {
+            "value": -5376,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ScouterOn"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 106,
+          "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "scouterweakest.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ScouterWeakest"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 59,
+          "y": 122
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "scouterlocked.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ScouterLocked"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 70,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "scouternearest.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ScouterNearest"
+          },
+          "anchorPoint": "CENTER_LEFT",
+          "x": 59,
+          "y": 122
+        }
+      }
+    ],
+    "baseTexture": "grnscouteroverlay.png",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "GreenScouterWorn"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

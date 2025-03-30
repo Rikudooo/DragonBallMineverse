@@ -92,7 +92,7 @@ public class TransformingProcedureProcedure {
 					if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Arcosian")) {
 						ArcosianTransformingProcedure.execute(entity);
 					} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Saiyan")) {
-						SaiyanTransformingProcedure.execute(entity);
+						SaiyanTransformingProcedure.execute(world, x, y, z, entity);
 					} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Half-Saiyan")) {
 						HalfSaiyanTransformingProcedure.execute(entity);
 					}
@@ -253,6 +253,19 @@ public class TransformingProcedureProcedure {
 							if (!connection.isConnecting() && connection.isConnected())
 								DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("kicharge"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
 						}
+					}
+				}
+			}
+		}
+		if (ReturnFullMoonProcedure.execute(world, entity)) {
+			if (entity.getXRot() >= -95 && entity.getXRot() <= -85) {
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).TransformationTimer >= 39) {
+					{
+						String _setval = "Oozaru";
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Form = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
 				}
 			}

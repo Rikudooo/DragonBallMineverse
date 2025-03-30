@@ -14,6 +14,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.SaiyanFormsGUIMenu;
+import net.mcreator.dbm.world.inventory.NamekianFormsGUIMenu;
 import net.mcreator.dbm.world.inventory.HalfSaiyanFormsGUIMenu;
 import net.mcreator.dbm.world.inventory.ArcosianFormsGUIMenu;
 import net.mcreator.dbm.network.DbmModVariables;
@@ -68,6 +69,22 @@ public class OpenRacialSkillsGUIProcedure {
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 						return new HalfSaiyanFormsGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		}
+		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Namekian")) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("NamekianFormsGUI");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new NamekianFormsGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

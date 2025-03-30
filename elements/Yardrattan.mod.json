@@ -171,10 +171,7 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:NamekForest"
-      },
-      {
-        "value": "CUSTOM:NamekPlains"
+        "value": "CUSTOM:YardratLands"
       }
     ],
     "spawnInDungeons": false,

@@ -3,6 +3,7 @@ package net.mcreator.dbm.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.resources.ResourceLocation;
@@ -33,8 +34,8 @@ public class SpiritBombFlyingProcedure {
 				immediatesourceentity.discard();
 		}
 		if (world.getLevelData().getGameRules().getBoolean(DbmModGameRules.KIKOHA_EXPLODE) == true) {
-			int horizontalRadiusSphere = (int) 25 - 1;
-			int verticalRadiusSphere = (int) 25 - 1;
+			int horizontalRadiusSphere = (int) 15 - 1;
+			int verticalRadiusSphere = (int) 15 - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -44,6 +45,9 @@ public class SpiritBombFlyingProcedure {
 						if (distanceSq <= 1.0) {
 							if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(new ResourceLocation("dbm:collateraldamage")))) {
 								world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
+							} else if (!((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR)) {
+								if (world instanceof Level _level && !_level.isClientSide())
+									_level.explode(null, x + xi, y + i, z + zi, 2, Level.ExplosionInteraction.BLOCK);
 							}
 						}
 					}

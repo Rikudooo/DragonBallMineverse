@@ -30,7 +30,10 @@ public class PlayerLoseHungerProcedure {
 		if (entity == null)
 			return;
 		if (itemstack.getItem().isEdible()) {
-			if ((itemstack.getItem().isEdible() ? itemstack.getItem().getFoodProperties().getNutrition() : 0) > 4) {
+			if ((itemstack.getItem().isEdible() ? itemstack.getItem().getFoodProperties().getNutrition() : 0) > 3) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxHealth * 0.1) {
+					ZenkaiBoostProcedure.execute(entity);
+				}
 				if (entity instanceof LivingEntity _entity)
 					_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxHealth
 							* 0.045 * (itemstack.getItem().isEdible() ? itemstack.getItem().getFoodProperties().getNutrition() : 0)));

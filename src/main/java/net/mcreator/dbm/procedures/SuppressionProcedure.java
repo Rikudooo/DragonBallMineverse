@@ -109,7 +109,7 @@ public class SuppressionProcedure {
 					});
 				}
 				{
-					double _setval = 1.5;
+					double _setval = 2.5;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FormBoost = _setval;
 						capability.syncPlayerVariables(entity);
@@ -170,7 +170,7 @@ public class SuppressionProcedure {
 					});
 				}
 				{
-					double _setval = 2;
+					double _setval = 3.5;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FormBoost = _setval;
 						capability.syncPlayerVariables(entity);
@@ -231,7 +231,7 @@ public class SuppressionProcedure {
 					});
 				}
 				{
-					double _setval = 3;
+					double _setval = 5;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FormBoost = _setval;
 						capability.syncPlayerVariables(entity);

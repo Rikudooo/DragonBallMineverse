@@ -62,7 +62,8 @@ public class FinishProcedureProcedure {
 				}
 			}, _bpos);
 		}
-		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Saiyan")) {
+		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Saiyan")
+				|| ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Half-Saiyan")) {
 			if (DbmModVariables.MapVariables.get(world).LegendarySpawned == false) {
 				if (Math.random() < 0.1) {
 					{

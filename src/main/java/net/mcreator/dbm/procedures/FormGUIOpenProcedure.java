@@ -23,6 +23,21 @@ public class FormGUIOpenProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+		} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Zenkai Boost")) {
+			{
+				double _setval = 30;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.MaxRacialLevel = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 3500;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.RacialTPCost = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Babidi's Magic")) {
 			{
 				double _setval = 1;

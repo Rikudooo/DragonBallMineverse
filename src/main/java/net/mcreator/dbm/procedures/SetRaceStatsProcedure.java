@@ -285,5 +285,7 @@ public class SetRaceStatsProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxHealth);
 		}
+		if (entity instanceof LivingEntity _entity)
+			_entity.setHealth((float) (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxHealth);
 	}
 }

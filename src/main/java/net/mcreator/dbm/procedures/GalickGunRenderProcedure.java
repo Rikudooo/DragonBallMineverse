@@ -310,7 +310,7 @@ public class GalickGunRenderProcedure {
 								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),
 								(entityiterator.getZ() + Math.cos(Math.toRadians(entityiterator instanceof StoryVegetaEntity _datEntI ? _datEntI.getEntityData().get(StoryVegetaEntity.DATA_OldYAW) : 0)) * 1.5),
 								(float) (entityiterator instanceof StoryVegetaEntity _datEntI ? _datEntI.getEntityData().get(StoryVegetaEntity.DATA_OldYAW) : 0),
-								(float) (entityiterator instanceof StoryVegetaEntity _datEntI ? _datEntI.getEntityData().get(StoryVegetaEntity.DATA_OldPITCH) : 0), 0, 1, 1, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								(float) (entityiterator instanceof StoryVegetaEntity _datEntI ? _datEntI.getEntityData().get(StoryVegetaEntity.DATA_OldPITCH) : 0), 0, (float) 1.2, (float) 1.2, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						RenderSystem.disableCull();
 						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator instanceof StoryVegetaEntity _datEntI ? _datEntI.getEntityData().get(StoryVegetaEntity.DATA_OldYAW) : 0)) * 1.5),
 								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),

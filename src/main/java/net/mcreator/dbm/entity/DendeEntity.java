@@ -6,6 +6,7 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
@@ -22,11 +23,14 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.dbm.procedures.OpenDendeGUIProcedure;
 import net.mcreator.dbm.procedures.DendeOnEntityTickUpdateProcedure;
 import net.mcreator.dbm.init.DbmModEntities;
 
@@ -114,6 +118,21 @@ public class DendeEntity extends PathfinderMob {
 	@Override
 	public boolean fireImmune() {
 		return true;
+	}
+
+	@Override
+	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
+		ItemStack itemstack = sourceentity.getItemInHand(hand);
+		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+
+		OpenDendeGUIProcedure.execute(world, x, y, z, sourceentity);
+		return retval;
 	}
 
 	@Override

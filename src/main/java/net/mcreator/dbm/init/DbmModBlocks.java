@@ -32,6 +32,10 @@ import net.mcreator.dbm.block.KorinTowerBlock2Block;
 import net.mcreator.dbm.block.KorinTowerBlock1Block;
 import net.mcreator.dbm.block.KorinTowerBaseBlock;
 import net.mcreator.dbm.block.KameHouseSpawnBlock;
+import net.mcreator.dbm.block.KaioshinkaiLogBlock;
+import net.mcreator.dbm.block.KaioshinkaiLeavesBlock;
+import net.mcreator.dbm.block.KaioshinkaiGrassBlockBlock;
+import net.mcreator.dbm.block.KaioshinkaiDirtBlock;
 import net.mcreator.dbm.block.InvisibleLightBlock;
 import net.mcreator.dbm.block.HyperbolicTimeChamberFloorBlock;
 import net.mcreator.dbm.block.HyperbolicTimeChamberDoorBlock;
@@ -370,6 +374,10 @@ public class DbmModBlocks {
 	public static final RegistryObject<Block> NAMEK_GRASS = REGISTRY.register("namek_grass", () -> new NamekGrassBlock());
 	public static final RegistryObject<Block> HYPERBOLIC_TIME_CHAMBER_FLOOR = REGISTRY.register("hyperbolic_time_chamber_floor", () -> new HyperbolicTimeChamberFloorBlock());
 	public static final RegistryObject<Block> YARDRAT_ROCK = REGISTRY.register("yardrat_rock", () -> new YardratRockBlock());
+	public static final RegistryObject<Block> KAIOSHINKAI_GRASS_BLOCK = REGISTRY.register("kaioshinkai_grass_block", () -> new KaioshinkaiGrassBlockBlock());
+	public static final RegistryObject<Block> KAIOSHINKAI_DIRT = REGISTRY.register("kaioshinkai_dirt", () -> new KaioshinkaiDirtBlock());
+	public static final RegistryObject<Block> KAIOSHINKAI_LEAVES = REGISTRY.register("kaioshinkai_leaves", () -> new KaioshinkaiLeavesBlock());
+	public static final RegistryObject<Block> KAIOSHINKAI_LOG = REGISTRY.register("kaioshinkai_log", () -> new KaioshinkaiLogBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

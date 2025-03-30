@@ -28,7 +28,9 @@ public class SuperSaiyan2Procedure {
 		if (entity == null)
 			return;
 		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormLike).equals("Super Saiyan 2")) {
-			if (!((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Beast")) {
+			if (!(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Beast")
+					|| ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan 4")
+					|| ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan Rage"))) {
 				{
 					String _setval = "dbm:textures/entities/eyes_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).EyesType)
 							+ "_ssj.png";
@@ -38,8 +40,9 @@ public class SuperSaiyan2Procedure {
 					});
 				}
 			}
-			if (!((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Legendary Super Saiyan 2")
-					|| !((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Beast")) {
+			if (!(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Legendary Super Saiyan 2")
+					|| ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan 4")
+					|| ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Beast"))) {
 				{
 					String _setval = "dbm:textures/entities/ssjhair.png";
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -116,6 +119,16 @@ public class SuperSaiyan2Procedure {
 					});
 				}
 			}
+			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan Rage")) {
+				{
+					String _setval = "dbm:textures/entities/eyes_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).EyesType)
+							+ "_lssj.png";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.EyesColorID = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		}
 		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan Full Power")) {
 			{
@@ -126,7 +139,7 @@ public class SuperSaiyan2Procedure {
 				});
 			}
 			{
-				double _setval = 3.2;
+				double _setval = 5.2;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -155,7 +168,7 @@ public class SuperSaiyan2Procedure {
 				});
 			}
 			{
-				double _setval = 4.15;
+				double _setval = 7;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -183,12 +196,22 @@ public class SuperSaiyan2Procedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				double _setval = 7.5;
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.FormBoost = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+			if (!(entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
+				{
+					double _setval = 9.5;
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.FormBoost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if ((entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
+				{
+					double _setval = 14.5;
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.FormBoost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			{
 				double _setval = 6;
@@ -213,7 +236,7 @@ public class SuperSaiyan2Procedure {
 				});
 			}
 			{
-				double _setval = 5.15;
+				double _setval = 8.5;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -242,7 +265,7 @@ public class SuperSaiyan2Procedure {
 				});
 			}
 			{
-				double _setval = 8.25;
+				double _setval = 10.25;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -271,7 +294,7 @@ public class SuperSaiyan2Procedure {
 				});
 			}
 			{
-				double _setval = 12;
+				double _setval = 17;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -288,6 +311,49 @@ public class SuperSaiyan2Procedure {
 				double _setval = 1.15;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Scale = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Form).equals("Super Saiyan 4")) {
+			{
+				String _setval = "Base";
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.FormLike = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 12.5;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.FormBoost = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 7;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.KiDrain = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 1.15;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Scale = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "dbm:textures/entities/aura_ssj.png";
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.AuraTexture = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "dbm:textures/entities/eyes_" + new java.text.DecimalFormat("##").format((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).EyesType) + "_ssj4.png";
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.EyesColorID = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

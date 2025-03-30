@@ -396,12 +396,19 @@ public class KiOverlayProcedure {
 	private static void execute(@Nullable Event event) {
 		double var1 = 0;
 		double var2 = 0;
+		boolean var3 = false;
 		if (target(2)) {
 			Player player = Minecraft.getInstance().player;
 			var1 = (player.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Ki;
 			var2 = (player.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxKi;
-			renderRectangle(30, 24, (float) (30 + 100 * (var1 / var2)), 32, 1, 255 << 24 | 60 << 16 | 161 << 8 | 239);
-			renderTexts((new java.text.DecimalFormat("##").format(var1) + "/" + new java.text.DecimalFormat("##").format(var2)), 32, 24, 0, 0, 1, 255 << 24 | 4 << 16 | 222 << 8 | 255, 0);
+			var3 = (player.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Legendary;
+			if (var3 == false) {
+				renderRectangle(30, 24, (float) (30 + 100 * (var1 / var2)), 32, 1, 255 << 24 | 60 << 16 | 161 << 8 | 239);
+				renderTexts((new java.text.DecimalFormat("##").format(var1) + "/" + new java.text.DecimalFormat("##").format(var2)), 32, 24, 0, 0, 1, 255 << 24 | 4 << 16 | 222 << 8 | 255, 0);
+			} else if (var3 == true) {
+				renderRectangle(30, 24, (float) (30 + 100 * (var1 / var2)), 32, 1, 255 << 24 | 102 << 16 | 255 << 8 | 102);
+				renderTexts((new java.text.DecimalFormat("##").format(var1) + "/" + new java.text.DecimalFormat("##").format(var2)), 32, 24, 0, 0, 1, 255 << 24 | 0 << 16 | 230 << 8 | 0, 0);
+			}
 			release();
 		}
 	}

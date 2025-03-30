@@ -32,6 +32,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 import net.minecraft.client.Minecraft;
@@ -254,6 +255,15 @@ public class DbmModVariables {
 			clone.MemberName4 = original.MemberName4;
 			clone.MemberName5 = original.MemberName5;
 			clone.FriendlyFire = original.FriendlyFire;
+			clone.FormMasteries = original.FormMasteries;
+			clone.RaceAbility = original.RaceAbility;
+			clone.ZenkaiLevel = original.ZenkaiLevel;
+			clone.Headwear = original.Headwear;
+			clone.ScouterMode = original.ScouterMode;
+			clone.ScouterLocked = original.ScouterLocked;
+			clone.ScouterEntity = original.ScouterEntity;
+			clone.ScouterDistance = original.ScouterDistance;
+			clone.ScouterPL = original.ScouterPL;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -839,6 +849,15 @@ public class DbmModVariables {
 		public String MemberName4 = "None";
 		public String MemberName5 = "None";
 		public String FriendlyFire = "Off";
+		public ListTag FormMasteries = new ListTag();
+		public boolean RaceAbility = false;
+		public double ZenkaiLevel = 0.0;
+		public String Headwear = "None";
+		public double ScouterMode = 0.0;
+		public boolean ScouterLocked = false;
+		public String ScouterEntity = "\"\"";
+		public double ScouterDistance = 0;
+		public double ScouterPL = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -1013,6 +1032,15 @@ public class DbmModVariables {
 			nbt.putString("MemberName4", MemberName4);
 			nbt.putString("MemberName5", MemberName5);
 			nbt.putString("FriendlyFire", FriendlyFire);
+			nbt.put("FormMasteries", this.FormMasteries);
+			nbt.putBoolean("RaceAbility", RaceAbility);
+			nbt.putDouble("ZenkaiLevel", ZenkaiLevel);
+			nbt.putString("Headwear", Headwear);
+			nbt.putDouble("ScouterMode", ScouterMode);
+			nbt.putBoolean("ScouterLocked", ScouterLocked);
+			nbt.putString("ScouterEntity", ScouterEntity);
+			nbt.putDouble("ScouterDistance", ScouterDistance);
+			nbt.putDouble("ScouterPL", ScouterPL);
 			return nbt;
 		}
 
@@ -1190,6 +1218,15 @@ public class DbmModVariables {
 			MemberName4 = nbt.getString("MemberName4");
 			MemberName5 = nbt.getString("MemberName5");
 			FriendlyFire = nbt.getString("FriendlyFire");
+			this.FormMasteries = nbt.get("FormMasteries") instanceof ListTag FormMasteries ? FormMasteries : new ListTag();
+			RaceAbility = nbt.getBoolean("RaceAbility");
+			ZenkaiLevel = nbt.getDouble("ZenkaiLevel");
+			Headwear = nbt.getString("Headwear");
+			ScouterMode = nbt.getDouble("ScouterMode");
+			ScouterLocked = nbt.getBoolean("ScouterLocked");
+			ScouterEntity = nbt.getString("ScouterEntity");
+			ScouterDistance = nbt.getDouble("ScouterDistance");
+			ScouterPL = nbt.getDouble("ScouterPL");
 		}
 	}
 
@@ -1389,6 +1426,15 @@ public class DbmModVariables {
 					variables.MemberName4 = message.data.MemberName4;
 					variables.MemberName5 = message.data.MemberName5;
 					variables.FriendlyFire = message.data.FriendlyFire;
+					variables.FormMasteries = message.data.FormMasteries;
+					variables.RaceAbility = message.data.RaceAbility;
+					variables.ZenkaiLevel = message.data.ZenkaiLevel;
+					variables.Headwear = message.data.Headwear;
+					variables.ScouterMode = message.data.ScouterMode;
+					variables.ScouterLocked = message.data.ScouterLocked;
+					variables.ScouterEntity = message.data.ScouterEntity;
+					variables.ScouterDistance = message.data.ScouterDistance;
+					variables.ScouterPL = message.data.ScouterPL;
 				}
 			});
 			context.setPacketHandled(true);

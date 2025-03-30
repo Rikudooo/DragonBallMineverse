@@ -131,7 +131,7 @@ public class SuperSaiyanProcedure {
 				});
 			}
 			{
-				double _setval = 3;
+				double _setval = 5;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -160,7 +160,7 @@ public class SuperSaiyanProcedure {
 				});
 			}
 			{
-				double _setval = 3.15;
+				double _setval = 5.15;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -189,7 +189,7 @@ public class SuperSaiyanProcedure {
 				});
 			}
 			{
-				double _setval = 3.3;
+				double _setval = 5.3;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -225,7 +225,7 @@ public class SuperSaiyanProcedure {
 				});
 			}
 			{
-				double _setval = 1.3;
+				double _setval = 1.45;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Scale = _setval;
 					capability.syncPlayerVariables(entity);
@@ -233,7 +233,7 @@ public class SuperSaiyanProcedure {
 			}
 			if ((entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
 				{
-					double _setval = 8.5;
+					double _setval = 13;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FormBoost = _setval;
 						capability.syncPlayerVariables(entity);
@@ -241,7 +241,7 @@ public class SuperSaiyanProcedure {
 				}
 			} else if (!(entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
 				{
-					double _setval = 5.5;
+					double _setval = 8.2;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FormBoost = _setval;
 						capability.syncPlayerVariables(entity);
@@ -264,7 +264,7 @@ public class SuperSaiyanProcedure {
 				});
 			}
 			{
-				double _setval = 1.5;
+				double _setval = 2;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Scale = _setval;
 					capability.syncPlayerVariables(entity);
@@ -272,7 +272,7 @@ public class SuperSaiyanProcedure {
 			}
 			if ((entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
 				{
-					double _setval = 8.65;
+					double _setval = 13.5;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FormBoost = _setval;
 						capability.syncPlayerVariables(entity);
@@ -280,7 +280,7 @@ public class SuperSaiyanProcedure {
 				}
 			} else if (!(entity.getDisplayName().getString()).equals("CaiGuyCrafter")) {
 				{
-					double _setval = 5.65;
+					double _setval = 8.5;
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FormBoost = _setval;
 						capability.syncPlayerVariables(entity);

@@ -18,6 +18,9 @@ public class SenzuBeanRightclickedProcedure {
 		}
 		if (entity instanceof Player _player)
 			_player.getCooldowns().addCooldown(itemstack.getItem(), 200);
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxHealth * 0.1) {
+			ZenkaiBoostProcedure.execute(entity);
+		}
 		if (entity instanceof LivingEntity _entity)
 			_entity.setHealth((float) (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxHealth);
 		{

@@ -21,6 +21,7 @@ public class OpenCreation2GUIProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		SetRaceStatsProcedure.execute(entity);
 		if (entity instanceof ServerPlayer _ent) {
 			BlockPos _bpos = BlockPos.containing(x, y, z);
 			NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -35,6 +36,5 @@ public class OpenCreation2GUIProcedure {
 				}
 			}, _bpos);
 		}
-		SetRaceStatsProcedure.execute(entity);
 	}
 }

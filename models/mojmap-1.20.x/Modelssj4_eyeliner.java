@@ -1,4 +1,4 @@
-// Made with Blockbench 4.9.4
+// Made with Blockbench 4.12.3
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -9,6 +9,8 @@ public class Modelssj4_eyeliner<T extends Entity> extends EntityModel<T> {
 			new ResourceLocation("modid", "ssj4_eyeliner"), "main");
 	private final ModelPart Body;
 	private final ModelPart Head;
+	private final ModelPart Eyeliner;
+	private final ModelPart Eyeliner2;
 	private final ModelPart RightArm;
 	private final ModelPart LeftArm;
 	private final ModelPart RightLeg;
@@ -17,6 +19,8 @@ public class Modelssj4_eyeliner<T extends Entity> extends EntityModel<T> {
 	public Modelssj4_eyeliner(ModelPart root) {
 		this.Body = root.getChild("Body");
 		this.Head = root.getChild("Head");
+		this.Eyeliner = this.Head.getChild("Eyeliner");
+		this.Eyeliner2 = this.Head.getChild("Eyeliner2");
 		this.RightArm = root.getChild("RightArm");
 		this.LeftArm = root.getChild("LeftArm");
 		this.RightLeg = root.getChild("RightLeg");
@@ -30,13 +34,24 @@ public class Modelssj4_eyeliner<T extends Entity> extends EntityModel<T> {
 		PartDefinition Body = partdefinition.addOrReplaceChild("Body", CubeListBuilder.create(),
 				PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create(),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
+		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(0, 0).addBox(
+				-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		PartDefinition Eyebrow = Head.addOrReplaceChild("Eyebrow", CubeListBuilder.create().texOffs(58, 62)
-				.addBox(-3.0F, -29.3F, -4.005F, 2.0F, 0.2F, 1.0F, new CubeDeformation(0.0F)).texOffs(58, 62).mirror()
-				.addBox(1.0F, -29.3F, -4.005F, 2.0F, 0.2F, 1.0F, new CubeDeformation(0.0F)).mirror(false),
-				PartPose.offset(0.0F, 24.0F, 0.0F));
+		PartDefinition Eyeliner = Head.addOrReplaceChild("Eyeliner",
+				CubeListBuilder.create().texOffs(55, 56)
+						.addBox(-1.05F, 2.95F, -4.03F, 2.1F, 0.05F, 0.025F, new CubeDeformation(0.0F)).texOffs(55, 56)
+						.addBox(-1.05F, 2.975F, -4.03F, 0.05F, 1.05F, 0.025F, new CubeDeformation(0.0F)).texOffs(55, 56)
+						.addBox(1.0F, 2.975F, -4.03F, 0.05F, 1.05F, 0.025F, new CubeDeformation(0.0F)).texOffs(55, 56)
+						.addBox(-1.05F, 4.0F, -4.03F, 2.1F, 0.05F, 0.025F, new CubeDeformation(0.0F)),
+				PartPose.offset(-2.0F, -8.0F, 0.025F));
+
+		PartDefinition Eyeliner2 = Head.addOrReplaceChild("Eyeliner2", CubeListBuilder.create().texOffs(55, 56).mirror()
+				.addBox(-1.05F, 2.95F, -4.03F, 2.1F, 0.05F, 0.025F, new CubeDeformation(0.0F)).mirror(false)
+				.texOffs(55, 56).mirror().addBox(1.0F, 2.975F, -4.03F, 0.05F, 1.05F, 0.025F, new CubeDeformation(0.0F))
+				.mirror(false).texOffs(55, 56).mirror()
+				.addBox(-1.05F, 2.975F, -4.03F, 0.05F, 1.05F, 0.025F, new CubeDeformation(0.0F)).mirror(false)
+				.texOffs(55, 56).mirror().addBox(-1.05F, 4.0F, -4.03F, 2.1F, 0.05F, 0.025F, new CubeDeformation(0.0F))
+				.mirror(false), PartPose.offset(2.0F, -8.0F, 0.025F));
 
 		PartDefinition RightArm = partdefinition.addOrReplaceChild("RightArm", CubeListBuilder.create(),
 				PartPose.offset(-5.0F, 2.0F, 0.0F));

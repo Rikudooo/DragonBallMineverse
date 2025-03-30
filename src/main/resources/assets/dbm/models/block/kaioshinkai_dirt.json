@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/kaidirt",
+    "up": "dbm:block/kaidirt",
+    "north": "dbm:block/kaidirt",
+    "east": "dbm:block/kaidirt",
+    "south": "dbm:block/kaidirt",
+    "west": "dbm:block/kaidirt",
+    "particle": "dbm:block/kaidirt"
+  },
+  "render_type": "solid"
+}

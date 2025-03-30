@@ -36,7 +36,7 @@ public class MysticProcedure {
 				});
 			}
 			{
-				double _setval = 7.5;
+				double _setval = 9.5;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);

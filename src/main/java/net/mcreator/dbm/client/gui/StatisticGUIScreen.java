@@ -16,8 +16,14 @@ import net.mcreator.dbm.procedures.TPTextProcedure;
 import net.mcreator.dbm.procedures.SubFormTextProcedure;
 import net.mcreator.dbm.procedures.StrengthTextProcedure;
 import net.mcreator.dbm.procedures.SpeedTextProcedure;
+import net.mcreator.dbm.procedures.ReturnSubFormTextProcedure;
+import net.mcreator.dbm.procedures.ReturnStrengthTextProcedure;
+import net.mcreator.dbm.procedures.ReturnSpiritTextProcedure;
 import net.mcreator.dbm.procedures.ReturnInSpacePodProcedure;
 import net.mcreator.dbm.procedures.ReturnFormTextProcedure;
+import net.mcreator.dbm.procedures.ReturnFocusTextProcedure;
+import net.mcreator.dbm.procedures.ReturnBodyTextProcedure;
+import net.mcreator.dbm.procedures.ReturnAgilityTextProcedure;
 import net.mcreator.dbm.procedures.ResilienceTextProcedure;
 import net.mcreator.dbm.procedures.RaceTextProcedure;
 import net.mcreator.dbm.procedures.NameTextProcedure;
@@ -88,20 +94,22 @@ public class StatisticGUIScreen extends AbstractContainerScreen<StatisticGUIMenu
 		}
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + -173 && mouseX < leftPos + -149 && mouseY > topPos + -12 && mouseY < topPos + -2)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.statistic_gui.tooltip_body_increase_max_hp_and_stamin"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnBodyTextProcedure.execute(entity)), mouseX, mouseY);
 		if (mouseX > leftPos + -173 && mouseX < leftPos + -134 && mouseY > topPos + 6 && mouseY < topPos + 16)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.statistic_gui.tooltip_agility_increase_speed_stamina"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnAgilityTextProcedure.execute(entity)), mouseX, mouseY);
 		if (mouseX > leftPos + -173 && mouseX < leftPos + -127 && mouseY > topPos + 23 && mouseY < topPos + 34)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.statistic_gui.tooltip_strength_increase_melee_damage"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnStrengthTextProcedure.execute(entity)), mouseX, mouseY);
 		if (mouseX > leftPos + -173 && mouseX < leftPos + -137 && mouseY > topPos + 41 && mouseY < topPos + 52)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.statistic_gui.tooltip_spirit_increase_ki_pool"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnSpiritTextProcedure.execute(entity)), mouseX, mouseY);
 		if (mouseX > leftPos + -172 && mouseX < leftPos + -144 && mouseY > topPos + 60 && mouseY < topPos + 69)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.statistic_gui.tooltip_focus_increase_ki_damage"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(ReturnFocusTextProcedure.execute(entity)), mouseX, mouseY);
 		if (mouseX > leftPos + -164 && mouseX < leftPos + -120 && mouseY > topPos + -85 && mouseY < topPos + -75)
 			guiGraphics.renderTooltip(font, Component.literal(ReturnFormTextProcedure.execute(entity)), mouseX, mouseY);
 		if (ReturnInSpacePodProcedure.execute(entity))
 			if (mouseX > leftPos + 174 && mouseX < leftPos + 194 && mouseY > topPos + 68 && mouseY < topPos + 88)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.statistic_gui.tooltip_travel_to_space"), mouseX, mouseY);
+		if (mouseX > leftPos + -164 && mouseX < leftPos + -105 && mouseY > topPos + -75 && mouseY < topPos + -66)
+			guiGraphics.renderTooltip(font, Component.literal(ReturnSubFormTextProcedure.execute(entity)), mouseX, mouseY);
 	}
 
 	@Override

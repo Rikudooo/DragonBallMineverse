@@ -4,10 +4,7 @@
   "definition": {
     "biomesInDimension": [
       {
-        "value": "CUSTOM:NamekPlains"
-      },
-      {
-        "value": "CUSTOM:NamekForest"
+        "value": "CUSTOM:KaioshinkaiPlains"
       }
     ],
     "worldGenType": "Normal world gen",
@@ -18,7 +15,7 @@
       "value": "Blocks.FLOWING_WATER"
     },
     "airColor": {
-      "value": -16711834,
+      "value": -3368449,
       "falpha": 0.0
     },
     "canRespawnHere": false,
@@ -28,9 +25,6 @@
     "sleepResult": "ALLOW",
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
-    "onPlayerEntersDimension": {
-      "name": "NamekPlayerEntersDimension"
-    },
     "portalFrame": {
       "value": ""
     },

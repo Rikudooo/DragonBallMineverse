@@ -1,7 +1,6 @@
 package net.mcreator.dbm.procedures;
 
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -67,9 +66,8 @@ public class DrinkWaterProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else {
-				if (entity instanceof LivingEntity _entity)
-					_entity.setHealth(0);
+			} else if (random > 1) {
+				entity.kill();
 			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();

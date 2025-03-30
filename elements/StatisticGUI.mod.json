@@ -384,7 +384,8 @@
         "data": {
           "name": "tooltip_body_increase_max_hp_and_stamin",
           "text": {
-            "fixedValue": "Body: Increase Max HP and Stamina"
+            "fixedValue": "Body: Increase Max HP and Stamina",
+            "name": "ReturnBodyText"
           },
           "width": 24,
           "height": 10,
@@ -397,7 +398,8 @@
         "data": {
           "name": "tooltip_agility_increase_speed_stamina",
           "text": {
-            "fixedValue": "Agility: Increase Speed, Stamina, and Defense"
+            "fixedValue": "Agility: Increase Speed, Stamina, and Defense",
+            "name": "ReturnAgilityText"
           },
           "width": 39,
           "height": 10,
@@ -410,7 +412,8 @@
         "data": {
           "name": "tooltip_strength_increase_melee_damage",
           "text": {
-            "fixedValue": "Strength: Increase Melee Damage and Defense"
+            "fixedValue": "Strength: Increase Melee Damage and Defense",
+            "name": "ReturnStrengthText"
           },
           "width": 46,
           "height": 11,
@@ -423,7 +426,8 @@
         "data": {
           "name": "tooltip_spirit_increase_ki_pool",
           "text": {
-            "fixedValue": "Spirit: Increase Ki Pool"
+            "fixedValue": "Spirit: Increase Ki Pool",
+            "name": "ReturnSpiritText"
           },
           "width": 36,
           "height": 11,
@@ -436,7 +440,8 @@
         "data": {
           "name": "tooltip_focus_increase_ki_damage",
           "text": {
-            "fixedValue": "Focus: Increase Ki Damage"
+            "fixedValue": "Focus: Increase Ki Damage",
+            "name": "ReturnFocusText"
           },
           "width": 28,
           "height": 9,
@@ -837,6 +842,20 @@
           "height": 20,
           "x": 388,
           "y": 188
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_sub_form_text",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnSubFormText"
+          },
+          "width": 59,
+          "height": 9,
+          "x": 50,
+          "y": 45
         }
       }
     ],

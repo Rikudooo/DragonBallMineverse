@@ -17,7 +17,7 @@ public class StoryYakonRenderer extends MobRenderer<StoryYakonEntity, ModelYakon
 
 	@Override
 	protected void scale(StoryYakonEntity entity, PoseStack poseStack, float f) {
-		poseStack.scale(2f, 2f, 2f);
+		poseStack.scale(3f, 3f, 3f);
 	}
 
 	@Override

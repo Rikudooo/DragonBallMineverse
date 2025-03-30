@@ -17,6 +17,27 @@
     "minecraft:sand",
     "minecraft:red_sand",
     "minecraft:sandstone",
-    "minecraft:red_sandstone"
+    "minecraft:red_sandstone",
+    "dbm:ajisa_leaves",
+    "minecraft:oak_leaves",
+    "minecraft:spruce_leaves",
+    "minecraft:birch_leaves",
+    "minecraft:jungle_leaves",
+    "minecraft:acacia_leaves",
+    "minecraft:dark_oak_leaves",
+    "minecraft:mangrove_leaves",
+    "minecraft:azalea_leaves",
+    "minecraft:flowering_azalea_leaves",
+    "minecraft:cherry_leaves",
+    "dbm:unbreakable_log",
+    "dbm:ajisa_log",
+    "minecraft:oak_log",
+    "minecraft:spruce_log",
+    "minecraft:birch_log",
+    "minecraft:jungle_log",
+    "minecraft:acacia_log",
+    "minecraft:dark_oak_log",
+    "minecraft:mangrove_log",
+    "minecraft:cherry_log"
   ]
 }

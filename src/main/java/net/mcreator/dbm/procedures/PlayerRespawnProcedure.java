@@ -8,6 +8,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 
 import net.mcreator.dbm.network.DbmModVariables;
 import net.mcreator.dbm.DbmMod;
@@ -49,6 +50,12 @@ public class PlayerRespawnProcedure {
 			}
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MaxHealth);
+			{
+				Entity _ent = entity;
+				_ent.teleportTo(4, 237, 104);
+				if (_ent instanceof ServerPlayer _serverPlayer)
+					_serverPlayer.connection.teleport(4, 237, 104, _ent.getYRot(), _ent.getXRot());
+			}
 		});
 		{
 			String _setval = "Base";

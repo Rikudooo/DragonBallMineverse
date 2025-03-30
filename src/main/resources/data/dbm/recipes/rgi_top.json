@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aac",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:black_wool"
+    },
+    "b": {
+      "item": "minecraft:blue_wool"
+    },
+    "c": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "result": {
+    "item": "dbm:rikudo_gi_chestplate",
+    "count": 1
+  }
+}

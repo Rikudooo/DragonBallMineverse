@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "dbm:kaioshinkai_log",
     "dbm:ajisa_planks",
     "dbm:ajisa_log"
   ]

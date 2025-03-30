@@ -36,6 +36,8 @@ import net.mcreator.dbm.entity.StoryCell4Entity;
 import net.mcreator.dbm.entity.StoryCell3Entity;
 import net.mcreator.dbm.entity.StoryCell2Entity;
 import net.mcreator.dbm.entity.StoryBurterEntity;
+import net.mcreator.dbm.entity.StoryBeerusEntity;
+import net.mcreator.dbm.entity.StoryBeerus2Entity;
 import net.mcreator.dbm.entity.StoryAndroid20Entity;
 import net.mcreator.dbm.entity.StoryAndroid19Entity;
 import net.mcreator.dbm.entity.StoryAndroid18Entity;
@@ -242,6 +244,18 @@ public class SetStoryEntitiesHealthProcedure {
 				_livingEntity123.getAttribute(Attributes.MAX_HEALTH).setBaseValue(90000);
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity124 && _livingEntity124.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity124.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryBeerusEntity) {
+			if (entity instanceof LivingEntity _livingEntity128 && _livingEntity128.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity128.getAttribute(Attributes.MAX_HEALTH).setBaseValue(120000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity129 && _livingEntity129.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity129.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryBeerus2Entity) {
+			if (entity instanceof LivingEntity _livingEntity132 && _livingEntity132.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity132.getAttribute(Attributes.MAX_HEALTH).setBaseValue(140000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity133 && _livingEntity133.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity133.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
 		}
 	}
 }
