@@ -24,6 +24,7 @@ import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.client.model.Modelspacepod;
 import net.mcreator.dbm.client.model.Modelandroid_palm;
 
 import javax.annotation.Nullable;
@@ -173,6 +174,22 @@ public class RenderHandProcedure {
 						_texture = new ResourceLocation("dbm:textures/entities/kiabsorber.png");
 					}
 					Modelandroid_palm newModel = new Modelandroid_palm(context.bakeLayer(Modelandroid_palm.LAYER_LOCATION));
+					newModel.LeftArm.copyFrom(playerModel.leftArm);
+					newModel.RightArm.copyFrom(playerModel.rightArm);
+					if (arm == HumanoidArm.LEFT) {
+						newModel.LeftArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
+					} else {
+						newModel.RightArm.render(_evt.getPoseStack(), bufferSource.getBuffer(RenderType.entityTranslucentCull(_texture)), packedLight, OverlayTexture.NO_OVERLAY);
+					}
+				}
+			}
+			if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SpacePod == true) {
+				{
+					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+					if (ResourceLocation.tryParse("dbm:textures/entities/spacepod.png") != null) {
+						_texture = new ResourceLocation("dbm:textures/entities/spacepod.png");
+					}
+					Modelspacepod newModel = new Modelspacepod(context.bakeLayer(Modelspacepod.LAYER_LOCATION));
 					newModel.LeftArm.copyFrom(playerModel.leftArm);
 					newModel.RightArm.copyFrom(playerModel.rightArm);
 					if (arm == HumanoidArm.LEFT) {

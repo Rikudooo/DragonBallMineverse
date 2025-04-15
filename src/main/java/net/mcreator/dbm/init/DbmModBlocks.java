@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.dbm.block.ZirakaiOreBlock;
 import net.mcreator.dbm.block.YardratRockBlock;
 import net.mcreator.dbm.block.VerticalLadderSupportBlock;
 import net.mcreator.dbm.block.VerticalLadderBlock;
@@ -378,6 +379,7 @@ public class DbmModBlocks {
 	public static final RegistryObject<Block> KAIOSHINKAI_DIRT = REGISTRY.register("kaioshinkai_dirt", () -> new KaioshinkaiDirtBlock());
 	public static final RegistryObject<Block> KAIOSHINKAI_LEAVES = REGISTRY.register("kaioshinkai_leaves", () -> new KaioshinkaiLeavesBlock());
 	public static final RegistryObject<Block> KAIOSHINKAI_LOG = REGISTRY.register("kaioshinkai_log", () -> new KaioshinkaiLogBlock());
+	public static final RegistryObject<Block> ZIRAKAI_ORE = REGISTRY.register("zirakai_ore", () -> new ZirakaiOreBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

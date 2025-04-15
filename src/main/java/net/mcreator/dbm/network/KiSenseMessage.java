@@ -53,7 +53,7 @@ public class KiSenseMessage {
 			return;
 		if (type == 0) {
 
-			KiSenseOnKeyPressedProcedure.execute();
+			KiSenseOnKeyPressedProcedure.execute(entity);
 		}
 		if (type == 1) {
 

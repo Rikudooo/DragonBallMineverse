@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"knockedback": {
+			"animation_length": 1,
+			"bones": {
+				"torso": {
+					"rotation": {
+						"vector": [17.5, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [20, 0, 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": [-95, 0, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-95, 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [-57.27652, 6.3202, 4.04618]
+					},
+					"position": {
+						"vector": [0, 0, 3]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [-56.87402, -10.51794, -6.79286]
+					},
+					"position": {
+						"vector": [0, 0, 3]
+					}
+				}
+			}
+		}
+	}
+}

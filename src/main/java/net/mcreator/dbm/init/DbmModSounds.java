@@ -30,4 +30,6 @@ public class DbmModSounds {
 	public static final RegistryObject<SoundEvent> SHENRONCALLED = REGISTRY.register("shenroncalled", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "shenroncalled")));
 	public static final RegistryObject<SoundEvent> TELEPORTATION = REGISTRY.register("teleportation", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "teleportation")));
 	public static final RegistryObject<SoundEvent> BIP = REGISTRY.register("bip", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "bip")));
+	public static final RegistryObject<SoundEvent> HEAVYATTACK = REGISTRY.register("heavyattack", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "heavyattack")));
+	public static final RegistryObject<SoundEvent> DODGE = REGISTRY.register("dodge", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "dodge")));
 }

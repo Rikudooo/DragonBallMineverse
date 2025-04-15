@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "I",
+    "keyBindingName": "Extra Slots",
+    "keyBindingCategoryKey": "dbm",
+    "onKeyPressed": {
+      "name": "ExtraSlotsOnKeyPressed"
+    }
+  }
+}

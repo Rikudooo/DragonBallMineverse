@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dbm:block/zirakaiore",
+    "up": "dbm:block/zirakaiore",
+    "north": "dbm:block/zirakaiore",
+    "east": "dbm:block/zirakaiore",
+    "south": "dbm:block/zirakaiore",
+    "west": "dbm:block/zirakaiore",
+    "particle": "dbm:block/zirakaiore"
+  },
+  "render_type": "solid"
+}

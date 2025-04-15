@@ -42,6 +42,13 @@ public class ScouterProcedureProcedure {
 		Entity NearestEntity = null;
 		Entity StrongestEntity = null;
 		double HighestPL = 0;
+		{
+			String _setval = "1 ".replace("" + (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).HeadwearSlot, "");
+			entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Headwear = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Headwear).contains("scouter_")) {
 			if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).ScouterMode > 0) {
 				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).ScouterMode == 1) {

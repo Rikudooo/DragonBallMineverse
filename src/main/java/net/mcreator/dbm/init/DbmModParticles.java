@@ -13,6 +13,7 @@ import net.mcreator.dbm.client.particle.TeleportationParticleParticle;
 import net.mcreator.dbm.client.particle.ParticlePunch3Particle;
 import net.mcreator.dbm.client.particle.ParticlePunch2Particle;
 import net.mcreator.dbm.client.particle.ParticlePunch1Particle;
+import net.mcreator.dbm.client.particle.ParticleHeavyParticle;
 import net.mcreator.dbm.client.particle.ParticleBlockParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -24,5 +25,6 @@ public class DbmModParticles {
 		event.registerSpriteSet(DbmModParticleTypes.PARTICLE_PUNCH_3.get(), ParticlePunch3Particle::provider);
 		event.registerSpriteSet(DbmModParticleTypes.PARTICLE_BLOCK.get(), ParticleBlockParticle::provider);
 		event.registerSpriteSet(DbmModParticleTypes.TELEPORTATION_PARTICLE.get(), TeleportationParticleParticle::provider);
+		event.registerSpriteSet(DbmModParticleTypes.PARTICLE_HEAVY.get(), ParticleHeavyParticle::provider);
 	}
 }

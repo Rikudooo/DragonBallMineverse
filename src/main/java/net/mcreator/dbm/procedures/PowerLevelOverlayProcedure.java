@@ -395,10 +395,12 @@ public class PowerLevelOverlayProcedure {
 
 	private static void execute(@Nullable Event event) {
 		double powerlevel = 0;
+		double kisense = 0;
 		if (target(2)) {
 			Player player = Minecraft.getInstance().player;
 			powerlevel = (player.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).PowerLevel;
-			renderTexts(("PL: " + new java.text.DecimalFormat("##").format(powerlevel)), 30, 10, 0, 0, 1, 255 << 24 | 255 << 16 | 102 << 8 | 102, 0);
+			kisense = (player.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiSenseKeyPressed;
+			renderTexts(("PL: " + new java.text.DecimalFormat("##").format(powerlevel)), 30, 6, 0, 0, (float) 0.6, 255 << 24 | 255 << 16 | 102 << 8 | 102, 0);
 			release();
 		}
 	}

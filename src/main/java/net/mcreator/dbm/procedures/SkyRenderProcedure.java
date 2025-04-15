@@ -229,7 +229,7 @@ public class SkyRenderProcedure {
 			if (target(1)) {
 				system(false);
 				size = Minecraft.getInstance().gameRenderer.getRenderDistance() * 2;
-				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "customspace" + ".png")));
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "spacesky" + ".png")));
 				renderShape(shape(), 0, 0, 0, 0, 0, 0, (float) size, (float) size, (float) size, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 				release();
 			}

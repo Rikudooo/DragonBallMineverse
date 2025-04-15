@@ -14,7 +14,7 @@
       "item": "minecraft:red_stained_glass"
     },
     "c": {
-      "item": "minecraft:redstone"
+      "item": "dbm:tier_3_circuit"
     },
     "d": {
       "item": "minecraft:blast_furnace"

@@ -15,6 +15,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.GroupGUIMenu;
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.DbmMod;
 
 import io.netty.buffer.Unpooled;
 
@@ -30,41 +31,78 @@ public class LeaveGroupProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				String _setval = "None";
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Member1 = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				String _setval = "None";
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Member2 = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				String _setval = "None";
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Member3 = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				String _setval = "None";
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Member4 = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				String _setval = "None";
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Member5 = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+			DbmMod.queueServerWork(1, () -> {
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Member1 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Member2 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Member3 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Member4 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Member5 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MemberName1 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MemberName2 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MemberName3 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MemberName4 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "None";
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MemberName5 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			});
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {

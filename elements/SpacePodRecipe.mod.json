@@ -30,7 +30,7 @@
         "value": "Items.IRON_INGOT"
       },
       {
-        "value": "Items.REDSTONE"
+        "value": "CUSTOM:Tier3Circuit"
       },
       {
         "value": "Blocks.BLAST_FURNACE"

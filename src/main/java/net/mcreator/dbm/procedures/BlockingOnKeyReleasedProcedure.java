@@ -44,7 +44,7 @@ public class BlockingOnKeyReleasedProcedure {
 		if (world.isClientSide()) {
 			if (entity instanceof AbstractClientPlayer player) {
 				var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
-				if (animation != null) {
+				if (animation != null && !animation.isActive()) {
 					animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("dbm", "stop"))));
 				}
 			}
@@ -57,7 +57,7 @@ public class BlockingOnKeyReleasedProcedure {
 					while (iterator.hasNext()) {
 						Connection connection = iterator.next();
 						if (!connection.isConnecting() && connection.isConnected())
-							DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("stop"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+							DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("stop"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
 					}
 				}
 			}

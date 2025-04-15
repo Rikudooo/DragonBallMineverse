@@ -13,10 +13,14 @@ import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.dbm.world.inventory.YardrattanGUIMenu;
 import net.mcreator.dbm.world.inventory.YardratGUI2Menu;
+import net.mcreator.dbm.world.inventory.WhisGUIMenu;
+import net.mcreator.dbm.world.inventory.WhisGUI2Menu;
 import net.mcreator.dbm.world.inventory.WelcomeGUIMenu;
 import net.mcreator.dbm.world.inventory.StoryGUIMenu;
 import net.mcreator.dbm.world.inventory.StoryGUI9Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI8Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI82Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI81Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI80Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI7Menu;
 import net.mcreator.dbm.world.inventory.StoryGUI79Menu;
@@ -114,6 +118,7 @@ import net.mcreator.dbm.world.inventory.HalfSaiyanFormsGUIMenu;
 import net.mcreator.dbm.world.inventory.GroupGUIMenu;
 import net.mcreator.dbm.world.inventory.GroupGUI2Menu;
 import net.mcreator.dbm.world.inventory.FinishGUIMenu;
+import net.mcreator.dbm.world.inventory.ExtraGUIMenu;
 import net.mcreator.dbm.world.inventory.EnmaGUIMenu;
 import net.mcreator.dbm.world.inventory.DendeGUIMenu;
 import net.mcreator.dbm.world.inventory.CharacterCreationGUIMenu;
@@ -233,4 +238,9 @@ public class DbmModMenus {
 	public static final RegistryObject<MenuType<StoryGUI79Menu>> STORY_GUI_79 = REGISTRY.register("story_gui_79", () -> IForgeMenuType.create(StoryGUI79Menu::new));
 	public static final RegistryObject<MenuType<StoryGUI80Menu>> STORY_GUI_80 = REGISTRY.register("story_gui_80", () -> IForgeMenuType.create(StoryGUI80Menu::new));
 	public static final RegistryObject<MenuType<NamekianFormsGUIMenu>> NAMEKIAN_FORMS_GUI = REGISTRY.register("namekian_forms_gui", () -> IForgeMenuType.create(NamekianFormsGUIMenu::new));
+	public static final RegistryObject<MenuType<ExtraGUIMenu>> EXTRA_GUI = REGISTRY.register("extra_gui", () -> IForgeMenuType.create(ExtraGUIMenu::new));
+	public static final RegistryObject<MenuType<StoryGUI81Menu>> STORY_GUI_81 = REGISTRY.register("story_gui_81", () -> IForgeMenuType.create(StoryGUI81Menu::new));
+	public static final RegistryObject<MenuType<WhisGUIMenu>> WHIS_GUI = REGISTRY.register("whis_gui", () -> IForgeMenuType.create(WhisGUIMenu::new));
+	public static final RegistryObject<MenuType<WhisGUI2Menu>> WHIS_GUI_2 = REGISTRY.register("whis_gui_2", () -> IForgeMenuType.create(WhisGUI2Menu::new));
+	public static final RegistryObject<MenuType<StoryGUI82Menu>> STORY_GUI_82 = REGISTRY.register("story_gui_82", () -> IForgeMenuType.create(StoryGUI82Menu::new));
 }

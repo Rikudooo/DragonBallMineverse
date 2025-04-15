@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.dbm.entity.YardrattanMasterEntity;
 import net.mcreator.dbm.entity.YardrattanEntity;
+import net.mcreator.dbm.entity.WhisEntity;
 import net.mcreator.dbm.entity.SupernovaEntity;
 import net.mcreator.dbm.entity.StoryZarbonEntity;
 import net.mcreator.dbm.entity.StoryYakonEntity;
@@ -292,6 +293,8 @@ public class DbmModEntities {
 			EntityType.Builder.<BeerusBallEntity>of(BeerusBallEntity::new, MobCategory.MISC).setCustomClientFactory(BeerusBallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(10f, 10f));
 	public static final RegistryObject<EntityType<StoryBeerus2Entity>> STORY_BEERUS_2 = register("story_beerus_2", EntityType.Builder.<StoryBeerus2Entity>of(StoryBeerus2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryBeerus2Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<WhisEntity>> WHIS = register("whis",
+			EntityType.Builder.<WhisEntity>of(WhisEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WhisEntity::new).fireImmune().sized(0.6f, 2f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -383,6 +386,7 @@ public class DbmModEntities {
 			StoryKidBuuEntity.init();
 			StoryBeerusEntity.init();
 			StoryBeerus2Entity.init();
+			WhisEntity.init();
 		});
 	}
 
@@ -469,5 +473,6 @@ public class DbmModEntities {
 		event.put(STORY_KID_BUU.get(), StoryKidBuuEntity.createAttributes().build());
 		event.put(STORY_BEERUS.get(), StoryBeerusEntity.createAttributes().build());
 		event.put(STORY_BEERUS_2.get(), StoryBeerus2Entity.createAttributes().build());
+		event.put(WHIS.get(), WhisEntity.createAttributes().build());
 	}
 }

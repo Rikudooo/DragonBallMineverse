@@ -29,6 +29,7 @@ import net.mcreator.dbm.network.KiSenseMessage;
 import net.mcreator.dbm.network.ForwardKeyMessage;
 import net.mcreator.dbm.network.FlyKeyMessage;
 import net.mcreator.dbm.network.FireKiBlastMessage;
+import net.mcreator.dbm.network.ExtraSlotsMessage;
 import net.mcreator.dbm.network.DetransformMessage;
 import net.mcreator.dbm.network.ChargeKiMessage;
 import net.mcreator.dbm.network.BlockingMessage;
@@ -361,6 +362,19 @@ public class DbmModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping EXTRA_SLOTS = new KeyMapping("key.dbm.extra_slots", GLFW.GLFW_KEY_I, "key.categories.dbm") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				DbmMod.PACKET_HANDLER.sendToServer(new ExtraSlotsMessage(0, 0));
+				ExtraSlotsMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long MENU_LASTPRESS = 0;
 	private static long CHARGE_KI_LASTPRESS = 0;
 	private static long TRANSFORM_LASTPRESS = 0;
@@ -399,6 +413,7 @@ public class DbmModKeyMappings {
 		event.register(LEFT);
 		event.register(RIGHT);
 		event.register(THIRD_FUNCTION);
+		event.register(EXTRA_SLOTS);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -425,6 +440,7 @@ public class DbmModKeyMappings {
 				LEFT.consumeClick();
 				RIGHT.consumeClick();
 				THIRD_FUNCTION.consumeClick();
+				EXTRA_SLOTS.consumeClick();
 			}
 		}
 	}

@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.dbm.client.renderer.YardrattanRenderer;
 import net.mcreator.dbm.client.renderer.YardrattanMasterRenderer;
+import net.mcreator.dbm.client.renderer.WhisRenderer;
 import net.mcreator.dbm.client.renderer.StoryZarbonRenderer;
 import net.mcreator.dbm.client.renderer.StoryYakonRenderer;
 import net.mcreator.dbm.client.renderer.StoryVegetaRenderer;
@@ -185,5 +186,6 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.SPHERE_OF_DESTRUCTION.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.BEERUS_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_BEERUS_2.get(), StoryBeerus2Renderer::new);
+		event.registerEntityRenderer(DbmModEntities.WHIS.get(), WhisRenderer::new);
 	}
 }

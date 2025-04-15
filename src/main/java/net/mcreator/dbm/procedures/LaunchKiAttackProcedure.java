@@ -524,7 +524,7 @@ public class LaunchKiAttackProcedure {
 						_entity.yHeadRotO = _entity.getYRot();
 					}
 				}
-				MakankosappoLoopProcedure.execute(world, entity);
+				KiWaveLoopProcedure.execute(world, entity);
 				if (world.isClientSide()) {
 					if (entity instanceof AbstractClientPlayer player) {
 						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
@@ -627,7 +627,7 @@ public class LaunchKiAttackProcedure {
 						_entity.yHeadRotO = _entity.getYRot();
 					}
 				}
-				MakankosappoLoopProcedure.execute(world, entity);
+				KiWaveLoopProcedure.execute(world, entity);
 				if (world.isClientSide()) {
 					if (entity instanceof AbstractClientPlayer player) {
 						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
@@ -730,7 +730,7 @@ public class LaunchKiAttackProcedure {
 						_entity.yHeadRotO = _entity.getYRot();
 					}
 				}
-				MakankosappoLoopProcedure.execute(world, entity);
+				KiWaveLoopProcedure.execute(world, entity);
 				if (world.isClientSide()) {
 					if (entity instanceof AbstractClientPlayer player) {
 						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));

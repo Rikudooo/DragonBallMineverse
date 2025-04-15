@@ -318,14 +318,14 @@ public class SaiyanFormsGUIScreen extends AbstractContainerScreen<SaiyanFormsGUI
 		guistate.put("button:imagebutton_kaiokenicon", imagebutton_kaiokenicon);
 		this.addRenderableWidget(imagebutton_kaiokenicon);
 		imagebutton_ssjgicon = new ImageButton(this.leftPos + -163, this.topPos + -13, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_ssjgicon.png"), 18, 36, e -> {
-			if (ReturnForm7GKiProcedure.execute(entity)) {
+			if (ReturnFormGKiProcedure.execute(entity)) {
 				DbmMod.PACKET_HANDLER.sendToServer(new SaiyanFormsGUIButtonMessage(19, x, y, z));
 				SaiyanFormsGUIButtonMessage.handleButtonAction(entity, 19, x, y, z);
 			}
 		}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				this.visible = ReturnForm7GKiProcedure.execute(entity);
+				this.visible = ReturnFormGKiProcedure.execute(entity);
 				super.renderWidget(guiGraphics, gx, gy, ticks);
 			}
 		};

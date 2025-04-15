@@ -36,6 +36,16 @@ public class FriezaSoldierDefeatedProcedure {
 							});
 						}
 					}
+				} else if ((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).StoryGUI == 83) {
+					if ((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).DefeatedFriezaSoldiers3 < 32) {
+						{
+							double _setval = (entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).DefeatedFriezaSoldiers3 + 1;
+							entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.DefeatedFriezaSoldiers3 = _setval;
+								capability.syncPlayerVariables(entityiterator);
+							});
+						}
+					}
 				}
 			}
 		}

@@ -11,7 +11,7 @@
       "item": "minecraft:iron_ingot"
     },
     "b": {
-      "item": "minecraft:redstone"
+      "item": "dbm:tier_3_circuit"
     },
     "c": {
       "item": "minecraft:stone_button"
@@ -26,7 +26,7 @@
       "item": "minecraft:glowstone_dust"
     },
     "g": {
-      "item": "minecraft:copper_ingot"
+      "item": "dbm:zirakai_gem"
     }
   },
   "result": {

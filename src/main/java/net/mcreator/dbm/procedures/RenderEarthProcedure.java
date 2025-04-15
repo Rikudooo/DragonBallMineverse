@@ -268,6 +268,54 @@ public class RenderEarthProcedure {
 				renderShape(shape(), 4500, 160, (-4500), 0, 0, 0, 160, 160, 160, 60 << 24 | 255 << 16 | 255 << 8 | 255);
 				release();
 			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/ankoku" + ".png")));
+				renderShape(shape(), 3500, 160, (-1000), 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				RenderSystem.disableCull();
+				renderShape(shape(), 3500, 160, (-1000), 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/ankoku_2" + ".png")));
+				renderShape(shape(), 3500, 160, (-1000), 0, 0, 0, 160, 160, 160, 60 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/arcose" + ".png")));
+				renderShape(shape(), 2500, 160, (-2500), 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				RenderSystem.disableCull();
+				renderShape(shape(), 2500, 160, (-2500), 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/arcose_2" + ".png")));
+				renderShape(shape(), 2500, 160, (-2500), 0, 0, 0, 160, 160, 160, 60 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/frieza79" + ".png")));
+				renderShape(shape(), 3000, 160, 3000, 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				RenderSystem.disableCull();
+				renderShape(shape(), 3000, 160, 3000, 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/frieza79_2" + ".png")));
+				renderShape(shape(), 3000, 160, 3000, 0, 0, 0, 160, 160, 160, 60 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/potaufeu" + ".png")));
+				renderShape(shape(), (-1000), 160, (-1000), 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				RenderSystem.disableCull();
+				renderShape(shape(), (-1000), 160, (-1000), 0, 0, 0, 150, 150, 150, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
+			if (target(2)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation(("dbm" + ":textures/" + "planets/potaufeu_2" + ".png")));
+				renderShape(shape(), (-1000), 160, (-1000), 0, 0, 0, 160, 160, 160, 60 << 24 | 255 << 16 | 255 << 8 | 255);
+				release();
+			}
 		}
 	}
 }

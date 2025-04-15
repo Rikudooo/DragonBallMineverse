@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gold_ingot"
+    },
+    "b": {
+      "item": "dbm:tier_1_circuit"
+    },
+    "c": {
+      "item": "dbm:zirakai_gem"
+    }
+  },
+  "result": {
+    "item": "dbm:tier_2_circuit",
+    "count": 1
+  }
+}

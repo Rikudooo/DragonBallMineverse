@@ -92,7 +92,7 @@ public class FormGUIOpenProcedure {
 				});
 			}
 			{
-				double _setval = 350000;
+				double _setval = 250000;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.RacialTPCost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -100,14 +100,14 @@ public class FormGUIOpenProcedure {
 			}
 		} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Super Saiyan Blue")) {
 			{
-				double _setval = 7;
+				double _setval = 8;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.MaxRacialLevel = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				double _setval = 0;
+				double _setval = 300000;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.RacialTPCost = _setval;
 					capability.syncPlayerVariables(entity);

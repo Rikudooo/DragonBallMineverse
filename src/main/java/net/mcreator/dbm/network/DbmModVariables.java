@@ -25,6 +25,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -264,6 +265,18 @@ public class DbmModVariables {
 			clone.ScouterEntity = original.ScouterEntity;
 			clone.ScouterDistance = original.ScouterDistance;
 			clone.ScouterPL = original.ScouterPL;
+			clone.KiSensePressed = original.KiSensePressed;
+			clone.KiSenseMode = original.KiSenseMode;
+			clone.HeavyAttackCD = original.HeavyAttackCD;
+			clone.HeavyAttackinCD = original.HeavyAttackinCD;
+			clone.HeadwearSlot = original.HeadwearSlot;
+			clone.KiSenseKeyPressed = original.KiSenseKeyPressed;
+			clone.KiSignatureX = original.KiSignatureX;
+			clone.KiSignatureY = original.KiSignatureY;
+			clone.KiSignatureZ = original.KiSignatureZ;
+			clone.KiSignature = original.KiSignature;
+			clone.InBeamClash = original.InBeamClash;
+			clone.DefeatedFriezaSoldiers3 = original.DefeatedFriezaSoldiers3;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -858,6 +871,18 @@ public class DbmModVariables {
 		public String ScouterEntity = "\"\"";
 		public double ScouterDistance = 0;
 		public double ScouterPL = 0;
+		public double KiSensePressed = 0;
+		public boolean KiSenseMode = false;
+		public double HeavyAttackCD = 0;
+		public boolean HeavyAttackinCD = false;
+		public ItemStack HeadwearSlot = ItemStack.EMPTY;
+		public double KiSenseKeyPressed = 0;
+		public double KiSignatureX = 0;
+		public double KiSignatureY = 0;
+		public double KiSignatureZ = 0;
+		public boolean KiSignature = false;
+		public boolean InBeamClash = false;
+		public double DefeatedFriezaSoldiers3 = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -1041,6 +1066,18 @@ public class DbmModVariables {
 			nbt.putString("ScouterEntity", ScouterEntity);
 			nbt.putDouble("ScouterDistance", ScouterDistance);
 			nbt.putDouble("ScouterPL", ScouterPL);
+			nbt.putDouble("KiSensePressed", KiSensePressed);
+			nbt.putBoolean("KiSenseMode", KiSenseMode);
+			nbt.putDouble("HeavyAttackCD", HeavyAttackCD);
+			nbt.putBoolean("HeavyAttackinCD", HeavyAttackinCD);
+			nbt.put("HeadwearSlot", HeadwearSlot.save(new CompoundTag()));
+			nbt.putDouble("KiSenseKeyPressed", KiSenseKeyPressed);
+			nbt.putDouble("KiSignatureX", KiSignatureX);
+			nbt.putDouble("KiSignatureY", KiSignatureY);
+			nbt.putDouble("KiSignatureZ", KiSignatureZ);
+			nbt.putBoolean("KiSignature", KiSignature);
+			nbt.putBoolean("InBeamClash", InBeamClash);
+			nbt.putDouble("DefeatedFriezaSoldiers3", DefeatedFriezaSoldiers3);
 			return nbt;
 		}
 
@@ -1227,6 +1264,18 @@ public class DbmModVariables {
 			ScouterEntity = nbt.getString("ScouterEntity");
 			ScouterDistance = nbt.getDouble("ScouterDistance");
 			ScouterPL = nbt.getDouble("ScouterPL");
+			KiSensePressed = nbt.getDouble("KiSensePressed");
+			KiSenseMode = nbt.getBoolean("KiSenseMode");
+			HeavyAttackCD = nbt.getDouble("HeavyAttackCD");
+			HeavyAttackinCD = nbt.getBoolean("HeavyAttackinCD");
+			HeadwearSlot = ItemStack.of(nbt.getCompound("HeadwearSlot"));
+			KiSenseKeyPressed = nbt.getDouble("KiSenseKeyPressed");
+			KiSignatureX = nbt.getDouble("KiSignatureX");
+			KiSignatureY = nbt.getDouble("KiSignatureY");
+			KiSignatureZ = nbt.getDouble("KiSignatureZ");
+			KiSignature = nbt.getBoolean("KiSignature");
+			InBeamClash = nbt.getBoolean("InBeamClash");
+			DefeatedFriezaSoldiers3 = nbt.getDouble("DefeatedFriezaSoldiers3");
 		}
 	}
 
@@ -1435,6 +1484,18 @@ public class DbmModVariables {
 					variables.ScouterEntity = message.data.ScouterEntity;
 					variables.ScouterDistance = message.data.ScouterDistance;
 					variables.ScouterPL = message.data.ScouterPL;
+					variables.KiSensePressed = message.data.KiSensePressed;
+					variables.KiSenseMode = message.data.KiSenseMode;
+					variables.HeavyAttackCD = message.data.HeavyAttackCD;
+					variables.HeavyAttackinCD = message.data.HeavyAttackinCD;
+					variables.HeadwearSlot = message.data.HeadwearSlot;
+					variables.KiSenseKeyPressed = message.data.KiSenseKeyPressed;
+					variables.KiSignatureX = message.data.KiSignatureX;
+					variables.KiSignatureY = message.data.KiSignatureY;
+					variables.KiSignatureZ = message.data.KiSignatureZ;
+					variables.KiSignature = message.data.KiSignature;
+					variables.InBeamClash = message.data.InBeamClash;
+					variables.DefeatedFriezaSoldiers3 = message.data.DefeatedFriezaSoldiers3;
 				}
 			});
 			context.setPacketHandled(true);

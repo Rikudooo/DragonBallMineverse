@@ -24,6 +24,7 @@ import net.mcreator.dbm.procedures.SetBodyProcedure;
 import net.mcreator.dbm.procedures.SetAgilityProcedure;
 import net.mcreator.dbm.procedures.SetAgeCMDProcedure;
 import net.mcreator.dbm.procedures.SendPlayerDBTextProcedure;
+import net.mcreator.dbm.procedures.SayRegistryNameProcedure;
 import net.mcreator.dbm.procedures.RemoveLegendaryProcedure;
 import net.mcreator.dbm.procedures.PlaceStructureProcedure;
 import net.mcreator.dbm.procedures.LocateStructureProcedure;
@@ -55,7 +56,21 @@ public class DBMAdminCommand {
 
 			LocateStructureProcedure.execute(world, arguments, entity);
 			return 0;
-		}))).then(Commands.literal("stats").then(Commands.literal("attributes")
+		}))).then(Commands.literal("registry").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			SayRegistryNameProcedure.execute(entity);
+			return 0;
+		})).then(Commands.literal("stats").then(Commands.literal("attributes")
 				.then(Commands.literal("body").then(Commands.argument("Player", EntityArgument.player()).then(Commands.literal("add").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();

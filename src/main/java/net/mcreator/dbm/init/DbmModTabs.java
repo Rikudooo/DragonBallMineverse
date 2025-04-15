@@ -33,6 +33,7 @@ public class DbmModTabs {
 				tabData.accept(DbmModBlocks.KAIOSHINKAI_DIRT.get().asItem());
 				tabData.accept(DbmModBlocks.KAIOSHINKAI_LEAVES.get().asItem());
 				tabData.accept(DbmModBlocks.KAIOSHINKAI_LOG.get().asItem());
+				tabData.accept(DbmModBlocks.ZIRAKAI_ORE.get().asItem());
 			})
 
 					.build());
@@ -59,6 +60,11 @@ public class DbmModTabs {
 				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_5.get());
 				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_6.get());
 				tabData.accept(DbmModItems.NAMEK_DRAGON_BALL_7.get());
+				tabData.accept(DbmModItems.SCOUTER_1.get());
+				tabData.accept(DbmModItems.ZIRAKAI_GEM.get());
+				tabData.accept(DbmModItems.TIER_1_CIRCUIT.get());
+				tabData.accept(DbmModItems.TIER_2_CIRCUIT.get());
+				tabData.accept(DbmModItems.TIER_3_CIRCUIT.get());
 			})
 
 					.build());

@@ -13,10 +13,14 @@ import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.dbm.client.gui.YardrattanGUIScreen;
 import net.mcreator.dbm.client.gui.YardratGUI2Screen;
+import net.mcreator.dbm.client.gui.WhisGUIScreen;
+import net.mcreator.dbm.client.gui.WhisGUI2Screen;
 import net.mcreator.dbm.client.gui.WelcomeGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUI9Screen;
 import net.mcreator.dbm.client.gui.StoryGUI8Screen;
+import net.mcreator.dbm.client.gui.StoryGUI82Screen;
+import net.mcreator.dbm.client.gui.StoryGUI81Screen;
 import net.mcreator.dbm.client.gui.StoryGUI80Screen;
 import net.mcreator.dbm.client.gui.StoryGUI7Screen;
 import net.mcreator.dbm.client.gui.StoryGUI79Screen;
@@ -114,6 +118,7 @@ import net.mcreator.dbm.client.gui.HalfSaiyanFormsGUIScreen;
 import net.mcreator.dbm.client.gui.GroupGUIScreen;
 import net.mcreator.dbm.client.gui.GroupGUI2Screen;
 import net.mcreator.dbm.client.gui.FinishGUIScreen;
+import net.mcreator.dbm.client.gui.ExtraGUIScreen;
 import net.mcreator.dbm.client.gui.EnmaGUIScreen;
 import net.mcreator.dbm.client.gui.DendeGUIScreen;
 import net.mcreator.dbm.client.gui.CharacterCreationGUIScreen;
@@ -235,6 +240,11 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.STORY_GUI_79.get(), StoryGUI79Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI_80.get(), StoryGUI80Screen::new);
 			MenuScreens.register(DbmModMenus.NAMEKIAN_FORMS_GUI.get(), NamekianFormsGUIScreen::new);
+			MenuScreens.register(DbmModMenus.EXTRA_GUI.get(), ExtraGUIScreen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_81.get(), StoryGUI81Screen::new);
+			MenuScreens.register(DbmModMenus.WHIS_GUI.get(), WhisGUIScreen::new);
+			MenuScreens.register(DbmModMenus.WHIS_GUI_2.get(), WhisGUI2Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_82.get(), StoryGUI82Screen::new);
 		});
 	}
 }

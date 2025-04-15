@@ -14,8 +14,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.dbm.item.ZirakaiGemItem;
 import net.mcreator.dbm.item.TurtleGiKingKaiItem;
 import net.mcreator.dbm.item.TurtleGiItem;
+import net.mcreator.dbm.item.Tier3CircuitItem;
+import net.mcreator.dbm.item.Tier2CircuitItem;
+import net.mcreator.dbm.item.Tier1CircuitItem;
 import net.mcreator.dbm.item.SpacePodItem;
 import net.mcreator.dbm.item.SenzuBeanItem;
 import net.mcreator.dbm.item.Scouter1Item;
@@ -284,6 +288,11 @@ public class DbmModItems {
 	public static final RegistryObject<Item> SCOUTER_1 = REGISTRY.register("scouter_1", () -> new Scouter1Item());
 	public static final RegistryObject<Item> BLACK_WHITE_FIT_CHESTPLATE = REGISTRY.register("black_white_fit_chestplate", () -> new BlackWhiteFitItem.Chestplate());
 	public static final RegistryObject<Item> BLACK_WHITE_FIT_LEGGINGS = REGISTRY.register("black_white_fit_leggings", () -> new BlackWhiteFitItem.Leggings());
+	public static final RegistryObject<Item> ZIRAKAI_GEM = REGISTRY.register("zirakai_gem", () -> new ZirakaiGemItem());
+	public static final RegistryObject<Item> TIER_1_CIRCUIT = REGISTRY.register("tier_1_circuit", () -> new Tier1CircuitItem());
+	public static final RegistryObject<Item> TIER_2_CIRCUIT = REGISTRY.register("tier_2_circuit", () -> new Tier2CircuitItem());
+	public static final RegistryObject<Item> TIER_3_CIRCUIT = REGISTRY.register("tier_3_circuit", () -> new Tier3CircuitItem());
+	public static final RegistryObject<Item> ZIRAKAI_ORE = block(DbmModBlocks.ZIRAKAI_ORE);
 
 	// Start of user code block custom items
 	// End of user code block custom items

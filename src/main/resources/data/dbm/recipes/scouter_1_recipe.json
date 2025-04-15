@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " ab",
+    "cde"
+  ],
+  "key": {
+    "a": {
+      "item": "dbm:zirakai_gem"
+    },
+    "b": {
+      "item": "minecraft:stone_button"
+    },
+    "c": {
+      "item": "minecraft:lime_stained_glass"
+    },
+    "d": {
+      "item": "dbm:tier_2_circuit"
+    },
+    "e": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "dbm:scouter_1",
+    "count": 1
+  }
+}

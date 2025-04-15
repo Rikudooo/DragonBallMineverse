@@ -229,7 +229,7 @@ public class PunchProcedureProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BlockingTimer > 3
+					if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BlockingTimer > 0
 							&& (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BlockingTimer < 10) {
 						if (event != null && event.isCancelable()) {
 							event.setCanceled(true);
@@ -279,6 +279,13 @@ public class PunchProcedureProcedure {
 										}
 									}
 								}
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:dodge")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:dodge")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 					}
