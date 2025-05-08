@@ -11,8 +11,10 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.dbm.entity.StoryZarbonEntity;
 import net.mcreator.dbm.entity.StoryYakonEntity;
+import net.mcreator.dbm.entity.StoryTagomaEntity;
 import net.mcreator.dbm.entity.StorySuperBuuEntity;
 import net.mcreator.dbm.entity.StorySpopovichEntity;
+import net.mcreator.dbm.entity.StoryShisamiEntity;
 import net.mcreator.dbm.entity.StoryRecoomeEntity;
 import net.mcreator.dbm.entity.StoryPuipuiEntity;
 import net.mcreator.dbm.entity.StoryNappaEntity;
@@ -24,6 +26,7 @@ import net.mcreator.dbm.entity.StoryKidBuuEntity;
 import net.mcreator.dbm.entity.StoryKibitoEntity;
 import net.mcreator.dbm.entity.StoryJeiceEntity;
 import net.mcreator.dbm.entity.StoryGuldoEntity;
+import net.mcreator.dbm.entity.StoryGoldenFriezaEntity;
 import net.mcreator.dbm.entity.StoryGinyuEntity;
 import net.mcreator.dbm.entity.StoryFusedBuuEntity;
 import net.mcreator.dbm.entity.StoryFriezaSoldierEntity;
@@ -256,6 +259,24 @@ public class SetStoryEntitiesHealthProcedure {
 				_livingEntity132.getAttribute(Attributes.MAX_HEALTH).setBaseValue(140000);
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity133 && _livingEntity133.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity133.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryTagomaEntity) {
+			if (entity instanceof LivingEntity _livingEntity136 && _livingEntity136.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity136.getAttribute(Attributes.MAX_HEALTH).setBaseValue(90000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity137 && _livingEntity137.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity137.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryShisamiEntity) {
+			if (entity instanceof LivingEntity _livingEntity140 && _livingEntity140.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity140.getAttribute(Attributes.MAX_HEALTH).setBaseValue(80000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity141 && _livingEntity141.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity141.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+		}
+		if (entity instanceof StoryGoldenFriezaEntity) {
+			if (entity instanceof LivingEntity _livingEntity144 && _livingEntity144.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity144.getAttribute(Attributes.MAX_HEALTH).setBaseValue(150000);
+			if (entity instanceof LivingEntity _entity)
+				_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity145 && _livingEntity145.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity145.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
 		}
 	}
 }

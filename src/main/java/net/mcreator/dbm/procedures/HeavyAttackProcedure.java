@@ -134,7 +134,7 @@ public class HeavyAttackProcedure {
 														ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:heavyattack")), SoundSource.PLAYERS, 1, 1, false);
 											}
 										}
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK)),
+										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK), entity),
 												(float) ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MeleeDamage * 1.5));
 										if (world.isClientSide()) {
 											if (entityiterator instanceof AbstractClientPlayer player) {
@@ -271,7 +271,7 @@ public class HeavyAttackProcedure {
 														ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:heavyattack")), SoundSource.PLAYERS, 1, 1, false);
 											}
 										}
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK)),
+										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK), entity),
 												(float) ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MeleeDamage * 1.5));
 										if ((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Flying == true) {
 											{
@@ -416,7 +416,7 @@ public class HeavyAttackProcedure {
 														ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:heavyattack")), SoundSource.PLAYERS, 1, 1, false);
 											}
 										}
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK)),
+										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK), entity),
 												(float) ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).MeleeDamage * 1.5));
 										if ((entityiterator.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Flying == true) {
 											{

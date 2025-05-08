@@ -18,8 +18,10 @@ import net.mcreator.dbm.client.renderer.StoryZarbonRenderer;
 import net.mcreator.dbm.client.renderer.StoryYakonRenderer;
 import net.mcreator.dbm.client.renderer.StoryVegetaRenderer;
 import net.mcreator.dbm.client.renderer.StoryTienshinhanRenderer;
+import net.mcreator.dbm.client.renderer.StoryTagomaRenderer;
 import net.mcreator.dbm.client.renderer.StorySuperBuuRenderer;
 import net.mcreator.dbm.client.renderer.StorySpopovichRenderer;
+import net.mcreator.dbm.client.renderer.StoryShisamiRenderer;
 import net.mcreator.dbm.client.renderer.StoryRecoomeRenderer;
 import net.mcreator.dbm.client.renderer.StoryRaditzRenderer;
 import net.mcreator.dbm.client.renderer.StoryPuipuiRenderer;
@@ -34,6 +36,7 @@ import net.mcreator.dbm.client.renderer.StoryKidBuuRenderer;
 import net.mcreator.dbm.client.renderer.StoryKibitoRenderer;
 import net.mcreator.dbm.client.renderer.StoryJeiceRenderer;
 import net.mcreator.dbm.client.renderer.StoryGuldoRenderer;
+import net.mcreator.dbm.client.renderer.StoryGoldenFriezaRenderer;
 import net.mcreator.dbm.client.renderer.StoryGinyuRenderer;
 import net.mcreator.dbm.client.renderer.StoryFusedBuuRenderer;
 import net.mcreator.dbm.client.renderer.StoryFriezaSoldierRenderer;
@@ -187,5 +190,8 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.BEERUS_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_BEERUS_2.get(), StoryBeerus2Renderer::new);
 		event.registerEntityRenderer(DbmModEntities.WHIS.get(), WhisRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_TAGOMA.get(), StoryTagomaRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_SHISAMI.get(), StoryShisamiRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.STORY_GOLDEN_FRIEZA.get(), StoryGoldenFriezaRenderer::new);
 	}
 }

@@ -39,13 +39,6 @@ public class BlockingOnKeyPressedProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				double _setval = (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BlockingTimer + 1;
-				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.BlockingTimer = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 			if (world.isClientSide()) {
 				if (entity instanceof AbstractClientPlayer player) {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));

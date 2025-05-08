@@ -260,7 +260,7 @@
           "image": "next2.png",
           "hoveredImage": "nexthovered2.png",
           "onClick": {
-            "name": "SetStory80"
+            "name": "SetStory82"
           },
           "displayCondition": {
             "name": "ReturnOnEarth"

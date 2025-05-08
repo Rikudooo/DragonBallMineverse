@@ -13,7 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.dbm.world.inventory.StoryGUI80Menu;
+import net.mcreator.dbm.world.inventory.StoryGUI82Menu;
 import net.mcreator.dbm.network.DbmModVariables;
 
 import io.netty.buffer.Unpooled;
@@ -23,7 +23,7 @@ public class SetStory82Procedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 80;
+			double _setval = 82;
 			entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.StoryGUI = _setval;
 				capability.syncPlayerVariables(entity);
@@ -34,12 +34,12 @@ public class SetStory82Procedure {
 			NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("StoryGUI80");
+					return Component.literal("StoryGUI82");
 				}
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new StoryGUI80Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					return new StoryGUI82Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 				}
 			}, _bpos);
 		}

@@ -656,5 +656,14 @@ public class StatsProcedureProcedure {
 				});
 			}
 		}
+		if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Blocking == true) {
+			{
+				double _setval = (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BlockingTimer + 1;
+				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.BlockingTimer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 	}
 }

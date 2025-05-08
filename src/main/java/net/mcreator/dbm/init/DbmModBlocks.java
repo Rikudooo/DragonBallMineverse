@@ -24,6 +24,7 @@ import net.mcreator.dbm.block.UnbreakableGlassBlock;
 import net.mcreator.dbm.block.UnbreakableFullGrassBlockBlock;
 import net.mcreator.dbm.block.UnbreakableDirtBlock;
 import net.mcreator.dbm.block.SpaceRockBlock;
+import net.mcreator.dbm.block.RedRockBlock;
 import net.mcreator.dbm.block.PowerPolePlinthUpBlock;
 import net.mcreator.dbm.block.PowerPolePlinthDownBlock;
 import net.mcreator.dbm.block.NamekGrassBlockBlock;
@@ -380,6 +381,7 @@ public class DbmModBlocks {
 	public static final RegistryObject<Block> KAIOSHINKAI_LEAVES = REGISTRY.register("kaioshinkai_leaves", () -> new KaioshinkaiLeavesBlock());
 	public static final RegistryObject<Block> KAIOSHINKAI_LOG = REGISTRY.register("kaioshinkai_log", () -> new KaioshinkaiLogBlock());
 	public static final RegistryObject<Block> ZIRAKAI_ORE = REGISTRY.register("zirakai_ore", () -> new ZirakaiOreBlock());
+	public static final RegistryObject<Block> RED_ROCK = REGISTRY.register("red_rock", () -> new RedRockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

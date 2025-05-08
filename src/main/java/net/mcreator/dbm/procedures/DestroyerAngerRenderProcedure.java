@@ -295,7 +295,8 @@ public class DestroyerAngerRenderProcedure {
 							end();
 						}
 						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator instanceof StoryBeerus2Entity _datEntI ? _datEntI.getEntityData().get(StoryBeerus2Entity.DATA_OldYAW) : 0)) * 1.5),
-								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9), (entityiterator.getZ() + Math.cos(0) * 1.5),
+								(entityiterator.getY() + entityiterator.getEyeHeight() * 0.9),
+								(entityiterator.getZ() + Math.cos(Math.toRadians(entityiterator instanceof StoryBeerus2Entity _datEntI ? _datEntI.getEntityData().get(StoryBeerus2Entity.DATA_OldYAW) : 0)) * 1.5),
 								(float) (entityiterator instanceof StoryBeerus2Entity _datEntI ? _datEntI.getEntityData().get(StoryBeerus2Entity.DATA_OldYAW) : 0),
 								(float) (entityiterator instanceof StoryBeerus2Entity _datEntI ? _datEntI.getEntityData().get(StoryBeerus2Entity.DATA_OldPITCH) : 0), 0, (float) (-0.4), (float) 0.4, 1, 255 << 24 | 255 << 16 | 255 << 8 | 255);
 						renderShape(shape(), (entityiterator.getX() - Math.sin(Math.toRadians(entityiterator instanceof StoryBeerus2Entity _datEntI ? _datEntI.getEntityData().get(StoryBeerus2Entity.DATA_OldYAW) : 0)) * 1.5),

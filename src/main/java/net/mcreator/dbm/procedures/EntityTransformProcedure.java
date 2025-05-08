@@ -18,6 +18,7 @@ import net.mcreator.dbm.entity.StoryZarbonEntity;
 import net.mcreator.dbm.entity.StoryVegetaEntity;
 import net.mcreator.dbm.entity.StoryPiccoloEntity;
 import net.mcreator.dbm.entity.StoryMysteriousYoungManEntity;
+import net.mcreator.dbm.entity.StoryGoldenFriezaEntity;
 import net.mcreator.dbm.entity.StoryFusedBuuEntity;
 import net.mcreator.dbm.entity.StoryFriezaEntity;
 import net.mcreator.dbm.entity.StoryCell4Entity;
@@ -256,6 +257,21 @@ public class EntityTransformProcedure {
 						_datEntSetS.getEntityData().set(StoryFusedBuuEntity.DATA_Form, "Gohan");
 					if (entity instanceof LivingEntity _entity)
 						_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity96 && _livingEntity96.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity96.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
+					entity.refreshDimensions();
+				}
+			}
+		}
+		if (entity instanceof StoryGoldenFriezaEntity) {
+			if ((entity instanceof StoryGoldenFriezaEntity _datEntS ? _datEntS.getEntityData().get(StoryGoldenFriezaEntity.DATA_Form) : "").equals("Final")) {
+				if (amount >= (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
+					damage = 0;
+					if (event instanceof LivingHurtEvent event2) {
+						event2.setAmount((float) damage);
+					}
+					if (entity instanceof StoryGoldenFriezaEntity _datEntSetS)
+						_datEntSetS.getEntityData().set(StoryGoldenFriezaEntity.DATA_Form, "Golden");
+					if (entity instanceof LivingEntity _entity)
+						_entity.setHealth((float) (entity instanceof LivingEntity _livingEntity103 && _livingEntity103.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity103.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0));
 					entity.refreshDimensions();
 				}
 			}

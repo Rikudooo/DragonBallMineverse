@@ -19,6 +19,13 @@ import net.mcreator.dbm.client.gui.WelcomeGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUIScreen;
 import net.mcreator.dbm.client.gui.StoryGUI9Screen;
 import net.mcreator.dbm.client.gui.StoryGUI8Screen;
+import net.mcreator.dbm.client.gui.StoryGUI89Screen;
+import net.mcreator.dbm.client.gui.StoryGUI88Screen;
+import net.mcreator.dbm.client.gui.StoryGUI87Screen;
+import net.mcreator.dbm.client.gui.StoryGUI86Screen;
+import net.mcreator.dbm.client.gui.StoryGUI85Screen;
+import net.mcreator.dbm.client.gui.StoryGUI84Screen;
+import net.mcreator.dbm.client.gui.StoryGUI83Screen;
 import net.mcreator.dbm.client.gui.StoryGUI82Screen;
 import net.mcreator.dbm.client.gui.StoryGUI81Screen;
 import net.mcreator.dbm.client.gui.StoryGUI80Screen;
@@ -245,6 +252,13 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.WHIS_GUI.get(), WhisGUIScreen::new);
 			MenuScreens.register(DbmModMenus.WHIS_GUI_2.get(), WhisGUI2Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI_82.get(), StoryGUI82Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_83.get(), StoryGUI83Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_84.get(), StoryGUI84Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_85.get(), StoryGUI85Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_86.get(), StoryGUI86Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_87.get(), StoryGUI87Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_88.get(), StoryGUI88Screen::new);
+			MenuScreens.register(DbmModMenus.STORY_GUI_89.get(), StoryGUI89Screen::new);
 		});
 	}
 }

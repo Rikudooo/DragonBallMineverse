@@ -260,7 +260,7 @@
           "image": "next2.png",
           "hoveredImage": "nexthovered2.png",
           "onClick": {
-            "name": "SetStory80"
+            "name": "SetStory83"
           },
           "displayCondition": {
             "name": "ReturnOnEarth"
@@ -330,6 +330,21 @@
           },
           "x": 51,
           "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_the_emperor_is_on_his_way_for_re",
+          "text": {
+            "fixedValue": "The emperor is on his way for revenge!"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 51,
+          "y": 80
         }
       }
     ],

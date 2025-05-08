@@ -89,6 +89,7 @@ public class StoryGUI82Screen extends AbstractContainerScreen<StoryGUI82Menu> {
 			guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui_82.label_be_on_planet_earth_done"), -154, 5, -256, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui_82.label_depths_of_the_universe_a_being"), -163, -67, -16777216, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui_82.label_you_train_to_better_your_skills"), -163, -58, -16777216, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.dbm.story_gui_82.label_the_emperor_is_on_his_way_for_re"), -163, -40, -16777216, false);
 	}
 
 	@Override

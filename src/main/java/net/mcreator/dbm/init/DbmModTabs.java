@@ -34,6 +34,7 @@ public class DbmModTabs {
 				tabData.accept(DbmModBlocks.KAIOSHINKAI_LEAVES.get().asItem());
 				tabData.accept(DbmModBlocks.KAIOSHINKAI_LOG.get().asItem());
 				tabData.accept(DbmModBlocks.ZIRAKAI_ORE.get().asItem());
+				tabData.accept(DbmModBlocks.RED_ROCK.get().asItem());
 			})
 
 					.build());
@@ -240,6 +241,22 @@ public class DbmModTabs {
 				tabData.accept(DbmModItems.FUTURE_FIT_LEGGINGS.get());
 				tabData.accept(DbmModItems.BLACK_WHITE_FIT_CHESTPLATE.get());
 				tabData.accept(DbmModItems.BLACK_WHITE_FIT_LEGGINGS.get());
+				tabData.accept(DbmModItems.BATTLE_ARMOR_2_CHESTPLATE.get());
+				tabData.accept(DbmModItems.BATTLE_ARMOR_2_LEGGINGS.get());
+				tabData.accept(DbmModItems.BATTLE_ARMOR_3_CHESTPLATE.get());
+				tabData.accept(DbmModItems.BATTLE_ARMOR_3_LEGGINGS.get());
+				tabData.accept(DbmModItems.BATTLE_ARMOR_WHIS_CHESTPLATE.get());
+				tabData.accept(DbmModItems.BATTLE_ARMOR_WHIS_LEGGINGS.get());
+				tabData.accept(DbmModItems.WHIS_GI_CHESTPLATE.get());
+				tabData.accept(DbmModItems.WHIS_GI_LEGGINGS.get());
+				tabData.accept(DbmModItems.BROLY_ARMOR_CHESTPLATE.get());
+				tabData.accept(DbmModItems.BROLY_ARMOR_LEGGINGS.get());
+				tabData.accept(DbmModItems.BROLY_OUTFIT_CHESTPLATE.get());
+				tabData.accept(DbmModItems.BROLY_OUTFIT_LEGGINGS.get());
+				tabData.accept(DbmModItems.GT_GOKU_GI_CHESTPLATE.get());
+				tabData.accept(DbmModItems.GT_GOKU_GI_LEGGINGS.get());
+				tabData.accept(DbmModItems.DESTROYER_U_7_OUTFIT_CHESTPLATE.get());
+				tabData.accept(DbmModItems.DESTROYER_U_7_OUTFIT_LEGGINGS.get());
 			})
 
 					.build());

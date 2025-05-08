@@ -96,9 +96,11 @@ import net.mcreator.dbm.client.model.ModelVegetaSaiyanSaga;
 import net.mcreator.dbm.client.model.ModelTwoStarDragonBallEntity;
 import net.mcreator.dbm.client.model.ModelTrunksDBZ;
 import net.mcreator.dbm.client.model.ModelThreeStarDragonBallEntity;
+import net.mcreator.dbm.client.model.ModelTagoma_;
 import net.mcreator.dbm.client.model.ModelSuperBuu;
 import net.mcreator.dbm.client.model.ModelSpopovich;
 import net.mcreator.dbm.client.model.ModelSixStarDragonBallEntity;
+import net.mcreator.dbm.client.model.ModelShisami;
 import net.mcreator.dbm.client.model.ModelShenron119;
 import net.mcreator.dbm.client.model.ModelSevenStarDragonBallEntity;
 import net.mcreator.dbm.client.model.ModelSemiPerfectCell;
@@ -201,6 +203,7 @@ public class DbmModModels {
 		event.registerLayerDefinition(Modelfriezasoldier.LAYER_LOCATION, Modelfriezasoldier::createBodyLayer);
 		event.registerLayerDefinition(Modelhair_sbroly_base.LAYER_LOCATION, Modelhair_sbroly_base::createBodyLayer);
 		event.registerLayerDefinition(Modelcui.LAYER_LOCATION, Modelcui::createBodyLayer);
+		event.registerLayerDefinition(ModelTagoma_.LAYER_LOCATION, ModelTagoma_::createBodyLayer);
 		event.registerLayerDefinition(Modelhair_sbroly_ssj2.LAYER_LOCATION, Modelhair_sbroly_ssj2::createBodyLayer);
 		event.registerLayerDefinition(Modeleyebrows_4.LAYER_LOCATION, Modeleyebrows_4::createBodyLayer);
 		event.registerLayerDefinition(Modelfriezafinal.LAYER_LOCATION, Modelfriezafinal::createBodyLayer);
@@ -282,6 +285,7 @@ public class DbmModModels {
 		event.registerLayerDefinition(Modelhair_16_ssj.LAYER_LOCATION, Modelhair_16_ssj::createBodyLayer);
 		event.registerLayerDefinition(Modelhair_trunks_ssj.LAYER_LOCATION, Modelhair_trunks_ssj::createBodyLayer);
 		event.registerLayerDefinition(ModelAndroid19.LAYER_LOCATION, ModelAndroid19::createBodyLayer);
+		event.registerLayerDefinition(ModelShisami.LAYER_LOCATION, ModelShisami::createBodyLayer);
 		event.registerLayerDefinition(ModelWhis.LAYER_LOCATION, ModelWhis::createBodyLayer);
 		event.registerLayerDefinition(Modeleyebrows_3.LAYER_LOCATION, Modeleyebrows_3::createBodyLayer);
 		event.registerLayerDefinition(Modeltrunkssupersaiyan.LAYER_LOCATION, Modeltrunkssupersaiyan::createBodyLayer);

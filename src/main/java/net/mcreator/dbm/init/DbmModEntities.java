@@ -24,8 +24,10 @@ import net.mcreator.dbm.entity.StoryZarbonEntity;
 import net.mcreator.dbm.entity.StoryYakonEntity;
 import net.mcreator.dbm.entity.StoryVegetaEntity;
 import net.mcreator.dbm.entity.StoryTienshinhanEntity;
+import net.mcreator.dbm.entity.StoryTagomaEntity;
 import net.mcreator.dbm.entity.StorySuperBuuEntity;
 import net.mcreator.dbm.entity.StorySpopovichEntity;
+import net.mcreator.dbm.entity.StoryShisamiEntity;
 import net.mcreator.dbm.entity.StoryRecoomeEntity;
 import net.mcreator.dbm.entity.StoryRaditzEntity;
 import net.mcreator.dbm.entity.StoryPuipuiEntity;
@@ -40,6 +42,7 @@ import net.mcreator.dbm.entity.StoryKidBuuEntity;
 import net.mcreator.dbm.entity.StoryKibitoEntity;
 import net.mcreator.dbm.entity.StoryJeiceEntity;
 import net.mcreator.dbm.entity.StoryGuldoEntity;
+import net.mcreator.dbm.entity.StoryGoldenFriezaEntity;
 import net.mcreator.dbm.entity.StoryGinyuEntity;
 import net.mcreator.dbm.entity.StoryFusedBuuEntity;
 import net.mcreator.dbm.entity.StoryFriezaSoldierEntity;
@@ -294,7 +297,13 @@ public class DbmModEntities {
 	public static final RegistryObject<EntityType<StoryBeerus2Entity>> STORY_BEERUS_2 = register("story_beerus_2", EntityType.Builder.<StoryBeerus2Entity>of(StoryBeerus2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryBeerus2Entity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<WhisEntity>> WHIS = register("whis",
-			EntityType.Builder.<WhisEntity>of(WhisEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WhisEntity::new).fireImmune().sized(0.6f, 2f));
+			EntityType.Builder.<WhisEntity>of(WhisEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WhisEntity::new).fireImmune().sized(0.6f, 4.1f));
+	public static final RegistryObject<EntityType<StoryTagomaEntity>> STORY_TAGOMA = register("story_tagoma", EntityType.Builder.<StoryTagomaEntity>of(StoryTagomaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryTagomaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryShisamiEntity>> STORY_SHISAMI = register("story_shisami", EntityType.Builder.<StoryShisamiEntity>of(StoryShisamiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryShisamiEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StoryGoldenFriezaEntity>> STORY_GOLDEN_FRIEZA = register("story_golden_frieza", EntityType.Builder.<StoryGoldenFriezaEntity>of(StoryGoldenFriezaEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryGoldenFriezaEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -387,6 +396,9 @@ public class DbmModEntities {
 			StoryBeerusEntity.init();
 			StoryBeerus2Entity.init();
 			WhisEntity.init();
+			StoryTagomaEntity.init();
+			StoryShisamiEntity.init();
+			StoryGoldenFriezaEntity.init();
 		});
 	}
 
@@ -474,5 +486,8 @@ public class DbmModEntities {
 		event.put(STORY_BEERUS.get(), StoryBeerusEntity.createAttributes().build());
 		event.put(STORY_BEERUS_2.get(), StoryBeerus2Entity.createAttributes().build());
 		event.put(WHIS.get(), WhisEntity.createAttributes().build());
+		event.put(STORY_TAGOMA.get(), StoryTagomaEntity.createAttributes().build());
+		event.put(STORY_SHISAMI.get(), StoryShisamiEntity.createAttributes().build());
+		event.put(STORY_GOLDEN_FRIEZA.get(), StoryGoldenFriezaEntity.createAttributes().build());
 	}
 }

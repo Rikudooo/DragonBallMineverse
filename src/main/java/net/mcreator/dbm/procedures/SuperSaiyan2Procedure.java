@@ -104,7 +104,7 @@ public class SuperSaiyan2Procedure {
 					});
 				}
 				{
-					String _setval = "dbm:textures/entities/aura_mystic.png";
+					String _setval = "dbm:textures/entities/aura_beast.png";
 					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AuraTexture = _setval;
 						capability.syncPlayerVariables(entity);
@@ -265,7 +265,7 @@ public class SuperSaiyan2Procedure {
 				});
 			}
 			{
-				double _setval = 10.25;
+				double _setval = 12.25;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);
@@ -294,7 +294,7 @@ public class SuperSaiyan2Procedure {
 				});
 			}
 			{
-				double _setval = 17;
+				double _setval = 16.5;
 				entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FormBoost = _setval;
 					capability.syncPlayerVariables(entity);

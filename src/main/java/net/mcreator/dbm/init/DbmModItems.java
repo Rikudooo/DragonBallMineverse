@@ -15,6 +15,7 @@ import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.dbm.item.ZirakaiGemItem;
+import net.mcreator.dbm.item.WhisGiItem;
 import net.mcreator.dbm.item.TurtleGiKingKaiItem;
 import net.mcreator.dbm.item.TurtleGiItem;
 import net.mcreator.dbm.item.Tier3CircuitItem;
@@ -40,6 +41,7 @@ import net.mcreator.dbm.item.NamekDragonBall1Item;
 import net.mcreator.dbm.item.MakankosappoItemItem;
 import net.mcreator.dbm.item.LegendaryItemItem;
 import net.mcreator.dbm.item.KamehamehaItemItem;
+import net.mcreator.dbm.item.GTGokuGiItem;
 import net.mcreator.dbm.item.FutureFitItem;
 import net.mcreator.dbm.item.DragonRadarItem;
 import net.mcreator.dbm.item.DragonBall7Item;
@@ -49,10 +51,16 @@ import net.mcreator.dbm.item.DragonBall4Item;
 import net.mcreator.dbm.item.DragonBall3Item;
 import net.mcreator.dbm.item.DragonBall2Item;
 import net.mcreator.dbm.item.DragonBall1Item;
+import net.mcreator.dbm.item.DestroyerU7OutfitItem;
 import net.mcreator.dbm.item.CookedDinosaurItem;
 import net.mcreator.dbm.item.ChargingItem;
+import net.mcreator.dbm.item.BrolyOutfitItem;
+import net.mcreator.dbm.item.BrolyArmorItem;
 import net.mcreator.dbm.item.BlackWhiteFitItem;
+import net.mcreator.dbm.item.BattleArmorWhisItem;
 import net.mcreator.dbm.item.BattleArmorItem;
+import net.mcreator.dbm.item.BattleArmor3Item;
+import net.mcreator.dbm.item.BattleArmor2Item;
 import net.mcreator.dbm.DbmMod;
 
 public class DbmModItems {
@@ -293,6 +301,23 @@ public class DbmModItems {
 	public static final RegistryObject<Item> TIER_2_CIRCUIT = REGISTRY.register("tier_2_circuit", () -> new Tier2CircuitItem());
 	public static final RegistryObject<Item> TIER_3_CIRCUIT = REGISTRY.register("tier_3_circuit", () -> new Tier3CircuitItem());
 	public static final RegistryObject<Item> ZIRAKAI_ORE = block(DbmModBlocks.ZIRAKAI_ORE);
+	public static final RegistryObject<Item> BATTLE_ARMOR_2_CHESTPLATE = REGISTRY.register("battle_armor_2_chestplate", () -> new BattleArmor2Item.Chestplate());
+	public static final RegistryObject<Item> BATTLE_ARMOR_2_LEGGINGS = REGISTRY.register("battle_armor_2_leggings", () -> new BattleArmor2Item.Leggings());
+	public static final RegistryObject<Item> BATTLE_ARMOR_3_CHESTPLATE = REGISTRY.register("battle_armor_3_chestplate", () -> new BattleArmor3Item.Chestplate());
+	public static final RegistryObject<Item> BATTLE_ARMOR_3_LEGGINGS = REGISTRY.register("battle_armor_3_leggings", () -> new BattleArmor3Item.Leggings());
+	public static final RegistryObject<Item> BATTLE_ARMOR_WHIS_CHESTPLATE = REGISTRY.register("battle_armor_whis_chestplate", () -> new BattleArmorWhisItem.Chestplate());
+	public static final RegistryObject<Item> BATTLE_ARMOR_WHIS_LEGGINGS = REGISTRY.register("battle_armor_whis_leggings", () -> new BattleArmorWhisItem.Leggings());
+	public static final RegistryObject<Item> WHIS_GI_CHESTPLATE = REGISTRY.register("whis_gi_chestplate", () -> new WhisGiItem.Chestplate());
+	public static final RegistryObject<Item> WHIS_GI_LEGGINGS = REGISTRY.register("whis_gi_leggings", () -> new WhisGiItem.Leggings());
+	public static final RegistryObject<Item> RED_ROCK = block(DbmModBlocks.RED_ROCK);
+	public static final RegistryObject<Item> BROLY_ARMOR_CHESTPLATE = REGISTRY.register("broly_armor_chestplate", () -> new BrolyArmorItem.Chestplate());
+	public static final RegistryObject<Item> BROLY_ARMOR_LEGGINGS = REGISTRY.register("broly_armor_leggings", () -> new BrolyArmorItem.Leggings());
+	public static final RegistryObject<Item> BROLY_OUTFIT_CHESTPLATE = REGISTRY.register("broly_outfit_chestplate", () -> new BrolyOutfitItem.Chestplate());
+	public static final RegistryObject<Item> BROLY_OUTFIT_LEGGINGS = REGISTRY.register("broly_outfit_leggings", () -> new BrolyOutfitItem.Leggings());
+	public static final RegistryObject<Item> GT_GOKU_GI_CHESTPLATE = REGISTRY.register("gt_goku_gi_chestplate", () -> new GTGokuGiItem.Chestplate());
+	public static final RegistryObject<Item> GT_GOKU_GI_LEGGINGS = REGISTRY.register("gt_goku_gi_leggings", () -> new GTGokuGiItem.Leggings());
+	public static final RegistryObject<Item> DESTROYER_U_7_OUTFIT_CHESTPLATE = REGISTRY.register("destroyer_u_7_outfit_chestplate", () -> new DestroyerU7OutfitItem.Chestplate());
+	public static final RegistryObject<Item> DESTROYER_U_7_OUTFIT_LEGGINGS = REGISTRY.register("destroyer_u_7_outfit_leggings", () -> new DestroyerU7OutfitItem.Leggings());
 
 	// Start of user code block custom items
 	// End of user code block custom items

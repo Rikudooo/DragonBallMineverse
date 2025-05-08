@@ -241,6 +241,7 @@ public class ModelAura<T extends Entity> extends EntityModel<T> {
 		this.TopMid.yRot = ageInTicks;
 		this.Top.yRot = ageInTicks;
 		this.Flat.yRot = ageInTicks;
+		this.Bottom.yRot = ageInTicks;
 		this.Tip.yRot = ageInTicks;
 	}
 }

@@ -308,6 +308,72 @@ public class HasGroupProcedure {
 								});
 							}
 						}
+						if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).DefeatedFriezaSoldiers2 != (new Object() {
+							Entity getEntity(String uuid) {
+								Entity _uuidentity = null;
+								if (world instanceof ServerLevel _server) {
+									try {
+										_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+									} catch (IllegalArgumentException e) {
+									}
+								}
+								return _uuidentity;
+							}
+						}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Member1)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new DbmModVariables.PlayerVariables())).DefeatedFriezaSoldiers2) {
+							{
+								double _setval = (new Object() {
+									Entity getEntity(String uuid) {
+										Entity _uuidentity = null;
+										if (world instanceof ServerLevel _server) {
+											try {
+												_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+											} catch (IllegalArgumentException e) {
+											}
+										}
+										return _uuidentity;
+									}
+								}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Member1)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new DbmModVariables.PlayerVariables())).DefeatedFriezaSoldiers2;
+								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.DefeatedFriezaSoldiers2 = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						}
+						if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).DefeatedFriezaSoldiers3 != (new Object() {
+							Entity getEntity(String uuid) {
+								Entity _uuidentity = null;
+								if (world instanceof ServerLevel _server) {
+									try {
+										_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+									} catch (IllegalArgumentException e) {
+									}
+								}
+								return _uuidentity;
+							}
+						}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Member1)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new DbmModVariables.PlayerVariables())).DefeatedFriezaSoldiers3) {
+							{
+								double _setval = (new Object() {
+									Entity getEntity(String uuid) {
+										Entity _uuidentity = null;
+										if (world instanceof ServerLevel _server) {
+											try {
+												_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+											} catch (IllegalArgumentException e) {
+											}
+										}
+										return _uuidentity;
+									}
+								}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Member1)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new DbmModVariables.PlayerVariables())).DefeatedFriezaSoldiers3;
+								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.DefeatedFriezaSoldiers3 = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						}
 					}
 					if (!(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FriendlyFire).equals((new Object() {
 						Entity getEntity(String uuid) {

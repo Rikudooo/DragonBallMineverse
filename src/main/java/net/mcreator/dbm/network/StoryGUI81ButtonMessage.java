@@ -12,7 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.StoryGUI81Menu;
-import net.mcreator.dbm.procedures.SetStory80Procedure;
+import net.mcreator.dbm.procedures.SetStory82Procedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStatsGUIProcedure;
@@ -139,7 +139,7 @@ public class StoryGUI81ButtonMessage {
 		}
 		if (buttonID == 15) {
 
-			SetStory80Procedure.execute(world, x, y, z, entity);
+			SetStory82Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

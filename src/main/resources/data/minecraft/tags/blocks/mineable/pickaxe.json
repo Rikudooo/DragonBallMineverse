@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "dbm:red_rock",
     "dbm:zirakai_ore",
     "dbm:yardrat_rock"
   ]
