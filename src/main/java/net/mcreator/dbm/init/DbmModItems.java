@@ -43,6 +43,7 @@ import net.mcreator.dbm.item.LegendaryItemItem;
 import net.mcreator.dbm.item.KamehamehaItemItem;
 import net.mcreator.dbm.item.GTGokuGiItem;
 import net.mcreator.dbm.item.FutureFitItem;
+import net.mcreator.dbm.item.FusingItemItem;
 import net.mcreator.dbm.item.DragonRadarItem;
 import net.mcreator.dbm.item.DragonBall7Item;
 import net.mcreator.dbm.item.DragonBall6Item;
@@ -318,6 +319,7 @@ public class DbmModItems {
 	public static final RegistryObject<Item> GT_GOKU_GI_LEGGINGS = REGISTRY.register("gt_goku_gi_leggings", () -> new GTGokuGiItem.Leggings());
 	public static final RegistryObject<Item> DESTROYER_U_7_OUTFIT_CHESTPLATE = REGISTRY.register("destroyer_u_7_outfit_chestplate", () -> new DestroyerU7OutfitItem.Chestplate());
 	public static final RegistryObject<Item> DESTROYER_U_7_OUTFIT_LEGGINGS = REGISTRY.register("destroyer_u_7_outfit_leggings", () -> new DestroyerU7OutfitItem.Leggings());
+	public static final RegistryObject<Item> FUSING_ITEM = REGISTRY.register("fusing_item", () -> new FusingItemItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

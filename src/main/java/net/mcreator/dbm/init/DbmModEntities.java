@@ -91,6 +91,7 @@ import net.mcreator.dbm.entity.KameSenninEntity;
 import net.mcreator.dbm.entity.KameHouseSpawnerEntity;
 import net.mcreator.dbm.entity.GregoryEntity;
 import net.mcreator.dbm.entity.GiantKiBlastEntity;
+import net.mcreator.dbm.entity.FusionLaunchEntity;
 import net.mcreator.dbm.entity.EarthEEntity;
 import net.mcreator.dbm.entity.DragonBallE7Entity;
 import net.mcreator.dbm.entity.DragonBallE6Entity;
@@ -304,6 +305,8 @@ public class DbmModEntities {
 			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryShisamiEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<StoryGoldenFriezaEntity>> STORY_GOLDEN_FRIEZA = register("story_golden_frieza", EntityType.Builder.<StoryGoldenFriezaEntity>of(StoryGoldenFriezaEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryGoldenFriezaEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FusionLaunchEntity>> FUSION_LAUNCH = register("fusion_launch",
+			EntityType.Builder.<FusionLaunchEntity>of(FusionLaunchEntity::new, MobCategory.MISC).setCustomClientFactory(FusionLaunchEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

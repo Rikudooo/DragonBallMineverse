@@ -16,7 +16,7 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.9.4
+// Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class ModelGiTop<T extends Entity> extends EntityModel<T> {
@@ -24,11 +24,15 @@ public class ModelGiTop<T extends Entity> extends EntityModel<T> {
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("dbm", "model_gi_top"), "main");
 	public final ModelPart Body;
+	public final ModelPart ShoulderPadLeft;
+	public final ModelPart ShoulderPadRight;
 	public final ModelPart RightArm;
 	public final ModelPart LeftArm;
 
 	public ModelGiTop(ModelPart root) {
 		this.Body = root.getChild("Body");
+		this.ShoulderPadLeft = this.Body.getChild("ShoulderPadLeft");
+		this.ShoulderPadRight = this.Body.getChild("ShoulderPadRight");
 		this.RightArm = root.getChild("RightArm");
 		this.LeftArm = root.getChild("LeftArm");
 	}
@@ -37,9 +41,9 @@ public class ModelGiTop<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition Body = partdefinition.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(0, 19).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition Pads = Body.addOrReplaceChild("Pads", CubeListBuilder.create(), PartPose.offset(-4.0F, 12.0F, 0.0F));
-		PartDefinition pad_r1 = Pads.addOrReplaceChild("pad_r1", CubeListBuilder.create().texOffs(56, 1).addBox(0.0F, 0.0F, -2.0F, 0.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.3927F));
-		PartDefinition pad_r2 = Pads.addOrReplaceChild("pad_r2", CubeListBuilder.create().texOffs(56, -4).addBox(0.0F, 0.0F, -2.0F, 0.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(8.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.3927F));
+		PartDefinition Body_r1 = Body.addOrReplaceChild("Body_r1", CubeListBuilder.create().texOffs(56, 1).mirror().addBox(0.0F, 0.0F, -2.0F, 0.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false),
+				PartPose.offsetAndRotation(4.0F, 12.0F, 0.0F, 0.0F, 0.0F, -0.3927F));
+		PartDefinition Body_r2 = Body.addOrReplaceChild("Body_r2", CubeListBuilder.create().texOffs(56, -4).addBox(0.0F, 0.0F, -2.0F, 0.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-4.0F, 12.0F, 0.0F, 0.0F, 0.0F, 0.3927F));
 		PartDefinition ShoulderPadLeft = Body.addOrReplaceChild("ShoulderPadLeft", CubeListBuilder.create().texOffs(0, 0).addBox(4.0F, -25.0F, -2.0F, 6.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
 		PartDefinition shoulderpad_r1 = ShoulderPadLeft.addOrReplaceChild("shoulderpad_r1", CubeListBuilder.create().texOffs(0, 7).addBox(-3.0F, 0.0F, 0.0F, 6.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(7.0F, -24.0F, 2.0F, 0.0262F, 0.0F, 0.0F));

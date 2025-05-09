@@ -277,6 +277,19 @@ public class DbmModVariables {
 			clone.KiSignature = original.KiSignature;
 			clone.InBeamClash = original.InBeamClash;
 			clone.DefeatedFriezaSoldiers3 = original.DefeatedFriezaSoldiers3;
+			clone.FusionOwned = original.FusionOwned;
+			clone.Fusion = original.Fusion;
+			clone.Fused = original.Fused;
+			clone.Fusing = original.Fusing;
+			clone.FusedSkin3 = original.FusedSkin3;
+			clone.FusedSkin4 = original.FusedSkin4;
+			clone.FusedHairstyle = original.FusedHairstyle;
+			clone.FusedHairStyleID = original.FusedHairStyleID;
+			clone.FusedEyesTypeID = original.FusedEyesTypeID;
+			clone.FusedEyesColorID = original.FusedEyesColorID;
+			clone.FusedMouth = original.FusedMouth;
+			clone.PlayerFused = original.PlayerFused;
+			clone.FusionClothes = original.FusionClothes;
 			if (!event.isWasDeath()) {
 				clone.KiAttackDamage = original.KiAttackDamage;
 				clone.Height = original.Height;
@@ -883,6 +896,19 @@ public class DbmModVariables {
 		public boolean KiSignature = false;
 		public boolean InBeamClash = false;
 		public double DefeatedFriezaSoldiers3 = 0;
+		public boolean FusionOwned = true;
+		public boolean Fusion = false;
+		public String Fused = "None";
+		public boolean Fusing = false;
+		public String FusedSkin3 = "dbm:textures/entities/notexture.png";
+		public String FusedSkin4 = "dbm:textures/entities/notexture.png";
+		public double FusedHairstyle = 0;
+		public String FusedHairStyleID = "dbm:textures/entities/notexture.png";
+		public String FusedEyesTypeID = "dbm:textures/entities/notexture.png";
+		public String FusedEyesColorID = "dbm:textures/entities/notexture.png";
+		public String FusedMouth = "dbm:textures/entities/notexture.png";
+		public boolean PlayerFused = false;
+		public String FusionClothes = "dbm:textures/entities/notexture.png";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -1078,6 +1104,19 @@ public class DbmModVariables {
 			nbt.putBoolean("KiSignature", KiSignature);
 			nbt.putBoolean("InBeamClash", InBeamClash);
 			nbt.putDouble("DefeatedFriezaSoldiers3", DefeatedFriezaSoldiers3);
+			nbt.putBoolean("FusionOwned", FusionOwned);
+			nbt.putBoolean("Fusion", Fusion);
+			nbt.putString("Fused", Fused);
+			nbt.putBoolean("Fusing", Fusing);
+			nbt.putString("FusedSkin3", FusedSkin3);
+			nbt.putString("FusedSkin4", FusedSkin4);
+			nbt.putDouble("FusedHairstyle", FusedHairstyle);
+			nbt.putString("FusedHairStyleID", FusedHairStyleID);
+			nbt.putString("FusedEyesTypeID", FusedEyesTypeID);
+			nbt.putString("FusedEyesColorID", FusedEyesColorID);
+			nbt.putString("FusedMouth", FusedMouth);
+			nbt.putBoolean("PlayerFused", PlayerFused);
+			nbt.putString("FusionClothes", FusionClothes);
 			return nbt;
 		}
 
@@ -1276,6 +1315,19 @@ public class DbmModVariables {
 			KiSignature = nbt.getBoolean("KiSignature");
 			InBeamClash = nbt.getBoolean("InBeamClash");
 			DefeatedFriezaSoldiers3 = nbt.getDouble("DefeatedFriezaSoldiers3");
+			FusionOwned = nbt.getBoolean("FusionOwned");
+			Fusion = nbt.getBoolean("Fusion");
+			Fused = nbt.getString("Fused");
+			Fusing = nbt.getBoolean("Fusing");
+			FusedSkin3 = nbt.getString("FusedSkin3");
+			FusedSkin4 = nbt.getString("FusedSkin4");
+			FusedHairstyle = nbt.getDouble("FusedHairstyle");
+			FusedHairStyleID = nbt.getString("FusedHairStyleID");
+			FusedEyesTypeID = nbt.getString("FusedEyesTypeID");
+			FusedEyesColorID = nbt.getString("FusedEyesColorID");
+			FusedMouth = nbt.getString("FusedMouth");
+			PlayerFused = nbt.getBoolean("PlayerFused");
+			FusionClothes = nbt.getString("FusionClothes");
 		}
 	}
 
@@ -1496,6 +1548,19 @@ public class DbmModVariables {
 					variables.KiSignature = message.data.KiSignature;
 					variables.InBeamClash = message.data.InBeamClash;
 					variables.DefeatedFriezaSoldiers3 = message.data.DefeatedFriezaSoldiers3;
+					variables.FusionOwned = message.data.FusionOwned;
+					variables.Fusion = message.data.Fusion;
+					variables.Fused = message.data.Fused;
+					variables.Fusing = message.data.Fusing;
+					variables.FusedSkin3 = message.data.FusedSkin3;
+					variables.FusedSkin4 = message.data.FusedSkin4;
+					variables.FusedHairstyle = message.data.FusedHairstyle;
+					variables.FusedHairStyleID = message.data.FusedHairStyleID;
+					variables.FusedEyesTypeID = message.data.FusedEyesTypeID;
+					variables.FusedEyesColorID = message.data.FusedEyesColorID;
+					variables.FusedMouth = message.data.FusedMouth;
+					variables.PlayerFused = message.data.PlayerFused;
+					variables.FusionClothes = message.data.FusionClothes;
 				}
 			});
 			context.setPacketHandled(true);

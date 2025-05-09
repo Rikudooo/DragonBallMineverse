@@ -59,6 +59,7 @@ import net.mcreator.dbm.client.model.Modelhair_gogeta;
 import net.mcreator.dbm.client.model.Modelhair_16_ssj2;
 import net.mcreator.dbm.client.model.Modelhair_16_ssj;
 import net.mcreator.dbm.client.model.Modelhair_16_base;
+import net.mcreator.dbm.client.model.Modelfusionclothes;
 import net.mcreator.dbm.client.model.Modelfriezathird;
 import net.mcreator.dbm.client.model.Modelfriezasoldier;
 import net.mcreator.dbm.client.model.Modelfriezasecond;
@@ -301,6 +302,7 @@ public class DbmModModels {
 		event.registerLayerDefinition(ModelOozaruVegeta.LAYER_LOCATION, ModelOozaruVegeta::createBodyLayer);
 		event.registerLayerDefinition(ModelSpopovich.LAYER_LOCATION, ModelSpopovich::createBodyLayer);
 		event.registerLayerDefinition(ModelPowerPole.LAYER_LOCATION, ModelPowerPole::createBodyLayer);
+		event.registerLayerDefinition(Modelfusionclothes.LAYER_LOCATION, Modelfusionclothes::createBodyLayer);
 		event.registerLayerDefinition(ModelShenron119.LAYER_LOCATION, ModelShenron119::createBodyLayer);
 	}
 }

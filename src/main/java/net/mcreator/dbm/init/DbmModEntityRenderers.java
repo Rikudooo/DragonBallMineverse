@@ -193,5 +193,6 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.STORY_TAGOMA.get(), StoryTagomaRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_SHISAMI.get(), StoryShisamiRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_GOLDEN_FRIEZA.get(), StoryGoldenFriezaRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.FUSION_LAUNCH.get(), ThrownItemRenderer::new);
 	}
 }

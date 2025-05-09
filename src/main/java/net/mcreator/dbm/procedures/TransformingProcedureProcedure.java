@@ -9,6 +9,8 @@ import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
@@ -20,6 +22,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.player.AbstractClientPlayer;
 
 import net.mcreator.dbm.network.DbmModVariables;
+import net.mcreator.dbm.init.DbmModEntities;
+import net.mcreator.dbm.entity.FusionLaunchEntity;
 import net.mcreator.dbm.DbmMod;
 
 import javax.annotation.Nullable;
@@ -59,179 +63,201 @@ public class TransformingProcedureProcedure {
 					});
 				}
 			} else {
-				{
-					double _setval = 0;
-					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.TransformationTimer = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (world.isClientSide()) {
-					if (entity instanceof AbstractClientPlayer player) {
-						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
-						if (animation != null) {
-							animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("dbm", "transform"))));
-						}
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Fusion == false) {
+					{
+						double _setval = 0;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.TransformationTimer = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
-				}
-				if (!world.isClientSide()) {
-					if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-						List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-						synchronized (connections) {
-							Iterator<Connection> iterator = connections.iterator();
-							while (iterator.hasNext()) {
-								Connection connection = iterator.next();
-								if (!connection.isConnecting() && connection.isConnected())
-									DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("transform"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+					if (world.isClientSide()) {
+						if (entity instanceof AbstractClientPlayer player) {
+							var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
+							if (animation != null) {
+								animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("dbm", "transform"))));
 							}
 						}
 					}
-				}
-				if (!(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Kaioken")
-						|| ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Babidi's Magic"))) {
-					if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Arcosian")) {
-						ArcosianTransformingProcedure.execute(entity);
-					} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Saiyan")) {
-						SaiyanTransformingProcedure.execute(world, x, y, z, entity);
-					} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Half-Saiyan")) {
-						HalfSaiyanTransformingProcedure.execute(entity);
-					}
-				}
-				if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Kaioken")) {
-					if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenOwned == 1) {
-						{
-							String _setval = "Kaioken";
-							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.SubForm = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
-						if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 0) {
-							{
-								double _setval = 1;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						}
-					} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenOwned == 2) {
-						{
-							String _setval = "Kaioken";
-							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.SubForm = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
-						if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 0) {
-							{
-								double _setval = 1;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 1) {
-							{
-								double _setval = 2;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						}
-					} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenOwned == 3) {
-						{
-							String _setval = "Kaioken";
-							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.SubForm = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
-						if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 0) {
-							{
-								double _setval = 1;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 1) {
-							{
-								double _setval = 2;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 2) {
-							{
-								double _setval = 3;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						}
-					} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenOwned == 4) {
-						{
-							String _setval = "Kaioken";
-							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.SubForm = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
-						if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 0) {
-							{
-								double _setval = 1;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 1) {
-							{
-								double _setval = 2;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 2) {
-							{
-								double _setval = 3;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
-						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 3) {
-							{
-								double _setval = 4;
-								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.KaiokenLevel = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+					if (!world.isClientSide()) {
+						if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+							List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+							synchronized (connections) {
+								Iterator<Connection> iterator = connections.iterator();
+								while (iterator.hasNext()) {
+									Connection connection = iterator.next();
+									if (!connection.isConnecting() && connection.isConnected())
+										DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("transform"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+								}
 							}
 						}
 					}
-				}
-				if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Babidi's Magic")) {
-					if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BabidiMagic == true) {
-						{
-							String _setval = "Babidi's Magic";
-							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.SubForm = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+					if (!(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Kaioken")
+							|| ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Babidi's Magic"))) {
+						if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Arcosian")) {
+							ArcosianTransformingProcedure.execute(entity);
+						} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Saiyan")) {
+							SaiyanTransformingProcedure.execute(world, x, y, z, entity);
+						} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Half-Saiyan")) {
+							HalfSaiyanTransformingProcedure.execute(entity);
 						}
 					}
-				}
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:transform")), SoundSource.PLAYERS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:transform")), SoundSource.PLAYERS, 1, 1, false);
+					if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Kaioken")) {
+						if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenOwned == 1) {
+							{
+								String _setval = "Kaioken";
+								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.SubForm = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+							if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 0) {
+								{
+									double _setval = 1;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							}
+						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenOwned == 2) {
+							{
+								String _setval = "Kaioken";
+								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.SubForm = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+							if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 0) {
+								{
+									double _setval = 1;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 1) {
+								{
+									double _setval = 2;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							}
+						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenOwned == 3) {
+							{
+								String _setval = "Kaioken";
+								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.SubForm = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+							if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 0) {
+								{
+									double _setval = 1;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 1) {
+								{
+									double _setval = 2;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 2) {
+								{
+									double _setval = 3;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							}
+						} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenOwned == 4) {
+							{
+								String _setval = "Kaioken";
+								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.SubForm = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+							if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 0) {
+								{
+									double _setval = 1;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 1) {
+								{
+									double _setval = 2;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 2) {
+								{
+									double _setval = 3;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KaiokenLevel == 3) {
+								{
+									double _setval = 4;
+									entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.KaiokenLevel = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
+							}
+						}
+					}
+					if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Babidi's Magic")) {
+						if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).BabidiMagic == true) {
+							{
+								String _setval = "Babidi's Magic";
+								entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.SubForm = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						}
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:transform")), SoundSource.PLAYERS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:transform")), SoundSource.PLAYERS, 1, 1, false);
+						}
+					}
+				} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Fusion == true) {
+					{
+						Entity _shootFrom = entity;
+						Level projectileLevel = _shootFrom.level();
+						if (!projectileLevel.isClientSide()) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new FusionLaunchEntity(DbmModEntities.FUSION_LAUNCH.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 0, 0);
+							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
 					}
 				}
 			}

@@ -149,5 +149,14 @@
         "stream": false
       }
     ]
+  },
+  "fusion": {
+    "subtitle": "subtitles.fusion",
+    "sounds": [
+      {
+        "name": "dbm:fusionha",
+        "stream": false
+      }
+    ]
   }
 }
