@@ -11120,52 +11120,6 @@
       "path": "~/Items"
     },
     {
-      "name": "KameHouseSpawnBlockAdded",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "kame_house_spawn_block_added",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dbm/procedures/KameHouseSpawnBlockAddedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "KameHouseSpawn",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "kame_house_spawn",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/dbm/models/item/kame_house_spawn.json",
-          "src/main/resources/assets/dbm/blockstates/kame_house_spawn.json",
-          "src/main/resources/assets/dbm/models/block/kame_house_spawn.json",
-          "src/main/resources/data/dbm/loot_tables/blocks/kame_house_spawn.json",
-          "src/main/java/net/mcreator/dbm/block/KameHouseSpawnBlock.java"
-        ]
-      }
-    },
-    {
       "name": "BlueDoor",
       "type": "block",
       "compiles": true,
@@ -14847,7 +14801,7 @@
           }
         ]
       },
-      "path": "~/Forms/HalfSaiyan"
+      "path": "~/Forms"
     },
     {
       "name": "StoryGUI7",
@@ -29742,6 +29696,686 @@
           }
         ]
       }
+    },
+    {
+      "name": "SetFormGreatNamekian",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_form_great_namekian",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetFormGreatNamekianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Namekian"
+    },
+    {
+      "name": "FormPathGreatNamekian",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_path_great_namekian",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/FormPathGreatNamekianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/HalfSaiyan"
+    },
+    {
+      "name": "SetFormFullPower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_form_full_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetFormFullPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Namekian"
+    },
+    {
+      "name": "SetFormSuperNamekian",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_form_super_namekian",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetFormSuperNamekianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Namekian"
+    },
+    {
+      "name": "SetFormPowerAwaken",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_form_power_awaken",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetFormPowerAwakenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Namekian"
+    },
+    {
+      "name": "SetFormOrangeNamekian",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_form_orange_namekian",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetFormOrangeNamekianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Namekian"
+    },
+    {
+      "name": "RacialForm1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racial_form_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/RacialForm1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms"
+    },
+    {
+      "name": "RacialForm2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racial_form_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/RacialForm2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms"
+    },
+    {
+      "name": "RacialForm3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racial_form_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/RacialForm3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms"
+    },
+    {
+      "name": "GreatNamekian",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "great_namekian",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/GreatNamekianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Namekian"
+    },
+    {
+      "name": "NamekianTransforming",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "namekian_transforming",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/NamekianTransformingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ki/Transforming"
+    },
+    {
+      "name": "HumanTransforming",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "human_transforming",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/HumanTransformingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ki/Transforming"
+    },
+    {
+      "name": "SetFormUnleashedPower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_form_unleashed_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetFormUnleashedPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Human"
+    },
+    {
+      "name": "SetFormSelflessnessState",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_form_selflessness_state",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetFormSelflessnessStateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Human"
+    },
+    {
+      "name": "HumanFormsGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "human_forms_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/gui/HumanFormsGUIScreen.java",
+          "src/main/java/net/mcreator/dbm/network/HumanFormsGUIButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/world/inventory/HumanFormsGUIMenu.java"
+        ]
+      },
+      "path": "~/Forms/Human"
+    },
+    {
+      "name": "PowerUnleashed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_unleashed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/PowerUnleashedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Forms/Human"
+    },
+    {
+      "name": "LightningAura",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_aura",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/LightningAuraProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ki/Aura"
+    },
+    {
+      "name": "MasterGoku",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_goku",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/renderer/MasterGokuRenderer.java",
+          "src/main/java/net/mcreator/dbm/entity/MasterGokuEntity.java"
+        ]
+      },
+      "path": "~/Entities/SafeZone"
+    },
+    {
+      "name": "GokuGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goku_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/client/gui/GokuGUIScreen.java",
+          "src/main/java/net/mcreator/dbm/network/GokuGUIButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/world/inventory/GokuGUIMenu.java"
+        ]
+      },
+      "path": "~/Entities/SafeZone"
+    },
+    {
+      "name": "GokuGUI2",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goku_gui_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/world/inventory/GokuGUI2Menu.java",
+          "src/main/java/net/mcreator/dbm/network/GokuGUI2ButtonMessage.java",
+          "src/main/java/net/mcreator/dbm/client/gui/GokuGUI2Screen.java"
+        ]
+      },
+      "path": "~/Entities/SafeZone"
+    },
+    {
+      "name": "OpenGokuGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_goku_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/OpenGokuGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone"
+    },
+    {
+      "name": "OpenGokuGUI2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_goku_gui_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/OpenGokuGUI2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/SafeZone"
+    },
+    {
+      "name": "LearnSolarFlare",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "learn_solar_flare",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/LearnSolarFlareProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/SolarFlare"
+    },
+    {
+      "name": "SolarFlareNotOwned",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_flare_not_owned",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SolarFlareNotOwnedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/KiAttacks/SolarFlare"
+    },
+    {
+      "name": "LearnInstantTransmissionGoku",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "learn_instant_transmission_goku",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/LearnInstantTransmissionGokuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LearnFusion",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "learn_fusion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/LearnFusionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FusionNotOwned",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fusion_not_owned",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/FusionNotOwnedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FusionOwned",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fusion_owned",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/FusionOwnedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnableFusion",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enable_fusion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/EnableFusionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GokuHouseSpawner",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goku_house_spawner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/entity/GokuHouseSpawnerEntity.java",
+          "src/main/java/net/mcreator/dbm/client/renderer/GokuHouseSpawnerRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "SetGokuCoords",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_goku_coords",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/SetGokuCoordsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GokuHouseAdditionGenerationCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goku_house_addition_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/GokuHouseAdditionGenerationConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GokuHouse",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goku_house",
+      "metadata": {
+        "has_nbt_structure": true,
+        "files": [
+          "src/main/resources/data/dbm/forge/biome_modifier/goku_house_biome_modifier.json",
+          "src/main/resources/data/dbm/worldgen/placed_feature/goku_house.json",
+          "src/main/java/net/mcreator/dbm/world/features/GokuHouseFeature.java",
+          "src/main/resources/data/dbm/worldgen/configured_feature/goku_house.json"
+        ]
+      }
+    },
+    {
+      "name": "TaiyokenEffectOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "taiyoken_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dbm/procedures/TaiyokenEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/KiAttacks"
     }
   ],
   "variable_elements": [
@@ -31357,7 +31991,7 @@
       "name": "FusionOwned",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "true"
+      "value": "false"
     },
     {
       "name": "Fusion",
@@ -31430,6 +32064,24 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "dbm:textures/entities/notexture.png"
+    },
+    {
+      "name": "GokuHouseCoords",
+      "type": "string",
+      "scope": "map",
+      "value": "Goku\u0027s House is unknown"
+    },
+    {
+      "name": "GokuHouseSpawn",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "GokuHouse",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -31576,6 +32228,22 @@
       ],
       "category": "player",
       "subtitle": "Fusing"
+    },
+    {
+      "name": "solarflarecharge",
+      "files": [
+        "solarflarecharge"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "solarchargelaunch",
+      "files": [
+        "solarflarelaunch"
+      ],
+      "category": "player",
+      "subtitle": "Solar Flare"
     }
   ],
   "tag_elements": {
@@ -31694,7 +32362,11 @@
       "CUSTOM:MasterPiccolo",
       "CUSTOM:NorthKaio",
       "CUSTOM:Popo",
-      "CUSTOM:Whis"
+      "CUSTOM:Whis",
+      "CUSTOM:AdminPunchingBag",
+      "CUSTOM:Bubbles",
+      "CUSTOM:Gregory",
+      "CUSTOM:MasterGoku"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:BuildingBricksSlabInvertedBlack",
@@ -31897,6 +32569,7 @@
       "gui.dbm.story_gui_55.label_on_par_with_vegetas_he_was_sen": "Supreme Kai. They told you about Bibidi, an evil being who once",
       "entity.dbm.babidi_ship_spawner": "Babidi Spawner",
       "gui.dbm.character_creation_gui_2.label_balanced_between_good_and_evil": "Balanced between good and evil,",
+      "gui.dbm.goku_gui_2.label_instant_transmission": "Instant T. | 20,000 TP",
       "gui.dbm.story_gui_42.label_on_par_with_vegetas_he_was_sen": "to fight Cell.",
       "entity.dbm.admin_punching_bag": "Punching Bag",
       "gui.dbm.story_gui_2.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
@@ -31925,6 +32598,7 @@
       "gui.dbm.story_gui_33.label_hey_looking_for_an_adventure_w": "A few hours passed since the intervention with the androids.",
       "gui.dbm.kame_sennin_gui_2.label_giant_ki_blast_560_tp": "Giant Ki Blast | 560 TP",
       "gui.dbm.story_gui_80.label_depths_of_the_universe_a_being": "about this.",
+      "gui.dbm.human_forms_gui.tooltip_regeneration_press_the_transfor": "Rage: Less Health \u003d More Damage",
       "gui.dbm.welcome_gui.label_dragon_ball_where_power_knows_n": "Dragon Ball, where power knows no limits.",
       "gui.dbm.story_gui_28.label_learned_that_you_are_attempting": "the one before. This time, Mecha Frieza won\u0027t make the same",
       "gui.dbm.story_gui_53.label_player_stats": "Story -Z Saga -Majin Buu Arc -Strongest Under The Heavens p.3",
@@ -31949,11 +32623,12 @@
       "gui.dbm.story_gui_18.label_is_sent_to_fight_you": "Frieza, they are the most feared after him.",
       "item.dbm.charging": "Charging",
       "block.dbm.building_fence_dark_green": "Building Fence",
+      "gui.dbm.goku_gui_2.label_king_enma": "Master Goku",
       "gui.dbm.story_gui_59.label_hey_looking_for_an_adventure_w": "Your fight witth Dabura unleashed too much energy. That was more",
       "gui.dbm.story_gui_38.label_player_stats": "Story -Z Saga -Android Arc -Cell\u0027s Power up",
       "item.dbm.senzu_bean": "Senzu Bean",
-      "gui.dbm.whis_gui_2.label_kaioken_15000_tp": "Newfound Power | 500,000 TP",
       "item.dbm.battle_armor_chestplate": "Battle Armor Top",
+      "gui.dbm.whis_gui_2.label_kaioken_15000_tp": "Newfound Power | 500,000 TP",
       "block.dbm.building_block_tiles": "Building Block",
       "gui.dbm.story_gui_49.label_single_day_this_isnt_something": "single day. This isn\u0027t something you can afford to miss.",
       "gui.dbm.story_gui_62.label_go_to_the_lookout": "-Go to the Lookout",
@@ -31994,6 +32669,7 @@
       "gui.dbm.group_gui.label_player_stats": "Group",
       "gui.dbm.story_gui_45.label_defeat_cell_done": "-Defeat Cell -Done",
       "gui.dbm.story_gui_71.label_defeat_kid_buu_done": "-Defeat Kid Buu -Done",
+      "gui.dbm.goku_gui_2.label_kaioken_15000_tp": "Ki Wave | 1,000 TP",
       "entity.dbm.story_frieza_soldier": "Frieza\u0027s Soldier",
       "gui.dbm.story_gui_46.label_be_on_planet_earth": "-Be on planet Earth",
       "gui.dbm.story_gui_64.label_player_stats": "Story -Z Saga -Majin Buu Arc -Super Buu",
@@ -32083,6 +32759,7 @@
       "gui.dbm.half_saiyan_forms_gui.tooltip_zenkai_boost_a_racial_ability_e": "Zenkai Boost: A Racial ability exclusive to Saiyans and Hybrids.",
       "gui.dbm.story_gui_40.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
       "gui.dbm.story_gui_38.label_defeat_cell_done": "-Defeat Cell -Done",
+      "subtitles.solarchargelaunch": "Solar Flare",
       "block.dbm.building_bricks_slab_dark_gray": "Building Bricks Slab",
       "gui.dbm.group_gui.label_are_you_ready_to_take_on_the_inc": "Are you ready to take on the incredible story of Dragon Ball?",
       "gui.dbm.story_gui_35.label_be_in_the_hyperbolic_time_chamb": "-Be in the Hyperbolic Time Chamber -Done",
@@ -32128,6 +32805,7 @@
       "entity.dbm.story_dodoria": "Dodoria",
       "key.dbm.extra_slots": "Extra Slots",
       "entity.dbm.story_cell": "Cell",
+      "gui.dbm.skills_gui.tooltip_enabledisable_fusion": "Enable/Disable Fusion",
       "gui.dbm.ki_attacks_gui.tooltip_ki_sense": "Ki Sense: Allows users to detect life energy, gauge power levels, and locate others by feeling their presence.",
       "gui.dbm.story_gui_31.label_be_on_planet_earth": "-Be on planet Earth",
       "gui.dbm.story_gui_57.label_on_par_with_vegetas_he_was_sen": "Babidi\u0027s men.",
@@ -32184,6 +32862,7 @@
       "gui.dbm.whis_gui.label_king_enma": "Whis",
       "gui.dbm.story_gui_36.label_hey_looking_for_an_adventure_w": "After training in the HTC, You are now ready to face the",
       "gui.dbm.story_gui_37.label_fight_cell": "-Fight Cell",
+      "gui.dbm.human_forms_gui.tooltip_kaioken_a_technique_that_gives": "Kaioken: A technique that gives you a boost in power!",
       "gui.dbm.kame_sennin_gui_2.label_king_enma": "Kame Sennin",
       "gui.dbm.half_saiyan_forms_gui.tooltip_kaioken_a_technique_that_gives": "Kaioken: A technique that gives you a boost in power!",
       "item.dbm.battle_armor_3_chestplate": "Battle Armor Top",
@@ -32194,6 +32873,7 @@
       "gui.dbm.story_gui_64.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
       "gui.dbm.half_saiyan_forms_gui.label_max_level_4": "Max Level: 4",
       "gui.dbm.story_gui_31.label_on_par_with_vegetas_he_was_sen": "talking about aren\u0027t 19 and 20, but 17 and 18, and they are",
+      "gui.dbm.human_forms_gui.tooltip_black_reach_the_pinnacle_of_you": "Orange: Use the Dragon\u0027s Power!",
       "gui.dbm.story_gui_59.label_absorbs_the_evil_elements_of_man": "absorbs the evil elements of mankind, becoming steadily more",
       "gui.dbm.story_gui_17.label_be_on_planet_earth": "-Be on planet Namek",
       "gui.dbm.story_gui_39.label_player_stats": "Story -Z Saga -Android Arc -Vegeta vs Cell",
@@ -32223,6 +32903,7 @@
       "gui.dbm.story_gui_25.label_player_stats": "Story -Z Saga -Android Arc -Young Mysterious Man?!",
       "gui.dbm.story_gui_52.label_defeat_kibito": "-Defeat Kibito",
       "gui.dbm.story_gui_77.label_hey_looking_for_an_adventure_w": "It\u0027s time to finish the fight with the Destroyer.",
+      "entity.dbm.goku_house_spawner": "Goku House Spawner",
       "gui.dbm.arcosian_forms_gui.label_player_stats": "Racial Skills",
       "gui.dbm.extra_gui.label_inventory": "Inventory",
       "gui.dbm.story_gui_12.label_x800y100z800space": "space-x800-y100-z800",
@@ -32350,6 +33031,7 @@
       "gui.dbm.story_gui_42.label_hey_looking_for_an_adventure_w": "The Cell Games will begin tomorrow! Make sure you are ready",
       "gui.dbm.half_saiyan_forms_gui.label_cost_50000_tp": "Cost: 50,000 TP",
       "gui.dbm.story_gui_16.label_defeat_zarbon_done": "-Defeat Zarbon -Done",
+      "gui.dbm.human_forms_gui.tooltip_super_namekian_a_namekian_whose": "Super Namekian: A Namekian whose power has vastly exceeded the capacities of normal Namekians",
       "gui.dbm.story_gui_36.label_of_frieza_and_his_father_all_at": "of Frieza and his father? All at the same place?",
       "gui.dbm.story_gui_6.label_defeat_raditz": "-Defeat Raditz",
       "gui.dbm.story_gui_77.label_depths_of_the_universe_a_being": "He heard about Super Saiyans existing on earth, that\u0027s why he\u0027s",
@@ -32483,6 +33165,7 @@
       "gui.dbm.story_gui_57.label_be_on_planet_earth": "-Be on planet Earth",
       "gui.dbm.story_gui_87.label_depths_of_the_universe_a_being": "Destroy him!",
       "gui.dbm.story_gui_34.label_greater_than_friezas_the_young": "a whole city\u0027s population and absorbed their energy.",
+      "gui.dbm.goku_gui_2.label_spirit_bomb_cost_8000_tp": "Kamehameha | 6,500 TP",
       "block.dbm.building_fence_orange": "Building Fence",
       "block.dbm.building_slab_blue": "Building Slab",
       "gui.dbm.story_gui_23.label_defeat_king_cold": "-Defeat King Cold",
@@ -32503,6 +33186,7 @@
       "gui.dbm.story_gui_23.label_the_dragon_balls_just_like_vege": "mistake as before. He will fight with his father King Cold!",
       "gui.dbm.character_creation_gui_2.label_fighting_class": "Fighting Class",
       "gui.dbm.story_gui_73.label_only_time_will_tell": "Only time will tell!",
+      "gui.dbm.human_forms_gui.label_player_stats": "Racial Skills",
       "gui.dbm.story_gui_18.label_defeat_frieza": "-Defeat Frieza",
       "gui.dbm.story_gui_7.label_player_stats": "Story -Z Saga -Saiyan Invasion Arc -Space Warriors",
       "gui.dbm.half_saiyan_forms_gui.tooltip_ultimate_unleash_your_innate_po": "Ultimate: Unleash your innate Potential!",
@@ -32528,6 +33212,7 @@
       "gui.dbm.story_gui_67.label_defeat_fused_buu": "-Defeat Fused Buu",
       "block.dbm.building_block_yellow": "Building Block",
       "gui.dbm.ki_attacks_gui.tooltip_fly_gives_the_player_the_abilit": "Fly: Gives the Player the ability to fly",
+      "entity.dbm.master_goku": "Son Goku",
       "gui.dbm.story_gui_71.label_player_stats": "Story -Z Saga -Majin Buu Arc -The Final Battle",
       "gui.dbm.story_gui_86.label_depths_of_the_universe_a_being": "so much in 4 months?",
       "gui.dbm.story_gui.label_are_you_ready_to_take_on_the_inc": "Are you ready to take on the incredible story of Dragon Ball?",
@@ -32545,6 +33230,7 @@
       "block.dbm.building_block_light_gray": "Building Block",
       "block.dbm.building_fence_red": "Building Fence",
       "gui.dbm.story_gui_53.label_strong": "strong",
+      "gui.dbm.goku_gui.label_hello_there_so_youre_dead_hu": "Yo, I\u0027m Son Goku!",
       "gui.dbm.story_gui_75.label_be_on_planet_earth": "-Be on planet Earth",
       "gui.dbm.story_gui_19.label_player_stats": "Story -Z Saga -Planet Namek Arc -The End",
       "gui.dbm.story_gui_15.label_defeat_cui_done": "-Defeat Cui -Done",
@@ -32617,6 +33303,7 @@
       "entity.dbm.story_android_20": "Android 20",
       "gui.dbm.story_gui_44.label_be_on_planet_earth": "-Be on planet Earth",
       "gui.dbm.story_gui_12.label_said_to_be_the_strongest_in_the": "said to be the strongest in the universe!",
+      "subtitles.solarflarecharge": "",
       "block.dbm.building_block_cyan": "Building Block",
       "gui.dbm.story_gui_2.label_be_on_planet_earth": "-Be on planet Earth",
       "gui.dbm.group_gui_2.label_player_stats": "Group",
@@ -32629,6 +33316,7 @@
       "gui.dbm.arcosian_forms_gui.label_max_level_6": "Max Level: 6",
       "gui.dbm.arcosian_forms_gui.label_max_level_7": "Max Level: 7",
       "gui.dbm.arcosian_forms_gui.label_max_level_8": "Max Level: 8",
+      "gui.dbm.goku_gui.label_king_enma": "Master Goku",
       "block.dbm.building_bricks_stairs_dark_gray": "Building Bricks Stairs",
       "item.dbm.destroyer_u_7_outfit_leggings": "Destroyer\u0027s Outfit (Universe 7)",
       "gui.dbm.story_gui_52.label_competitors_must_punch_a_special": "competitors must punch a specialized machine to recieve a score",
@@ -32682,6 +33370,7 @@
       "gui.dbm.story_gui_81.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
       "gui.dbm.statistic_gui.tooltip_spirit_increase_ki_pool": "Spirit: Increase Ki Pool",
       "gui.dbm.ki_attacks_gui.label_upgradecost": "Cost: 150 TP",
+      "gui.dbm.human_forms_gui.tooltip_jump_allows_you_to_jump_higher": "Unleashed Power: It\u0027s in the name",
       "gui.dbm.story_gui_58.label_defeat_dabura": "-Defeat Dabura",
       "gui.dbm.korin_drink_gui.label_be_fully_released_you_will_also": "be fully released. You will also get the ability to sense Ki. However,",
       "entity.dbm.dinosaur_1": "Dinosaur",
@@ -32710,6 +33399,7 @@
       "item.dbm.namek_dragon_ball_4": "Four-Stars Namek Dragon Ball",
       "gui.dbm.story_gui_74.label_be_on_planet_earth": "-Be on planet Earth",
       "gui.dbm.story_gui_25.label_on_par_with_vegetas_he_was_sen": "never met him before, yet his power level is amazing! Far",
+      "gui.dbm.human_forms_gui.tooltip_super_saiyan_2_upgrade_your_rac": "Selflessness State: Even bigger Power-up",
       "gui.dbm.story_gui_86.label_be_on_planet_earth": "-Be on planet Earth",
       "subtitles.kiwave_charge": "Charging Ki Beam",
       "gui.dbm.story_gui_45.label_hey_looking_for_an_adventure_w": "The fight against the Cell Jrs was tough, but now it\u0027s time to",
@@ -32801,6 +33491,7 @@
       "gui.dbm.story_gui_25.label_greater_than_friezas_the_young": "greater than Frieza\u0027s. The young man want to challenge you!",
       "gui.dbm.story_gui_80.label_hey_looking_for_an_adventure_w": "Shenron is called far away from here. You have a bad feeling",
       "item.dbm.raw_dinosaur": "Raw Dinosaur",
+      "gui.dbm.human_forms_gui.tooltip_golden_cooler_combine_your_two": "Power Awaken: Unleash your Namekian Potential!",
       "entity.dbm.namek_dragon_ball_e_7": "Seven-Stars Namek Dragon Ball",
       "gui.dbm.story_gui_29.label_hey_looking_for_an_adventure_w": "Android 19 got destroyed, but Dr. Gero ran way to his lab.",
       "gui.dbm.piccolo_gui_2.label_spirit_bomb_cost_8000_tp": "Makankosappo | 5,400 TP",
@@ -32930,6 +33621,7 @@
       "block.dbm.building_bricks_brown": "Building Bricks",
       "gui.dbm.story_gui_28.label_defeat_king_cold_done": "-Defeat King Cold -Done",
       "gui.dbm.story_gui_48.label_violent_as_time_passed": "violent as time passed",
+      "gui.dbm.goku_gui_2.label_giant_ki_blast_560_tp": "Solar Flare | 5,560 TP",
       "gui.dbm.story_gui_5.label_player_stats": "Story -Z Saga -The Beginning",
       "gui.dbm.story_gui_68.label_buu_reverted_to_his_original_for": "Buu reverted to his original form.",
       "block.dbm.building_slab_inverted_black": "Building Slab",
@@ -32991,7 +33683,6 @@
       "block.dbm.building_stairs_light_gray": "Building Stairs",
       "block.dbm.building_block_orange": "Building Block",
       "gui.dbm.welcome_gui.label_on_an_epic_journey_through_the": "on an epic journey through the world of",
-      "block.dbm.kame_house_spawn": "Kame House Spawn",
       "gui.dbm.half_saiyan_forms_gui.label_max_level": "Max Level: 4",
       "block.dbm.horizontal_ladder": "Ladder",
       "block.dbm.building_bricks_slab_brown": "Building Bricks Slab",
@@ -33141,6 +33832,7 @@
       "gui.dbm.story_gui_72.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
       "gui.dbm.story_gui_32.label_on_par_with_vegetas_he_was_sen": "woke up, Android 16.",
       "gui.dbm.story_gui_8.label_defeat_raditz_done": "-Defeat Raditz -Done",
+      "gui.dbm.goku_gui_2.label_fusion": "Fusion | 25,000 TP",
       "block.dbm.building_bricks_stairs_gray": "Building Bricks Stairs",
       "item.dbm.battle_armor_whis_leggings": "Battle Armor Whis Signed Bottom",
       "gui.dbm.story_gui_62.label_be_on_planet_earth_done": "-Be on planet Earth -Done",
@@ -33287,6 +33979,10 @@
           {
             "name": "BeamClash",
             "children": []
+          },
+          {
+            "name": "SolarFlare",
+            "children": []
           }
         ]
       },
@@ -33344,6 +34040,10 @@
           },
           {
             "name": "Namekian",
+            "children": []
+          },
+          {
+            "name": "Human",
             "children": []
           }
         ]
@@ -33447,7 +34147,7 @@
   "workspaceSettings": {
     "modid": "dbm",
     "modName": "Dragon Ball Mineverse",
-    "version": "1.2",
+    "version": "1.3",
     "description": "The Best Dragon Ball Mod on the latest version of Minecraft",
     "author": "Rikudo_Sage",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/dragon-ball-mineverse",

@@ -84,12 +84,14 @@ import net.mcreator.dbm.entity.NamekDragonBallE1Entity;
 import net.mcreator.dbm.entity.NamekChunkLoaderEntity;
 import net.mcreator.dbm.entity.MasterPiccoloEntity;
 import net.mcreator.dbm.entity.MasterKorinEntity;
+import net.mcreator.dbm.entity.MasterGokuEntity;
 import net.mcreator.dbm.entity.KingEnmaEntity;
 import net.mcreator.dbm.entity.KiBlastEntity;
 import net.mcreator.dbm.entity.KameTurtleEntity;
 import net.mcreator.dbm.entity.KameSenninEntity;
 import net.mcreator.dbm.entity.KameHouseSpawnerEntity;
 import net.mcreator.dbm.entity.GregoryEntity;
+import net.mcreator.dbm.entity.GokuHouseSpawnerEntity;
 import net.mcreator.dbm.entity.GiantKiBlastEntity;
 import net.mcreator.dbm.entity.FusionLaunchEntity;
 import net.mcreator.dbm.entity.EarthEEntity;
@@ -307,6 +309,10 @@ public class DbmModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StoryGoldenFriezaEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<FusionLaunchEntity>> FUSION_LAUNCH = register("fusion_launch",
 			EntityType.Builder.<FusionLaunchEntity>of(FusionLaunchEntity::new, MobCategory.MISC).setCustomClientFactory(FusionLaunchEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MasterGokuEntity>> MASTER_GOKU = register("master_goku", EntityType.Builder.<MasterGokuEntity>of(MasterGokuEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(MasterGokuEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GokuHouseSpawnerEntity>> GOKU_HOUSE_SPAWNER = register("goku_house_spawner", EntityType.Builder.<GokuHouseSpawnerEntity>of(GokuHouseSpawnerEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(GokuHouseSpawnerEntity::new).fireImmune().sized(0.01f, 0.01f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -402,6 +408,8 @@ public class DbmModEntities {
 			StoryTagomaEntity.init();
 			StoryShisamiEntity.init();
 			StoryGoldenFriezaEntity.init();
+			MasterGokuEntity.init();
+			GokuHouseSpawnerEntity.init();
 		});
 	}
 
@@ -492,5 +500,7 @@ public class DbmModEntities {
 		event.put(STORY_TAGOMA.get(), StoryTagomaEntity.createAttributes().build());
 		event.put(STORY_SHISAMI.get(), StoryShisamiEntity.createAttributes().build());
 		event.put(STORY_GOLDEN_FRIEZA.get(), StoryGoldenFriezaEntity.createAttributes().build());
+		event.put(MASTER_GOKU.get(), MasterGokuEntity.createAttributes().build());
+		event.put(GOKU_HOUSE_SPAWNER.get(), GokuHouseSpawnerEntity.createAttributes().build());
 	}
 }

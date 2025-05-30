@@ -335,6 +335,80 @@ public class RenderPlayerCustomizationProcedure {
 					}
 				}
 			}
+		} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FusedHairstyle == -2) {
+			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+				if (ResourceLocation.tryParse(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1ID)) != null) {
+					_texture = new ResourceLocation(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1ID));
+				}
+				Modelnamekian_antenna newModel = new Modelnamekian_antenna(context.bakeLayer(Modelnamekian_antenna.LAYER_LOCATION));
+				newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+				newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+				newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+				newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+				newModel.Body.copyFrom(_pr.getModel().body);
+				newModel.Head.copyFrom(_pr.getModel().head);
+				poseStack.pushPose();
+				poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+				new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+						_evt.getMultiBufferSource(), _evt.getPackedLight());
+				poseStack.popPose();
+			}
+		} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FusedHairstyle == -3) {
+			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+				if (ResourceLocation.tryParse(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1ID)) != null) {
+					_texture = new ResourceLocation(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin1ID));
+				}
+				Modelarcosian_ear newModel = new Modelarcosian_ear(context.bakeLayer(Modelarcosian_ear.LAYER_LOCATION));
+				newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+				newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+				newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+				newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+				newModel.Body.copyFrom(_pr.getModel().body);
+				newModel.Head.copyFrom(_pr.getModel().head);
+				poseStack.pushPose();
+				poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+				new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+						_evt.getMultiBufferSource(), _evt.getPackedLight());
+				poseStack.popPose();
+			}
+			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+				if (ResourceLocation.tryParse(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3ID)) != null) {
+					_texture = new ResourceLocation(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Skin3ID));
+				}
+				Modelarcosian_tail_1 newModel = new Modelarcosian_tail_1(context.bakeLayer(Modelarcosian_tail_1.LAYER_LOCATION));
+				newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+				newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+				newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+				newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+				newModel.Body.copyFrom(_pr.getModel().body);
+				newModel.Head.copyFrom(_pr.getModel().head);
+				poseStack.pushPose();
+				poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+				new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+						_evt.getMultiBufferSource(), _evt.getPackedLight());
+				poseStack.popPose();
+			}
+			if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
+				ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/default.png");
+				if (ResourceLocation.tryParse("dbm:textures/entities/hair1big.png") != null) {
+					_texture = new ResourceLocation("dbm:textures/entities/hair1big.png");
+				}
+				Modelhorn_arcosian_first newModel = new Modelhorn_arcosian_first(context.bakeLayer(Modelhorn_arcosian_first.LAYER_LOCATION));
+				newModel.LeftLeg.copyFrom(_pr.getModel().leftLeg);
+				newModel.RightLeg.copyFrom(_pr.getModel().rightLeg);
+				newModel.LeftArm.copyFrom(_pr.getModel().leftArm);
+				newModel.RightArm.copyFrom(_pr.getModel().rightArm);
+				newModel.Body.copyFrom(_pr.getModel().body);
+				newModel.Head.copyFrom(_pr.getModel().head);
+				poseStack.pushPose();
+				poseStack.scale(0.9375F, 0.9375F, 0.9375F);
+				new com.kleiders.kleidersplayerrenderer.KleidersPlayerAnimatedRenderer(context, _texture, newModel).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
+						_evt.getMultiBufferSource(), _evt.getPackedLight());
+				poseStack.popPose();
+			}
 		} else if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FusedHairstyle == 2) {
 			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormLike).equals("Base")) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {

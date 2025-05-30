@@ -496,6 +496,58 @@ public class ChargeKiAttackProcedure {
 					}
 				}
 			}
+			if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).SelectedKiAttack).equals("Solar Flare")) {
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackCharge == 0
+						&& (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Ki >= 420) {
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:solarflarecharge")), SoundSource.PLAYERS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("dbm:solarflarecharge")), SoundSource.PLAYERS, 1, 1, false);
+						}
+					}
+				}
+				{
+					double _setval = 420;
+					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.KiAttackCost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackCost <= (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new DbmModVariables.PlayerVariables())).Ki) {
+					if (world.isClientSide()) {
+						if (entity instanceof AbstractClientPlayer player) {
+							var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("dbm", "player_animation"));
+							if (animation != null && !animation.isActive()) {
+								animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("dbm", "solarflare"))));
+							}
+						}
+					}
+					if (!world.isClientSide()) {
+						if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+							List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+							synchronized (connections) {
+								Iterator<Connection> iterator = connections.iterator();
+								while (iterator.hasNext()) {
+									Connection connection = iterator.next();
+									if (!connection.isConnecting() && connection.isConnected())
+										DbmMod.PACKET_HANDLER.sendTo(new SetupAnimationsProcedure.DbmModAnimationMessage(Component.literal("solarflare"), entity.getId(), false), connection, NetworkDirection.PLAY_TO_CLIENT);
+								}
+							}
+						}
+					}
+					if ((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackCharge < 21) {
+						{
+							double _setval = (entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).KiAttackCharge + 1;
+							entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.KiAttackCharge = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+				}
+			}
 		}
 	}
 }

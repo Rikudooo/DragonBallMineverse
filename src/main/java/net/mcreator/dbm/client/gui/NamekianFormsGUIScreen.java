@@ -17,6 +17,9 @@ import net.mcreator.dbm.procedures.ReturnKaiokenOwnedProcedure;
 import net.mcreator.dbm.procedures.ReturnFormPathNotSubformProcedure;
 import net.mcreator.dbm.procedures.ReturnBabidiMagicOwnedProcedure;
 import net.mcreator.dbm.procedures.RacialFormLevelTextProcedure;
+import net.mcreator.dbm.procedures.RacialForm3Procedure;
+import net.mcreator.dbm.procedures.RacialForm2Procedure;
+import net.mcreator.dbm.procedures.RacialForm1Procedure;
 import net.mcreator.dbm.procedures.KaiokenOwnedTextProcedure;
 import net.mcreator.dbm.procedures.FormPathTextProcedure;
 import net.mcreator.dbm.procedures.FormPathKaiokenProcedure;
@@ -77,18 +80,21 @@ public class NamekianFormsGUIScreen extends AbstractContainerScreen<NamekianForm
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -85 && mouseY < topPos + -67)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_jump_allows_you_to_jump_higher"), mouseX, mouseY);
-		if (ReturnRacialFormOver4Procedure.execute(entity))
+		if (RacialForm1Procedure.execute(entity))
 			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -49 && mouseY < topPos + -31)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_super_saiyan_2_upgrade_your_rac"), mouseX, mouseY);
 		if (ReturnKaiokenOwnedProcedure.execute(entity))
 			if (mouseX > leftPos + 16 && mouseX < leftPos + 34 && mouseY > topPos + -85 && mouseY < topPos + -67)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_kaioken_a_technique_that_gives"), mouseX, mouseY);
-		if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + 23 && mouseY < topPos + 41)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_golden_cooler_combine_your_two"), mouseX, mouseY);
-		if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + 59 && mouseY < topPos + 77)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_black_reach_the_pinnacle_of_you"), mouseX, mouseY);
-		if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -12 && mouseY < topPos + 5)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_super_namekian_a_namekian_whose"), mouseX, mouseY);
+		if (RacialForm3Procedure.execute(entity))
+			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + 23 && mouseY < topPos + 41)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_golden_cooler_combine_your_two"), mouseX, mouseY);
+		if (ReturnRacialFormOver4Procedure.execute(entity))
+			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + 59 && mouseY < topPos + 77)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_black_reach_the_pinnacle_of_you"), mouseX, mouseY);
+		if (RacialForm3Procedure.execute(entity))
+			if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -12 && mouseY < topPos + 5)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_super_namekian_a_namekian_whose"), mouseX, mouseY);
 		if (mouseX > leftPos + -119 && mouseX < leftPos + -101 && mouseY > topPos + -85 && mouseY < topPos + -67)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.namekian_forms_gui.tooltip_regeneration_press_the_transfor"), mouseX, mouseY);
 	}
@@ -303,23 +309,67 @@ public class NamekianFormsGUIScreen extends AbstractContainerScreen<NamekianForm
 		guistate.put("button:imagebutton_babidiicon", imagebutton_babidiicon);
 		this.addRenderableWidget(imagebutton_babidiicon);
 		imagebutton_giantnamekianicon = new ImageButton(this.leftPos + -163, this.topPos + -85, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_giantnamekianicon.png"), 18, 36, e -> {
+			if (true) {
+				DbmMod.PACKET_HANDLER.sendToServer(new NamekianFormsGUIButtonMessage(18, x, y, z));
+				NamekianFormsGUIButtonMessage.handleButtonAction(entity, 18, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_giantnamekianicon", imagebutton_giantnamekianicon);
 		this.addRenderableWidget(imagebutton_giantnamekianicon);
 		imagebutton_fullpowericon = new ImageButton(this.leftPos + -163, this.topPos + -49, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_fullpowericon.png"), 18, 36, e -> {
-		});
+			if (RacialForm1Procedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new NamekianFormsGUIButtonMessage(19, x, y, z));
+				NamekianFormsGUIButtonMessage.handleButtonAction(entity, 19, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = RacialForm1Procedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_fullpowericon", imagebutton_fullpowericon);
 		this.addRenderableWidget(imagebutton_fullpowericon);
 		imagebutton_powerunleashednamek = new ImageButton(this.leftPos + -163, this.topPos + 23, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_powerunleashednamek.png"), 18, 36, e -> {
-		});
+			if (RacialForm3Procedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new NamekianFormsGUIButtonMessage(20, x, y, z));
+				NamekianFormsGUIButtonMessage.handleButtonAction(entity, 20, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = RacialForm3Procedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_powerunleashednamek", imagebutton_powerunleashednamek);
 		this.addRenderableWidget(imagebutton_powerunleashednamek);
 		imagebutton_supernamekianicon = new ImageButton(this.leftPos + -163, this.topPos + -12, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_supernamekianicon.png"), 18, 36, e -> {
-		});
+			if (RacialForm2Procedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new NamekianFormsGUIButtonMessage(21, x, y, z));
+				NamekianFormsGUIButtonMessage.handleButtonAction(entity, 21, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = RacialForm2Procedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_supernamekianicon", imagebutton_supernamekianicon);
 		this.addRenderableWidget(imagebutton_supernamekianicon);
 		imagebutton_orangenamekianicon = new ImageButton(this.leftPos + -163, this.topPos + 59, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_orangenamekianicon.png"), 18, 36, e -> {
-		});
+			if (ReturnRacialFormOver4Procedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new NamekianFormsGUIButtonMessage(22, x, y, z));
+				NamekianFormsGUIButtonMessage.handleButtonAction(entity, 22, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = ReturnRacialFormOver4Procedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_orangenamekianicon", imagebutton_orangenamekianicon);
 		this.addRenderableWidget(imagebutton_orangenamekianicon);
 		imagebutton_regenicon = new ImageButton(this.leftPos + -119, this.topPos + -85, 18, 18, 0, 0, 18, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_regenicon.png"), 18, 36, e -> {

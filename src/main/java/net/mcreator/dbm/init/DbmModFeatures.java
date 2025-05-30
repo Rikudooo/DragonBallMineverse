@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraft.world.level.levelgen.feature.Feature;
 
 import net.mcreator.dbm.world.features.KameHouseFeature;
+import net.mcreator.dbm.world.features.GokuHouseFeature;
 import net.mcreator.dbm.world.features.BabidiShipFeature;
 import net.mcreator.dbm.DbmMod;
 
@@ -20,4 +21,5 @@ public class DbmModFeatures {
 	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, DbmMod.MODID);
 	public static final RegistryObject<Feature<?>> KAME_HOUSE = REGISTRY.register("kame_house", KameHouseFeature::new);
 	public static final RegistryObject<Feature<?>> BABIDI_SHIP = REGISTRY.register("babidi_ship", BabidiShipFeature::new);
+	public static final RegistryObject<Feature<?>> GOKU_HOUSE = REGISTRY.register("goku_house", GokuHouseFeature::new);
 }

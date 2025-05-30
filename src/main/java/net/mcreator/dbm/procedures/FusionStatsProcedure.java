@@ -170,24 +170,90 @@ public class FusionStatsProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				{
-					double _setval = (new Object() {
-						Entity getEntity(String uuid) {
-							Entity _uuidentity = null;
-							if (world instanceof ServerLevel _server) {
-								try {
-									_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
-								} catch (IllegalArgumentException e) {
-								}
+				if (!(((new Object() {
+					Entity getEntity(String uuid) {
+						Entity _uuidentity = null;
+						if (world instanceof ServerLevel _server) {
+							try {
+								_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+							} catch (IllegalArgumentException e) {
 							}
-							return _uuidentity;
 						}
-					}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Fused)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new DbmModVariables.PlayerVariables())).HairStyle;
-					entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.FusedHairstyle = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+						return _uuidentity;
+					}
+				}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Fused)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new DbmModVariables.PlayerVariables())).BodyType).equals("Namekian") || ((new Object() {
+							Entity getEntity(String uuid) {
+								Entity _uuidentity = null;
+								if (world instanceof ServerLevel _server) {
+									try {
+										_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+									} catch (IllegalArgumentException e) {
+									}
+								}
+								return _uuidentity;
+							}
+						}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Fused)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new DbmModVariables.PlayerVariables())).BodyType).equals("Arcosian"))) {
+					{
+						double _setval = (new Object() {
+							Entity getEntity(String uuid) {
+								Entity _uuidentity = null;
+								if (world instanceof ServerLevel _server) {
+									try {
+										_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+									} catch (IllegalArgumentException e) {
+									}
+								}
+								return _uuidentity;
+							}
+						}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Fused)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new DbmModVariables.PlayerVariables())).HairStyle;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.FusedHairstyle = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else if (((new Object() {
+					Entity getEntity(String uuid) {
+						Entity _uuidentity = null;
+						if (world instanceof ServerLevel _server) {
+							try {
+								_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+							} catch (IllegalArgumentException e) {
+							}
+						}
+						return _uuidentity;
+					}
+				}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Fused)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new DbmModVariables.PlayerVariables())).BodyType).equals("Namekian")) {
+					{
+						double _setval = -2;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.FusedHairstyle = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else if (((new Object() {
+					Entity getEntity(String uuid) {
+						Entity _uuidentity = null;
+						if (world instanceof ServerLevel _server) {
+							try {
+								_uuidentity = _server.getEntity(UUIDTypeAdapter.fromString(uuid));
+							} catch (IllegalArgumentException e) {
+							}
+						}
+						return _uuidentity;
+					}
+				}.getEntity(((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Fused)).getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new DbmModVariables.PlayerVariables())).BodyType).equals("Arcosian")) {
+					{
+						double _setval = -3;
+						entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.FusedHairstyle = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 				if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Android")) {
 					if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FightingClass).equals("Warrior")) {

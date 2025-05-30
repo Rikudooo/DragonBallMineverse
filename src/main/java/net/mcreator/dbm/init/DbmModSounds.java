@@ -33,4 +33,6 @@ public class DbmModSounds {
 	public static final RegistryObject<SoundEvent> HEAVYATTACK = REGISTRY.register("heavyattack", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "heavyattack")));
 	public static final RegistryObject<SoundEvent> DODGE = REGISTRY.register("dodge", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "dodge")));
 	public static final RegistryObject<SoundEvent> FUSION = REGISTRY.register("fusion", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "fusion")));
+	public static final RegistryObject<SoundEvent> SOLARFLARECHARGE = REGISTRY.register("solarflarecharge", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "solarflarecharge")));
+	public static final RegistryObject<SoundEvent> SOLARCHARGELAUNCH = REGISTRY.register("solarchargelaunch", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("dbm", "solarchargelaunch")));
 }

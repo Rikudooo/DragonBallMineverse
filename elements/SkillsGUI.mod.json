@@ -527,6 +527,38 @@
           "x": 303,
           "y": 116
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fusiontrue",
+          "image": "fusiontrue.png",
+          "hoveredImage": "fusion.png",
+          "onClick": {
+            "name": "EnableFusion"
+          },
+          "displayCondition": {
+            "name": "FusionOwned"
+          },
+          "x": 258,
+          "y": 35
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_enabledisable_fusion",
+          "text": {
+            "fixedValue": "Enable/Disable Fusion"
+          },
+          "displayCondition": {
+            "name": "FusionOwned"
+          },
+          "width": 20,
+          "height": 16,
+          "x": 258,
+          "y": 35
+        }
       }
     ],
     "gridSettings": {
@@ -534,7 +566,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

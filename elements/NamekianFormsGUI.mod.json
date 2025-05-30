@@ -284,7 +284,7 @@
             "fixedValue": "Full Power: Unleash your power!!"
           },
           "displayCondition": {
-            "name": "ReturnRacialFormOver4"
+            "name": "RacialForm1"
           },
           "width": 18,
           "height": 18,
@@ -382,6 +382,9 @@
           "text": {
             "fixedValue": "Power Awaken: Unleash your Namekian Potential!"
           },
+          "displayCondition": {
+            "name": "RacialForm3"
+          },
           "width": 18,
           "height": 18,
           "x": 51,
@@ -394,6 +397,9 @@
           "name": "tooltip_black_reach_the_pinnacle_of_you",
           "text": {
             "fixedValue": "Orange: Use the Dragon's Power!"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialFormOver4"
           },
           "width": 18,
           "height": 18,
@@ -474,6 +480,9 @@
           "name": "imagebutton_giantnamekianicon",
           "image": "giantnamekianicon.png",
           "hoveredImage": "giantnamekianiconhovered.png",
+          "onClick": {
+            "name": "SetFormGreatNamekian"
+          },
           "x": 51,
           "y": 35
         }
@@ -484,6 +493,12 @@
           "name": "imagebutton_fullpowericon",
           "image": "fullpowericon.png",
           "hoveredImage": "fullpowericonhovered.png",
+          "onClick": {
+            "name": "SetFormFullPower"
+          },
+          "displayCondition": {
+            "name": "RacialForm1"
+          },
           "x": 51,
           "y": 71
         }
@@ -494,6 +509,12 @@
           "name": "imagebutton_powerunleashednamek",
           "image": "powerunleashednamek.png",
           "hoveredImage": "powerunleashednamekhovered.png",
+          "onClick": {
+            "name": "SetFormPowerAwaken"
+          },
+          "displayCondition": {
+            "name": "RacialForm3"
+          },
           "x": 51,
           "y": 143
         }
@@ -504,6 +525,9 @@
           "name": "tooltip_super_namekian_a_namekian_whose",
           "text": {
             "fixedValue": "Super Namekian: A Namekian whose power has vastly exceeded the capacities of normal Namekians"
+          },
+          "displayCondition": {
+            "name": "RacialForm3"
           },
           "width": 18,
           "height": 17,
@@ -517,6 +541,12 @@
           "name": "imagebutton_supernamekianicon",
           "image": "supernamekianicon.png",
           "hoveredImage": "supernamekian.png",
+          "onClick": {
+            "name": "SetFormSuperNamekian"
+          },
+          "displayCondition": {
+            "name": "RacialForm2"
+          },
           "x": 51,
           "y": 108
         }
@@ -527,6 +557,12 @@
           "name": "imagebutton_orangenamekianicon",
           "image": "orangenamekianicon.png",
           "hoveredImage": "orangenamekianiconhovered.png",
+          "onClick": {
+            "name": "SetFormOrangeNamekian"
+          },
+          "displayCondition": {
+            "name": "ReturnRacialFormOver4"
+          },
           "x": 51,
           "y": 179
         }

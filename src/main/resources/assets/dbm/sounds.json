@@ -158,5 +158,22 @@
         "stream": false
       }
     ]
+  },
+  "solarflarecharge": {
+    "sounds": [
+      {
+        "name": "dbm:solarflarecharge",
+        "stream": false
+      }
+    ]
+  },
+  "solarchargelaunch": {
+    "subtitle": "subtitles.solarchargelaunch",
+    "sounds": [
+      {
+        "name": "dbm:solarflarelaunch",
+        "stream": false
+      }
+    ]
   }
 }

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"solarflare": {
+			"loop": true,
+			"animation_length": 0.25,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"vector": [-137.26579, -15.69986, 16.32495]
+					},
+					"position": {
+						"vector": [-2, 0, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-137.26579, 15.69986, -16.32495]
+					},
+					"position": {
+						"vector": [2, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

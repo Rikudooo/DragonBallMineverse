@@ -261,7 +261,6 @@ public class DbmModItems {
 	public static final RegistryObject<Item> DRAGON_BALL_6 = REGISTRY.register("dragon_ball_6", () -> new DragonBall6Item());
 	public static final RegistryObject<Item> DRAGON_BALL_7 = REGISTRY.register("dragon_ball_7", () -> new DragonBall7Item());
 	public static final RegistryObject<Item> MAKANKOSAPPO_ITEM = REGISTRY.register("makankosappo_item", () -> new MakankosappoItemItem());
-	public static final RegistryObject<Item> KAME_HOUSE_SPAWN = block(DbmModBlocks.KAME_HOUSE_SPAWN);
 	public static final RegistryObject<Item> BLUE_DOOR = doubleBlock(DbmModBlocks.BLUE_DOOR);
 	public static final RegistryObject<Item> NAMEK_GRASS_BLOCK = block(DbmModBlocks.NAMEK_GRASS_BLOCK);
 	public static final RegistryObject<Item> NAMEK_DIRT = block(DbmModBlocks.NAMEK_DIRT);

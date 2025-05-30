@@ -13,8 +13,13 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dbm.world.inventory.NamekianFormsGUIMenu;
 import net.mcreator.dbm.procedures.UpgradeButtonProcedure;
+import net.mcreator.dbm.procedures.SetFormSuperNamekianProcedure;
+import net.mcreator.dbm.procedures.SetFormPowerAwakenProcedure;
 import net.mcreator.dbm.procedures.SetFormPathKaiokenProcedure;
 import net.mcreator.dbm.procedures.SetFormPathBabidiMagicProcedure;
+import net.mcreator.dbm.procedures.SetFormOrangeNamekianProcedure;
+import net.mcreator.dbm.procedures.SetFormGreatNamekianProcedure;
+import net.mcreator.dbm.procedures.SetFormFullPowerProcedure;
 import net.mcreator.dbm.procedures.OpenUltimateSkillsGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStoryGUIProcedure;
 import net.mcreator.dbm.procedures.OpenStatsGUIProcedure;
@@ -150,6 +155,26 @@ public class NamekianFormsGUIButtonMessage {
 		if (buttonID == 17) {
 
 			SetFormPathBabidiMagicProcedure.execute(entity);
+		}
+		if (buttonID == 18) {
+
+			SetFormGreatNamekianProcedure.execute(entity);
+		}
+		if (buttonID == 19) {
+
+			SetFormFullPowerProcedure.execute(entity);
+		}
+		if (buttonID == 20) {
+
+			SetFormPowerAwakenProcedure.execute(entity);
+		}
+		if (buttonID == 21) {
+
+			SetFormSuperNamekianProcedure.execute(entity);
+		}
+		if (buttonID == 22) {
+
+			SetFormOrangeNamekianProcedure.execute(entity);
 		}
 	}
 

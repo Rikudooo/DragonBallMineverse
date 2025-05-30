@@ -440,6 +440,9 @@ public class DbmModVariables {
 		public boolean BabidiShip = false;
 		public boolean BabidiShipSpawner = false;
 		public boolean LegendarySpawned = false;
+		public String GokuHouseCoords = "Goku's House is unknown";
+		public boolean GokuHouseSpawn = false;
+		public boolean GokuHouse = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -532,6 +535,9 @@ public class DbmModVariables {
 			BabidiShip = nbt.getBoolean("BabidiShip");
 			BabidiShipSpawner = nbt.getBoolean("BabidiShipSpawner");
 			LegendarySpawned = nbt.getBoolean("LegendarySpawned");
+			GokuHouseCoords = nbt.getString("GokuHouseCoords");
+			GokuHouseSpawn = nbt.getBoolean("GokuHouseSpawn");
+			GokuHouse = nbt.getBoolean("GokuHouse");
 		}
 
 		@Override
@@ -617,6 +623,9 @@ public class DbmModVariables {
 			nbt.putBoolean("BabidiShip", BabidiShip);
 			nbt.putBoolean("BabidiShipSpawner", BabidiShipSpawner);
 			nbt.putBoolean("LegendarySpawned", LegendarySpawned);
+			nbt.putString("GokuHouseCoords", GokuHouseCoords);
+			nbt.putBoolean("GokuHouseSpawn", GokuHouseSpawn);
+			nbt.putBoolean("GokuHouse", GokuHouse);
 			return nbt;
 		}
 
@@ -896,7 +905,7 @@ public class DbmModVariables {
 		public boolean KiSignature = false;
 		public boolean InBeamClash = false;
 		public double DefeatedFriezaSoldiers3 = 0;
-		public boolean FusionOwned = true;
+		public boolean FusionOwned = false;
 		public boolean Fusion = false;
 		public String Fused = "None";
 		public boolean Fusing = false;

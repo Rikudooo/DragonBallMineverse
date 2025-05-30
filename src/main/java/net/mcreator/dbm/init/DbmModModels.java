@@ -136,6 +136,7 @@ import net.mcreator.dbm.client.model.ModelHalo;
 import net.mcreator.dbm.client.model.ModelGuldo;
 import net.mcreator.dbm.client.model.ModelGregory;
 import net.mcreator.dbm.client.model.ModelGorillaBubble;
+import net.mcreator.dbm.client.model.ModelGoku;
 import net.mcreator.dbm.client.model.ModelGinyu;
 import net.mcreator.dbm.client.model.ModelGiTop;
 import net.mcreator.dbm.client.model.ModelGiBottom;
@@ -251,6 +252,7 @@ public class DbmModModels {
 		event.registerLayerDefinition(ModelGiBottom.LAYER_LOCATION, ModelGiBottom::createBodyLayer);
 		event.registerLayerDefinition(Modelbuutenks.LAYER_LOCATION, Modelbuutenks::createBodyLayer);
 		event.registerLayerDefinition(ModelimperfectCell.LAYER_LOCATION, ModelimperfectCell::createBodyLayer);
+		event.registerLayerDefinition(ModelGoku.LAYER_LOCATION, ModelGoku::createBodyLayer);
 		event.registerLayerDefinition(Modelhair_zamasu_2.LAYER_LOCATION, Modelhair_zamasu_2::createBodyLayer);
 		event.registerLayerDefinition(ModelSixStarDragonBallEntity.LAYER_LOCATION, ModelSixStarDragonBallEntity::createBodyLayer);
 		event.registerLayerDefinition(Modeltien.LAYER_LOCATION, Modeltien::createBodyLayer);

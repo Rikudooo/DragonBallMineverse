@@ -33,7 +33,6 @@ import net.mcreator.dbm.block.NamekDirtBlock;
 import net.mcreator.dbm.block.KorinTowerBlock2Block;
 import net.mcreator.dbm.block.KorinTowerBlock1Block;
 import net.mcreator.dbm.block.KorinTowerBaseBlock;
-import net.mcreator.dbm.block.KameHouseSpawnBlock;
 import net.mcreator.dbm.block.KaioshinkaiLogBlock;
 import net.mcreator.dbm.block.KaioshinkaiLeavesBlock;
 import net.mcreator.dbm.block.KaioshinkaiGrassBlockBlock;
@@ -365,7 +364,6 @@ public class DbmModBlocks {
 	public static final RegistryObject<Block> KORIN_TOWER_BLOCK_1 = REGISTRY.register("korin_tower_block_1", () -> new KorinTowerBlock1Block());
 	public static final RegistryObject<Block> KORIN_TOWER_BLOCK_2 = REGISTRY.register("korin_tower_block_2", () -> new KorinTowerBlock2Block());
 	public static final RegistryObject<Block> HYPERBOLIC_TIME_CHAMBER_DOOR = REGISTRY.register("hyperbolic_time_chamber_door", () -> new HyperbolicTimeChamberDoorBlock());
-	public static final RegistryObject<Block> KAME_HOUSE_SPAWN = REGISTRY.register("kame_house_spawn", () -> new KameHouseSpawnBlock());
 	public static final RegistryObject<Block> BLUE_DOOR = REGISTRY.register("blue_door", () -> new BlueDoorBlock());
 	public static final RegistryObject<Block> NAMEK_GRASS_BLOCK = REGISTRY.register("namek_grass_block", () -> new NamekGrassBlockBlock());
 	public static final RegistryObject<Block> NAMEK_DIRT = REGISTRY.register("namek_dirt", () -> new NamekDirtBlock());

@@ -1,0 +1,13 @@
+{
+  "type": "dbm:goku_house",
+  "config": {
+    "structure": "dbm:goku_house_spawner",
+    "random_rotation": true,
+    "ignored_blocks": "minecraft:structure_block",
+    "offset": [
+      0,
+      -2,
+      0
+    ]
+  }
+}

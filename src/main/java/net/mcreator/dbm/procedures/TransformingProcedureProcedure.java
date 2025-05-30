@@ -100,6 +100,10 @@ public class TransformingProcedureProcedure {
 							SaiyanTransformingProcedure.execute(world, x, y, z, entity);
 						} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Half-Saiyan")) {
 							HalfSaiyanTransformingProcedure.execute(entity);
+						} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Namekian")) {
+							NamekianTransformingProcedure.execute(entity);
+						} else if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).Race).equals("Human")) {
+							HumanTransformingProcedure.execute(entity);
 						}
 					}
 					if (((entity.getCapability(DbmModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DbmModVariables.PlayerVariables())).FormPath).equals("Kaioken")) {

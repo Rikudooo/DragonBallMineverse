@@ -76,11 +76,13 @@ import net.mcreator.dbm.client.renderer.NamekDragonBallE1Renderer;
 import net.mcreator.dbm.client.renderer.NamekChunkLoaderRenderer;
 import net.mcreator.dbm.client.renderer.MasterPiccoloRenderer;
 import net.mcreator.dbm.client.renderer.MasterKorinRenderer;
+import net.mcreator.dbm.client.renderer.MasterGokuRenderer;
 import net.mcreator.dbm.client.renderer.KingEnmaRenderer;
 import net.mcreator.dbm.client.renderer.KameTurtleRenderer;
 import net.mcreator.dbm.client.renderer.KameSenninRenderer;
 import net.mcreator.dbm.client.renderer.KameHouseSpawnerRenderer;
 import net.mcreator.dbm.client.renderer.GregoryRenderer;
+import net.mcreator.dbm.client.renderer.GokuHouseSpawnerRenderer;
 import net.mcreator.dbm.client.renderer.EarthERenderer;
 import net.mcreator.dbm.client.renderer.DragonBallE7Renderer;
 import net.mcreator.dbm.client.renderer.DragonBallE6Renderer;
@@ -194,5 +196,7 @@ public class DbmModEntityRenderers {
 		event.registerEntityRenderer(DbmModEntities.STORY_SHISAMI.get(), StoryShisamiRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.STORY_GOLDEN_FRIEZA.get(), StoryGoldenFriezaRenderer::new);
 		event.registerEntityRenderer(DbmModEntities.FUSION_LAUNCH.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.MASTER_GOKU.get(), MasterGokuRenderer::new);
+		event.registerEntityRenderer(DbmModEntities.GOKU_HOUSE_SPAWNER.get(), GokuHouseSpawnerRenderer::new);
 	}
 }

@@ -121,9 +121,12 @@ import net.mcreator.dbm.client.gui.KorinDrinkGUIScreen;
 import net.mcreator.dbm.client.gui.KiAttacksGUIScreen;
 import net.mcreator.dbm.client.gui.KameSenninGUIScreen;
 import net.mcreator.dbm.client.gui.KameSenninGUI2Screen;
+import net.mcreator.dbm.client.gui.HumanFormsGUIScreen;
 import net.mcreator.dbm.client.gui.HalfSaiyanFormsGUIScreen;
 import net.mcreator.dbm.client.gui.GroupGUIScreen;
 import net.mcreator.dbm.client.gui.GroupGUI2Screen;
+import net.mcreator.dbm.client.gui.GokuGUIScreen;
+import net.mcreator.dbm.client.gui.GokuGUI2Screen;
 import net.mcreator.dbm.client.gui.FinishGUIScreen;
 import net.mcreator.dbm.client.gui.ExtraGUIScreen;
 import net.mcreator.dbm.client.gui.EnmaGUIScreen;
@@ -259,6 +262,9 @@ public class DbmModScreens {
 			MenuScreens.register(DbmModMenus.STORY_GUI_87.get(), StoryGUI87Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI_88.get(), StoryGUI88Screen::new);
 			MenuScreens.register(DbmModMenus.STORY_GUI_89.get(), StoryGUI89Screen::new);
+			MenuScreens.register(DbmModMenus.HUMAN_FORMS_GUI.get(), HumanFormsGUIScreen::new);
+			MenuScreens.register(DbmModMenus.GOKU_GUI.get(), GokuGUIScreen::new);
+			MenuScreens.register(DbmModMenus.GOKU_GUI_2.get(), GokuGUI2Screen::new);
 		});
 	}
 }

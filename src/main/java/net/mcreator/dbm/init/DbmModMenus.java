@@ -121,9 +121,12 @@ import net.mcreator.dbm.world.inventory.KorinDrinkGUIMenu;
 import net.mcreator.dbm.world.inventory.KiAttacksGUIMenu;
 import net.mcreator.dbm.world.inventory.KameSenninGUIMenu;
 import net.mcreator.dbm.world.inventory.KameSenninGUI2Menu;
+import net.mcreator.dbm.world.inventory.HumanFormsGUIMenu;
 import net.mcreator.dbm.world.inventory.HalfSaiyanFormsGUIMenu;
 import net.mcreator.dbm.world.inventory.GroupGUIMenu;
 import net.mcreator.dbm.world.inventory.GroupGUI2Menu;
+import net.mcreator.dbm.world.inventory.GokuGUIMenu;
+import net.mcreator.dbm.world.inventory.GokuGUI2Menu;
 import net.mcreator.dbm.world.inventory.FinishGUIMenu;
 import net.mcreator.dbm.world.inventory.ExtraGUIMenu;
 import net.mcreator.dbm.world.inventory.EnmaGUIMenu;
@@ -257,4 +260,7 @@ public class DbmModMenus {
 	public static final RegistryObject<MenuType<StoryGUI87Menu>> STORY_GUI_87 = REGISTRY.register("story_gui_87", () -> IForgeMenuType.create(StoryGUI87Menu::new));
 	public static final RegistryObject<MenuType<StoryGUI88Menu>> STORY_GUI_88 = REGISTRY.register("story_gui_88", () -> IForgeMenuType.create(StoryGUI88Menu::new));
 	public static final RegistryObject<MenuType<StoryGUI89Menu>> STORY_GUI_89 = REGISTRY.register("story_gui_89", () -> IForgeMenuType.create(StoryGUI89Menu::new));
+	public static final RegistryObject<MenuType<HumanFormsGUIMenu>> HUMAN_FORMS_GUI = REGISTRY.register("human_forms_gui", () -> IForgeMenuType.create(HumanFormsGUIMenu::new));
+	public static final RegistryObject<MenuType<GokuGUIMenu>> GOKU_GUI = REGISTRY.register("goku_gui", () -> IForgeMenuType.create(GokuGUIMenu::new));
+	public static final RegistryObject<MenuType<GokuGUI2Menu>> GOKU_GUI_2 = REGISTRY.register("goku_gui_2", () -> IForgeMenuType.create(GokuGUI2Menu::new));
 }

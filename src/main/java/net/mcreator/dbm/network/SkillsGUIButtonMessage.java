@@ -31,6 +31,7 @@ import net.mcreator.dbm.procedures.OpenIcon12Procedure;
 import net.mcreator.dbm.procedures.OpenIcon11Procedure;
 import net.mcreator.dbm.procedures.OpenIcon10Procedure;
 import net.mcreator.dbm.procedures.OpenGroupGUIProcedure;
+import net.mcreator.dbm.procedures.EnableFusionProcedure;
 import net.mcreator.dbm.procedures.CloseGUIProcedure;
 import net.mcreator.dbm.DbmMod;
 
@@ -160,6 +161,10 @@ public class SkillsGUIButtonMessage {
 		if (buttonID == 19) {
 
 			SetSkillKiSenseProcedure.execute(entity);
+		}
+		if (buttonID == 20) {
+
+			EnableFusionProcedure.execute(entity);
 		}
 	}
 

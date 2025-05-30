@@ -1,0 +1,268 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "learngui.png",
+          "use1Xscale": false,
+          "x": 28,
+          "y": 96
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gokuface.png",
+          "use1Xscale": true,
+          "x": 25,
+          "y": 72
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_king_enma",
+          "text": {
+            "fixedValue": "Master Goku"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 81,
+          "y": 127
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dialogexit",
+          "image": "dialogexit.png",
+          "hoveredImage": "dialogexithovered.png",
+          "onClick": {
+            "name": "CloseGUI"
+          },
+          "x": 382,
+          "y": 142
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "kiwave.png",
+          "use1Xscale": false,
+          "x": 71,
+          "y": 155
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnKiWave"
+          },
+          "displayCondition": {
+            "name": "KiWaveNotOwned"
+          },
+          "x": 45,
+          "y": 156
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_kaioken_15000_tp",
+          "text": {
+            "fixedValue": "Ki Wave | 1,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 158
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton1",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnKamehameha"
+          },
+          "displayCondition": {
+            "name": "KameHouseAdditionalGenerationCondition"
+          },
+          "x": 45,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "kamehameha.png",
+          "use1Xscale": false,
+          "x": 71,
+          "y": 171
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spirit_bomb_cost_8000_tp",
+          "text": {
+            "fixedValue": "Kamehameha | 6,500 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 175
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton2",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnSolarFlare"
+          },
+          "displayCondition": {
+            "name": "SolarFlareNotOwned"
+          },
+          "x": 45,
+          "y": 191
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "solarflare.png",
+          "use1Xscale": false,
+          "x": 71,
+          "y": 189
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_giant_ki_blast_560_tp",
+          "text": {
+            "fixedValue": "Solar Flare | 5,560 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 192
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_instant_transmission",
+          "text": {
+            "fixedValue": "Instant T. | 20,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 245,
+          "y": 158
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton3",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnInstantTransmissionGoku"
+          },
+          "displayCondition": {
+            "name": "ReturnITNotOwned"
+          },
+          "x": 205,
+          "y": 156
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_learnbutton4",
+          "image": "learnbutton.png",
+          "hoveredImage": "learnbuttonhovered.png",
+          "onClick": {
+            "name": "LearnFusion"
+          },
+          "displayCondition": {
+            "name": "FusionNotOwned"
+          },
+          "x": 205,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "instanttransmissionicon.png",
+          "use1Xscale": false,
+          "x": 230,
+          "y": 153
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "fusion.png",
+          "use1Xscale": true,
+          "x": 232,
+          "y": 176
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_fusion",
+          "text": {
+            "fixedValue": "Fusion | 25,000 TP"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 245,
+          "y": 175
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

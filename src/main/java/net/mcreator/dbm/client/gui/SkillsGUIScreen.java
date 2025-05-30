@@ -19,6 +19,7 @@ import net.mcreator.dbm.procedures.ReturnSkillPotentialReleaseProcedure;
 import net.mcreator.dbm.procedures.ReturnSkillKiSenseProcedure;
 import net.mcreator.dbm.procedures.ReturnSkillJumpProcedure;
 import net.mcreator.dbm.procedures.ReturnSkillFlyProcedure;
+import net.mcreator.dbm.procedures.FusionOwnedProcedure;
 import net.mcreator.dbm.network.SkillsGUIButtonMessage;
 import net.mcreator.dbm.DbmMod;
 
@@ -51,6 +52,7 @@ public class SkillsGUIScreen extends AbstractContainerScreen<SkillsGUIMenu> {
 	ImageButton imagebutton_potentialreleaseicon;
 	ImageButton imagebutton_upgradeicon;
 	ImageButton imagebutton_kisenseicon;
+	ImageButton imagebutton_fusiontrue;
 
 	public SkillsGUIScreen(SkillsGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -76,6 +78,9 @@ public class SkillsGUIScreen extends AbstractContainerScreen<SkillsGUIMenu> {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.skills_gui.tooltip_potential_release_allows_you_to"), mouseX, mouseY);
 		if (mouseX > leftPos + -163 && mouseX < leftPos + -145 && mouseY > topPos + -4 && mouseY < topPos + 14)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.skills_gui.tooltip_ki_sense"), mouseX, mouseY);
+		if (FusionOwnedProcedure.execute(entity))
+			if (mouseX > leftPos + 44 && mouseX < leftPos + 64 && mouseY > topPos + -85 && mouseY < topPos + -69)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.dbm.skills_gui.tooltip_enabledisable_fusion"), mouseX, mouseY);
 	}
 
 	@Override
@@ -297,5 +302,19 @@ public class SkillsGUIScreen extends AbstractContainerScreen<SkillsGUIMenu> {
 		});
 		guistate.put("button:imagebutton_kisenseicon", imagebutton_kisenseicon);
 		this.addRenderableWidget(imagebutton_kisenseicon);
+		imagebutton_fusiontrue = new ImageButton(this.leftPos + 44, this.topPos + -85, 20, 16, 0, 0, 16, new ResourceLocation("dbm:textures/screens/atlas/imagebutton_fusiontrue.png"), 20, 32, e -> {
+			if (FusionOwnedProcedure.execute(entity)) {
+				DbmMod.PACKET_HANDLER.sendToServer(new SkillsGUIButtonMessage(20, x, y, z));
+				SkillsGUIButtonMessage.handleButtonAction(entity, 20, x, y, z);
+			}
+		}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				this.visible = FusionOwnedProcedure.execute(entity);
+				super.renderWidget(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fusiontrue", imagebutton_fusiontrue);
+		this.addRenderableWidget(imagebutton_fusiontrue);
 	}
 }
